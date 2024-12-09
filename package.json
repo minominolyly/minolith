@@ -1,0 +1,46 @@
+{
+  "name": "minolith",
+  "version": "0.0.0",
+  "description": "design system by minominolyly",
+  "main": "src/minolith.scss",
+  "scripts": {
+    "build": "npm run build-lib",
+    "build-lib": "npm run build-lib-clean && npm run build-lib-sass && npm run build-lib-copy-css && npm run build-lib-copy-map && npm run build-lib-postcss && npm run build-lib-postcss-min",
+    "build-lib-clean": "rimraf dist",
+    "build-lib-copy-css": "node -e \"require('fs').copyFileSync('./dist/css/minolith.css', './dist/css/minolith.min.css')\"",
+    "build-lib-copy-map": "node -e \"require('fs').copyFileSync('./dist/css/minolith.css.map', './dist/css/minolith.min.css.map')\"",
+    "build-lib-postcss": "postcss --output dist/css/minolith.css dist/css/minolith.css",
+    "build-lib-postcss-min": "postcss --output dist/css/minolith.min.css dist/css/minolith.min.css",
+    "build-lib-sass": "sass src/minolith.scss dist/css/minolith.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minominolyly/minolith.git"
+  },
+  "keywords": [
+    "minominolyly",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "author": "minominolyly",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/minominolyly/minolith/issues"
+  },
+  "homepage": "https://github.com/minominolyly/minolith#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^11.0.0",
+    "rimraf": "^6.0.1",
+    "sass": "^1.82.0"
+  }
+}

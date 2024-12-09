@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+
+.link {
+  color: var(--#{variables.$prefix}color-default-fore);
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+  &:visited {
+    color: var(--#{variables.$prefix}color-default-visited-fore);
+  }
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+      &:hover {
+        color: var(--#{variables.$prefix}color-#{$colorName}-hover-fore);
+      }
+      &:visited {
+        color: var(--#{variables.$prefix}color-#{$colorName}-visited-fore);
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+$font-family-sans-serif: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+  "Hiragino Sans", Meiryo, sans-serif;
+$font-family-monospace: "Consolas", "Courier New", courier, monospace;
+
+$font-size-root: null !default;
+$font-size-base: 1rem !default;
+$font-size-xsmall: $font-size-base * 0.5 !default;
+$font-size-small: $font-size-base * 0.75 !default;
+$font-size-normal: $font-size-base !default;
+$font-size-medium: $font-size-base * 1.25 !default;
+$font-size-large: $font-size-base * 1.5 !default;
+$font-size-xlarge: $font-size-base * 1.75 !default;
+$font-size-xxlarge: $font-size-base * 2 !default;
+$font-size-xxxlarge: $font-size-base * 2.5 !default;
+$font-size-xxxxlarge: $font-size-base * 3 !default;
+$font-size-xxxxxlarge: $font-size-base * 3.5 !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;

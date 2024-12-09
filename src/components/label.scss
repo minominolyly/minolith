@@ -1,0 +1,5 @@
+@use "../variables/index.scss" as variables;
+
+.label {
+  font-weight: var(--#{variables.$prefix}font-weight-semibold);
+}

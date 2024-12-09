@@ -1,0 +1,115 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+@use "../icons/index.scss" as icons;
+
+.accordion {
+  color: var(--#{variables.$prefix}color-default-accordion-fore);
+  background-color: var(--#{variables.$prefix}color-default-accordion-back);
+  border-color: var(--#{variables.$prefix}color-default-accordion-border);
+  border-width: var(--#{variables.$prefix}border-width-thin);
+  border-style: solid;
+  .accordion-summary {
+    background-color: var(--#{variables.$prefix}color-default-accordion-summary-back);
+    border-color: var(--#{variables.$prefix}color-default-accordion-summary-border);
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+    position: relative;
+    list-style: none;
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      @include icons.chevron() {
+        content: "";
+        right: 1rem;
+        position: absolute;
+        top: calc(50% - 0.25rem);
+      }
+    }
+    &:hover,
+    &.is-hovered,
+    &.is-hovered {
+      background-color: var(--#{variables.$prefix}color-default-accordion-summary-hover-back);
+      border-color: var(--#{variables.$prefix}color-default-accordion-summary-hover-border);
+    }
+    &:focus,
+    &.is-focus,
+    &.is-focused {
+      background-color: var(--#{variables.$prefix}color-default-accordion-summary-focus-back);
+      border-color: var(--#{variables.$prefix}color-default-accordion-summary-focus-border);
+    }
+    &:active,
+    &.is-active {
+      background-color: var(--#{variables.$prefix}color-default-accordion-summary-active-back);
+      border-color: var(--#{variables.$prefix}color-default-accordion-summary-active-border);
+    }
+    &[disabled],
+    fieldset[disabled],
+    &.is-disabled {
+      background-color: var(--#{variables.$prefix}color-default-accordion-summary-disabled-back);
+      border-color: var(--#{variables.$prefix}color-default-accordion-summary-disabled-border);
+    }
+  }
+  .accordion-details {
+    border-color: var(--#{variables.$prefix}color-gray-border);
+    height: 0;
+    display: none;
+    padding: 1rem;
+  }
+  &[open],is-open {
+    .accordion-summary {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+    .accordion-details {
+      display: block;
+      height: auto;
+    }
+  }
+
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      color: var(--#{variables.$prefix}color-#{$colorName}-accordion-fore);
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-border);
+      .accordion-summary {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-border);
+        &:after {
+          background: var(--#{variables.$prefix}color-#{$colorName}-accordion-fore);
+        }
+        &:hover,
+        &.is-hovered,
+        &.is-hovered {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-hover-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-hover-border);
+        }
+        &:focus,
+        &.is-focus,
+        &.is-focused {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-focus-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-focus-border);
+        }
+        &:active,
+        &.is-active {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-active-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-active-border);
+        }
+        &[disabled],
+        fieldset[disabled],
+        &.is-disabled {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-disabled-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-disabled-border);
+        }
+      }
+      .accordion-details {
+        width: 100%;
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-accordion-summary-border);
+      }
+    }
+  }
+}

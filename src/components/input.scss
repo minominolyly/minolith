@@ -1,0 +1,220 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+
+.input {
+  background-color: var(--#{variables.$prefix}color-default-back);
+  border-color: var(--#{variables.$prefix}color-default-border);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: var(--border-width-medium);
+  padding: 0.5rem;
+  &::placeholder {
+    color: var(--#{variables.$prefix}color-default-placeholder);
+  }
+  &:focus,
+  &.is-focus,
+  &.is-focused {
+    background-color: var(--#{variables.$prefix}color-default-focus-back);
+    border-color: var(--#{variables.$prefix}color-default-focus-border);
+  }
+  &[disabled],
+  fieldset[disabled],
+  &.is-disabled {
+    background-color: var(--#{variables.$prefix}color-default-disabled-back);
+    border-color: var(--#{variables.$prefix}color-default-disabled-border);
+  }
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+      &::placeholder {
+        color: var(--#{variables.$prefix}color-#{$colorName}-placeholder);
+      }
+      &:focus,
+      &.is-focus,
+      &.is-focused {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-focus-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-focus-border);
+      }
+      &[disabled],
+      fieldset[disabled],
+      &.is-disabled {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+      }
+    }
+  }
+}
+
+.input-text {
+  @extend .input;
+}
+
+.input-checkbox {
+  @extend .input;
+  appearance: none;
+  border-radius: 25%;
+  cursor: pointer;
+  height: 1rem;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: middle;
+  width: 1rem;
+  &:after {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 25%;
+    border-style: solid;
+    border-width: 0 var(--#{variables.$prefix}border-width-medium) var(--#{variables.$prefix}border-width-medium) 0;
+    content: "";
+    display: block;
+    height: 1rem;
+    left: 0.25rem;
+    position: absolute;
+    top: -0.33rem;
+    transform: rotate(45deg);
+    width: 0.5rem;
+  }
+  &:checked {
+    &:after {
+      border-color: var(--#{variables.$prefix}color-default-fore);
+    }
+  }
+  &[disabled],
+  fieldset[disabled],
+  &.is-disabled {
+    background-color: var(--#{variables.$prefix}color-default-disabled-back);
+    border-color: var(--#{variables.$prefix}color-default-disabled-border);
+    &:checked {
+      &:after {
+        border-color: var(--#{variables.$prefix}color-default-disabled-fore);
+      }
+    }
+  }
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+      &:checked {
+        &:after {
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+        }
+      }
+      &[disabled],
+      fieldset[disabled],
+      &.is-disabled {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+        &:checked {
+          &:after {
+            border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-radio {
+  @extend .input;
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1rem;
+  line-height: 1.5;
+  position: relative;
+  vertical-align: middle;
+  width: 1rem;
+  &:after {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: var(--border-width-medium);
+    content: "";
+    display: block;
+    height: 0.5rem;
+    left: 0.125rem;
+    position: absolute;
+    top: 0.125rem;
+    width: 0.5rem;
+  }
+  &:checked {
+    &:after {
+      background-color: var(--#{variables.$prefix}color-default-fore);
+      border-color: var(--#{variables.$prefix}color-default-fore);
+    }
+  }
+  &[disabled],
+  fieldset[disabled],
+  &.is-disabled {
+    background-color: var(--#{variables.$prefix}color-default-disabled-back);
+    border-color: var(--#{variables.$prefix}color-default-disabled-border);
+    &:checked {
+      &:after {
+        border-color: var(--#{variables.$prefix}color-default-disabled-fore);
+      }
+    }
+  }
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+      &:checked {
+        &:after {
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+        }
+      }
+      &[disabled],
+      fieldset[disabled],
+      &.is-disabled {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+        &:checked {
+          &:after {
+            border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.input-color {
+  @extend .input;
+  cursor: pointer;
+  height: 2.5rem;
+}
+
+.input[type="text"],
+.input[type="email"],
+.input[type="number"],
+.input[type="password"] {
+  @extend .input-text;
+}
+
+textarea{
+  &.input {
+    @extend .input-text;
+    min-height: min-content;
+    width: 100%;
+    field-sizing: content;
+  }
+}
+
+.input[type="checkbox"] {
+  @extend .input-checkbox;
+}
+
+.input[type="radio"] {
+  @extend .input-radio;
+}
+
+.input[type="color"] {
+  @extend .input-color;
+}

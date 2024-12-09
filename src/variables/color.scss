@@ -1,0 +1,415 @@
+
+@use "sass:color";
+
+//#region define color settings
+
+$color-lightness-white: 95% !default;
+$color-lightness-black: 35% !default;
+
+$color-lightness-50: 80% !default;
+$color-lightness-offset-lighter: 2.5%;
+$color-lightness-offset-darker: 5.25%;
+
+$color-chroma-gray: 0.02 !default;
+$color-chroma-colorful: 0.085 !default;
+
+$color-hue-gray: 290 !default;
+$color-hue-red: 0 !default;
+$color-hue-orange: 70 !default;
+$color-hue-yellow: 90 !default;
+$color-hue-lime: 120 !default;
+$color-hue-green: 150 !default;
+$color-hue-cyan: 190 !default;
+$color-hue-blue: 240 !default;
+$color-hue-violet: 290 !default;
+$color-hue-magenta: 340 !default;
+
+//#endregion define color settings
+
+//#region define color shades array
+
+$colorShadesLight: (
+  (
+    name: "plain",
+    fore: "05",
+    back: "95",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      fore: "05",
+      back: "95",
+      border: "40",
+      accordionSummary: (
+        fore: "05",
+        back: "50",
+        border: "50",
+      ),
+      accordionDetails: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+    ),
+    button: (
+      fore: "05",
+      back: "50",
+      border: "50",
+      shadow: "50",
+    ),
+    card: (
+      fore: "05",
+      back: "60",
+      border: "60",
+      shadow: "50",
+      messageHeader: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+      messageBody: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+      messageFooter: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+    ),
+    message: (
+      fore: "05",
+      back: "60",
+      border: "60",
+      messageHeader: (
+        fore: "05",
+        back: "40",
+        border: "40",
+      ),
+      messageBody: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+    ),
+  ),
+  (
+    name: "disabled",
+    fore: "80",
+    back: "10",
+    border: "70",
+    placeholder: "40",
+    shadow: "30",
+    accordion: (
+      accordionSummary: (
+        fore: "05",
+        back: "70",
+        border: "70",
+      ),
+    ),
+    button: (
+      fore: "05",
+      back: "70",
+      border: "70",
+      shadow: "50",
+    ),
+  ),
+  (
+    name: "hover",
+    fore: "05",
+    back: "95",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+    ),
+    button: (
+      fore: "05",
+      back: "60",
+      border: "60",
+      shadow: "50",
+    ),
+  ),
+  (
+    name: "focus",
+    fore: "05",
+    back: "95",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "05",
+        back: "60",
+        border: "60",
+      ),
+    ),
+    button: (
+      fore: "05",
+      back: "60",
+      border: "60",
+      shadow: "50",
+    ),
+  ),
+  (
+    name: "active",
+    fore: "05",
+    back: "95",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "05",
+        back: "50",
+        border: "50",
+      ),
+    ),
+    button: (
+      fore: "05",
+      back: "50",
+      border: "50",
+      shadow: "50",
+    ),
+  ),
+  (
+    name: "visited",
+    fore: "05",
+    back: "95",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    button: (
+      fore: "05",
+      back: "50",
+      border: "50",
+      shadow: "50",
+    ),
+  )
+);
+
+$colorShadesDark: (
+  (
+    name: "plain",
+    fore: "95",
+    back: "05",
+    border: "40",
+    placeholder: "40",
+    shadow: "30",
+    accordion: (
+      fore: "95",
+      back: "05",
+      border: "40",
+      accordionSummary: (
+        fore: "95",
+        back: "30",
+        border: "50",
+      ),
+      accordionDetails: (
+        fore: "95",
+        back: "05",
+        border: "40",
+      ),
+    ),
+    button: (
+      fore: "95",
+      back: "20",
+      border: "20",
+      shadow: "30",
+    ),
+    card: (
+      fore: "95",
+      back: "30",
+      border: "40",
+      shadow: "30",
+      messageHeader: (
+        fore: "95",
+        back: "30",
+        border: "40",
+      ),
+      messageBody: (
+        fore: "95",
+        back: "30",
+        border: "40",
+      ),
+      messageFooter: (
+        fore: "95",
+        back: "30",
+        border: "40",
+      ),
+    ),
+    message: (
+      fore: "95",
+      back: "30",
+      messageHeader: (
+        fore: "95",
+        back: "20",
+        border: "40",
+      ),
+      messageBody: (
+        fore: "95",
+        back: "30",
+        border: "40",
+      ),
+    ),
+  ),
+  (
+    name: "disabled",
+    fore: "80",
+    back: "10",
+    border: "70",
+    placeholder: "40",
+    shadow: "30",
+    accordion: (
+      accordionSummary: (
+        fore: "95",
+        back: "60",
+        border: "60",
+      ),
+    ),
+    button: (
+      fore: "95",
+      back: "40",
+      border: "40",
+      shadow: "30",
+    ),
+  ),
+  (
+    name: "hover",
+    fore: "95",
+    back: "05",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "95",
+        back: "40",
+        border: "40",
+        shadow: "30",
+      ),
+    ),
+    button: (
+      fore: "95",
+      back: "30",
+      border: "30",
+      shadow: "30",
+    ),
+  ),
+  (
+    name: "focus",
+    fore: "95",
+    back: "05",
+    border: "60",
+    placeholder: "60",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "95",
+        back: "50",
+        border: "50",
+      ),
+    ),
+    button: (
+      fore: "95",
+      back: "30",
+      border: "30",
+      shadow: "30",
+    ),
+  ),
+  (
+    name: "active",
+    fore: "95",
+    back: "05",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    accordion: (
+      accordionSummary: (
+        fore: "95",
+        back: "50",
+        border: "50",
+      ),
+    ),
+    button: (
+      fore: "95",
+      back: "20",
+      border: "20",
+      shadow: "30",
+    ),
+  ),
+  (
+    name: "visited",
+    fore: "95",
+    back: "05",
+    border: "40",
+    placeholder: "40",
+    shadow: "40",
+    button: (
+      fore: "95",
+      back: "20",
+      border: "20",
+      shadow: "30",
+    ),
+  )
+);
+
+//#endregion define color shades array
+
+//#region define colorNames array
+
+$colors: (
+  (
+    "name": "gray",
+    "hue": $color-hue-gray,
+    "chroma": $color-chroma-gray,
+  ),
+  (
+    "name": "red",
+    "hue": $color-hue-red,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "orange",
+    "hue": $color-hue-orange,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "yellow",
+    "hue": $color-hue-yellow,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "green",
+    "hue": $color-hue-green,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "cyan",
+    "hue": $color-hue-cyan,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "blue",
+    "hue": $color-hue-blue,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "violet",
+    "hue": $color-hue-violet,
+    "chroma": $color-chroma-colorful,
+  ),
+  (
+    "name": "magenta",
+    "hue": $color-hue-magenta,
+    "chroma": $color-chroma-colorful,
+  )
+) !default;
+
+//#endregion define colorNames array

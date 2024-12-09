@@ -1,0 +1,95 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+
+.badge {
+  align-items: center;
+  background-color: var(--#{variables.$prefix}color-default-back);
+  border-color: var(--#{variables.$prefix}color-default-border);
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: var(--#{variables.$prefix}border-width-thin);
+  color: var(--#{variables.$prefix}color-default-fore);
+  display: inline-flex;
+  font-size: var(--#{variables.$prefix}font-size-small);
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+
+  &.is-small {
+    font-size: var(--#{variables.$prefix}font-size-xsmall);
+    border-width: var(--#{variables.$prefix}border-width-xthin);
+    padding: 0.125rem 0.25rem;
+  }
+
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+    }
+  }
+
+  &.is-clickable {
+    background-color: var(--#{variables.$prefix}color-default-button-back);
+    border-color: var(--#{variables.$prefix}color-default-button-border);
+    user-select: none;
+    cursor: pointer;
+    &:hover,
+    &.is-hovered,
+    &.is-hovered {
+      background-color: var(--#{variables.$prefix}color-default-hover-button-back);
+      border-color: var(--#{variables.$prefix}color-default-hover-button-border);
+    }
+    &:focus,
+    &.is-focus,
+    &.is-focused {
+      background-color: var(--#{variables.$prefix}color-default-focus-button-back);
+      border-color: var(--#{variables.$prefix}color-default-focus-button-border);
+    }
+    &:active,
+    &.is-active {
+      background-color: var(--#{variables.$prefix}color-default-active-button-back);
+      border-color: var(--#{variables.$prefix}color-default-active-button-border);
+    }
+    &[disabled],
+    fieldset[disabled],
+    &.is-disabled {
+      background-color: var(--#{variables.$prefix}color-default-disabled-button-back);
+      border-color: var(--#{variables.$prefix}color-default-disabled-button-border);
+    }
+
+    @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-button-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-button-border);
+        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+        &:hover,
+        &.is-hover,
+        &.is-hovered {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-hover-button-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-hover-button-border);
+        }
+        &:focus,
+        &.is-focus,
+        &.is-focused {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-focus-button-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-focus-button-border);
+        }
+        &:active,
+        &.is-active {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-active-button-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-active-button-border);
+        }
+        &[disabled],
+        fieldset[disabled],
+        &.is-disabled {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-button-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-button-border);
+        }
+      }
+    }
+  }
+
+}

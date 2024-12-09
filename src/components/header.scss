@@ -1,0 +1,16 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+
+.header {
+  display: block;
+  width: 100%;
+  box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-default-shadow);
+  backdrop-filter: blur(0.25rem);
+  &.is-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--#{variables.$prefix}z-index-header-is-sticky);
+  }
+}

@@ -1,0 +1,56 @@
+
+$border-width-xthin: 0.05rem !default;
+$border-width-thin: 0.1rem !default;
+$border-width-medium: 0.125rem !default;
+$border-width-thick: 0.25rem !default;
+$border-width-xthick: 0.5rem !default;
+
+$border-radius-small: 0.2rem !default;
+$border-radius-medium: 0.25rem !default;
+$border-radius-large: 0.5rem !default;
+$border-radius-circle: 50% !default;
+$border-radius-pill: 50rem !default;
+
+$borderSides: (
+  "top",
+  "right",
+  "bottom",
+  "left",
+);
+
+$borderStyles: (
+  "solid",
+  "dashed",
+  "dotted",
+);
+
+$borderWidths: (
+  "xthin",
+  "thin",
+  "medium",
+  "thick",
+  "xthick",
+);
+
+$borderRadiuses: (
+  (
+    "name": "small",
+    "value": $border-radius-small,
+  ),
+  (
+    "name": "medium",
+    "value": $border-radius-medium,
+  ),
+  (
+    "name": "large",
+    "value": $border-radius-large,
+  ),
+  (
+    "name": "circle",
+    "value": $border-radius-circle,
+  ),
+  (
+    "name": "pill",
+    "value": $border-radius-pill,
+  ),
+) !default;

@@ -1,0 +1,220 @@
+@use "../variables/index.scss" as variables;
+
+$offset: 0.02px;
+
+@mixin screen($size) {
+  @if ($size == "xsmall") {
+    $max-width: variables.$breakpoint-small - $offset;
+    @media screen and (max-width: $max-width) {
+      @content;
+    }
+  } @else if ($size == "xlarge") {
+    $min-width: variables.$breakpoint-xlarge;
+    @media screen and (min-width: $min-width) {
+      @content;
+    }
+  } @else {
+    $min-width: variables.$breakpoint-medium !default;
+    $max-width: variables.$breakpoint-large - $offset !default;
+    @if ($size == "medium") {
+    } @else if ($size == "small") {
+      $min-width: variables.$breakpoint-small;
+      $max-width: variables.$breakpoint-medium - $offset;
+    } @else if ($size == "large") {
+      $min-width: variables.$breakpoint-large;
+      $max-width: variables.$breakpoint-xlarge - $offset;
+    } @else {
+      @error "size wrong.";
+    }
+    @media screen and (min-width: $min-width) and (max-width: $max-width) {
+      @content;
+    }
+  }
+}
+
+@mixin is-responsive($suffix: "") {
+  @include screen("xsmall") {
+    &.is-xsmall#{$suffix},
+    &.is-xsmall-up#{$suffix},
+    &.is-small-down#{$suffix},
+    &.is-medium-down#{$suffix},
+    &.is-large-down#{$suffix},
+    &.is-xlarge-down#{$suffix} {
+      @content;
+    }
+  }
+  @include screen("small") {
+    &.is-xsmall-up#{$suffix},
+    &.is-small-down#{$suffix},
+    &.is-small#{$suffix},
+    &.is-small-up#{$suffix},
+    &.is-medium-down#{$suffix},
+    &.is-large-down#{$suffix},
+    &.is-xlarge-down#{$suffix} {
+      @content;
+    }
+  }
+  @include screen("medium") {
+    &.is-xsmall-up#{$suffix},
+    &.is-small-up#{$suffix},
+    &.is-medium-down#{$suffix},
+    &.is-medium#{$suffix},
+    &.is-medium-up#{$suffix},
+    &.is-large-down#{$suffix},
+    &.is-xlarge-down#{$suffix} {
+      @content;
+    }
+  }
+  @include screen("large") {
+    &.is-xsmall-up#{$suffix},
+    &.is-small-up#{$suffix},
+    &.is-medium-up#{$suffix},
+    &.is-large-down#{$suffix},
+    &.is-large#{$suffix},
+    &.is-large-up#{$suffix},
+    &.is-xlarge-down#{$suffix} {
+      @content;
+    }
+  }
+  @include screen("xlarge") {
+    &.is-xsmall-up#{$suffix},
+    &.is-small-up#{$suffix},
+    &.is-medium-up#{$suffix},
+    &.is-large-up#{$suffix},
+    &.is-xlarge-down#{$suffix},
+    &.is-xlarge#{$suffix} {
+      @content;
+    }
+  }
+}
+
+@mixin add-responsible-visible() {
+  @content;
+  &.is-xsmall {
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("medium") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-tablet-or-less {
+    @include screen("medium") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-tablet {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("medium") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-tablet-or-more {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+  }
+  &.is-desktop-or-less {
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-desktop {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-desktop-or-more {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+  }
+  &.is-widescreen-or-less {
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-widescreen {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("medium") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-widescreen-or-more {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("medium") {
+      display: none !important;
+    }
+  }
+  &.is-fullhd {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("medium") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+  }
+}
+
+@mixin column() {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 100%;
+  position: relative;
+}

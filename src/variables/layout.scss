@@ -1,0 +1,28 @@
+$breakpoint-xsmall: 0 !default;
+$breakpoint-small: 544px !default;
+$breakpoint-medium: 768px !default;
+$breakpoint-large: 1024px !default;
+$breakpoint-xlarge: 1200px !default;
+
+$breakpoints: (
+  (
+    "name": "xsmall",
+    "value": $breakpoint-xsmall,
+  ),
+  (
+    "name": "small",
+    "value": $breakpoint-small,
+  ),
+  (
+    "name": "medium",
+    "value": $breakpoint-medium,
+  ),
+  (
+    "name": "large",
+    "value": $breakpoint-large,
+  ),
+  (
+    "name": "xlarge",
+    "value": $breakpoint-xlarge,
+  )
+);

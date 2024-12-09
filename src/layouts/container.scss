@@ -1,0 +1,19 @@
+
+@use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  width: auto;
+  @include mixins.screen("medium") {
+    max-width: variables.$breakpoint-medium;
+  }
+  @include mixins.screen("large") {
+    max-width: variables.$breakpoint-large;
+  }
+  @include mixins.screen("xlarge") {
+    max-width: variables.$breakpoint-xlarge;
+  }
+}

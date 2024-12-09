@@ -1,0 +1,14 @@
+
+.list {
+  display: block;
+  list-style: none;
+  &.is-style-decimal {
+    list-style: decimal;
+  }
+  &.is-style-disc {
+    list-style: disc;
+  }
+  .list-item {
+    display: list-item;
+  }
+}

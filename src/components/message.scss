@@ -1,0 +1,41 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+
+.message {
+  display: block;
+  background-color: var(--#{variables.$prefix}color-default-message-back);
+  border-radius: var(--#{variables.$prefix}border-radius-medium);
+  color: var(--#{variables.$prefix}color-default-messaage-fore);
+  .message-header {
+    background-color: var(--#{variables.$prefix}color-default-message-header-back);
+    border-radius: var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium) 0 0;
+    color: var(--#{variables.$prefix}color-default-message-header-fore);
+    padding: 0.5rem;
+    display: block;
+    font-size: var(--#{variables.$prefix}font-size-medium);
+    font-weight: var(--#{variables.$prefix}font-weight-semibold);
+  }
+  .message-body {
+    background-color: var(--#{variables.$prefix}color-default-message-body-back);
+    border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium);
+    color: var(--#{variables.$prefix}color-default-message-body-fore);
+    padding: 0.5rem;
+    display: block;
+  }
+
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      background-color: var(--#{variables.$prefix}color-#{$colorName}-message-back);
+      color: var(--#{variables.$prefix}color-#{$colorName}-message-fore);
+      .message-header {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-message-header-back);
+        color: var(--#{variables.$prefix}color-#{$colorName}-message-header-fore);
+      }
+      .message-body {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-message-body-back);
+        color: var(--#{variables.$prefix}color-#{$colorName}-message-body-fore);
+      }
+    }
+  }
+}

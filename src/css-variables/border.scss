@@ -1,0 +1,16 @@
+@use "../variables/index.scss" as variables;
+@use "sass:map";
+
+:root {
+  --#{variables.$prefix}border-width-xthin: #{variables.$border-width-xthin};
+  --#{variables.$prefix}border-width-thin: #{variables.$border-width-thin};
+  --#{variables.$prefix}border-width-medium: #{variables.$border-width-medium};
+  --#{variables.$prefix}border-width-thick: #{variables.$border-width-thick};
+  --#{variables.$prefix}border-width-xthick: #{variables.$border-width-xthick};
+
+  @each $borderRadius in variables.$borderRadiuses {
+    $name: map.get($borderRadius, "name");
+    $value: map.get($borderRadius, "value");
+    --#{variables.$prefix}border-radius-#{$name}: #{$value};
+  }
+}

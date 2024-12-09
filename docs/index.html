@@ -1,0 +1,929 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>minolith</title>
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../dist/minolith.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="https://unpkg.com/sorbit/dist/css/minolith.min.css"
+    />
+  </head>
+  <body class="tabula">
+    <header class="header is-sticky">
+      <div class="">
+        <nav class="nav" role="navigation" aria-label="main navigation">
+          <div class="nav-accordion is-tablet-or-less">
+            <div class="nav-brand">
+              <div class="left">
+                <div
+                  role="button"
+                  class="hamburger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="navbar-menu"
+                  onclick="toggleHamburger()"
+                >
+                  <span class="crown"></span
+                  ><span class="upperpatty" aria-hidden="true"></span
+                  ><span class="club" aria-hidden="true"></span
+                  ><span class="lowerpatty" aria-hidden="true"></span
+                  ><span class="heel"></span>
+                </div>
+              </div>
+              <span class="center"
+                ><a aria-current="page" hreflang="ja" href="/" class="link"
+                  >minolith</a
+                ></span
+              >
+              <span class="right"></span>
+            </div>
+            <div id="nav-menu" class="nav-menu">
+              <a class="nav-menu-item" onclick="changeColorScheme(`light`)">
+                <span>light</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColorScheme(`dark`)">
+                <span>dark</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(``)">
+                <span>default</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-gray`)">
+                <span>gray</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-red`)">
+                <span>red</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-orange`)">
+                <span>orange</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-yellow`)">
+                <span>yellow</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-green`)">
+                <span>green</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-cyan`)">
+                <span>cyan</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-blue`)">
+                <span>blue</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-violet`)">
+                <span>violet</span>
+              </a>
+            </div>
+          </div>
+          <div class="nav-static is-tablet-or-more">
+            <div class="nav-brand">
+              <div class="left">
+                <div class="mx-2rem">
+                  <a aria-current="page" hreflang="ja" href="/" class="link"
+                    >minolith</a
+                  >
+                </div>
+              </div>
+              <span class="right"></span>
+            </div>
+            <div id="nav-menu" class="nav-menu">
+              <a class="nav-menu-item" onclick="changeColorScheme(`light`)">
+                <span>light</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColorScheme(`dark`)">
+                <span>dark</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(``)">
+                <span>default</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-gray`)">
+                <span>gray</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-red`)">
+                <span>red</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-orange`)">
+                <span>orange</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-yellow`)">
+                <span>yellow</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-green`)">
+                <span>green</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-cyan`)">
+                <span>cyan</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-blue`)">
+                <span>blue</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-violet`)">
+                <span>violet</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="my-1rem">
+          <span class="badge">.badge</span>
+          <!-- <span class="badge is-small">.badge .is-small</span> -->
+        </section>
+        <section class="my-1rem">
+          <div>
+            <button class="button">.button</button>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <label class="label">.label</label>
+          </div>
+          <div>
+            <input type="text" class="input" placeholder=".input text" />
+          </div>
+          <div>
+            <textarea class="input" placeholder=".input textarea"></textarea>
+          </div>
+          <div>
+            <input type="password" class="input" placeholder=".input password" />
+          </div>
+          <div>
+            <input type="date" class="input" />
+          </div>
+          <div>
+            <input type="time" class="input" />
+          </div>
+          <div>
+            <input type="color" class="input" />
+          </div>
+          <div>
+            <input type="datetime-local" class="input" />
+          </div>
+          <div>
+            <input type="file" class="input" />
+          </div>
+          <div>
+            <input type="checkbox" class="input" />
+          </div>
+          <div>
+            <input type="radio" class="input" />
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="loader"></div>
+          </div>
+          <div>
+            <div class="progress is-50-percent"></div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div class="message">
+            <div class="message-header">.message</div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div class="card">
+            <div class="card-header">.card</div>
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="card-footer">footer</div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div class="gingham is-gray-60 is-aspect-ratio-16-9">
+            gingham(default is not available)
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div class="stripe is-gray-60 is-aspect-ratio-16-9">
+            stripe(default is not available)
+          </div>
+        </section>
+        <section class="my-1rem">
+          <h1 class="heading-1">.heading-1</h1>
+          <h2 class="heading-2">.heading-2</h2>
+          <h3 class="heading-3">.heading-3</h1>
+          <h4 class="heading-4">.heading-4</h2>
+          <h5 class="heading-5">.heading-5</h1>
+          <h6 class="heading-6">.heading-6</h2>
+        </section>
+        <section class="my-1rem">
+          <div class="is-italic">.is-italic</div>
+          <div class="is-oblique">.is-oblique</div>
+          <div class="is-capitalized">.is-capitalized</div>
+          <div class="is-lowercase">.is-lowercase</div>
+          <div class="is-uppercase">.is-uppercase</div>
+        </section>
+        <section class="my-1rem">
+          <div class="is-text-align-left">.is-text-align-left</div>
+          <div class="is-text-align-right">.is-text-align-right</div>
+          <div class="is-text-align-center">.is-text-align-center</div>
+          <div class="is-text-align-unset">.is-text-align-unset</div>
+        </section>
+        <section class="my-1rem">
+          <div class="is-white-space-nowrap">.is-white-space-nowrap</div>
+        </section>
+        <section class="my-1rem">
+          <div class="is-font-size-small">.is-font-size-small</div>
+          <div class="is-font-size-normal">.is-font-size-normal</div>
+          <div class="is-font-size-medium">.is-font-size-medium</div>
+          <div class="is-font-size-large">.is-font-size-large</div>
+          <div class="is-font-size-xlarge">.is-font-size-xlarge</div>
+          <div class="is-font-size-xxlarge">.is-font-size-xxlarge</div>
+          <div class="is-font-size-xxxlarge">.is-font-size-xxxlarge</div>
+          <div class="is-font-size-xxxxlarge">.is-font-size-xxxxlarge</div>
+          <div class="is-font-size-xxxxxlarge">.is-font-size-xxxxxlarge</div>
+        </section>
+        <section class="my-1rem">
+          <div class="is-white-space-nowrap">.is-white-space-nowrap</div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="is-forecolor-gray-10">.is-forecolor-gray-10</div>
+            <div class="is-forecolor-gray-20">.is-forecolor-gray-20</div>
+            <div class="is-forecolor-gray-30">.is-forecolor-gray-30</div>
+            <div class="is-forecolor-gray-40">.is-forecolor-gray-40</div>
+            <div class="is-forecolor-gray-50">.is-forecolor-gray-50</div>
+            <div class="is-forecolor-gray-60">.is-forecolor-gray-60</div>
+            <div class="is-forecolor-gray-70">.is-forecolor-gray-70</div>
+            <div class="is-forecolor-gray-80">.is-forecolor-gray-80</div>
+            <div class="is-forecolor-gray-90">.is-forecolor-gray-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-red-10">.is-forecolor-red-10</div>
+            <div class="is-forecolor-red-20">.is-forecolor-red-20</div>
+            <div class="is-forecolor-red-30">.is-forecolor-red-30</div>
+            <div class="is-forecolor-red-40">.is-forecolor-red-40</div>
+            <div class="is-forecolor-red-50">.is-forecolor-red-50</div>
+            <div class="is-forecolor-red-60">.is-forecolor-red-60</div>
+            <div class="is-forecolor-red-70">.is-forecolor-red-70</div>
+            <div class="is-forecolor-red-80">.is-forecolor-red-80</div>
+            <div class="is-forecolor-red-90">.is-forecolor-red-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-orange-10">.is-forecolor-orange-10</div>
+            <div class="is-forecolor-orange-20">.is-forecolor-orange-20</div>
+            <div class="is-forecolor-orange-30">.is-forecolor-orange-30</div>
+            <div class="is-forecolor-orange-40">.is-forecolor-orange-40</div>
+            <div class="is-forecolor-orange-50">.is-forecolor-orange-50</div>
+            <div class="is-forecolor-orange-60">.is-forecolor-orange-60</div>
+            <div class="is-forecolor-orange-70">.is-forecolor-orange-70</div>
+            <div class="is-forecolor-orange-80">.is-forecolor-orange-80</div>
+            <div class="is-forecolor-orange-90">.is-forecolor-orange-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-yellow-10">.is-forecolor-yellow-10</div>
+            <div class="is-forecolor-yellow-20">.is-forecolor-yellow-20</div>
+            <div class="is-forecolor-yellow-30">.is-forecolor-yellow-30</div>
+            <div class="is-forecolor-yellow-40">.is-forecolor-yellow-40</div>
+            <div class="is-forecolor-yellow-50">.is-forecolor-yellow-50</div>
+            <div class="is-forecolor-yellow-60">.is-forecolor-yellow-60</div>
+            <div class="is-forecolor-yellow-70">.is-forecolor-yellow-70</div>
+            <div class="is-forecolor-yellow-80">.is-forecolor-yellow-80</div>
+            <div class="is-forecolor-yellow-90">.is-forecolor-yellow-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-green-10">.is-forecolor-green-10</div>
+            <div class="is-forecolor-green-20">.is-forecolor-green-20</div>
+            <div class="is-forecolor-green-30">.is-forecolor-green-30</div>
+            <div class="is-forecolor-green-40">.is-forecolor-green-40</div>
+            <div class="is-forecolor-green-50">.is-forecolor-green-50</div>
+            <div class="is-forecolor-green-60">.is-forecolor-green-60</div>
+            <div class="is-forecolor-green-70">.is-forecolor-green-70</div>
+            <div class="is-forecolor-green-80">.is-forecolor-green-80</div>
+            <div class="is-forecolor-green-90">.is-forecolor-green-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-cyan-10">.is-forecolor-cyan-10</div>
+            <div class="is-forecolor-cyan-20">.is-forecolor-cyan-20</div>
+            <div class="is-forecolor-cyan-30">.is-forecolor-cyan-30</div>
+            <div class="is-forecolor-cyan-40">.is-forecolor-cyan-40</div>
+            <div class="is-forecolor-cyan-50">.is-forecolor-cyan-50</div>
+            <div class="is-forecolor-cyan-60">.is-forecolor-cyan-60</div>
+            <div class="is-forecolor-cyan-70">.is-forecolor-cyan-70</div>
+            <div class="is-forecolor-cyan-80">.is-forecolor-cyan-80</div>
+            <div class="is-forecolor-cyan-90">.is-forecolor-cyan-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-blue-10">.is-forecolor-blue-10</div>
+            <div class="is-forecolor-blue-20">.is-forecolor-blue-20</div>
+            <div class="is-forecolor-blue-30">.is-forecolor-blue-30</div>
+            <div class="is-forecolor-blue-40">.is-forecolor-blue-40</div>
+            <div class="is-forecolor-blue-50">.is-forecolor-blue-50</div>
+            <div class="is-forecolor-blue-60">.is-forecolor-blue-60</div>
+            <div class="is-forecolor-blue-70">.is-forecolor-blue-70</div>
+            <div class="is-forecolor-blue-80">.is-forecolor-blue-80</div>
+            <div class="is-forecolor-blue-90">.is-forecolor-blue-90</div>
+          </div>
+          <div>
+            <div class="is-forecolor-violet-10">.is-forecolor-violet-10</div>
+            <div class="is-forecolor-violet-20">.is-forecolor-violet-20</div>
+            <div class="is-forecolor-violet-30">.is-forecolor-violet-30</div>
+            <div class="is-forecolor-violet-40">.is-forecolor-violet-40</div>
+            <div class="is-forecolor-violet-50">.is-forecolor-violet-50</div>
+            <div class="is-forecolor-violet-60">.is-forecolor-violet-60</div>
+            <div class="is-forecolor-violet-70">.is-forecolor-violet-70</div>
+            <div class="is-forecolor-violet-80">.is-forecolor-violet-80</div>
+            <div class="is-forecolor-violet-90">.is-forecolor-violet-90</div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="is-backcolor-gray-10">.is-backcolor-gray-10</div>
+            <div class="is-backcolor-gray-20">.is-backcolor-gray-20</div>
+            <div class="is-backcolor-gray-30">.is-backcolor-gray-30</div>
+            <div class="is-backcolor-gray-40">.is-backcolor-gray-40</div>
+            <div class="is-backcolor-gray-50">.is-backcolor-gray-50</div>
+            <div class="is-backcolor-gray-60">.is-backcolor-gray-60</div>
+            <div class="is-backcolor-gray-70">.is-backcolor-gray-70</div>
+            <div class="is-backcolor-gray-80">.is-backcolor-gray-80</div>
+            <div class="is-backcolor-gray-90">.is-backcolor-gray-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-red-10">.is-backcolor-red-10</div>
+            <div class="is-backcolor-red-20">.is-backcolor-red-20</div>
+            <div class="is-backcolor-red-30">.is-backcolor-red-30</div>
+            <div class="is-backcolor-red-40">.is-backcolor-red-40</div>
+            <div class="is-backcolor-red-50">.is-backcolor-red-50</div>
+            <div class="is-backcolor-red-60">.is-backcolor-red-60</div>
+            <div class="is-backcolor-red-70">.is-backcolor-red-70</div>
+            <div class="is-backcolor-red-80">.is-backcolor-red-80</div>
+            <div class="is-backcolor-red-90">.is-backcolor-red-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-orange-10">.is-backcolor-orange-10</div>
+            <div class="is-backcolor-orange-20">.is-backcolor-orange-20</div>
+            <div class="is-backcolor-orange-30">.is-backcolor-orange-30</div>
+            <div class="is-backcolor-orange-40">.is-backcolor-orange-40</div>
+            <div class="is-backcolor-orange-50">.is-backcolor-orange-50</div>
+            <div class="is-backcolor-orange-60">.is-backcolor-orange-60</div>
+            <div class="is-backcolor-orange-70">.is-backcolor-orange-70</div>
+            <div class="is-backcolor-orange-80">.is-backcolor-orange-80</div>
+            <div class="is-backcolor-orange-90">.is-backcolor-orange-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-yellow-10">.is-backcolor-yellow-10</div>
+            <div class="is-backcolor-yellow-20">.is-backcolor-yellow-20</div>
+            <div class="is-backcolor-yellow-30">.is-backcolor-yellow-30</div>
+            <div class="is-backcolor-yellow-40">.is-backcolor-yellow-40</div>
+            <div class="is-backcolor-yellow-50">.is-backcolor-yellow-50</div>
+            <div class="is-backcolor-yellow-60">.is-backcolor-yellow-60</div>
+            <div class="is-backcolor-yellow-70">.is-backcolor-yellow-70</div>
+            <div class="is-backcolor-yellow-80">.is-backcolor-yellow-80</div>
+            <div class="is-backcolor-yellow-90">.is-backcolor-yellow-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-green-10">.is-backcolor-green-10</div>
+            <div class="is-backcolor-green-20">.is-backcolor-green-20</div>
+            <div class="is-backcolor-green-30">.is-backcolor-green-30</div>
+            <div class="is-backcolor-green-40">.is-backcolor-green-40</div>
+            <div class="is-backcolor-green-50">.is-backcolor-green-50</div>
+            <div class="is-backcolor-green-60">.is-backcolor-green-60</div>
+            <div class="is-backcolor-green-70">.is-backcolor-green-70</div>
+            <div class="is-backcolor-green-80">.is-backcolor-green-80</div>
+            <div class="is-backcolor-green-90">.is-backcolor-green-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-cyan-10">.is-backcolor-cyan-10</div>
+            <div class="is-backcolor-cyan-20">.is-backcolor-cyan-20</div>
+            <div class="is-backcolor-cyan-30">.is-backcolor-cyan-30</div>
+            <div class="is-backcolor-cyan-40">.is-backcolor-cyan-40</div>
+            <div class="is-backcolor-cyan-50">.is-backcolor-cyan-50</div>
+            <div class="is-backcolor-cyan-60">.is-backcolor-cyan-60</div>
+            <div class="is-backcolor-cyan-70">.is-backcolor-cyan-70</div>
+            <div class="is-backcolor-cyan-80">.is-backcolor-cyan-80</div>
+            <div class="is-backcolor-cyan-90">.is-backcolor-cyan-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-blue-10">.is-backcolor-blue-10</div>
+            <div class="is-backcolor-blue-20">.is-backcolor-blue-20</div>
+            <div class="is-backcolor-blue-30">.is-backcolor-blue-30</div>
+            <div class="is-backcolor-blue-40">.is-backcolor-blue-40</div>
+            <div class="is-backcolor-blue-50">.is-backcolor-blue-50</div>
+            <div class="is-backcolor-blue-60">.is-backcolor-blue-60</div>
+            <div class="is-backcolor-blue-70">.is-backcolor-blue-70</div>
+            <div class="is-backcolor-blue-80">.is-backcolor-blue-80</div>
+            <div class="is-backcolor-blue-90">.is-backcolor-blue-90</div>
+          </div>
+          <div>
+            <div class="is-backcolor-violet-10">.is-backcolor-violet-10</div>
+            <div class="is-backcolor-violet-20">.is-backcolor-violet-20</div>
+            <div class="is-backcolor-violet-30">.is-backcolor-violet-30</div>
+            <div class="is-backcolor-violet-40">.is-backcolor-violet-40</div>
+            <div class="is-backcolor-violet-50">.is-backcolor-violet-50</div>
+            <div class="is-backcolor-violet-60">.is-backcolor-violet-60</div>
+            <div class="is-backcolor-violet-70">.is-backcolor-violet-70</div>
+            <div class="is-backcolor-violet-80">.is-backcolor-violet-80</div>
+            <div class="is-backcolor-violet-90">.is-backcolor-violet-90</div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="is-highlighter-gray-10">.is-highlighter-gray-10</div>
+            <div class="is-highlighter-gray-20">.is-highlighter-gray-20</div>
+            <div class="is-highlighter-gray-30">.is-highlighter-gray-30</div>
+            <div class="is-highlighter-gray-40">.is-highlighter-gray-40</div>
+            <div class="is-highlighter-gray-50">.is-highlighter-gray-50</div>
+            <div class="is-highlighter-gray-60">.is-highlighter-gray-60</div>
+            <div class="is-highlighter-gray-70">.is-highlighter-gray-70</div>
+            <div class="is-highlighter-gray-80">.is-highlighter-gray-80</div>
+            <div class="is-highlighter-gray-90">.is-highlighter-gray-90</div>
+          </div>
+          <div>
+            <div class="is-highlighter-red-10">.is-highlighter-red-10</div>
+            <div class="is-highlighter-red-20">.is-highlighter-red-20</div>
+            <div class="is-highlighter-red-30">.is-highlighter-red-30</div>
+            <div class="is-highlighter-red-40">.is-highlighter-red-40</div>
+            <div class="is-highlighter-red-50">.is-highlighter-red-50</div>
+            <div class="is-highlighter-red-60">.is-highlighter-red-60</div>
+            <div class="is-highlighter-red-70">.is-highlighter-red-70</div>
+            <div class="is-highlighter-red-80">.is-highlighter-red-80</div>
+            <div class="is-highlighter-red-90">.is-highlighter-red-90</div>
+          </div>
+          <div>
+            <div class="is-highlighter-orange-10">
+              .is-highlighter-orange-10
+            </div>
+            <div class="is-highlighter-orange-20">
+              .is-highlighter-orange-20
+            </div>
+            <div class="is-highlighter-orange-30">
+              .is-highlighter-orange-30
+            </div>
+            <div class="is-highlighter-orange-40">
+              .is-highlighter-orange-40
+            </div>
+            <div class="is-highlighter-orange-50">
+              .is-highlighter-orange-50
+            </div>
+            <div class="is-highlighter-orange-60">
+              .is-highlighter-orange-60
+            </div>
+            <div class="is-highlighter-orange-70">
+              .is-highlighter-orange-70
+            </div>
+            <div class="is-highlighter-orange-80">
+              .is-highlighter-orange-80
+            </div>
+            <div class="is-highlighter-orange-90">
+              .is-highlighter-orange-90
+            </div>
+          </div>
+          <div>
+            <div class="is-highlighter-yellow-10">
+              .is-highlighter-yellow-10
+            </div>
+            <div class="is-highlighter-yellow-20">
+              .is-highlighter-yellow-20
+            </div>
+            <div class="is-highlighter-yellow-30">
+              .is-highlighter-yellow-30
+            </div>
+            <div class="is-highlighter-yellow-40">
+              .is-highlighter-yellow-40
+            </div>
+            <div class="is-highlighter-yellow-50">
+              .is-highlighter-yellow-50
+            </div>
+            <div class="is-highlighter-yellow-60">
+              .is-highlighter-yellow-60
+            </div>
+            <div class="is-highlighter-yellow-70">
+              .is-highlighter-yellow-70
+            </div>
+            <div class="is-highlighter-yellow-80">
+              .is-highlighter-yellow-80
+            </div>
+            <div class="is-highlighter-yellow-90">
+              .is-highlighter-yellow-90
+            </div>
+          </div>
+          <div>
+            <div class="is-highlighter-green-10">
+              .is-highlighter-green-10
+            </div>
+            <div class="is-highlighter-green-20">
+              .is-highlighter-green-20
+            </div>
+            <div class="is-highlighter-green-30">
+              .is-highlighter-green-30
+            </div>
+            <div class="is-highlighter-green-40">
+              .is-highlighter-green-40
+            </div>
+            <div class="is-highlighter-green-50">
+              .is-highlighter-green-50
+            </div>
+            <div class="is-highlighter-green-60">
+              .is-highlighter-green-60
+            </div>
+            <div class="is-highlighter-green-70">
+              .is-highlighter-green-70
+            </div>
+            <div class="is-highlighter-green-80">
+              .is-highlighter-green-80
+            </div>
+            <div class="is-highlighter-green-90">
+              .is-highlighter-green-90
+            </div>
+          </div>
+          <div>
+            <div class="is-highlighter-cyan-10">.is-highlighter-cyan-10</div>
+            <div class="is-highlighter-cyan-20">.is-highlighter-cyan-20</div>
+            <div class="is-highlighter-cyan-30">.is-highlighter-cyan-30</div>
+            <div class="is-highlighter-cyan-40">.is-highlighter-cyan-40</div>
+            <div class="is-highlighter-cyan-50">.is-highlighter-cyan-50</div>
+            <div class="is-highlighter-cyan-60">.is-highlighter-cyan-60</div>
+            <div class="is-highlighter-cyan-70">.is-highlighter-cyan-70</div>
+            <div class="is-highlighter-cyan-80">.is-highlighter-cyan-80</div>
+            <div class="is-highlighter-cyan-90">.is-highlighter-cyan-90</div>
+          </div>
+          <div>
+            <div class="is-highlighter-blue-10">.is-highlighter-blue-10</div>
+            <div class="is-highlighter-blue-20">.is-highlighter-blue-20</div>
+            <div class="is-highlighter-blue-30">.is-highlighter-blue-30</div>
+            <div class="is-highlighter-blue-40">.is-highlighter-blue-40</div>
+            <div class="is-highlighter-blue-50">.is-highlighter-blue-50</div>
+            <div class="is-highlighter-blue-60">.is-highlighter-blue-60</div>
+            <div class="is-highlighter-blue-70">.is-highlighter-blue-70</div>
+            <div class="is-highlighter-blue-80">.is-highlighter-blue-80</div>
+            <div class="is-highlighter-blue-90">.is-highlighter-blue-90</div>
+          </div>
+          <div>
+            <div class="is-highlighter-violet-10">
+              .is-highlighter-violet-10
+            </div>
+            <div class="is-highlighter-violet-20">
+              .is-highlighter-violet-20
+            </div>
+            <div class="is-highlighter-violet-30">
+              .is-highlighter-violet-30
+            </div>
+            <div class="is-highlighter-violet-40">
+              .is-highlighter-violet-40
+            </div>
+            <div class="is-highlighter-violet-50">
+              .is-highlighter-violet-50
+            </div>
+            <div class="is-highlighter-violet-60">
+              .is-highlighter-violet-60
+            </div>
+            <div class="is-highlighter-violet-70">
+              .is-highlighter-violet-70
+            </div>
+            <div class="is-highlighter-violet-80">
+              .is-highlighter-violet-80
+            </div>
+            <div class="is-highlighter-violet-90">
+              .is-highlighter-violet-90
+            </div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="has-border-solid">.has-border-solid</div>
+            <div class="has-border-dashed">.has-border-dashed</div>
+            <div class="has-border-dotted">.has-border-dotted</div>
+            <div class="has-border-solid is-border-width-xthin">
+              .is-border-width-xthin
+            </div>
+            <div class="has-border-solid is-border-width-thin">
+              .is-border-width-thin
+            </div>
+            <div class="has-border-solid is-border-width-medium">
+              .is-border-width-medium
+            </div>
+            <div class="has-border-solid is-border-width-thick">
+              .is-border-width-thick
+            </div>
+            <div class="has-border-solid is-border-width-xthick">
+              .is-border-width-xthick
+            </div>
+            <div class="has-border-solid is-border-radius-medium">
+              .is-border-radius-medium
+            </div>
+            <div class="has-border-solid is-border-radius-circle">
+              .is-border-radius-circle
+            </div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <div>
+            <div class="has-border-solid is-bordercolor-gray-10">
+              .is-bordercolor-gray-10
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-20">
+              .is-bordercolor-gray-20
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-30">
+              .is-bordercolor-gray-30
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-40">
+              .is-bordercolor-gray-40
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-50">
+              .is-bordercolor-gray-50
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-60">
+              .is-bordercolor-gray-60
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-70">
+              .is-bordercolor-gray-70
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-80">
+              .is-bordercolor-gray-80
+            </div>
+            <div class="has-border-solid is-bordercolor-gray-90">
+              .is-bordercolor-gray-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-red-10">
+              .is-bordercolor-red-10
+            </div>
+            <div class="has-border-solid is-bordercolor-red-20">
+              .is-bordercolor-red-20
+            </div>
+            <div class="has-border-solid is-bordercolor-red-30">
+              .is-bordercolor-red-30
+            </div>
+            <div class="has-border-solid is-bordercolor-red-40">
+              .is-bordercolor-red-40
+            </div>
+            <div class="has-border-solid is-bordercolor-red-50">
+              .is-bordercolor-red-50
+            </div>
+            <div class="has-border-solid is-bordercolor-red-60">
+              .is-bordercolor-red-60
+            </div>
+            <div class="has-border-solid is-bordercolor-red-70">
+              .is-bordercolor-red-70
+            </div>
+            <div class="has-border-solid is-bordercolor-red-80">
+              .is-bordercolor-red-80
+            </div>
+            <div class="has-border-solid is-bordercolor-red-90">
+              .is-bordercolor-red-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-orange-10">
+              .is-bordercolor-orange-10
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-20">
+              .is-bordercolor-orange-20
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-30">
+              .is-bordercolor-orange-30
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-40">
+              .is-bordercolor-orange-40
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-50">
+              .is-bordercolor-orange-50
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-60">
+              .is-bordercolor-orange-60
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-70">
+              .is-bordercolor-orange-70
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-80">
+              .is-bordercolor-orange-80
+            </div>
+            <div class="has-border-solid is-bordercolor-orange-90">
+              .is-bordercolor-orange-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-yellow-10">
+              .is-bordercolor-yellow-10
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-20">
+              .is-bordercolor-yellow-20
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-30">
+              .is-bordercolor-yellow-30
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-40">
+              .is-bordercolor-yellow-40
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-50">
+              .is-bordercolor-yellow-50
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-60">
+              .is-bordercolor-yellow-60
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-70">
+              .is-bordercolor-yellow-70
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-80">
+              .is-bordercolor-yellow-80
+            </div>
+            <div class="has-border-solid is-bordercolor-yellow-90">
+              .is-bordercolor-yellow-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-green-10">
+              .is-bordercolor-green-10
+            </div>
+            <div class="has-border-solid is-bordercolor-green-20">
+              .is-bordercolor-green-20
+            </div>
+            <div class="has-border-solid is-bordercolor-green-30">
+              .is-bordercolor-green-30
+            </div>
+            <div class="has-border-solid is-bordercolor-green-40">
+              .is-bordercolor-green-40
+            </div>
+            <div class="has-border-solid is-bordercolor-green-50">
+              .is-bordercolor-green-50
+            </div>
+            <div class="has-border-solid is-bordercolor-green-60">
+              .is-bordercolor-green-60
+            </div>
+            <div class="has-border-solid is-bordercolor-green-70">
+              .is-bordercolor-green-70
+            </div>
+            <div class="has-border-solid is-bordercolor-green-80">
+              .is-bordercolor-green-80
+            </div>
+            <div class="has-border-solid is-bordercolor-green-90">
+              .is-bordercolor-green-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-cyan-10">
+              .is-bordercolor-cyan-10
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-20">
+              .is-bordercolor-cyan-20
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-30">
+              .is-bordercolor-cyan-30
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-40">
+              .is-bordercolor-cyan-40
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-50">
+              .is-bordercolor-cyan-50
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-60">
+              .is-bordercolor-cyan-60
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-70">
+              .is-bordercolor-cyan-70
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-80">
+              .is-bordercolor-cyan-80
+            </div>
+            <div class="has-border-solid is-bordercolor-cyan-90">
+              .is-bordercolor-cyan-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-blue-10">
+              .is-bordercolor-blue-10
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-20">
+              .is-bordercolor-blue-20
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-30">
+              .is-bordercolor-blue-30
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-40">
+              .is-bordercolor-blue-40
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-50">
+              .is-bordercolor-blue-50
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-60">
+              .is-bordercolor-blue-60
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-70">
+              .is-bordercolor-blue-70
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-80">
+              .is-bordercolor-blue-80
+            </div>
+            <div class="has-border-solid is-bordercolor-blue-90">
+              .is-bordercolor-blue-90
+            </div>
+          </div>
+          <div>
+            <div class="has-border-solid is-bordercolor-violet-10">
+              .is-bordercolor-violet-10
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-20">
+              .is-bordercolor-violet-20
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-30">
+              .is-bordercolor-violet-30
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-40">
+              .is-bordercolor-violet-40
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-50">
+              .is-bordercolor-violet-50
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-60">
+              .is-bordercolor-violet-60
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-70">
+              .is-bordercolor-violet-70
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-80">
+              .is-bordercolor-violet-80
+            </div>
+            <div class="has-border-solid is-bordercolor-violet-90">
+              .is-bordercolor-violet-90
+            </div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <button class="button" onclick="toggleModal()">modal open</button>
+          <div class="modal">
+            <div class="modal-content">
+              <div class="container">
+                <div class="my-1rem">
+                  <div class="message">
+                    <div class="message-header">.message</div>
+                    <div class="message-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                </div>
+                <div class="my-1rem centering">
+                  <button class="button" onclick="toggleModal()">
+                    modal close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="my-1rem">
+          <details class="accordion">
+            <summary class="accordion-summary">accordion-summary</summary>
+            <div class="accordion-details">accordion-details</div>
+          </details>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="sns">
+          <div class="columns">
+            <div class="column">
+              <a
+                class="github margin-1"
+                href="https://github.com/minominolyly/minolith"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="copyright">© minominolyly</div>
+      </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

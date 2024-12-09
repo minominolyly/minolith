@@ -1,0 +1,11 @@
+@use "../variables/index.scss" as variables;
+
+:root {
+  --#{variables.$prefix}animation-speed-heavy: #{variables.$animation-speed-heavy};
+  --#{variables.$prefix}animation-speed-slower: #{variables.$animation-speed-slower};
+  --#{variables.$prefix}animation-speed-slow: #{variables.$animation-speed-slow};
+  --#{variables.$prefix}animation-speed-normal: #{variables.$animation-speed-normal};
+  --#{variables.$prefix}animation-speed-fast: #{variables.$animation-speed-fast};
+  --#{variables.$prefix}animation-speed-faster: #{variables.$animation-speed-faster};
+  --#{variables.$prefix}animation-speed-flash: #{variables.$animation-speed-flash};
+}

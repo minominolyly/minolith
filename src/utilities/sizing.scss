@@ -1,0 +1,109 @@
+@use "sass:string";
+@use "../functions/index.scss" as functions;
+
+@for $p from 0 through 100 {
+  $escaped: functions.strReplace(#{($p * 0.1)}, ".", "\\.");
+
+  .is-width-#{$escaped}rem,
+  .width-#{$escaped}rem {
+    width: $p * 0.1rem;
+  }
+  .is-height-#{$escaped}rem,
+  .height-#{$escaped}rem {
+    height: $p * 0.1rem;
+  }
+}
+
+.is-width-100-percentage {
+  width: 100%;
+}
+
+.is-height-100-percentage {
+  height: 100%;
+}
+
+.is-width-auto {
+  width: auto;
+}
+
+.is-height-auto {
+  height: auto;
+}
+
+.is-aspect-ratio-square {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-paper-landscape {
+  aspect-ratio: 1.414 / 1;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-paper-portrait {
+  aspect-ratio: 1 / 1.414;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-2-3 {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-3-2 {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-3-4 {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-4-5 {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-5-4 {
+  aspect-ratio: 5 / 4;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-5-8 {
+  aspect-ratio: 5 / 8;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-8-5 {
+  aspect-ratio: 8 / 5;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-9-16 {
+  aspect-ratio: 9 / 16;
+  width: 100%;
+  height: auto;
+}
+
+.is-aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+}

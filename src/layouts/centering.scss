@@ -1,0 +1,13 @@
+.centering {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  & > * {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.is-fullheight {
+    height: 100%;
+  }
+}

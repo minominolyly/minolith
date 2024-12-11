@@ -1,0 +1,60 @@
+@use "sass:math";
+@use "../mixins/index.scss" as mixins;
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  &.is-direction-row {
+    flex-direction: row;
+  }
+  &.is-direction-row-reverse {
+    flex-direction: row-reverse;
+  }
+  &.is-direction-column {
+    flex-direction: column;
+  }
+  &.is-direction-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  @include mixins.is-responsive("-direction-row") {
+    flex-direction: row;
+  }
+  @include mixins.is-responsive("-direction-row-reverse") {
+    flex-direction: row-reverse;
+  }
+  @include mixins.is-responsive("-direction-column") {
+    flex-direction: column;
+  }
+  @include mixins.is-responsive("-direction-column-reverse") {
+    flex-direction: column-reverse;
+  }
+
+  .column {
+    @include mixins.column();
+    &.is-full {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+  @for $num from 1 through variables.$columns-count {
+    .column-#{$num} {
+      @include mixins.column();
+      flex-basis: percentage(math.div($num, variables.$columns-count));
+      max-width: percentage(math.div($num, variables.$columns-count));
+      width: percentage(math.div($num, variables.$columns-count));
+    }
+  }
+  .column,
+  [class^="column-"] {
+    @for $num from 1 through variables.$columns-count {
+      @include mixins.is-responsive("-" + $num) {
+        flex-basis: percentage(math.div($num, variables.$columns-count));
+        max-width: percentage(math.div($num, variables.$columns-count));
+        width: percentage(math.div($num, variables.$columns-count));
+      }
+    }
+  }
+}

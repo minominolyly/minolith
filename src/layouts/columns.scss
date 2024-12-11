@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "../mixins/index.scss" as mixins;
+@use "../variables/index.scss" as variables;
 
 .columns {
   display: flex;

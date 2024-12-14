@@ -1,6 +1,8 @@
 @use "../variables/index.scss" as variables;
 
 :root {
+  --#{variables.$prefix}font-family-sans-serif: #{variables.$font-family-sans-serif};
+  --#{variables.$prefix}font-family-monospace: #{variables.$font-family-monospace};
   --#{variables.$prefix}font-size-xsmall: #{variables.$font-size-xsmall};
   --#{variables.$prefix}font-size-small: #{variables.$font-size-small};
   --#{variables.$prefix}font-size-normal: #{variables.$font-size-normal};

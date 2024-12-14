@@ -11,7 +11,9 @@
     "build-lib-copy-map": "node -e \"require('fs').copyFileSync('./dist/css/minolith.css.map', './dist/css/minolith.min.css.map')\"",
     "build-lib-postcss": "postcss --output dist/css/minolith.css dist/css/minolith.css",
     "build-lib-postcss-min": "postcss --output dist/css/minolith.min.css dist/css/minolith.min.css",
-    "build-lib-sass": "sass src/minolith.scss dist/css/minolith.css"
+    "build-lib-sass": "sass src/minolith.scss dist/css/minolith.css",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

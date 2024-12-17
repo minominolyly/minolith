@@ -1,17 +1,19 @@
-
 @use "sass:color";
+@use "../functions/index.scss" as functions;
 
 //#region define color settings
 
 $color-lightness-white: 95% !default;
-$color-lightness-black: 35% !default;
+$color-lightness-black: 14% !default;
 
-$color-lightness-50: 80% !default;
-$color-lightness-offset-lighter: 2.5%;
-$color-lightness-offset-darker: 5.25%;
+$color-lightness-50: 50% !default;
+$color-lightness-offset-lighter: 5% !default;
+$color-lightness-offset-darker: -4% !default;
 
 $color-chroma-gray: 0.02 !default;
-$color-chroma-colorful: 0.085 !default;
+$color-chroma-colorful: 0.18 !default;
+$color-chroma-colorful-offset-lighter: -0.01 !default;
+$color-chroma-colorful-offset-darker: -0.01 !default;
 
 $color-hue-gray: 290 !default;
 $color-hue-red: 0 !default;
@@ -28,337 +30,1067 @@ $color-hue-magenta: 340 !default;
 
 //#region define color shades array
 
+//#region color-light-lightness
+
+$color-light-lightness-fore: 5 !default;
+$color-light-lightness-back: 95 !default;
+$color-light-lightness-border: 70 !default;
+$color-light-lightness-placeholder: 70 !default;
+$color-light-lightness-shadow: 70 !default;
+
+//#region color-dark-lightness-accordion
+$color-light-lightness-accordion-fore: 5 !default;
+$color-light-lightness-accordion-back: 95 !default;
+$color-light-lightness-accordion-border: 70 !default;
+$color-light-lightness-accordion-summary-fore: 5 !default;
+$color-light-lightness-accordion-summary-back: 70 !default;
+$color-light-lightness-accordion-summary-border: 70 !default;
+$color-light-lightness-accordion-details-fore: 5 !default;
+$color-light-lightness-accordion-details-back: 95 !default;
+$color-light-lightness-accordion-details-border: 70 !default;
+//#endregion color-dark-lightness-accordion
+
+//#region color-light-lightness-button
+$color-light-lightness-button-fore: 5 !default;
+$color-light-lightness-button-back: 70 !default;
+$color-light-lightness-button-border: 70 !default;
+$color-light-lightness-button-shadow: 70 !default;
+//#endregion color-light-lightness-button
+
+//#region color-light-lightness-badge
+$color-light-lightness-badge-fore: 5 !default;
+$color-light-lightness-badge-back: 85 !default;
+$color-light-lightness-badge-border: 70 !default;
+//#endregion color-light-lightness-badge
+
+//#region color-light-lightness-card
+$color-light-lightness-card-fore: 5 !default;
+$color-light-lightness-card-back: 70 !default;
+$color-light-lightness-card-border: 70 !default;
+$color-light-lightness-card-shadow: 30 !default;
+$color-light-lightness-card-header-fore: 5 !default;
+$color-light-lightness-card-header-back: 70 !default;
+$color-light-lightness-card-body-fore: 5 !default;
+$color-light-lightness-card-body-back: 90 !default;
+$color-light-lightness-card-footer-fore: 5 !default;
+$color-light-lightness-card-footer-back: 80 !default;
+//#endregion color-light-lightness-card
+
+//#region color-light-lightness-header
+$color-light-lightness-header-fore: 5 !default;
+$color-light-lightness-header-back: 70 !default;
+//#endregion color-light-lightness-header
+
+//#region color-light-lightness-label
+$color-light-lightness-label-fore: 70 !default;
+//#endregion color-light-lightness-label
+
+//#region color-light-lightness-link
+$color-light-lightness-link-fore: 70 !default;
+//#endregion color-light-lightness-link
+
+//#region color-light-lightness-loader
+$color-light-lightness-loader-fore: 70 !default;
+//#endregion color-light-lightness-loader
+
+//#region color-light-lightness-message
+$color-light-lightness-message-fore: 5 !default;
+$color-light-lightness-message-back: 70 !default;
+$color-light-lightness-message-border: 70 !default;
+$color-light-lightness-message-header-fore: 5 !default;
+$color-light-lightness-message-header-back: 70 !default;
+$color-light-lightness-message-body-fore: 5 !default;
+$color-light-lightness-message-body-back: 90 !default;
+//#endregion color-light-lightness-card
+
+//#region color-light-lightness-progress
+$color-light-lightness-progress-fore: 70 !default;
+$color-light-lightness-progress-back: 95 !default;
+//#endregion color-light-lightness-progress
+
+//#endregion color-light-lightness
+
+//#region color-dark-lightness
+
+$color-dark-lightness-fore: 95 !default;
+$color-dark-lightness-back: 5 !default;
+$color-dark-lightness-border: 50 !default;
+$color-dark-lightness-placeholder: 50 !default;
+$color-dark-lightness-shadow: 50 !default;
+
+//#region color-dark-lightness-accordion
+$color-dark-lightness-accordion-fore: 95 !default;
+$color-dark-lightness-accordion-back: 5 !default;
+$color-dark-lightness-accordion-border: 30 !default;
+$color-dark-lightness-accordion-summary-fore: 95 !default;
+$color-dark-lightness-accordion-summary-back: 30 !default;
+$color-dark-lightness-accordion-summary-border: 30 !default;
+$color-dark-lightness-accordion-details-fore: 95 !default;
+$color-dark-lightness-accordion-details-back: 5 !default;
+$color-dark-lightness-accordion-details-border: 30 !default;
+//#endregion color-dark-lightness-accordion
+
+//#region color-dark-lightness-button
+$color-dark-lightness-button-fore: 95 !default;
+$color-dark-lightness-button-back: 30 !default;
+$color-dark-lightness-button-border: 30 !default;
+$color-dark-lightness-button-shadow: 30 !default;
+$color-dark-lightness-badge-fore: 95 !default;
+$color-dark-lightness-badge-back: 15 !default;
+$color-dark-lightness-badge-border: 30 !default;
+//#endregion color-dark-lightness-button
+
+//#region color-dark-lightness-card
+$color-dark-lightness-card-fore: 95 !default;
+$color-dark-lightness-card-back: 5 !default;
+$color-dark-lightness-card-border: 30 !default;
+$color-dark-lightness-card-shadow: 30 !default;
+$color-dark-lightness-card-header-fore: 95 !default;
+$color-dark-lightness-card-header-back: 50 !default;
+$color-dark-lightness-card-body-fore: 95 !default;
+$color-dark-lightness-card-body-back: 10 !default;
+$color-dark-lightness-card-footer-fore: 95 !default;
+$color-dark-lightness-card-footer-back: 20 !default;
+//#endregion color-dark-lightness-card
+
+//#region color-light-lightness-header
+$color-dark-lightness-header-fore: 95 !default;
+$color-dark-lightness-header-back: 70 !default;
+//#endregion color-light-lightness-header
+
+//#region color-light-lightness-label
+$color-dark-lightness-label-fore: 80 !default;
+//#endregion color-light-lightness-label
+
+//#region color-light-lightness-link
+$color-dark-lightness-link-fore: 80 !default;
+//#endregion color-light-lightness-link
+
+//#region color-light-lightness-loader
+$color-dark-lightness-loader-fore: 80 !default;
+//#endregion color-light-lightness-loader
+
+//#region color-light-lightness-progress
+$color-dark-lightness-progress-fore: 80 !default;
+//#endregion color-light-lightness-progress
+
+//#region color-dark-lightness-message
+$color-dark-lightness-message-fore: 95 !default;
+$color-dark-lightness-message-back: 5 !default;
+$color-dark-lightness-message-border: 30 !default;
+$color-dark-lightness-message-header-fore: 95 !default;
+$color-dark-lightness-message-header-back: 50 !default;
+$color-dark-lightness-message-body-fore: 95 !default;
+$color-dark-lightness-message-body-back: 5 !default;
+//#endregion color-dark-lightness-card
+
+//#region color-light-lightness-progress
+$color-dark-lightness-progress-fore: 80 !default;
+$color-dark-lightness-progress-back: 5 !default;
+//#endregion color-light-lightness-progress
+
+//#endregion color-dark-lightness
+
+$color-light-lightness-offset-disabled-fore: 30 !default;
+$color-dark-lightness-offset-disabled-fore: -30 !default;
+$color-lightness-offset-disabled: 0 !default;
+$color-lightness-offset-focus: 20 !default;
+$color-lightness-offset-hover: 5 !default;
+$color-lightness-offset-active: -5 !default;
+$color-lightness-offset-visited: 0 !default;
+
+//#region colorShadesLight
+
 $colorShadesLight: (
+  //#region plain
   (
-    name: "plain",
-    fore: "05",
-    back: "95",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      fore: "05",
-      back: "95",
-      border: "40",
-      accordionSummary: (
-        fore: "05",
-        back: "50",
-        border: "50",
+      name: "plain",
+      fore: functions.zeroPadding($color-light-lightness-fore, 2),
+      back: functions.zeroPadding($color-light-lightness-back, 2),
+      border: functions.zeroPadding($color-light-lightness-border, 2),
+      placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
+      shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      accordion: (
+        fore: functions.zeroPadding($color-light-lightness-accordion-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-accordion-back, 2),
+        border:
+          functions.zeroPadding($color-light-lightness-accordion-border, 2),
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-back,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-border,
+              2
+            ),
+        ),
+        accordionDetails: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-details-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-details-back,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-details-border,
+              2
+            ),
+        ),
       ),
-      accordionDetails: (
-        fore: "05",
-        back: "60",
-        border: "60",
+      badge: (
+        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-badge-back, 2),
+        border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-button-back, 2),
+        border: functions.zeroPadding($color-light-lightness-button-border, 2),
+        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+      ),
+      card: (
+        fore: functions.zeroPadding($color-light-lightness-card-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-card-back, 2),
+        border: functions.zeroPadding($color-light-lightness-card-border, 2),
+        shadow: functions.zeroPadding($color-light-lightness-card-shadow, 2),
+        cardHeader: (
+          fore:
+            functions.zeroPadding($color-light-lightness-card-header-fore, 2),
+          back:
+            functions.zeroPadding($color-light-lightness-card-header-back, 2),
+        ),
+        cardBody: (
+          fore: functions.zeroPadding($color-light-lightness-card-body-fore, 2),
+          back: functions.zeroPadding($color-light-lightness-card-body-back, 2),
+        ),
+        cardFooter: (
+          fore:
+            functions.zeroPadding($color-light-lightness-card-footer-fore, 2),
+          back:
+            functions.zeroPadding($color-light-lightness-card-footer-back, 2),
+        ),
+      ),
+      header: (
+        fore: functions.zeroPadding($color-light-lightness-header-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-header-back, 2),
+      ),
+      label: (
+        fore: functions.zeroPadding($color-light-lightness-label-fore, 2),
+      ),
+      loader: (
+        fore: functions.zeroPadding($color-light-lightness-loader-fore, 2),
+      ),
+      link: (
+        fore: functions.zeroPadding($color-light-lightness-link-fore, 2),
+      ),
+      message: (
+        fore: functions.zeroPadding($color-light-lightness-message-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-message-back, 2),
+        border: functions.zeroPadding($color-light-lightness-message-border, 2),
+        messageHeader: (
+          fore:
+            functions.zeroPadding($color-light-lightness-message-header-fore, 2),
+          back:
+            functions.zeroPadding($color-light-lightness-message-header-back, 2),
+        ),
+        messageBody: (
+          fore:
+            functions.zeroPadding($color-light-lightness-message-body-fore, 2),
+          back:
+            functions.zeroPadding($color-light-lightness-message-body-back, 2),
+        ),
+      ),
+      progress: (
+        fore: functions.zeroPadding($color-light-lightness-progress-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-progress-back, 2),
       ),
     ),
-    button: (
-      fore: "05",
-      back: "50",
-      border: "50",
-      shadow: "50",
-    ),
-    card: (
-      fore: "05",
-      back: "60",
-      border: "60",
-      shadow: "50",
-      messageHeader: (
-        fore: "05",
-        back: "60",
-        border: "60",
-      ),
-      messageBody: (
-        fore: "05",
-        back: "60",
-        border: "60",
-      ),
-      messageFooter: (
-        fore: "05",
-        back: "60",
-        border: "60",
-      ),
-    ),
-    message: (
-      fore: "05",
-      back: "60",
-      border: "60",
-      messageHeader: (
-        fore: "05",
-        back: "40",
-        border: "40",
-      ),
-      messageBody: (
-        fore: "05",
-        back: "60",
-        border: "60",
-      ),
-    ),
-  ),
+  //#endregion plain
+  //#region disabled
   (
-    name: "disabled",
-    fore: "80",
-    back: "10",
-    border: "70",
-    placeholder: "40",
-    shadow: "30",
-    accordion: (
-      accordionSummary: (
-        fore: "05",
-        back: "70",
-        border: "70",
+      name: "disabled",
+      fore:
+        functions.zeroPadding(
+          $color-light-lightness-fore +
+            $color-light-lightness-offset-disabled-fore,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-light-lightness-back + $color-lightness-offset-disabled,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-light-lightness-border + $color-lightness-offset-disabled,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-light-lightness-placeholder + $color-lightness-offset-disabled,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-light-lightness-shadow + $color-lightness-offset-disabled,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-fore +
+                $color-light-lightness-offset-disabled-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-back +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-border +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore:
+          functions.zeroPadding(
+            $color-light-lightness-badge-fore +
+              $color-light-lightness-offset-disabled-fore,
+            2
+          ),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-badge-back + $color-lightness-offset-disabled,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-badge-border +
+              $color-lightness-offset-disabled,
+            2
+          ),
+      ),
+      button: (
+        fore:
+          functions.zeroPadding(
+            $color-light-lightness-button-fore +
+              $color-light-lightness-offset-disabled-fore,
+            2
+          ),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-button-back +
+              $color-lightness-offset-disabled,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-button-border +
+              $color-lightness-offset-disabled,
+            2
+          ),
+        shadow:
+          functions.zeroPadding(
+            $color-light-lightness-button-shadow +
+              $color-lightness-offset-disabled,
+            2
+          ),
       ),
     ),
-    button: (
-      fore: "05",
-      back: "70",
-      border: "70",
-      shadow: "50",
-    ),
-  ),
+  //#endregion disabled
+  //#region hover
   (
-    name: "hover",
-    fore: "05",
-    back: "95",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "05",
-        back: "60",
-        border: "60",
+      name: "hover",
+      fore:
+        functions.zeroPadding(
+          $color-light-lightness-fore + $color-lightness-offset-hover,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-light-lightness-back + $color-lightness-offset-hover,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-light-lightness-border + $color-lightness-offset-hover,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-light-lightness-placeholder + $color-lightness-offset-hover,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-light-lightness-shadow + $color-lightness-offset-hover,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-back +
+                $color-lightness-offset-hover,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-badge-back + $color-lightness-offset-hover,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-badge-border + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-button-back + $color-lightness-offset-hover,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-button-border + $color-lightness-offset-hover,
+            2
+          ),
+        shadow: "50",
       ),
     ),
-    button: (
-      fore: "05",
-      back: "60",
-      border: "60",
-      shadow: "50",
-    ),
-  ),
+  //#endregion hover
+  //#region focus
   (
-    name: "focus",
-    fore: "05",
-    back: "95",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "05",
-        back: "60",
-        border: "60",
+      name: "focus",
+      fore: functions.zeroPadding($color-light-lightness-fore, 2),
+      back: functions.zeroPadding($color-light-lightness-back, 2),
+      border:
+        functions.zeroPadding(
+          $color-light-lightness-border + $color-lightness-offset-focus,
+          2
+        ),
+      placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
+      shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-back,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-badge-back, 2),
+        border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-button-back, 2),
+        border: functions.zeroPadding($color-light-lightness-button-border, 2),
+        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
       ),
     ),
-    button: (
-      fore: "05",
-      back: "60",
-      border: "60",
-      shadow: "50",
-    ),
-  ),
+  //#endregion focus
+  //#region active
   (
-    name: "active",
-    fore: "05",
-    back: "95",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "05",
-        back: "50",
-        border: "50",
+      name: "active",
+      fore:
+        functions.zeroPadding(
+          $color-light-lightness-fore + $color-lightness-offset-active,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-light-lightness-back + $color-lightness-offset-active,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-light-lightness-border + $color-lightness-offset-active,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-light-lightness-placeholder + $color-lightness-offset-active,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-light-lightness-shadow + $color-lightness-offset-active,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-light-lightness-accordion-summary-back +
+                $color-lightness-offset-active,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-badge-back + $color-lightness-offset-active,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-badge-border + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-light-lightness-button-back + $color-lightness-offset-active,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-light-lightness-button-border +
+              $color-lightness-offset-active,
+            2
+          ),
+        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
       ),
     ),
-    button: (
-      fore: "05",
-      back: "50",
-      border: "50",
-      shadow: "50",
-    ),
-  ),
+  //#endregion active
+  //#region visited
   (
     name: "visited",
-    fore: "05",
-    back: "95",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
+    fore:
+      functions.zeroPadding(
+        $color-light-lightness-fore + $color-lightness-offset-visited,
+        2
+      ),
+    back:
+      functions.zeroPadding(
+        $color-light-lightness-back + $color-lightness-offset-visited,
+        2
+      ),
+    border:
+      functions.zeroPadding(
+        $color-light-lightness-border + $color-lightness-offset-visited,
+        2
+      ),
+    placeholder:
+      functions.zeroPadding(
+        $color-light-lightness-placeholder + $color-lightness-offset-visited,
+        2
+      ),
+    shadow:
+      functions.zeroPadding(
+        $color-light-lightness-shadow + $color-lightness-offset-visited,
+        2
+      ),
+    badge: (
+      fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+      back: functions.zeroPadding($color-light-lightness-badge-back, 2),
+      border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+    ),
     button: (
-      fore: "05",
-      back: "50",
-      border: "50",
-      shadow: "50",
+      fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
+      back: functions.zeroPadding($color-light-lightness-button-back, 2),
+      border: functions.zeroPadding($color-light-lightness-button-border, 2),
+      shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+    ),
+    link: (
+      fore:
+        functions.zeroPadding(
+          $color-light-lightness-link-fore + $color-lightness-offset-visited,
+          2
+        ),
     ),
   )
+  //#endregion visited
 );
 
+//#endregion colorShadesLight
+
+//#region colorShadesDark
+
 $colorShadesDark: (
+  //#region plain
   (
-    name: "plain",
-    fore: "95",
-    back: "05",
-    border: "40",
-    placeholder: "40",
-    shadow: "30",
-    accordion: (
-      fore: "95",
-      back: "05",
-      border: "40",
-      accordionSummary: (
-        fore: "95",
-        back: "30",
-        border: "50",
+      name: "plain",
+      fore: functions.zeroPadding($color-dark-lightness-fore, 2),
+      back: functions.zeroPadding($color-dark-lightness-back, 2),
+      border: functions.zeroPadding($color-dark-lightness-border, 2),
+      placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
+      shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
+      accordion: (
+        fore: functions.zeroPadding($color-dark-lightness-accordion-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-accordion-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-accordion-border, 2),
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-back,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-border,
+              2
+            ),
+        ),
+        accordionDetails: (
+          fore:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-details-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-details-back,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-details-border,
+              2
+            ),
+        ),
       ),
-      accordionDetails: (
-        fore: "95",
-        back: "05",
-        border: "40",
+      badge: (
+        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+      ),
+      card: (
+        fore: functions.zeroPadding($color-dark-lightness-card-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-card-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-card-border, 2),
+        shadow: functions.zeroPadding($color-dark-lightness-card-shadow, 2),
+        cardHeader: (
+          fore: functions.zeroPadding($color-dark-lightness-card-header-fore, 2),
+          back: functions.zeroPadding($color-dark-lightness-card-header-back, 2),
+        ),
+        cardBody: (
+          fore: functions.zeroPadding($color-dark-lightness-card-body-fore, 2),
+          back: functions.zeroPadding($color-dark-lightness-card-body-back, 2),
+        ),
+        cardFooter: (
+          fore: functions.zeroPadding($color-dark-lightness-card-footer-fore, 2),
+          back: functions.zeroPadding($color-dark-lightness-card-footer-back, 2),
+        ),
+      ),
+      header: (
+        fore: functions.zeroPadding($color-dark-lightness-header-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-header-back, 2),
+      ),
+      label: (
+        fore: functions.zeroPadding($color-dark-lightness-label-fore, 2),
+      ),
+      link: (
+        fore: functions.zeroPadding($color-dark-lightness-link-fore, 2),
+      ),
+      loader: (
+        fore: functions.zeroPadding($color-dark-lightness-loader-fore, 2),
+      ),
+      message: (
+        fore: functions.zeroPadding($color-dark-lightness-message-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-message-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-message-border, 2),
+        messageHeader: (
+          fore:
+            functions.zeroPadding($color-dark-lightness-message-header-fore, 2),
+          back:
+            functions.zeroPadding($color-dark-lightness-message-header-back, 2),
+        ),
+        messageBody: (
+          fore:
+            functions.zeroPadding($color-dark-lightness-message-body-fore, 2),
+          back:
+            functions.zeroPadding($color-dark-lightness-message-body-back, 2),
+        ),
+      ),
+      progress: (
+        fore: functions.zeroPadding($color-dark-lightness-progress-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-progress-back, 2),
       ),
     ),
-    button: (
-      fore: "95",
-      back: "20",
-      border: "20",
-      shadow: "30",
-    ),
-    card: (
-      fore: "95",
-      back: "30",
-      border: "40",
-      shadow: "30",
-      messageHeader: (
-        fore: "95",
-        back: "30",
-        border: "40",
-      ),
-      messageBody: (
-        fore: "95",
-        back: "30",
-        border: "40",
-      ),
-      messageFooter: (
-        fore: "95",
-        back: "30",
-        border: "40",
-      ),
-    ),
-    message: (
-      fore: "95",
-      back: "30",
-      messageHeader: (
-        fore: "95",
-        back: "20",
-        border: "40",
-      ),
-      messageBody: (
-        fore: "95",
-        back: "30",
-        border: "40",
-      ),
-    ),
-  ),
+  //#endregion plain
+  //#region disabled
   (
-    name: "disabled",
-    fore: "80",
-    back: "10",
-    border: "70",
-    placeholder: "40",
-    shadow: "30",
-    accordion: (
-      accordionSummary: (
-        fore: "95",
-        back: "60",
-        border: "60",
+      name: "disabled",
+      fore:
+        functions.zeroPadding(
+          $color-dark-lightness-fore + $color-dark-lightness-offset-disabled-fore,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-dark-lightness-back + $color-lightness-offset-disabled,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-dark-lightness-border + $color-lightness-offset-disabled,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-dark-lightness-placeholder + $color-lightness-offset-disabled,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-dark-lightness-shadow + $color-lightness-offset-disabled,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-fore +
+              $color-dark-lightness-offset-disabled-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-back +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          border:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-border +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-fore +
+            $color-dark-lightness-offset-disabled-fore,
+            2
+          ),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-back + $color-lightness-offset-disabled,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-border +
+              $color-lightness-offset-disabled,
+            2
+          ),
+      ),
+      button: (
+        fore:
+          functions.zeroPadding(
+            $color-dark-lightness-button-fore +
+            $color-dark-lightness-offset-disabled-fore,
+            2
+          ),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-button-back + $color-lightness-offset-disabled,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-button-border +
+              $color-lightness-offset-disabled,
+            2
+          ),
+        shadow:
+          functions.zeroPadding(
+            $color-dark-lightness-button-shadow +
+              $color-lightness-offset-disabled,
+            2
+          ),
       ),
     ),
-    button: (
-      fore: "95",
-      back: "40",
-      border: "40",
-      shadow: "30",
-    ),
-  ),
+  //#endregion disabled
+  //#region hover
   (
-    name: "hover",
-    fore: "95",
-    back: "05",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "95",
-        back: "40",
-        border: "40",
-        shadow: "30",
+      name: "hover",
+      fore:
+        functions.zeroPadding(
+          $color-dark-lightness-fore + $color-lightness-offset-hover,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-dark-lightness-back + $color-lightness-offset-hover,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-dark-lightness-border + $color-lightness-offset-hover,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-dark-lightness-placeholder + $color-lightness-offset-hover,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-dark-lightness-shadow + $color-lightness-offset-hover,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-back +
+                $color-lightness-offset-hover,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-back + $color-lightness-offset-hover,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-border + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-button-back + $color-lightness-offset-hover,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-button-border + $color-lightness-offset-hover,
+            2
+          ),
+        shadow: "50",
       ),
     ),
-    button: (
-      fore: "95",
-      back: "30",
-      border: "30",
-      shadow: "30",
-    ),
-  ),
+  //#endregion hover
+  //#region focus
   (
-    name: "focus",
-    fore: "95",
-    back: "05",
-    border: "60",
-    placeholder: "60",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "95",
-        back: "50",
-        border: "50",
+      name: "focus",
+      fore: functions.zeroPadding($color-dark-lightness-fore, 2),
+      back: functions.zeroPadding($color-dark-lightness-back, 2),
+      border:
+        functions.zeroPadding(
+          $color-dark-lightness-border + $color-lightness-offset-focus,
+          2
+        ),
+      placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
+      shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
+      accordion: (
+        accordionSummary: (
+          fore: "95",
+          back: "30",
+          border: "50",
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
       ),
     ),
-    button: (
-      fore: "95",
-      back: "30",
-      border: "30",
-      shadow: "30",
-    ),
-  ),
+  //#endregion focus
+  //#region active
   (
-    name: "active",
-    fore: "95",
-    back: "05",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    accordion: (
-      accordionSummary: (
-        fore: "95",
-        back: "50",
-        border: "50",
+      name: "active",
+      fore:
+        functions.zeroPadding(
+          $color-dark-lightness-fore + $color-lightness-offset-active,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-dark-lightness-back + $color-lightness-offset-active,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-dark-lightness-border + $color-lightness-offset-active,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-dark-lightness-placeholder + $color-lightness-offset-active,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-dark-lightness-shadow + $color-lightness-offset-active,
+          2
+        ),
+      accordion: (
+        accordionSummary: (
+          fore:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-fore,
+              2
+            ),
+          back:
+            functions.zeroPadding(
+              $color-dark-lightness-accordion-summary-back +
+                $color-lightness-offset-active,
+              2
+            ),
+        ),
+      ),
+      badge: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-back + $color-lightness-offset-active,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-badge-border + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back:
+          functions.zeroPadding(
+            $color-dark-lightness-button-back + $color-lightness-offset-active,
+            2
+          ),
+        border:
+          functions.zeroPadding(
+            $color-dark-lightness-button-border + $color-lightness-offset-active,
+            2
+          ),
+        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
       ),
     ),
-    button: (
-      fore: "95",
-      back: "20",
-      border: "20",
-      shadow: "30",
-    ),
-  ),
+  //#endregion active
+  //#region visited
   (
-    name: "visited",
-    fore: "95",
-    back: "05",
-    border: "40",
-    placeholder: "40",
-    shadow: "40",
-    button: (
-      fore: "95",
-      back: "20",
-      border: "20",
-      shadow: "30",
-    ),
-  )
+      name: "visited",
+      fore:
+        functions.zeroPadding(
+          $color-dark-lightness-fore + $color-lightness-offset-visited,
+          2
+        ),
+      back:
+        functions.zeroPadding(
+          $color-dark-lightness-back + $color-lightness-offset-visited,
+          2
+        ),
+      border:
+        functions.zeroPadding(
+          $color-dark-lightness-border + $color-lightness-offset-visited,
+          2
+        ),
+      placeholder:
+        functions.zeroPadding(
+          $color-dark-lightness-placeholder + $color-lightness-offset-visited,
+          2
+        ),
+      shadow:
+        functions.zeroPadding(
+          $color-dark-lightness-shadow + $color-lightness-offset-visited,
+          2
+        ),
+      badge: (
+        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+      ),
+      button: (
+        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+      ),
+      link: (
+        fore:
+          functions.zeroPadding(
+            $color-light-lightness-link-fore + $color-lightness-offset-visited,
+            2
+          ),
+      ),
+    )
+    //#endregion visited
 );
+
+//#endregion colorShadesDark
 
 //#endregion define color shades array
 
@@ -368,47 +1100,38 @@ $colors: (
   (
     "name": "gray",
     "hue": $color-hue-gray,
-    "chroma": $color-chroma-gray,
   ),
   (
     "name": "red",
     "hue": $color-hue-red,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "orange",
     "hue": $color-hue-orange,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "yellow",
     "hue": $color-hue-yellow,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "green",
     "hue": $color-hue-green,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "cyan",
     "hue": $color-hue-cyan,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "blue",
     "hue": $color-hue-blue,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "violet",
     "hue": $color-hue-violet,
-    "chroma": $color-chroma-colorful,
   ),
   (
     "name": "magenta",
     "hue": $color-hue-magenta,
-    "chroma": $color-chroma-colorful,
   )
 ) !default;
 

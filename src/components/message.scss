@@ -4,29 +4,32 @@
 .message {
   display: block;
   background-color: var(--#{variables.$prefix}color-default-message-back);
+  border-color: var(--#{variables.$prefix}color-default-message-border);
   border-radius: var(--#{variables.$prefix}border-radius-medium);
+  border-style: solid;
+  border-width: var(--#{variables.$prefix}border-width-thin);
   color: var(--#{variables.$prefix}color-default-messaage-fore);
   .message-header {
     background-color: var(--#{variables.$prefix}color-default-message-header-back);
     border-radius: var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium) 0 0;
     color: var(--#{variables.$prefix}color-default-message-header-fore);
-    padding: 0.5rem;
     display: block;
     font-size: var(--#{variables.$prefix}font-size-medium);
     font-weight: var(--#{variables.$prefix}font-weight-semibold);
+    padding: 0.5rem;
   }
   .message-body {
     background-color: var(--#{variables.$prefix}color-default-message-body-back);
     border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium);
     color: var(--#{variables.$prefix}color-default-message-body-fore);
-    padding: 0.5rem;
     display: block;
+    padding: 0.5rem;
   }
-
   @each $color in variables.$colors {
     $colorName: map.get($color, "name");
     &.is-#{$colorName} {
       background-color: var(--#{variables.$prefix}color-#{$colorName}-message-back);
+      border-color: var(--#{variables.$prefix}color-#{$colorName}-message-border);
       color: var(--#{variables.$prefix}color-#{$colorName}-message-fore);
       .message-header {
         background-color: var(--#{variables.$prefix}color-#{$colorName}-message-header-back);

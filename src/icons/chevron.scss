@@ -15,11 +15,11 @@ $line-height: 0.2rem;
     100% 0,
     50% calc(100% - #{$line-height})
   );
-  background: var(--color-default-fore);
+  background: var(--#{variables.$prefix}color-default-fore);
   @each $color in variables.$colors {
     $colorName: map.get($color, "name");
     &.is-#{$colorName} {
-      background: var(--color-#{$colorName}-fore);
+      background: var(--#{variables.$prefix}color-#{$colorName}-fore);
     }
   }
   @content;

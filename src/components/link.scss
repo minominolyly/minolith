@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 
 .link {
-  color: var(--#{variables.$prefix}color-default-fore);
+  color: var(--#{variables.$prefix}color-default-link-fore);
   text-decoration: underline;
   &:hover {
     text-decoration: none;
@@ -11,17 +11,17 @@
     outline: none;
   }
   &:visited {
-    color: var(--#{variables.$prefix}color-default-visited-fore);
+    color: var(--#{variables.$prefix}color-default-link-visited-fore);
   }
   @each $color in variables.$colors {
     $colorName: map.get($color, "name");
     &.is-#{$colorName} {
-      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-      &:hover {
-        color: var(--#{variables.$prefix}color-#{$colorName}-hover-fore);
-      }
+      color: var(--#{variables.$prefix}color-#{$colorName}-link-fore);
+      // &:hover {
+      //   color: var(--#{variables.$prefix}color-#{$colorName}-hover-fore);
+      // }
       &:visited {
-        color: var(--#{variables.$prefix}color-#{$colorName}-visited-fore);
+        color: var(--#{variables.$prefix}color-#{$colorName}-link-visited-fore);
       }
     }
   }

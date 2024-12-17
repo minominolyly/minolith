@@ -1,5 +1,12 @@
+@use "sass:map";
 @use "../variables/index.scss" as variables;
 
 .label {
   font-weight: var(--#{variables.$prefix}font-weight-semibold);
+  @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+    &.is-#{$colorName} {
+      color: var(--#{variables.$prefix}color-#{$colorName}-label-fore);
+    }
+  }
 }

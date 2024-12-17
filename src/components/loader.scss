@@ -9,7 +9,7 @@
     animation-timing-function: linear;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: var(--#{variables.$prefix}color-default-border);
+    background: var(--#{variables.$prefix}color-default-loader-fore);
     mask: conic-gradient(#0000 10%, var(--#{variables.$prefix}color-default-back)),
       linear-gradient(var(--#{variables.$prefix}color-default-back) 0 0) content-box;
     mask-composite: subtract;
@@ -26,7 +26,7 @@
     @each $color in variables.$colors {
     $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background: var(--#{variables.$prefix}color-#{$colorName}-border);
+        background: var(--#{variables.$prefix}color-#{$colorName}-loader-fore);
       }
     }
   }

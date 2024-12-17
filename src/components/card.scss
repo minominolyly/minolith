@@ -4,7 +4,10 @@
 .card {
   display: block;
   background-color: var(--#{variables.$prefix}color-default-card-back);
-  border-radius: 0.25rem;
+  border-radius: calc(
+    var(--#{variables.$prefix}border-radius-medium) +
+      var(--#{variables.$prefix}border-width-thin)
+  );
   border-color: var(--#{variables.$prefix}color-default-card-border);
   border-style: solid;
   border-width: var(--#{variables.$prefix}border-width-thin);
@@ -14,7 +17,8 @@
   }
   .card-header {
     background-color: var(--#{variables.$prefix}color-default-card-header-back);
-    border-radius: 0.25rem;
+    border-radius: var(--#{variables.$prefix}border-radius-medium)
+      var(--#{variables.$prefix}border-radius-medium) 0 0;
     color: var(--#{variables.$prefix}color-default-card-header-fore);
     padding: 0.5rem;
     display: block;
@@ -26,10 +30,22 @@
     color: var(--#{variables.$prefix}color-default-card-body-fore);
     padding: 0.5rem;
     display: block;
+    &:first-child {
+      border-radius: var(--#{variables.$prefix}border-radius-medium)
+        var(--#{variables.$prefix}border-radius-medium) 0 0;
+    }
+    &:last-child {
+      border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium)
+        var(--#{variables.$prefix}border-radius-medium);
+    }
+    &:only-child {
+      border-radius: var(--#{variables.$prefix}border-radius-medium);
+    }
   }
   .card-footer {
     background-color: var(--#{variables.$prefix}color-default-card-footer-back);
-    border-radius: 0.25rem;
+    border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium)
+      var(--#{variables.$prefix}border-radius-medium);
     color: var(--#{variables.$prefix}color-default-card-footer-fore);
     padding: 0.5rem;
     display: block;
@@ -37,16 +53,28 @@
   @each $color in variables.$colors {
     $colorName: map.get($color, "name");
     &.is-#{$colorName} {
-      background-color: var(--#{variables.$prefix}color-#{$colorName}-card-back);
+      background-color: var(
+        --#{variables.$prefix}color-#{$colorName}-card-back
+      );
       border-color: var(--#{variables.$prefix}color-#{$colorName}-card-border);
       color: var(--#{variables.$prefix}color-#{$colorName}-card-fore);
       .card-header {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-card-header-back);
+        background-color: var(
+          --#{variables.$prefix}color-#{$colorName}-card-header-back
+        );
         color: var(--#{variables.$prefix}color-#{$colorName}-card-header-fore);
       }
       .card-body {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-card-body-back);
+        background-color: var(
+          --#{variables.$prefix}color-#{$colorName}-card-body-back
+        );
         color: var(--#{variables.$prefix}color-#{$colorName}-card-body-fore);
+      }
+      .card-footer {
+        background-color: var(
+          --#{variables.$prefix}color-#{$colorName}-card-footer-back
+        );
+        color: var(--#{variables.$prefix}color-#{$colorName}-card-footer-fore);
       }
     }
   }

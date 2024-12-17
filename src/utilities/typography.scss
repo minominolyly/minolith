@@ -48,6 +48,10 @@
   font-family: var(--#{variables.$prefix}font-family-monospace);
 }
 
+.is-font-size-xsmall {
+  font-size: var(--#{variables.$prefix}font-size-xsmall) !important;
+}
+
 .is-font-size-small {
   font-size: var(--#{variables.$prefix}font-size-small) !important;
 }

@@ -11,20 +11,20 @@
       rel="stylesheet"
       type="text/css"
       media="all"
-      href="../dist/minolith.css"
+      href="../dist/css/minolith.css"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       media="all"
       href="https://unpkg.com/minolith/dist/css/minolith.min.css"
-    />
+    /> -->
   </head>
   <body class="tabula">
     <header class="header is-sticky">
       <div class="">
         <nav class="nav" role="navigation" aria-label="main navigation">
-          <div class="nav-accordion is-tablet-or-less">
+          <div class="nav-accordion is-small-or-less">
             <div class="nav-brand">
               <div class="left">
                 <div
@@ -43,7 +43,7 @@
                 </div>
               </div>
               <span class="center"
-                ><a aria-current="page" hreflang="ja" href="/" class="link"
+                ><a aria-current="page" hreflang="ja" href="/" class="link is-violet"
                   >minolith</a
                 ></span
               >
@@ -83,13 +83,16 @@
               <a class="nav-menu-item" onclick="changeColor(`is-violet`)">
                 <span>violet</span>
               </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-magenta`)">
+                <span>magenta</span>
+              </a>
             </div>
           </div>
-          <div class="nav-static is-tablet-or-more">
+          <div class="nav-static is-small-or-more">
             <div class="nav-brand">
               <div class="left">
                 <div class="mx-2rem">
-                  <a aria-current="page" hreflang="ja" href="/" class="link"
+                  <a aria-current="page" hreflang="ja" href="/" class="link is-violet"
                     >minolith</a
                   >
                 </div>
@@ -130,6 +133,9 @@
               <a class="nav-menu-item" onclick="changeColor(`is-violet`)">
                 <span>violet</span>
               </a>
+              <a class="nav-menu-item" onclick="changeColor(`is-magenta`)">
+                <span>magenta</span>
+              </a>
             </div>
           </div>
         </nav>
@@ -138,56 +144,486 @@
     <main class="main">
       <div class="container">
         <section class="my-1rem">
-          <span class="badge">.badge</span>
-          <!-- <span class="badge is-small">.badge .is-small</span> -->
+          <details class="accordion">
+            <summary class="accordion-summary">.badge</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge">.badge</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-small">.badge .is-small</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-clickable"
+                        >.badge .is-clickable</span
+                      >
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-clickable" disabled
+                        >.badge .is-clickable [disabled]</span
+                      >
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-gray">.badge .is-gray</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-red">.badge .is-red</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-orange">.badge .is-orange</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-yellow">.badge .is-yellow</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-green">.badge .is-green</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-cyan">.badge .is-cyan</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-blue">.badge .is-blue</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-violet">.badge .is-violet</span>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <span class="badge is-magenta">.badge .is-magenta</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div>
-            <button class="button">.button</button>
-          </div>
+          <details class="accordion">
+            <summary class="accordion-summary">.button</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button">.button</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button" disabled>
+                        .button [disabled]
+                      </button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-gray">.button .is-gray</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-red">.button .is-red</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-orange">
+                        .button .is-orange
+                      </button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-yellow">
+                        .button .is-yellow
+                      </button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-green">.button .is-green</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-cyan">.button .is-cyan</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-blue">.button .is-blue</button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-violet">
+                        .button .is-violet
+                      </button>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <button class="button is-magenta">
+                        .button .is-magenta
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div>
-            <label class="label">.label</label>
-          </div>
-          <div>
-            <input type="text" class="input" placeholder=".input text" />
-          </div>
-          <div>
-            <textarea class="input" placeholder=".input textarea"></textarea>
-          </div>
-          <div>
-            <input type="password" class="input" placeholder=".input password" />
-          </div>
-          <div>
-            <input type="date" class="input" />
-          </div>
-          <div>
-            <input type="time" class="input" />
-          </div>
-          <div>
-            <input type="color" class="input" />
-          </div>
-          <div>
-            <input type="datetime-local" class="input" />
-          </div>
-          <div>
-            <input type="file" class="input" />
-          </div>
-          <div>
-            <input type="checkbox" class="input" />
-          </div>
-          <div>
-            <input type="radio" class="input" />
-          </div>
+          <details class="accordion">
+            <summary class="accordion-summary">.link</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link">.link</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link" disabled>.link [disabled]</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-gray">.link .is-gray</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-red">.link .is-red</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-orange">.link .is-orange</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-yellow">.link .is-yellow</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-green">.link .is-green</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-cyan">.link .is-cyan</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-blue">.link .is-blue</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-violet">.link .is-violet</a>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <a class="link is-magenta">.link .is-magenta</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div>
-            <div class="loader"></div>
-          </div>
-          <div>
-            <div class="progress is-50-percent"></div>
-          </div>
+          <details class="accordion">
+            <summary class="accordion-summary">.label</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label">.label</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-gray">.label .is-gray</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-red">.label .is-red</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-orange">.label .is-orange</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-yellow">.label .is-yellow</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-green">.label .is-green</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-cyan">.label .is-cyan</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-blue">.label .is-blue</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-violet">.label .is-violet</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <label class="label is-magenta">.label .is-magenta</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </section>
+        <section class="my-1rem">
+          <details class="accordion">
+            <summary class="accordion-summary">.input</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder=".input text"
+                      />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <textarea
+                        class="input"
+                        placeholder=".input textarea"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input
+                        type="password"
+                        class="input"
+                        placeholder=".input password"
+                      />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input type="date" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input type="time" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input type="datetime-local" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input type="color" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input id="checkbox" type="checkbox" class="input" />
+                      <label for="checkbox">.input checkbox</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input id="radio" type="radio" class="input" />
+                      <label for="radio">.input radio</label>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <input type="file" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </section>
+        <section class="my-1rem">
+          <details class="accordion">
+            <summary class="accordion-summary">.loader</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-gray"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-red"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-orange"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-yellow"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-green"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-cyan"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-blue"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-violet"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="loader is-magenta"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </section>
+        <section class="my-1rem">
+          <details class="accordion">
+            <summary class="accordion-summary">.progress</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-gray"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-red"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-orange"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-yellow"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-green"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-cyan"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-blue"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-violet"></div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="progress is-50-percent is-magenta"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
           <div class="message">
@@ -229,646 +665,2402 @@
           </div>
         </section>
         <section class="my-1rem">
-          <h1 class="heading-1">.heading-1</h1>
-          <h2 class="heading-2">.heading-2</h2>
-          <h3 class="heading-3">.heading-3</h1>
-          <h4 class="heading-4">.heading-4</h2>
-          <h5 class="heading-5">.heading-5</h1>
-          <h6 class="heading-6">.heading-6</h2>
+          <details class="accordion">
+            <summary class="accordion-summary">.heading</summary>
+            <div class="accordion-details">
+              <h1 class="heading-1">.heading-1</h1>
+              <h2 class="heading-2">.heading-2</h2>
+              <h3 class="heading-3">.heading-3</h3>
+              <h4 class="heading-4">.heading-4</h4>
+              <h5 class="heading-5">.heading-5</h5>
+              <h6 class="heading-6">.heading-6</h6>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div class="is-italic">.is-italic</div>
-          <div class="is-oblique">.is-oblique</div>
-          <div class="is-capitalized">.is-capitalized</div>
-          <div class="is-lowercase">.is-lowercase</div>
-          <div class="is-uppercase">.is-uppercase</div>
+          <details class="accordion">
+            <summary class="accordion-summary">typography</summary>
+            <div class="accordion-details">
+              <div class="p-0.5rem">
+                <div class="is-italic">.is-italic</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-oblique">.is-oblique</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-capitalized">.is-capitalized</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-lowercase">.is-lowercase</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-uppercase">.is-uppercase</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-text-align-left">.is-text-align-left</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-text-align-right">.is-text-align-right</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-text-align-center">.is-text-align-center</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-text-align-unset">.is-text-align-unset</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-white-space-nowrap">.is-white-space-nowrap</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xsmall">.is-font-size-xsmall</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-small">.is-font-size-small</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-normal">.is-font-size-normal</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-medium">.is-font-size-medium</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-large">.is-font-size-large</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xlarge">.is-font-size-xlarge</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xxlarge">.is-font-size-xxlarge</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xxxlarge">.is-font-size-xxxlarge</div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xxxxlarge">
+                  .is-font-size-xxxxlarge
+                </div>
+              </div>
+              <div class="p-0.5rem">
+                <div class="is-font-size-xxxxxlarge">
+                  .is-font-size-xxxxxlarge
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div class="is-text-align-left">.is-text-align-left</div>
-          <div class="is-text-align-right">.is-text-align-right</div>
-          <div class="is-text-align-center">.is-text-align-center</div>
-          <div class="is-text-align-unset">.is-text-align-unset</div>
+          <details class="accordion">
+            <summary class="accordion-summary">color</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-gray-05">
+                        .is-forecolor-gray-05
+                      </div>
+                      <div class="is-forecolor-gray-10">
+                        .is-forecolor-gray-10
+                      </div>
+                      <div class="is-forecolor-gray-15">
+                        .is-forecolor-gray-15
+                      </div>
+                      <div class="is-forecolor-gray-20">
+                        .is-forecolor-gray-20
+                      </div>
+                      <div class="is-forecolor-gray-25">
+                        .is-forecolor-gray-25
+                      </div>
+                      <div class="is-forecolor-gray-30">
+                        .is-forecolor-gray-30
+                      </div>
+                      <div class="is-forecolor-gray-35">
+                        .is-forecolor-gray-35
+                      </div>
+                      <div class="is-forecolor-gray-40">
+                        .is-forecolor-gray-40
+                      </div>
+                      <div class="is-forecolor-gray-45">
+                        .is-forecolor-gray-45
+                      </div>
+                      <div class="is-forecolor-gray-50">
+                        .is-forecolor-gray-50
+                      </div>
+                      <div class="is-forecolor-gray-55">
+                        .is-forecolor-gray-55
+                      </div>
+                      <div class="is-forecolor-gray-60">
+                        .is-forecolor-gray-60
+                      </div>
+                      <div class="is-forecolor-gray-65">
+                        .is-forecolor-gray-65
+                      </div>
+                      <div class="is-forecolor-gray-70">
+                        .is-forecolor-gray-70
+                      </div>
+                      <div class="is-forecolor-gray-75">
+                        .is-forecolor-gray-75
+                      </div>
+                      <div class="is-forecolor-gray-80">
+                        .is-forecolor-gray-80
+                      </div>
+                      <div class="is-forecolor-gray-85">
+                        .is-forecolor-gray-85
+                      </div>
+                      <div class="is-forecolor-gray-90">
+                        .is-forecolor-gray-90
+                      </div>
+                      <div class="is-forecolor-gray-95">
+                        .is-forecolor-gray-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-red-05">
+                        .is-forecolor-red-05
+                      </div>
+                      <div class="is-forecolor-red-10">
+                        .is-forecolor-red-10
+                      </div>
+                      <div class="is-forecolor-red-15">
+                        .is-forecolor-red-15
+                      </div>
+                      <div class="is-forecolor-red-20">
+                        .is-forecolor-red-20
+                      </div>
+                      <div class="is-forecolor-red-25">
+                        .is-forecolor-red-25
+                      </div>
+                      <div class="is-forecolor-red-30">
+                        .is-forecolor-red-30
+                      </div>
+                      <div class="is-forecolor-red-35">
+                        .is-forecolor-red-35
+                      </div>
+                      <div class="is-forecolor-red-40">
+                        .is-forecolor-red-40
+                      </div>
+                      <div class="is-forecolor-red-45">
+                        .is-forecolor-red-45
+                      </div>
+                      <div class="is-forecolor-red-50">
+                        .is-forecolor-red-50
+                      </div>
+                      <div class="is-forecolor-red-55">
+                        .is-forecolor-red-55
+                      </div>
+                      <div class="is-forecolor-red-60">
+                        .is-forecolor-red-60
+                      </div>
+                      <div class="is-forecolor-red-65">
+                        .is-forecolor-red-65
+                      </div>
+                      <div class="is-forecolor-red-70">
+                        .is-forecolor-red-70
+                      </div>
+                      <div class="is-forecolor-red-75">
+                        .is-forecolor-red-75
+                      </div>
+                      <div class="is-forecolor-red-80">
+                        .is-forecolor-red-80
+                      </div>
+                      <div class="is-forecolor-red-85">
+                        .is-forecolor-red-85
+                      </div>
+                      <div class="is-forecolor-red-90">
+                        .is-forecolor-red-90
+                      </div>
+                      <div class="is-forecolor-red-95">
+                        .is-forecolor-red-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-orange-05">
+                        .is-forecolor-orange-05
+                      </div>
+                      <div class="is-forecolor-orange-10">
+                        .is-forecolor-orange-10
+                      </div>
+                      <div class="is-forecolor-orange-15">
+                        .is-forecolor-orange-15
+                      </div>
+                      <div class="is-forecolor-orange-20">
+                        .is-forecolor-orange-20
+                      </div>
+                      <div class="is-forecolor-orange-25">
+                        .is-forecolor-orange-25
+                      </div>
+                      <div class="is-forecolor-orange-30">
+                        .is-forecolor-orange-30
+                      </div>
+                      <div class="is-forecolor-orange-35">
+                        .is-forecolor-orange-35
+                      </div>
+                      <div class="is-forecolor-orange-40">
+                        .is-forecolor-orange-40
+                      </div>
+                      <div class="is-forecolor-orange-45">
+                        .is-forecolor-orange-45
+                      </div>
+                      <div class="is-forecolor-orange-50">
+                        .is-forecolor-orange-50
+                      </div>
+                      <div class="is-forecolor-orange-55">
+                        .is-forecolor-orange-55
+                      </div>
+                      <div class="is-forecolor-orange-60">
+                        .is-forecolor-orange-60
+                      </div>
+                      <div class="is-forecolor-orange-65">
+                        .is-forecolor-orange-65
+                      </div>
+                      <div class="is-forecolor-orange-70">
+                        .is-forecolor-orange-70
+                      </div>
+                      <div class="is-forecolor-orange-75">
+                        .is-forecolor-orange-75
+                      </div>
+                      <div class="is-forecolor-orange-80">
+                        .is-forecolor-orange-80
+                      </div>
+                      <div class="is-forecolor-orange-85">
+                        .is-forecolor-orange-85
+                      </div>
+                      <div class="is-forecolor-orange-90">
+                        .is-forecolor-orange-90
+                      </div>
+                      <div class="is-forecolor-orange-95">
+                        .is-forecolor-orange-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-yellow-05">
+                        .is-forecolor-yellow-05
+                      </div>
+                      <div class="is-forecolor-yellow-10">
+                        .is-forecolor-yellow-10
+                      </div>
+                      <div class="is-forecolor-yellow-15">
+                        .is-forecolor-yellow-15
+                      </div>
+                      <div class="is-forecolor-yellow-20">
+                        .is-forecolor-yellow-20
+                      </div>
+                      <div class="is-forecolor-yellow-25">
+                        .is-forecolor-yellow-25
+                      </div>
+                      <div class="is-forecolor-yellow-30">
+                        .is-forecolor-yellow-30
+                      </div>
+                      <div class="is-forecolor-yellow-35">
+                        .is-forecolor-yellow-35
+                      </div>
+                      <div class="is-forecolor-yellow-40">
+                        .is-forecolor-yellow-40
+                      </div>
+                      <div class="is-forecolor-yellow-45">
+                        .is-forecolor-yellow-45
+                      </div>
+                      <div class="is-forecolor-yellow-50">
+                        .is-forecolor-yellow-50
+                      </div>
+                      <div class="is-forecolor-yellow-55">
+                        .is-forecolor-yellow-55
+                      </div>
+                      <div class="is-forecolor-yellow-60">
+                        .is-forecolor-yellow-60
+                      </div>
+                      <div class="is-forecolor-yellow-65">
+                        .is-forecolor-yellow-65
+                      </div>
+                      <div class="is-forecolor-yellow-70">
+                        .is-forecolor-yellow-70
+                      </div>
+                      <div class="is-forecolor-yellow-75">
+                        .is-forecolor-yellow-75
+                      </div>
+                      <div class="is-forecolor-yellow-80">
+                        .is-forecolor-yellow-80
+                      </div>
+                      <div class="is-forecolor-yellow-85">
+                        .is-forecolor-yellow-85
+                      </div>
+                      <div class="is-forecolor-yellow-90">
+                        .is-forecolor-yellow-90
+                      </div>
+                      <div class="is-forecolor-yellow-95">
+                        .is-forecolor-yellow-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-green-05">
+                        .is-forecolor-green-05
+                      </div>
+                      <div class="is-forecolor-green-10">
+                        .is-forecolor-green-10
+                      </div>
+                      <div class="is-forecolor-green-15">
+                        .is-forecolor-green-15
+                      </div>
+                      <div class="is-forecolor-green-20">
+                        .is-forecolor-green-20
+                      </div>
+                      <div class="is-forecolor-green-25">
+                        .is-forecolor-green-25
+                      </div>
+                      <div class="is-forecolor-green-30">
+                        .is-forecolor-green-30
+                      </div>
+                      <div class="is-forecolor-green-35">
+                        .is-forecolor-green-35
+                      </div>
+                      <div class="is-forecolor-green-40">
+                        .is-forecolor-green-40
+                      </div>
+                      <div class="is-forecolor-green-45">
+                        .is-forecolor-green-45
+                      </div>
+                      <div class="is-forecolor-green-50">
+                        .is-forecolor-green-50
+                      </div>
+                      <div class="is-forecolor-green-55">
+                        .is-forecolor-green-55
+                      </div>
+                      <div class="is-forecolor-green-60">
+                        .is-forecolor-green-60
+                      </div>
+                      <div class="is-forecolor-green-65">
+                        .is-forecolor-green-65
+                      </div>
+                      <div class="is-forecolor-green-70">
+                        .is-forecolor-green-70
+                      </div>
+                      <div class="is-forecolor-green-75">
+                        .is-forecolor-green-75
+                      </div>
+                      <div class="is-forecolor-green-80">
+                        .is-forecolor-green-80
+                      </div>
+                      <div class="is-forecolor-green-85">
+                        .is-forecolor-green-85
+                      </div>
+                      <div class="is-forecolor-green-90">
+                        .is-forecolor-green-90
+                      </div>
+                      <div class="is-forecolor-green-95">
+                        .is-forecolor-green-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-cyan-05">
+                        .is-forecolor-cyan-05
+                      </div>
+                      <div class="is-forecolor-cyan-10">
+                        .is-forecolor-cyan-10
+                      </div>
+                      <div class="is-forecolor-cyan-15">
+                        .is-forecolor-cyan-15
+                      </div>
+                      <div class="is-forecolor-cyan-20">
+                        .is-forecolor-cyan-20
+                      </div>
+                      <div class="is-forecolor-cyan-25">
+                        .is-forecolor-cyan-25
+                      </div>
+                      <div class="is-forecolor-cyan-30">
+                        .is-forecolor-cyan-30
+                      </div>
+                      <div class="is-forecolor-cyan-35">
+                        .is-forecolor-cyan-35
+                      </div>
+                      <div class="is-forecolor-cyan-40">
+                        .is-forecolor-cyan-40
+                      </div>
+                      <div class="is-forecolor-cyan-45">
+                        .is-forecolor-cyan-45
+                      </div>
+                      <div class="is-forecolor-cyan-50">
+                        .is-forecolor-cyan-50
+                      </div>
+                      <div class="is-forecolor-cyan-55">
+                        .is-forecolor-cyan-55
+                      </div>
+                      <div class="is-forecolor-cyan-60">
+                        .is-forecolor-cyan-60
+                      </div>
+                      <div class="is-forecolor-cyan-65">
+                        .is-forecolor-cyan-65
+                      </div>
+                      <div class="is-forecolor-cyan-70">
+                        .is-forecolor-cyan-70
+                      </div>
+                      <div class="is-forecolor-cyan-75">
+                        .is-forecolor-cyan-75
+                      </div>
+                      <div class="is-forecolor-cyan-80">
+                        .is-forecolor-cyan-80
+                      </div>
+                      <div class="is-forecolor-cyan-85">
+                        .is-forecolor-cyan-85
+                      </div>
+                      <div class="is-forecolor-cyan-90">
+                        .is-forecolor-cyan-90
+                      </div>
+                      <div class="is-forecolor-cyan-95">
+                        .is-forecolor-cyan-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-blue-05">
+                        .is-forecolor-blue-05
+                      </div>
+                      <div class="is-forecolor-blue-10">
+                        .is-forecolor-blue-10
+                      </div>
+                      <div class="is-forecolor-blue-15">
+                        .is-forecolor-blue-15
+                      </div>
+                      <div class="is-forecolor-blue-20">
+                        .is-forecolor-blue-20
+                      </div>
+                      <div class="is-forecolor-blue-25">
+                        .is-forecolor-blue-25
+                      </div>
+                      <div class="is-forecolor-blue-30">
+                        .is-forecolor-blue-30
+                      </div>
+                      <div class="is-forecolor-blue-35">
+                        .is-forecolor-blue-35
+                      </div>
+                      <div class="is-forecolor-blue-40">
+                        .is-forecolor-blue-40
+                      </div>
+                      <div class="is-forecolor-blue-45">
+                        .is-forecolor-blue-45
+                      </div>
+                      <div class="is-forecolor-blue-50">
+                        .is-forecolor-blue-50
+                      </div>
+                      <div class="is-forecolor-blue-55">
+                        .is-forecolor-blue-55
+                      </div>
+                      <div class="is-forecolor-blue-60">
+                        .is-forecolor-blue-60
+                      </div>
+                      <div class="is-forecolor-blue-65">
+                        .is-forecolor-blue-65
+                      </div>
+                      <div class="is-forecolor-blue-70">
+                        .is-forecolor-blue-70
+                      </div>
+                      <div class="is-forecolor-blue-75">
+                        .is-forecolor-blue-75
+                      </div>
+                      <div class="is-forecolor-blue-80">
+                        .is-forecolor-blue-80
+                      </div>
+                      <div class="is-forecolor-blue-85">
+                        .is-forecolor-blue-85
+                      </div>
+                      <div class="is-forecolor-blue-90">
+                        .is-forecolor-blue-90
+                      </div>
+                      <div class="is-forecolor-blue-95">
+                        .is-forecolor-blue-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-violet-05">
+                        .is-forecolor-violet-05
+                      </div>
+                      <div class="is-forecolor-violet-10">
+                        .is-forecolor-violet-10
+                      </div>
+                      <div class="is-forecolor-violet-15">
+                        .is-forecolor-violet-15
+                      </div>
+                      <div class="is-forecolor-violet-20">
+                        .is-forecolor-violet-20
+                      </div>
+                      <div class="is-forecolor-violet-25">
+                        .is-forecolor-violet-25
+                      </div>
+                      <div class="is-forecolor-violet-30">
+                        .is-forecolor-violet-30
+                      </div>
+                      <div class="is-forecolor-violet-35">
+                        .is-forecolor-violet-35
+                      </div>
+                      <div class="is-forecolor-violet-40">
+                        .is-forecolor-violet-40
+                      </div>
+                      <div class="is-forecolor-violet-45">
+                        .is-forecolor-violet-45
+                      </div>
+                      <div class="is-forecolor-violet-50">
+                        .is-forecolor-violet-50
+                      </div>
+                      <div class="is-forecolor-violet-55">
+                        .is-forecolor-violet-55
+                      </div>
+                      <div class="is-forecolor-violet-60">
+                        .is-forecolor-violet-60
+                      </div>
+                      <div class="is-forecolor-violet-65">
+                        .is-forecolor-violet-65
+                      </div>
+                      <div class="is-forecolor-violet-70">
+                        .is-forecolor-violet-70
+                      </div>
+                      <div class="is-forecolor-violet-75">
+                        .is-forecolor-violet-75
+                      </div>
+                      <div class="is-forecolor-violet-80">
+                        .is-forecolor-violet-80
+                      </div>
+                      <div class="is-forecolor-violet-85">
+                        .is-forecolor-violet-85
+                      </div>
+                      <div class="is-forecolor-violet-90">
+                        .is-forecolor-violet-90
+                      </div>
+                      <div class="is-forecolor-violet-95">
+                        .is-forecolor-violet-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-forecolor-magenta-05">
+                        .is-forecolor-magenta-05
+                      </div>
+                      <div class="is-forecolor-magenta-10">
+                        .is-forecolor-magenta-10
+                      </div>
+                      <div class="is-forecolor-magenta-15">
+                        .is-forecolor-magenta-15
+                      </div>
+                      <div class="is-forecolor-magenta-20">
+                        .is-forecolor-magenta-20
+                      </div>
+                      <div class="is-forecolor-magenta-25">
+                        .is-forecolor-magenta-25
+                      </div>
+                      <div class="is-forecolor-magenta-30">
+                        .is-forecolor-magenta-30
+                      </div>
+                      <div class="is-forecolor-magenta-35">
+                        .is-forecolor-magenta-35
+                      </div>
+                      <div class="is-forecolor-magenta-40">
+                        .is-forecolor-magenta-40
+                      </div>
+                      <div class="is-forecolor-magenta-45">
+                        .is-forecolor-magenta-45
+                      </div>
+                      <div class="is-forecolor-magenta-50">
+                        .is-forecolor-magenta-50
+                      </div>
+                      <div class="is-forecolor-magenta-55">
+                        .is-forecolor-magenta-55
+                      </div>
+                      <div class="is-forecolor-magenta-60">
+                        .is-forecolor-magenta-60
+                      </div>
+                      <div class="is-forecolor-magenta-65">
+                        .is-forecolor-magenta-65
+                      </div>
+                      <div class="is-forecolor-magenta-70">
+                        .is-forecolor-magenta-70
+                      </div>
+                      <div class="is-forecolor-magenta-75">
+                        .is-forecolor-magenta-75
+                      </div>
+                      <div class="is-forecolor-magenta-80">
+                        .is-forecolor-magenta-80
+                      </div>
+                      <div class="is-forecolor-magenta-85">
+                        .is-forecolor-magenta-85
+                      </div>
+                      <div class="is-forecolor-magenta-90">
+                        .is-forecolor-magenta-90
+                      </div>
+                      <div class="is-forecolor-magenta-95">
+                        .is-forecolor-magenta-95
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-gray-05">
+                        .is-backcolor-gray-05
+                      </div>
+                      <div class="is-backcolor-gray-10">
+                        .is-backcolor-gray-10
+                      </div>
+                      <div class="is-backcolor-gray-15">
+                        .is-backcolor-gray-15
+                      </div>
+                      <div class="is-backcolor-gray-20">
+                        .is-backcolor-gray-20
+                      </div>
+                      <div class="is-backcolor-gray-25">
+                        .is-backcolor-gray-25
+                      </div>
+                      <div class="is-backcolor-gray-30">
+                        .is-backcolor-gray-30
+                      </div>
+                      <div class="is-backcolor-gray-35">
+                        .is-backcolor-gray-35
+                      </div>
+                      <div class="is-backcolor-gray-40">
+                        .is-backcolor-gray-40
+                      </div>
+                      <div class="is-backcolor-gray-45">
+                        .is-backcolor-gray-45
+                      </div>
+                      <div class="is-backcolor-gray-50">
+                        .is-backcolor-gray-50
+                      </div>
+                      <div class="is-backcolor-gray-55">
+                        .is-backcolor-gray-55
+                      </div>
+                      <div class="is-backcolor-gray-60">
+                        .is-backcolor-gray-60
+                      </div>
+                      <div class="is-backcolor-gray-65">
+                        .is-backcolor-gray-65
+                      </div>
+                      <div class="is-backcolor-gray-70">
+                        .is-backcolor-gray-70
+                      </div>
+                      <div class="is-backcolor-gray-75">
+                        .is-backcolor-gray-75
+                      </div>
+                      <div class="is-backcolor-gray-80">
+                        .is-backcolor-gray-80
+                      </div>
+                      <div class="is-backcolor-gray-85">
+                        .is-backcolor-gray-85
+                      </div>
+                      <div class="is-backcolor-gray-90">
+                        .is-backcolor-gray-90
+                      </div>
+                      <div class="is-backcolor-gray-95">
+                        .is-backcolor-gray-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-red-05">
+                        .is-backcolor-red-05
+                      </div>
+                      <div class="is-backcolor-red-10">
+                        .is-backcolor-red-10
+                      </div>
+                      <div class="is-backcolor-red-15">
+                        .is-backcolor-red-15
+                      </div>
+                      <div class="is-backcolor-red-20">
+                        .is-backcolor-red-20
+                      </div>
+                      <div class="is-backcolor-red-25">
+                        .is-backcolor-red-25
+                      </div>
+                      <div class="is-backcolor-red-30">
+                        .is-backcolor-red-30
+                      </div>
+                      <div class="is-backcolor-red-35">
+                        .is-backcolor-red-35
+                      </div>
+                      <div class="is-backcolor-red-40">
+                        .is-backcolor-red-40
+                      </div>
+                      <div class="is-backcolor-red-45">
+                        .is-backcolor-red-45
+                      </div>
+                      <div class="is-backcolor-red-50">
+                        .is-backcolor-red-50
+                      </div>
+                      <div class="is-backcolor-red-55">
+                        .is-backcolor-red-55
+                      </div>
+                      <div class="is-backcolor-red-60">
+                        .is-backcolor-red-60
+                      </div>
+                      <div class="is-backcolor-red-65">
+                        .is-backcolor-red-65
+                      </div>
+                      <div class="is-backcolor-red-70">
+                        .is-backcolor-red-70
+                      </div>
+                      <div class="is-backcolor-red-75">
+                        .is-backcolor-red-75
+                      </div>
+                      <div class="is-backcolor-red-80">
+                        .is-backcolor-red-80
+                      </div>
+                      <div class="is-backcolor-red-85">
+                        .is-backcolor-red-85
+                      </div>
+                      <div class="is-backcolor-red-90">
+                        .is-backcolor-red-90
+                      </div>
+                      <div class="is-backcolor-red-95">
+                        .is-backcolor-red-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-orange-05">
+                        .is-backcolor-orange-05
+                      </div>
+                      <div class="is-backcolor-orange-10">
+                        .is-backcolor-orange-10
+                      </div>
+                      <div class="is-backcolor-orange-15">
+                        .is-backcolor-orange-15
+                      </div>
+                      <div class="is-backcolor-orange-20">
+                        .is-backcolor-orange-20
+                      </div>
+                      <div class="is-backcolor-orange-25">
+                        .is-backcolor-orange-25
+                      </div>
+                      <div class="is-backcolor-orange-30">
+                        .is-backcolor-orange-30
+                      </div>
+                      <div class="is-backcolor-orange-35">
+                        .is-backcolor-orange-35
+                      </div>
+                      <div class="is-backcolor-orange-40">
+                        .is-backcolor-orange-40
+                      </div>
+                      <div class="is-backcolor-orange-45">
+                        .is-backcolor-orange-45
+                      </div>
+                      <div class="is-backcolor-orange-50">
+                        .is-backcolor-orange-50
+                      </div>
+                      <div class="is-backcolor-orange-55">
+                        .is-backcolor-orange-55
+                      </div>
+                      <div class="is-backcolor-orange-60">
+                        .is-backcolor-orange-60
+                      </div>
+                      <div class="is-backcolor-orange-65">
+                        .is-backcolor-orange-65
+                      </div>
+                      <div class="is-backcolor-orange-70">
+                        .is-backcolor-orange-70
+                      </div>
+                      <div class="is-backcolor-orange-75">
+                        .is-backcolor-orange-75
+                      </div>
+                      <div class="is-backcolor-orange-80">
+                        .is-backcolor-orange-80
+                      </div>
+                      <div class="is-backcolor-orange-85">
+                        .is-backcolor-orange-85
+                      </div>
+                      <div class="is-backcolor-orange-90">
+                        .is-backcolor-orange-90
+                      </div>
+                      <div class="is-backcolor-orange-95">
+                        .is-backcolor-orange-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-yellow-05">
+                        .is-backcolor-yellow-05
+                      </div>
+                      <div class="is-backcolor-yellow-10">
+                        .is-backcolor-yellow-10
+                      </div>
+                      <div class="is-backcolor-yellow-15">
+                        .is-backcolor-yellow-15
+                      </div>
+                      <div class="is-backcolor-yellow-20">
+                        .is-backcolor-yellow-20
+                      </div>
+                      <div class="is-backcolor-yellow-25">
+                        .is-backcolor-yellow-25
+                      </div>
+                      <div class="is-backcolor-yellow-30">
+                        .is-backcolor-yellow-30
+                      </div>
+                      <div class="is-backcolor-yellow-35">
+                        .is-backcolor-yellow-35
+                      </div>
+                      <div class="is-backcolor-yellow-40">
+                        .is-backcolor-yellow-40
+                      </div>
+                      <div class="is-backcolor-yellow-45">
+                        .is-backcolor-yellow-45
+                      </div>
+                      <div class="is-backcolor-yellow-50">
+                        .is-backcolor-yellow-50
+                      </div>
+                      <div class="is-backcolor-yellow-55">
+                        .is-backcolor-yellow-55
+                      </div>
+                      <div class="is-backcolor-yellow-60">
+                        .is-backcolor-yellow-60
+                      </div>
+                      <div class="is-backcolor-yellow-65">
+                        .is-backcolor-yellow-65
+                      </div>
+                      <div class="is-backcolor-yellow-70">
+                        .is-backcolor-yellow-70
+                      </div>
+                      <div class="is-backcolor-yellow-75">
+                        .is-backcolor-yellow-75
+                      </div>
+                      <div class="is-backcolor-yellow-80">
+                        .is-backcolor-yellow-80
+                      </div>
+                      <div class="is-backcolor-yellow-85">
+                        .is-backcolor-yellow-85
+                      </div>
+                      <div class="is-backcolor-yellow-90">
+                        .is-backcolor-yellow-90
+                      </div>
+                      <div class="is-backcolor-yellow-95">
+                        .is-backcolor-yellow-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-green-05">
+                        .is-backcolor-green-05
+                      </div>
+                      <div class="is-backcolor-green-10">
+                        .is-backcolor-green-10
+                      </div>
+                      <div class="is-backcolor-green-15">
+                        .is-backcolor-green-15
+                      </div>
+                      <div class="is-backcolor-green-20">
+                        .is-backcolor-green-20
+                      </div>
+                      <div class="is-backcolor-green-25">
+                        .is-backcolor-green-25
+                      </div>
+                      <div class="is-backcolor-green-30">
+                        .is-backcolor-green-30
+                      </div>
+                      <div class="is-backcolor-green-35">
+                        .is-backcolor-green-35
+                      </div>
+                      <div class="is-backcolor-green-40">
+                        .is-backcolor-green-40
+                      </div>
+                      <div class="is-backcolor-green-45">
+                        .is-backcolor-green-45
+                      </div>
+                      <div class="is-backcolor-green-50">
+                        .is-backcolor-green-50
+                      </div>
+                      <div class="is-backcolor-green-55">
+                        .is-backcolor-green-55
+                      </div>
+                      <div class="is-backcolor-green-60">
+                        .is-backcolor-green-60
+                      </div>
+                      <div class="is-backcolor-green-65">
+                        .is-backcolor-green-65
+                      </div>
+                      <div class="is-backcolor-green-70">
+                        .is-backcolor-green-70
+                      </div>
+                      <div class="is-backcolor-green-75">
+                        .is-backcolor-green-75
+                      </div>
+                      <div class="is-backcolor-green-80">
+                        .is-backcolor-green-80
+                      </div>
+                      <div class="is-backcolor-green-85">
+                        .is-backcolor-green-85
+                      </div>
+                      <div class="is-backcolor-green-90">
+                        .is-backcolor-green-90
+                      </div>
+                      <div class="is-backcolor-green-95">
+                        .is-backcolor-green-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-cyan-05">
+                        .is-backcolor-cyan-05
+                      </div>
+                      <div class="is-backcolor-cyan-10">
+                        .is-backcolor-cyan-10
+                      </div>
+                      <div class="is-backcolor-cyan-15">
+                        .is-backcolor-cyan-15
+                      </div>
+                      <div class="is-backcolor-cyan-20">
+                        .is-backcolor-cyan-20
+                      </div>
+                      <div class="is-backcolor-cyan-25">
+                        .is-backcolor-cyan-25
+                      </div>
+                      <div class="is-backcolor-cyan-30">
+                        .is-backcolor-cyan-30
+                      </div>
+                      <div class="is-backcolor-cyan-35">
+                        .is-backcolor-cyan-35
+                      </div>
+                      <div class="is-backcolor-cyan-40">
+                        .is-backcolor-cyan-40
+                      </div>
+                      <div class="is-backcolor-cyan-45">
+                        .is-backcolor-cyan-45
+                      </div>
+                      <div class="is-backcolor-cyan-50">
+                        .is-backcolor-cyan-50
+                      </div>
+                      <div class="is-backcolor-cyan-55">
+                        .is-backcolor-cyan-55
+                      </div>
+                      <div class="is-backcolor-cyan-60">
+                        .is-backcolor-cyan-60
+                      </div>
+                      <div class="is-backcolor-cyan-65">
+                        .is-backcolor-cyan-65
+                      </div>
+                      <div class="is-backcolor-cyan-70">
+                        .is-backcolor-cyan-70
+                      </div>
+                      <div class="is-backcolor-cyan-75">
+                        .is-backcolor-cyan-75
+                      </div>
+                      <div class="is-backcolor-cyan-80">
+                        .is-backcolor-cyan-80
+                      </div>
+                      <div class="is-backcolor-cyan-85">
+                        .is-backcolor-cyan-85
+                      </div>
+                      <div class="is-backcolor-cyan-90">
+                        .is-backcolor-cyan-90
+                      </div>
+                      <div class="is-backcolor-cyan-95">
+                        .is-backcolor-cyan-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-blue-05">
+                        .is-backcolor-blue-05
+                      </div>
+                      <div class="is-backcolor-blue-10">
+                        .is-backcolor-blue-10
+                      </div>
+                      <div class="is-backcolor-blue-15">
+                        .is-backcolor-blue-15
+                      </div>
+                      <div class="is-backcolor-blue-20">
+                        .is-backcolor-blue-20
+                      </div>
+                      <div class="is-backcolor-blue-25">
+                        .is-backcolor-blue-25
+                      </div>
+                      <div class="is-backcolor-blue-30">
+                        .is-backcolor-blue-30
+                      </div>
+                      <div class="is-backcolor-blue-35">
+                        .is-backcolor-blue-35
+                      </div>
+                      <div class="is-backcolor-blue-40">
+                        .is-backcolor-blue-40
+                      </div>
+                      <div class="is-backcolor-blue-45">
+                        .is-backcolor-blue-45
+                      </div>
+                      <div class="is-backcolor-blue-50">
+                        .is-backcolor-blue-50
+                      </div>
+                      <div class="is-backcolor-blue-55">
+                        .is-backcolor-blue-55
+                      </div>
+                      <div class="is-backcolor-blue-60">
+                        .is-backcolor-blue-60
+                      </div>
+                      <div class="is-backcolor-blue-65">
+                        .is-backcolor-blue-65
+                      </div>
+                      <div class="is-backcolor-blue-70">
+                        .is-backcolor-blue-70
+                      </div>
+                      <div class="is-backcolor-blue-75">
+                        .is-backcolor-blue-75
+                      </div>
+                      <div class="is-backcolor-blue-80">
+                        .is-backcolor-blue-80
+                      </div>
+                      <div class="is-backcolor-blue-85">
+                        .is-backcolor-blue-85
+                      </div>
+                      <div class="is-backcolor-blue-90">
+                        .is-backcolor-blue-90
+                      </div>
+                      <div class="is-backcolor-blue-95">
+                        .is-backcolor-blue-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-violet-05">
+                        .is-backcolor-violet-05
+                      </div>
+                      <div class="is-backcolor-violet-10">
+                        .is-backcolor-violet-10
+                      </div>
+                      <div class="is-backcolor-violet-15">
+                        .is-backcolor-violet-15
+                      </div>
+                      <div class="is-backcolor-violet-20">
+                        .is-backcolor-violet-20
+                      </div>
+                      <div class="is-backcolor-violet-25">
+                        .is-backcolor-violet-25
+                      </div>
+                      <div class="is-backcolor-violet-30">
+                        .is-backcolor-violet-30
+                      </div>
+                      <div class="is-backcolor-violet-35">
+                        .is-backcolor-violet-35
+                      </div>
+                      <div class="is-backcolor-violet-40">
+                        .is-backcolor-violet-40
+                      </div>
+                      <div class="is-backcolor-violet-45">
+                        .is-backcolor-violet-45
+                      </div>
+                      <div class="is-backcolor-violet-50">
+                        .is-backcolor-violet-50
+                      </div>
+                      <div class="is-backcolor-violet-55">
+                        .is-backcolor-violet-55
+                      </div>
+                      <div class="is-backcolor-violet-60">
+                        .is-backcolor-violet-60
+                      </div>
+                      <div class="is-backcolor-violet-65">
+                        .is-backcolor-violet-65
+                      </div>
+                      <div class="is-backcolor-violet-70">
+                        .is-backcolor-violet-70
+                      </div>
+                      <div class="is-backcolor-violet-75">
+                        .is-backcolor-violet-75
+                      </div>
+                      <div class="is-backcolor-violet-80">
+                        .is-backcolor-violet-80
+                      </div>
+                      <div class="is-backcolor-violet-85">
+                        .is-backcolor-violet-85
+                      </div>
+                      <div class="is-backcolor-violet-90">
+                        .is-backcolor-violet-90
+                      </div>
+                      <div class="is-backcolor-violet-95">
+                        .is-backcolor-violet-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-backcolor-magenta-05">
+                        .is-backcolor-magenta-05
+                      </div>
+                      <div class="is-backcolor-magenta-10">
+                        .is-backcolor-magenta-10
+                      </div>
+                      <div class="is-backcolor-magenta-15">
+                        .is-backcolor-magenta-15
+                      </div>
+                      <div class="is-backcolor-magenta-20">
+                        .is-backcolor-magenta-20
+                      </div>
+                      <div class="is-backcolor-magenta-25">
+                        .is-backcolor-magenta-25
+                      </div>
+                      <div class="is-backcolor-magenta-30">
+                        .is-backcolor-magenta-30
+                      </div>
+                      <div class="is-backcolor-magenta-35">
+                        .is-backcolor-magenta-35
+                      </div>
+                      <div class="is-backcolor-magenta-40">
+                        .is-backcolor-magenta-40
+                      </div>
+                      <div class="is-backcolor-magenta-45">
+                        .is-backcolor-magenta-45
+                      </div>
+                      <div class="is-backcolor-magenta-50">
+                        .is-backcolor-magenta-50
+                      </div>
+                      <div class="is-backcolor-magenta-55">
+                        .is-backcolor-magenta-55
+                      </div>
+                      <div class="is-backcolor-magenta-60">
+                        .is-backcolor-magenta-60
+                      </div>
+                      <div class="is-backcolor-magenta-65">
+                        .is-backcolor-magenta-65
+                      </div>
+                      <div class="is-backcolor-magenta-70">
+                        .is-backcolor-magenta-70
+                      </div>
+                      <div class="is-backcolor-magenta-75">
+                        .is-backcolor-magenta-75
+                      </div>
+                      <div class="is-backcolor-magenta-80">
+                        .is-backcolor-magenta-80
+                      </div>
+                      <div class="is-backcolor-magenta-85">
+                        .is-backcolor-magenta-85
+                      </div>
+                      <div class="is-backcolor-magenta-90">
+                        .is-backcolor-magenta-90
+                      </div>
+                      <div class="is-backcolor-magenta-95">
+                        .is-backcolor-magenta-95
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-gray-05">
+                        .is-highlighter-gray-05
+                      </div>
+                      <div class="is-highlighter-gray-10">
+                        .is-highlighter-gray-10
+                      </div>
+                      <div class="is-highlighter-gray-15">
+                        .is-highlighter-gray-15
+                      </div>
+                      <div class="is-highlighter-gray-20">
+                        .is-highlighter-gray-20
+                      </div>
+                      <div class="is-highlighter-gray-25">
+                        .is-highlighter-gray-25
+                      </div>
+                      <div class="is-highlighter-gray-30">
+                        .is-highlighter-gray-30
+                      </div>
+                      <div class="is-highlighter-gray-35">
+                        .is-highlighter-gray-35
+                      </div>
+                      <div class="is-highlighter-gray-40">
+                        .is-highlighter-gray-40
+                      </div>
+                      <div class="is-highlighter-gray-45">
+                        .is-highlighter-gray-45
+                      </div>
+                      <div class="is-highlighter-gray-50">
+                        .is-highlighter-gray-50
+                      </div>
+                      <div class="is-highlighter-gray-55">
+                        .is-highlighter-gray-55
+                      </div>
+                      <div class="is-highlighter-gray-60">
+                        .is-highlighter-gray-60
+                      </div>
+                      <div class="is-highlighter-gray-65">
+                        .is-highlighter-gray-65
+                      </div>
+                      <div class="is-highlighter-gray-70">
+                        .is-highlighter-gray-70
+                      </div>
+                      <div class="is-highlighter-gray-75">
+                        .is-highlighter-gray-75
+                      </div>
+                      <div class="is-highlighter-gray-80">
+                        .is-highlighter-gray-80
+                      </div>
+                      <div class="is-highlighter-gray-85">
+                        .is-highlighter-gray-85
+                      </div>
+                      <div class="is-highlighter-gray-90">
+                        .is-highlighter-gray-90
+                      </div>
+                      <div class="is-highlighter-gray-95">
+                        .is-highlighter-gray-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-red-05">
+                        .is-highlighter-red-05
+                      </div>
+                      <div class="is-highlighter-red-10">
+                        .is-highlighter-red-10
+                      </div>
+                      <div class="is-highlighter-red-15">
+                        .is-highlighter-red-15
+                      </div>
+                      <div class="is-highlighter-red-20">
+                        .is-highlighter-red-20
+                      </div>
+                      <div class="is-highlighter-red-25">
+                        .is-highlighter-red-25
+                      </div>
+                      <div class="is-highlighter-red-30">
+                        .is-highlighter-red-30
+                      </div>
+                      <div class="is-highlighter-red-35">
+                        .is-highlighter-red-35
+                      </div>
+                      <div class="is-highlighter-red-40">
+                        .is-highlighter-red-40
+                      </div>
+                      <div class="is-highlighter-red-45">
+                        .is-highlighter-red-45
+                      </div>
+                      <div class="is-highlighter-red-50">
+                        .is-highlighter-red-50
+                      </div>
+                      <div class="is-highlighter-red-55">
+                        .is-highlighter-red-55
+                      </div>
+                      <div class="is-highlighter-red-60">
+                        .is-highlighter-red-60
+                      </div>
+                      <div class="is-highlighter-red-65">
+                        .is-highlighter-red-65
+                      </div>
+                      <div class="is-highlighter-red-70">
+                        .is-highlighter-red-70
+                      </div>
+                      <div class="is-highlighter-red-75">
+                        .is-highlighter-red-75
+                      </div>
+                      <div class="is-highlighter-red-80">
+                        .is-highlighter-red-80
+                      </div>
+                      <div class="is-highlighter-red-85">
+                        .is-highlighter-red-85
+                      </div>
+                      <div class="is-highlighter-red-90">
+                        .is-highlighter-red-90
+                      </div>
+                      <div class="is-highlighter-red-95">
+                        .is-highlighter-red-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-orange-05">
+                        .is-highlighter-orange-05
+                      </div>
+                      <div class="is-highlighter-orange-10">
+                        .is-highlighter-orange-10
+                      </div>
+                      <div class="is-highlighter-orange-15">
+                        .is-highlighter-orange-15
+                      </div>
+                      <div class="is-highlighter-orange-20">
+                        .is-highlighter-orange-20
+                      </div>
+                      <div class="is-highlighter-orange-25">
+                        .is-highlighter-orange-25
+                      </div>
+                      <div class="is-highlighter-orange-30">
+                        .is-highlighter-orange-30
+                      </div>
+                      <div class="is-highlighter-orange-35">
+                        .is-highlighter-orange-35
+                      </div>
+                      <div class="is-highlighter-orange-40">
+                        .is-highlighter-orange-40
+                      </div>
+                      <div class="is-highlighter-orange-45">
+                        .is-highlighter-orange-45
+                      </div>
+                      <div class="is-highlighter-orange-50">
+                        .is-highlighter-orange-50
+                      </div>
+                      <div class="is-highlighter-orange-55">
+                        .is-highlighter-orange-55
+                      </div>
+                      <div class="is-highlighter-orange-60">
+                        .is-highlighter-orange-60
+                      </div>
+                      <div class="is-highlighter-orange-65">
+                        .is-highlighter-orange-65
+                      </div>
+                      <div class="is-highlighter-orange-70">
+                        .is-highlighter-orange-70
+                      </div>
+                      <div class="is-highlighter-orange-75">
+                        .is-highlighter-orange-75
+                      </div>
+                      <div class="is-highlighter-orange-80">
+                        .is-highlighter-orange-80
+                      </div>
+                      <div class="is-highlighter-orange-85">
+                        .is-highlighter-orange-85
+                      </div>
+                      <div class="is-highlighter-orange-90">
+                        .is-highlighter-orange-90
+                      </div>
+                      <div class="is-highlighter-orange-95">
+                        .is-highlighter-orange-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-yellow-05">
+                        .is-highlighter-yellow-05
+                      </div>
+                      <div class="is-highlighter-yellow-10">
+                        .is-highlighter-yellow-10
+                      </div>
+                      <div class="is-highlighter-yellow-15">
+                        .is-highlighter-yellow-15
+                      </div>
+                      <div class="is-highlighter-yellow-20">
+                        .is-highlighter-yellow-20
+                      </div>
+                      <div class="is-highlighter-yellow-25">
+                        .is-highlighter-yellow-25
+                      </div>
+                      <div class="is-highlighter-yellow-30">
+                        .is-highlighter-yellow-30
+                      </div>
+                      <div class="is-highlighter-yellow-35">
+                        .is-highlighter-yellow-35
+                      </div>
+                      <div class="is-highlighter-yellow-40">
+                        .is-highlighter-yellow-40
+                      </div>
+                      <div class="is-highlighter-yellow-45">
+                        .is-highlighter-yellow-45
+                      </div>
+                      <div class="is-highlighter-yellow-50">
+                        .is-highlighter-yellow-50
+                      </div>
+                      <div class="is-highlighter-yellow-55">
+                        .is-highlighter-yellow-55
+                      </div>
+                      <div class="is-highlighter-yellow-60">
+                        .is-highlighter-yellow-60
+                      </div>
+                      <div class="is-highlighter-yellow-65">
+                        .is-highlighter-yellow-65
+                      </div>
+                      <div class="is-highlighter-yellow-70">
+                        .is-highlighter-yellow-70
+                      </div>
+                      <div class="is-highlighter-yellow-75">
+                        .is-highlighter-yellow-75
+                      </div>
+                      <div class="is-highlighter-yellow-80">
+                        .is-highlighter-yellow-80
+                      </div>
+                      <div class="is-highlighter-yellow-85">
+                        .is-highlighter-yellow-85
+                      </div>
+                      <div class="is-highlighter-yellow-90">
+                        .is-highlighter-yellow-90
+                      </div>
+                      <div class="is-highlighter-yellow-95">
+                        .is-highlighter-yellow-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-green-05">
+                        .is-highlighter-green-05
+                      </div>
+                      <div class="is-highlighter-green-10">
+                        .is-highlighter-green-10
+                      </div>
+                      <div class="is-highlighter-green-15">
+                        .is-highlighter-green-15
+                      </div>
+                      <div class="is-highlighter-green-20">
+                        .is-highlighter-green-20
+                      </div>
+                      <div class="is-highlighter-green-25">
+                        .is-highlighter-green-25
+                      </div>
+                      <div class="is-highlighter-green-30">
+                        .is-highlighter-green-30
+                      </div>
+                      <div class="is-highlighter-green-35">
+                        .is-highlighter-green-35
+                      </div>
+                      <div class="is-highlighter-green-40">
+                        .is-highlighter-green-40
+                      </div>
+                      <div class="is-highlighter-green-45">
+                        .is-highlighter-green-45
+                      </div>
+                      <div class="is-highlighter-green-50">
+                        .is-highlighter-green-50
+                      </div>
+                      <div class="is-highlighter-green-55">
+                        .is-highlighter-green-55
+                      </div>
+                      <div class="is-highlighter-green-60">
+                        .is-highlighter-green-60
+                      </div>
+                      <div class="is-highlighter-green-65">
+                        .is-highlighter-green-65
+                      </div>
+                      <div class="is-highlighter-green-70">
+                        .is-highlighter-green-70
+                      </div>
+                      <div class="is-highlighter-green-75">
+                        .is-highlighter-green-75
+                      </div>
+                      <div class="is-highlighter-green-80">
+                        .is-highlighter-green-80
+                      </div>
+                      <div class="is-highlighter-green-85">
+                        .is-highlighter-green-85
+                      </div>
+                      <div class="is-highlighter-green-90">
+                        .is-highlighter-green-90
+                      </div>
+                      <div class="is-highlighter-green-95">
+                        .is-highlighter-green-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-cyan-05">
+                        .is-highlighter-cyan-05
+                      </div>
+                      <div class="is-highlighter-cyan-10">
+                        .is-highlighter-cyan-10
+                      </div>
+                      <div class="is-highlighter-cyan-15">
+                        .is-highlighter-cyan-15
+                      </div>
+                      <div class="is-highlighter-cyan-20">
+                        .is-highlighter-cyan-20
+                      </div>
+                      <div class="is-highlighter-cyan-25">
+                        .is-highlighter-cyan-25
+                      </div>
+                      <div class="is-highlighter-cyan-30">
+                        .is-highlighter-cyan-30
+                      </div>
+                      <div class="is-highlighter-cyan-35">
+                        .is-highlighter-cyan-35
+                      </div>
+                      <div class="is-highlighter-cyan-40">
+                        .is-highlighter-cyan-40
+                      </div>
+                      <div class="is-highlighter-cyan-45">
+                        .is-highlighter-cyan-45
+                      </div>
+                      <div class="is-highlighter-cyan-50">
+                        .is-highlighter-cyan-50
+                      </div>
+                      <div class="is-highlighter-cyan-55">
+                        .is-highlighter-cyan-55
+                      </div>
+                      <div class="is-highlighter-cyan-60">
+                        .is-highlighter-cyan-60
+                      </div>
+                      <div class="is-highlighter-cyan-65">
+                        .is-highlighter-cyan-65
+                      </div>
+                      <div class="is-highlighter-cyan-70">
+                        .is-highlighter-cyan-70
+                      </div>
+                      <div class="is-highlighter-cyan-75">
+                        .is-highlighter-cyan-75
+                      </div>
+                      <div class="is-highlighter-cyan-80">
+                        .is-highlighter-cyan-80
+                      </div>
+                      <div class="is-highlighter-cyan-85">
+                        .is-highlighter-cyan-85
+                      </div>
+                      <div class="is-highlighter-cyan-90">
+                        .is-highlighter-cyan-90
+                      </div>
+                      <div class="is-highlighter-cyan-95">
+                        .is-highlighter-cyan-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-blue-05">
+                        .is-highlighter-blue-05
+                      </div>
+                      <div class="is-highlighter-blue-10">
+                        .is-highlighter-blue-10
+                      </div>
+                      <div class="is-highlighter-blue-15">
+                        .is-highlighter-blue-15
+                      </div>
+                      <div class="is-highlighter-blue-20">
+                        .is-highlighter-blue-20
+                      </div>
+                      <div class="is-highlighter-blue-25">
+                        .is-highlighter-blue-25
+                      </div>
+                      <div class="is-highlighter-blue-30">
+                        .is-highlighter-blue-30
+                      </div>
+                      <div class="is-highlighter-blue-35">
+                        .is-highlighter-blue-35
+                      </div>
+                      <div class="is-highlighter-blue-40">
+                        .is-highlighter-blue-40
+                      </div>
+                      <div class="is-highlighter-blue-45">
+                        .is-highlighter-blue-45
+                      </div>
+                      <div class="is-highlighter-blue-50">
+                        .is-highlighter-blue-50
+                      </div>
+                      <div class="is-highlighter-blue-55">
+                        .is-highlighter-blue-55
+                      </div>
+                      <div class="is-highlighter-blue-60">
+                        .is-highlighter-blue-60
+                      </div>
+                      <div class="is-highlighter-blue-65">
+                        .is-highlighter-blue-65
+                      </div>
+                      <div class="is-highlighter-blue-70">
+                        .is-highlighter-blue-70
+                      </div>
+                      <div class="is-highlighter-blue-75">
+                        .is-highlighter-blue-75
+                      </div>
+                      <div class="is-highlighter-blue-80">
+                        .is-highlighter-blue-80
+                      </div>
+                      <div class="is-highlighter-blue-85">
+                        .is-highlighter-blue-85
+                      </div>
+                      <div class="is-highlighter-blue-90">
+                        .is-highlighter-blue-90
+                      </div>
+                      <div class="is-highlighter-blue-95">
+                        .is-highlighter-blue-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-violet-05">
+                        .is-highlighter-violet-05
+                      </div>
+                      <div class="is-highlighter-violet-10">
+                        .is-highlighter-violet-10
+                      </div>
+                      <div class="is-highlighter-violet-15">
+                        .is-highlighter-violet-15
+                      </div>
+                      <div class="is-highlighter-violet-20">
+                        .is-highlighter-violet-20
+                      </div>
+                      <div class="is-highlighter-violet-25">
+                        .is-highlighter-violet-25
+                      </div>
+                      <div class="is-highlighter-violet-30">
+                        .is-highlighter-violet-30
+                      </div>
+                      <div class="is-highlighter-violet-35">
+                        .is-highlighter-violet-35
+                      </div>
+                      <div class="is-highlighter-violet-40">
+                        .is-highlighter-violet-40
+                      </div>
+                      <div class="is-highlighter-violet-45">
+                        .is-highlighter-violet-45
+                      </div>
+                      <div class="is-highlighter-violet-50">
+                        .is-highlighter-violet-50
+                      </div>
+                      <div class="is-highlighter-violet-55">
+                        .is-highlighter-violet-55
+                      </div>
+                      <div class="is-highlighter-violet-60">
+                        .is-highlighter-violet-60
+                      </div>
+                      <div class="is-highlighter-violet-65">
+                        .is-highlighter-violet-65
+                      </div>
+                      <div class="is-highlighter-violet-70">
+                        .is-highlighter-violet-70
+                      </div>
+                      <div class="is-highlighter-violet-75">
+                        .is-highlighter-violet-75
+                      </div>
+                      <div class="is-highlighter-violet-80">
+                        .is-highlighter-violet-80
+                      </div>
+                      <div class="is-highlighter-violet-85">
+                        .is-highlighter-violet-85
+                      </div>
+                      <div class="is-highlighter-violet-90">
+                        .is-highlighter-violet-90
+                      </div>
+                      <div class="is-highlighter-violet-95">
+                        .is-highlighter-violet-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="is-highlighter-magenta-05">
+                        .is-highlighter-magenta-05
+                      </div>
+                      <div class="is-highlighter-magenta-10">
+                        .is-highlighter-magenta-10
+                      </div>
+                      <div class="is-highlighter-magenta-15">
+                        .is-highlighter-magenta-15
+                      </div>
+                      <div class="is-highlighter-magenta-20">
+                        .is-highlighter-magenta-20
+                      </div>
+                      <div class="is-highlighter-magenta-25">
+                        .is-highlighter-magenta-25
+                      </div>
+                      <div class="is-highlighter-magenta-30">
+                        .is-highlighter-magenta-30
+                      </div>
+                      <div class="is-highlighter-magenta-35">
+                        .is-highlighter-magenta-35
+                      </div>
+                      <div class="is-highlighter-magenta-40">
+                        .is-highlighter-magenta-40
+                      </div>
+                      <div class="is-highlighter-magenta-45">
+                        .is-highlighter-magenta-45
+                      </div>
+                      <div class="is-highlighter-magenta-50">
+                        .is-highlighter-magenta-50
+                      </div>
+                      <div class="is-highlighter-magenta-55">
+                        .is-highlighter-magenta-55
+                      </div>
+                      <div class="is-highlighter-magenta-60">
+                        .is-highlighter-magenta-60
+                      </div>
+                      <div class="is-highlighter-magenta-65">
+                        .is-highlighter-magenta-65
+                      </div>
+                      <div class="is-highlighter-magenta-70">
+                        .is-highlighter-magenta-70
+                      </div>
+                      <div class="is-highlighter-magenta-75">
+                        .is-highlighter-magenta-75
+                      </div>
+                      <div class="is-highlighter-magenta-80">
+                        .is-highlighter-magenta-80
+                      </div>
+                      <div class="is-highlighter-magenta-85">
+                        .is-highlighter-magenta-85
+                      </div>
+                      <div class="is-highlighter-magenta-90">
+                        .is-highlighter-magenta-90
+                      </div>
+                      <div class="is-highlighter-magenta-95">
+                        .is-highlighter-magenta-95
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="columns">
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-gray-05">
+                        .is-bordercolor-gray-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-10">
+                        .is-bordercolor-gray-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-15">
+                        .is-bordercolor-gray-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-20">
+                        .is-bordercolor-gray-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-25">
+                        .is-bordercolor-gray-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-30">
+                        .is-bordercolor-gray-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-35">
+                        .is-bordercolor-gray-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-40">
+                        .is-bordercolor-gray-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-45">
+                        .is-bordercolor-gray-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-50">
+                        .is-bordercolor-gray-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-55">
+                        .is-bordercolor-gray-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-60">
+                        .is-bordercolor-gray-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-65">
+                        .is-bordercolor-gray-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-70">
+                        .is-bordercolor-gray-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-75">
+                        .is-bordercolor-gray-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-80">
+                        .is-bordercolor-gray-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-85">
+                        .is-bordercolor-gray-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-90">
+                        .is-bordercolor-gray-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-gray-95">
+                        .is-bordercolor-gray-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-red-05">
+                        .is-bordercolor-red-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-10">
+                        .is-bordercolor-red-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-15">
+                        .is-bordercolor-red-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-20">
+                        .is-bordercolor-red-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-25">
+                        .is-bordercolor-red-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-30">
+                        .is-bordercolor-red-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-35">
+                        .is-bordercolor-red-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-40">
+                        .is-bordercolor-red-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-45">
+                        .is-bordercolor-red-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-50">
+                        .is-bordercolor-red-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-55">
+                        .is-bordercolor-red-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-60">
+                        .is-bordercolor-red-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-65">
+                        .is-bordercolor-red-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-70">
+                        .is-bordercolor-red-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-75">
+                        .is-bordercolor-red-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-80">
+                        .is-bordercolor-red-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-85">
+                        .is-bordercolor-red-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-90">
+                        .is-bordercolor-red-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-red-95">
+                        .is-bordercolor-red-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-orange-05">
+                        .is-bordercolor-orange-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-10">
+                        .is-bordercolor-orange-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-15">
+                        .is-bordercolor-orange-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-20">
+                        .is-bordercolor-orange-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-25">
+                        .is-bordercolor-orange-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-30">
+                        .is-bordercolor-orange-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-35">
+                        .is-bordercolor-orange-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-40">
+                        .is-bordercolor-orange-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-45">
+                        .is-bordercolor-orange-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-50">
+                        .is-bordercolor-orange-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-55">
+                        .is-bordercolor-orange-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-60">
+                        .is-bordercolor-orange-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-65">
+                        .is-bordercolor-orange-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-70">
+                        .is-bordercolor-orange-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-75">
+                        .is-bordercolor-orange-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-80">
+                        .is-bordercolor-orange-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-85">
+                        .is-bordercolor-orange-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-90">
+                        .is-bordercolor-orange-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-orange-95">
+                        .is-bordercolor-orange-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-yellow-05">
+                        .is-bordercolor-yellow-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-10">
+                        .is-bordercolor-yellow-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-15">
+                        .is-bordercolor-yellow-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-20">
+                        .is-bordercolor-yellow-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-25">
+                        .is-bordercolor-yellow-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-30">
+                        .is-bordercolor-yellow-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-35">
+                        .is-bordercolor-yellow-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-40">
+                        .is-bordercolor-yellow-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-45">
+                        .is-bordercolor-yellow-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-50">
+                        .is-bordercolor-yellow-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-55">
+                        .is-bordercolor-yellow-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-60">
+                        .is-bordercolor-yellow-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-65">
+                        .is-bordercolor-yellow-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-70">
+                        .is-bordercolor-yellow-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-75">
+                        .is-bordercolor-yellow-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-80">
+                        .is-bordercolor-yellow-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-85">
+                        .is-bordercolor-yellow-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-90">
+                        .is-bordercolor-yellow-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-yellow-95">
+                        .is-bordercolor-yellow-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-green-05">
+                        .is-bordercolor-green-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-10">
+                        .is-bordercolor-green-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-15">
+                        .is-bordercolor-green-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-20">
+                        .is-bordercolor-green-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-25">
+                        .is-bordercolor-green-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-30">
+                        .is-bordercolor-green-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-35">
+                        .is-bordercolor-green-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-40">
+                        .is-bordercolor-green-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-45">
+                        .is-bordercolor-green-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-50">
+                        .is-bordercolor-green-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-55">
+                        .is-bordercolor-green-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-60">
+                        .is-bordercolor-green-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-65">
+                        .is-bordercolor-green-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-70">
+                        .is-bordercolor-green-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-75">
+                        .is-bordercolor-green-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-80">
+                        .is-bordercolor-green-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-85">
+                        .is-bordercolor-green-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-90">
+                        .is-bordercolor-green-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-green-95">
+                        .is-bordercolor-green-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-cyan-05">
+                        .is-bordercolor-cyan-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-10">
+                        .is-bordercolor-cyan-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-15">
+                        .is-bordercolor-cyan-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-20">
+                        .is-bordercolor-cyan-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-25">
+                        .is-bordercolor-cyan-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-30">
+                        .is-bordercolor-cyan-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-35">
+                        .is-bordercolor-cyan-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-40">
+                        .is-bordercolor-cyan-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-45">
+                        .is-bordercolor-cyan-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-50">
+                        .is-bordercolor-cyan-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-55">
+                        .is-bordercolor-cyan-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-60">
+                        .is-bordercolor-cyan-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-65">
+                        .is-bordercolor-cyan-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-70">
+                        .is-bordercolor-cyan-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-75">
+                        .is-bordercolor-cyan-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-80">
+                        .is-bordercolor-cyan-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-85">
+                        .is-bordercolor-cyan-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-90">
+                        .is-bordercolor-cyan-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-cyan-95">
+                        .is-bordercolor-cyan-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-blue-05">
+                        .is-bordercolor-blue-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-10">
+                        .is-bordercolor-blue-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-15">
+                        .is-bordercolor-blue-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-20">
+                        .is-bordercolor-blue-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-25">
+                        .is-bordercolor-blue-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-30">
+                        .is-bordercolor-blue-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-35">
+                        .is-bordercolor-blue-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-40">
+                        .is-bordercolor-blue-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-45">
+                        .is-bordercolor-blue-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-50">
+                        .is-bordercolor-blue-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-55">
+                        .is-bordercolor-blue-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-60">
+                        .is-bordercolor-blue-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-65">
+                        .is-bordercolor-blue-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-70">
+                        .is-bordercolor-blue-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-75">
+                        .is-bordercolor-blue-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-80">
+                        .is-bordercolor-blue-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-85">
+                        .is-bordercolor-blue-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-90">
+                        .is-bordercolor-blue-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-blue-95">
+                        .is-bordercolor-blue-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-violet-05">
+                        .is-bordercolor-violet-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-10">
+                        .is-bordercolor-violet-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-15">
+                        .is-bordercolor-violet-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-20">
+                        .is-bordercolor-violet-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-25">
+                        .is-bordercolor-violet-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-30">
+                        .is-bordercolor-violet-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-35">
+                        .is-bordercolor-violet-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-40">
+                        .is-bordercolor-violet-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-45">
+                        .is-bordercolor-violet-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-50">
+                        .is-bordercolor-violet-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-55">
+                        .is-bordercolor-violet-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-60">
+                        .is-bordercolor-violet-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-65">
+                        .is-bordercolor-violet-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-70">
+                        .is-bordercolor-violet-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-75">
+                        .is-bordercolor-violet-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-80">
+                        .is-bordercolor-violet-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-85">
+                        .is-bordercolor-violet-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-90">
+                        .is-bordercolor-violet-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-violet-95">
+                        .is-bordercolor-violet-95
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column-3 is-small-6 is-xsmall-12">
+                    <div class="p-0.5rem">
+                      <div class="has-border-solid is-bordercolor-magenta-05">
+                        .is-bordercolor-magenta-05
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-10">
+                        .is-bordercolor-magenta-10
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-15">
+                        .is-bordercolor-magenta-15
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-20">
+                        .is-bordercolor-magenta-20
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-25">
+                        .is-bordercolor-magenta-25
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-30">
+                        .is-bordercolor-magenta-30
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-35">
+                        .is-bordercolor-magenta-35
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-40">
+                        .is-bordercolor-magenta-40
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-45">
+                        .is-bordercolor-magenta-45
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-50">
+                        .is-bordercolor-magenta-50
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-55">
+                        .is-bordercolor-magenta-55
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-60">
+                        .is-bordercolor-magenta-60
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-65">
+                        .is-bordercolor-magenta-65
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-70">
+                        .is-bordercolor-magenta-70
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-75">
+                        .is-bordercolor-magenta-75
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-80">
+                        .is-bordercolor-magenta-80
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-85">
+                        .is-bordercolor-magenta-85
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-90">
+                        .is-bordercolor-magenta-90
+                      </div>
+                      <div class="has-border-solid is-bordercolor-magenta-95">
+                        .is-bordercolor-magenta-95
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
-          <div class="is-white-space-nowrap">.is-white-space-nowrap</div>
-        </section>
-        <section class="my-1rem">
-          <div class="is-font-size-small">.is-font-size-small</div>
-          <div class="is-font-size-normal">.is-font-size-normal</div>
-          <div class="is-font-size-medium">.is-font-size-medium</div>
-          <div class="is-font-size-large">.is-font-size-large</div>
-          <div class="is-font-size-xlarge">.is-font-size-xlarge</div>
-          <div class="is-font-size-xxlarge">.is-font-size-xxlarge</div>
-          <div class="is-font-size-xxxlarge">.is-font-size-xxxlarge</div>
-          <div class="is-font-size-xxxxlarge">.is-font-size-xxxxlarge</div>
-          <div class="is-font-size-xxxxxlarge">.is-font-size-xxxxxlarge</div>
-        </section>
-        <section class="my-1rem">
-          <div class="is-white-space-nowrap">.is-white-space-nowrap</div>
-        </section>
-        <section class="my-1rem">
-          <div>
-            <div class="is-forecolor-gray-10">.is-forecolor-gray-10</div>
-            <div class="is-forecolor-gray-20">.is-forecolor-gray-20</div>
-            <div class="is-forecolor-gray-30">.is-forecolor-gray-30</div>
-            <div class="is-forecolor-gray-40">.is-forecolor-gray-40</div>
-            <div class="is-forecolor-gray-50">.is-forecolor-gray-50</div>
-            <div class="is-forecolor-gray-60">.is-forecolor-gray-60</div>
-            <div class="is-forecolor-gray-70">.is-forecolor-gray-70</div>
-            <div class="is-forecolor-gray-80">.is-forecolor-gray-80</div>
-            <div class="is-forecolor-gray-90">.is-forecolor-gray-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-red-10">.is-forecolor-red-10</div>
-            <div class="is-forecolor-red-20">.is-forecolor-red-20</div>
-            <div class="is-forecolor-red-30">.is-forecolor-red-30</div>
-            <div class="is-forecolor-red-40">.is-forecolor-red-40</div>
-            <div class="is-forecolor-red-50">.is-forecolor-red-50</div>
-            <div class="is-forecolor-red-60">.is-forecolor-red-60</div>
-            <div class="is-forecolor-red-70">.is-forecolor-red-70</div>
-            <div class="is-forecolor-red-80">.is-forecolor-red-80</div>
-            <div class="is-forecolor-red-90">.is-forecolor-red-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-orange-10">.is-forecolor-orange-10</div>
-            <div class="is-forecolor-orange-20">.is-forecolor-orange-20</div>
-            <div class="is-forecolor-orange-30">.is-forecolor-orange-30</div>
-            <div class="is-forecolor-orange-40">.is-forecolor-orange-40</div>
-            <div class="is-forecolor-orange-50">.is-forecolor-orange-50</div>
-            <div class="is-forecolor-orange-60">.is-forecolor-orange-60</div>
-            <div class="is-forecolor-orange-70">.is-forecolor-orange-70</div>
-            <div class="is-forecolor-orange-80">.is-forecolor-orange-80</div>
-            <div class="is-forecolor-orange-90">.is-forecolor-orange-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-yellow-10">.is-forecolor-yellow-10</div>
-            <div class="is-forecolor-yellow-20">.is-forecolor-yellow-20</div>
-            <div class="is-forecolor-yellow-30">.is-forecolor-yellow-30</div>
-            <div class="is-forecolor-yellow-40">.is-forecolor-yellow-40</div>
-            <div class="is-forecolor-yellow-50">.is-forecolor-yellow-50</div>
-            <div class="is-forecolor-yellow-60">.is-forecolor-yellow-60</div>
-            <div class="is-forecolor-yellow-70">.is-forecolor-yellow-70</div>
-            <div class="is-forecolor-yellow-80">.is-forecolor-yellow-80</div>
-            <div class="is-forecolor-yellow-90">.is-forecolor-yellow-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-green-10">.is-forecolor-green-10</div>
-            <div class="is-forecolor-green-20">.is-forecolor-green-20</div>
-            <div class="is-forecolor-green-30">.is-forecolor-green-30</div>
-            <div class="is-forecolor-green-40">.is-forecolor-green-40</div>
-            <div class="is-forecolor-green-50">.is-forecolor-green-50</div>
-            <div class="is-forecolor-green-60">.is-forecolor-green-60</div>
-            <div class="is-forecolor-green-70">.is-forecolor-green-70</div>
-            <div class="is-forecolor-green-80">.is-forecolor-green-80</div>
-            <div class="is-forecolor-green-90">.is-forecolor-green-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-cyan-10">.is-forecolor-cyan-10</div>
-            <div class="is-forecolor-cyan-20">.is-forecolor-cyan-20</div>
-            <div class="is-forecolor-cyan-30">.is-forecolor-cyan-30</div>
-            <div class="is-forecolor-cyan-40">.is-forecolor-cyan-40</div>
-            <div class="is-forecolor-cyan-50">.is-forecolor-cyan-50</div>
-            <div class="is-forecolor-cyan-60">.is-forecolor-cyan-60</div>
-            <div class="is-forecolor-cyan-70">.is-forecolor-cyan-70</div>
-            <div class="is-forecolor-cyan-80">.is-forecolor-cyan-80</div>
-            <div class="is-forecolor-cyan-90">.is-forecolor-cyan-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-blue-10">.is-forecolor-blue-10</div>
-            <div class="is-forecolor-blue-20">.is-forecolor-blue-20</div>
-            <div class="is-forecolor-blue-30">.is-forecolor-blue-30</div>
-            <div class="is-forecolor-blue-40">.is-forecolor-blue-40</div>
-            <div class="is-forecolor-blue-50">.is-forecolor-blue-50</div>
-            <div class="is-forecolor-blue-60">.is-forecolor-blue-60</div>
-            <div class="is-forecolor-blue-70">.is-forecolor-blue-70</div>
-            <div class="is-forecolor-blue-80">.is-forecolor-blue-80</div>
-            <div class="is-forecolor-blue-90">.is-forecolor-blue-90</div>
-          </div>
-          <div>
-            <div class="is-forecolor-violet-10">.is-forecolor-violet-10</div>
-            <div class="is-forecolor-violet-20">.is-forecolor-violet-20</div>
-            <div class="is-forecolor-violet-30">.is-forecolor-violet-30</div>
-            <div class="is-forecolor-violet-40">.is-forecolor-violet-40</div>
-            <div class="is-forecolor-violet-50">.is-forecolor-violet-50</div>
-            <div class="is-forecolor-violet-60">.is-forecolor-violet-60</div>
-            <div class="is-forecolor-violet-70">.is-forecolor-violet-70</div>
-            <div class="is-forecolor-violet-80">.is-forecolor-violet-80</div>
-            <div class="is-forecolor-violet-90">.is-forecolor-violet-90</div>
-          </div>
-        </section>
-        <section class="my-1rem">
-          <div>
-            <div class="is-backcolor-gray-10">.is-backcolor-gray-10</div>
-            <div class="is-backcolor-gray-20">.is-backcolor-gray-20</div>
-            <div class="is-backcolor-gray-30">.is-backcolor-gray-30</div>
-            <div class="is-backcolor-gray-40">.is-backcolor-gray-40</div>
-            <div class="is-backcolor-gray-50">.is-backcolor-gray-50</div>
-            <div class="is-backcolor-gray-60">.is-backcolor-gray-60</div>
-            <div class="is-backcolor-gray-70">.is-backcolor-gray-70</div>
-            <div class="is-backcolor-gray-80">.is-backcolor-gray-80</div>
-            <div class="is-backcolor-gray-90">.is-backcolor-gray-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-red-10">.is-backcolor-red-10</div>
-            <div class="is-backcolor-red-20">.is-backcolor-red-20</div>
-            <div class="is-backcolor-red-30">.is-backcolor-red-30</div>
-            <div class="is-backcolor-red-40">.is-backcolor-red-40</div>
-            <div class="is-backcolor-red-50">.is-backcolor-red-50</div>
-            <div class="is-backcolor-red-60">.is-backcolor-red-60</div>
-            <div class="is-backcolor-red-70">.is-backcolor-red-70</div>
-            <div class="is-backcolor-red-80">.is-backcolor-red-80</div>
-            <div class="is-backcolor-red-90">.is-backcolor-red-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-orange-10">.is-backcolor-orange-10</div>
-            <div class="is-backcolor-orange-20">.is-backcolor-orange-20</div>
-            <div class="is-backcolor-orange-30">.is-backcolor-orange-30</div>
-            <div class="is-backcolor-orange-40">.is-backcolor-orange-40</div>
-            <div class="is-backcolor-orange-50">.is-backcolor-orange-50</div>
-            <div class="is-backcolor-orange-60">.is-backcolor-orange-60</div>
-            <div class="is-backcolor-orange-70">.is-backcolor-orange-70</div>
-            <div class="is-backcolor-orange-80">.is-backcolor-orange-80</div>
-            <div class="is-backcolor-orange-90">.is-backcolor-orange-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-yellow-10">.is-backcolor-yellow-10</div>
-            <div class="is-backcolor-yellow-20">.is-backcolor-yellow-20</div>
-            <div class="is-backcolor-yellow-30">.is-backcolor-yellow-30</div>
-            <div class="is-backcolor-yellow-40">.is-backcolor-yellow-40</div>
-            <div class="is-backcolor-yellow-50">.is-backcolor-yellow-50</div>
-            <div class="is-backcolor-yellow-60">.is-backcolor-yellow-60</div>
-            <div class="is-backcolor-yellow-70">.is-backcolor-yellow-70</div>
-            <div class="is-backcolor-yellow-80">.is-backcolor-yellow-80</div>
-            <div class="is-backcolor-yellow-90">.is-backcolor-yellow-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-green-10">.is-backcolor-green-10</div>
-            <div class="is-backcolor-green-20">.is-backcolor-green-20</div>
-            <div class="is-backcolor-green-30">.is-backcolor-green-30</div>
-            <div class="is-backcolor-green-40">.is-backcolor-green-40</div>
-            <div class="is-backcolor-green-50">.is-backcolor-green-50</div>
-            <div class="is-backcolor-green-60">.is-backcolor-green-60</div>
-            <div class="is-backcolor-green-70">.is-backcolor-green-70</div>
-            <div class="is-backcolor-green-80">.is-backcolor-green-80</div>
-            <div class="is-backcolor-green-90">.is-backcolor-green-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-cyan-10">.is-backcolor-cyan-10</div>
-            <div class="is-backcolor-cyan-20">.is-backcolor-cyan-20</div>
-            <div class="is-backcolor-cyan-30">.is-backcolor-cyan-30</div>
-            <div class="is-backcolor-cyan-40">.is-backcolor-cyan-40</div>
-            <div class="is-backcolor-cyan-50">.is-backcolor-cyan-50</div>
-            <div class="is-backcolor-cyan-60">.is-backcolor-cyan-60</div>
-            <div class="is-backcolor-cyan-70">.is-backcolor-cyan-70</div>
-            <div class="is-backcolor-cyan-80">.is-backcolor-cyan-80</div>
-            <div class="is-backcolor-cyan-90">.is-backcolor-cyan-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-blue-10">.is-backcolor-blue-10</div>
-            <div class="is-backcolor-blue-20">.is-backcolor-blue-20</div>
-            <div class="is-backcolor-blue-30">.is-backcolor-blue-30</div>
-            <div class="is-backcolor-blue-40">.is-backcolor-blue-40</div>
-            <div class="is-backcolor-blue-50">.is-backcolor-blue-50</div>
-            <div class="is-backcolor-blue-60">.is-backcolor-blue-60</div>
-            <div class="is-backcolor-blue-70">.is-backcolor-blue-70</div>
-            <div class="is-backcolor-blue-80">.is-backcolor-blue-80</div>
-            <div class="is-backcolor-blue-90">.is-backcolor-blue-90</div>
-          </div>
-          <div>
-            <div class="is-backcolor-violet-10">.is-backcolor-violet-10</div>
-            <div class="is-backcolor-violet-20">.is-backcolor-violet-20</div>
-            <div class="is-backcolor-violet-30">.is-backcolor-violet-30</div>
-            <div class="is-backcolor-violet-40">.is-backcolor-violet-40</div>
-            <div class="is-backcolor-violet-50">.is-backcolor-violet-50</div>
-            <div class="is-backcolor-violet-60">.is-backcolor-violet-60</div>
-            <div class="is-backcolor-violet-70">.is-backcolor-violet-70</div>
-            <div class="is-backcolor-violet-80">.is-backcolor-violet-80</div>
-            <div class="is-backcolor-violet-90">.is-backcolor-violet-90</div>
-          </div>
-        </section>
-        <section class="my-1rem">
-          <div>
-            <div class="is-highlighter-gray-10">.is-highlighter-gray-10</div>
-            <div class="is-highlighter-gray-20">.is-highlighter-gray-20</div>
-            <div class="is-highlighter-gray-30">.is-highlighter-gray-30</div>
-            <div class="is-highlighter-gray-40">.is-highlighter-gray-40</div>
-            <div class="is-highlighter-gray-50">.is-highlighter-gray-50</div>
-            <div class="is-highlighter-gray-60">.is-highlighter-gray-60</div>
-            <div class="is-highlighter-gray-70">.is-highlighter-gray-70</div>
-            <div class="is-highlighter-gray-80">.is-highlighter-gray-80</div>
-            <div class="is-highlighter-gray-90">.is-highlighter-gray-90</div>
-          </div>
-          <div>
-            <div class="is-highlighter-red-10">.is-highlighter-red-10</div>
-            <div class="is-highlighter-red-20">.is-highlighter-red-20</div>
-            <div class="is-highlighter-red-30">.is-highlighter-red-30</div>
-            <div class="is-highlighter-red-40">.is-highlighter-red-40</div>
-            <div class="is-highlighter-red-50">.is-highlighter-red-50</div>
-            <div class="is-highlighter-red-60">.is-highlighter-red-60</div>
-            <div class="is-highlighter-red-70">.is-highlighter-red-70</div>
-            <div class="is-highlighter-red-80">.is-highlighter-red-80</div>
-            <div class="is-highlighter-red-90">.is-highlighter-red-90</div>
-          </div>
-          <div>
-            <div class="is-highlighter-orange-10">
-              .is-highlighter-orange-10
-            </div>
-            <div class="is-highlighter-orange-20">
-              .is-highlighter-orange-20
-            </div>
-            <div class="is-highlighter-orange-30">
-              .is-highlighter-orange-30
-            </div>
-            <div class="is-highlighter-orange-40">
-              .is-highlighter-orange-40
-            </div>
-            <div class="is-highlighter-orange-50">
-              .is-highlighter-orange-50
-            </div>
-            <div class="is-highlighter-orange-60">
-              .is-highlighter-orange-60
-            </div>
-            <div class="is-highlighter-orange-70">
-              .is-highlighter-orange-70
-            </div>
-            <div class="is-highlighter-orange-80">
-              .is-highlighter-orange-80
-            </div>
-            <div class="is-highlighter-orange-90">
-              .is-highlighter-orange-90
-            </div>
-          </div>
-          <div>
-            <div class="is-highlighter-yellow-10">
-              .is-highlighter-yellow-10
-            </div>
-            <div class="is-highlighter-yellow-20">
-              .is-highlighter-yellow-20
-            </div>
-            <div class="is-highlighter-yellow-30">
-              .is-highlighter-yellow-30
-            </div>
-            <div class="is-highlighter-yellow-40">
-              .is-highlighter-yellow-40
-            </div>
-            <div class="is-highlighter-yellow-50">
-              .is-highlighter-yellow-50
-            </div>
-            <div class="is-highlighter-yellow-60">
-              .is-highlighter-yellow-60
-            </div>
-            <div class="is-highlighter-yellow-70">
-              .is-highlighter-yellow-70
-            </div>
-            <div class="is-highlighter-yellow-80">
-              .is-highlighter-yellow-80
-            </div>
-            <div class="is-highlighter-yellow-90">
-              .is-highlighter-yellow-90
-            </div>
-          </div>
-          <div>
-            <div class="is-highlighter-green-10">
-              .is-highlighter-green-10
-            </div>
-            <div class="is-highlighter-green-20">
-              .is-highlighter-green-20
-            </div>
-            <div class="is-highlighter-green-30">
-              .is-highlighter-green-30
-            </div>
-            <div class="is-highlighter-green-40">
-              .is-highlighter-green-40
-            </div>
-            <div class="is-highlighter-green-50">
-              .is-highlighter-green-50
-            </div>
-            <div class="is-highlighter-green-60">
-              .is-highlighter-green-60
-            </div>
-            <div class="is-highlighter-green-70">
-              .is-highlighter-green-70
-            </div>
-            <div class="is-highlighter-green-80">
-              .is-highlighter-green-80
-            </div>
-            <div class="is-highlighter-green-90">
-              .is-highlighter-green-90
-            </div>
-          </div>
-          <div>
-            <div class="is-highlighter-cyan-10">.is-highlighter-cyan-10</div>
-            <div class="is-highlighter-cyan-20">.is-highlighter-cyan-20</div>
-            <div class="is-highlighter-cyan-30">.is-highlighter-cyan-30</div>
-            <div class="is-highlighter-cyan-40">.is-highlighter-cyan-40</div>
-            <div class="is-highlighter-cyan-50">.is-highlighter-cyan-50</div>
-            <div class="is-highlighter-cyan-60">.is-highlighter-cyan-60</div>
-            <div class="is-highlighter-cyan-70">.is-highlighter-cyan-70</div>
-            <div class="is-highlighter-cyan-80">.is-highlighter-cyan-80</div>
-            <div class="is-highlighter-cyan-90">.is-highlighter-cyan-90</div>
-          </div>
-          <div>
-            <div class="is-highlighter-blue-10">.is-highlighter-blue-10</div>
-            <div class="is-highlighter-blue-20">.is-highlighter-blue-20</div>
-            <div class="is-highlighter-blue-30">.is-highlighter-blue-30</div>
-            <div class="is-highlighter-blue-40">.is-highlighter-blue-40</div>
-            <div class="is-highlighter-blue-50">.is-highlighter-blue-50</div>
-            <div class="is-highlighter-blue-60">.is-highlighter-blue-60</div>
-            <div class="is-highlighter-blue-70">.is-highlighter-blue-70</div>
-            <div class="is-highlighter-blue-80">.is-highlighter-blue-80</div>
-            <div class="is-highlighter-blue-90">.is-highlighter-blue-90</div>
-          </div>
-          <div>
-            <div class="is-highlighter-violet-10">
-              .is-highlighter-violet-10
-            </div>
-            <div class="is-highlighter-violet-20">
-              .is-highlighter-violet-20
-            </div>
-            <div class="is-highlighter-violet-30">
-              .is-highlighter-violet-30
-            </div>
-            <div class="is-highlighter-violet-40">
-              .is-highlighter-violet-40
-            </div>
-            <div class="is-highlighter-violet-50">
-              .is-highlighter-violet-50
-            </div>
-            <div class="is-highlighter-violet-60">
-              .is-highlighter-violet-60
-            </div>
-            <div class="is-highlighter-violet-70">
-              .is-highlighter-violet-70
-            </div>
-            <div class="is-highlighter-violet-80">
-              .is-highlighter-violet-80
-            </div>
-            <div class="is-highlighter-violet-90">
-              .is-highlighter-violet-90
-            </div>
-          </div>
-        </section>
-        <section class="my-1rem">
-          <div>
-            <div class="has-border-solid">.has-border-solid</div>
-            <div class="has-border-dashed">.has-border-dashed</div>
-            <div class="has-border-dotted">.has-border-dotted</div>
-            <div class="has-border-solid is-border-width-xthin">
-              .is-border-width-xthin
-            </div>
-            <div class="has-border-solid is-border-width-thin">
-              .is-border-width-thin
-            </div>
-            <div class="has-border-solid is-border-width-medium">
-              .is-border-width-medium
-            </div>
-            <div class="has-border-solid is-border-width-thick">
-              .is-border-width-thick
-            </div>
-            <div class="has-border-solid is-border-width-xthick">
-              .is-border-width-xthick
-            </div>
-            <div class="has-border-solid is-border-radius-medium">
-              .is-border-radius-medium
-            </div>
-            <div class="has-border-solid is-border-radius-circle">
-              .is-border-radius-circle
-            </div>
-          </div>
-        </section>
-        <section class="my-1rem">
-          <div>
-            <div class="has-border-solid is-bordercolor-gray-10">
-              .is-bordercolor-gray-10
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-20">
-              .is-bordercolor-gray-20
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-30">
-              .is-bordercolor-gray-30
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-40">
-              .is-bordercolor-gray-40
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-50">
-              .is-bordercolor-gray-50
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-60">
-              .is-bordercolor-gray-60
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-70">
-              .is-bordercolor-gray-70
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-80">
-              .is-bordercolor-gray-80
-            </div>
-            <div class="has-border-solid is-bordercolor-gray-90">
-              .is-bordercolor-gray-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-red-10">
-              .is-bordercolor-red-10
-            </div>
-            <div class="has-border-solid is-bordercolor-red-20">
-              .is-bordercolor-red-20
-            </div>
-            <div class="has-border-solid is-bordercolor-red-30">
-              .is-bordercolor-red-30
-            </div>
-            <div class="has-border-solid is-bordercolor-red-40">
-              .is-bordercolor-red-40
-            </div>
-            <div class="has-border-solid is-bordercolor-red-50">
-              .is-bordercolor-red-50
-            </div>
-            <div class="has-border-solid is-bordercolor-red-60">
-              .is-bordercolor-red-60
-            </div>
-            <div class="has-border-solid is-bordercolor-red-70">
-              .is-bordercolor-red-70
-            </div>
-            <div class="has-border-solid is-bordercolor-red-80">
-              .is-bordercolor-red-80
-            </div>
-            <div class="has-border-solid is-bordercolor-red-90">
-              .is-bordercolor-red-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-orange-10">
-              .is-bordercolor-orange-10
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-20">
-              .is-bordercolor-orange-20
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-30">
-              .is-bordercolor-orange-30
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-40">
-              .is-bordercolor-orange-40
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-50">
-              .is-bordercolor-orange-50
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-60">
-              .is-bordercolor-orange-60
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-70">
-              .is-bordercolor-orange-70
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-80">
-              .is-bordercolor-orange-80
-            </div>
-            <div class="has-border-solid is-bordercolor-orange-90">
-              .is-bordercolor-orange-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-yellow-10">
-              .is-bordercolor-yellow-10
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-20">
-              .is-bordercolor-yellow-20
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-30">
-              .is-bordercolor-yellow-30
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-40">
-              .is-bordercolor-yellow-40
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-50">
-              .is-bordercolor-yellow-50
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-60">
-              .is-bordercolor-yellow-60
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-70">
-              .is-bordercolor-yellow-70
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-80">
-              .is-bordercolor-yellow-80
-            </div>
-            <div class="has-border-solid is-bordercolor-yellow-90">
-              .is-bordercolor-yellow-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-green-10">
-              .is-bordercolor-green-10
-            </div>
-            <div class="has-border-solid is-bordercolor-green-20">
-              .is-bordercolor-green-20
-            </div>
-            <div class="has-border-solid is-bordercolor-green-30">
-              .is-bordercolor-green-30
-            </div>
-            <div class="has-border-solid is-bordercolor-green-40">
-              .is-bordercolor-green-40
-            </div>
-            <div class="has-border-solid is-bordercolor-green-50">
-              .is-bordercolor-green-50
-            </div>
-            <div class="has-border-solid is-bordercolor-green-60">
-              .is-bordercolor-green-60
-            </div>
-            <div class="has-border-solid is-bordercolor-green-70">
-              .is-bordercolor-green-70
-            </div>
-            <div class="has-border-solid is-bordercolor-green-80">
-              .is-bordercolor-green-80
-            </div>
-            <div class="has-border-solid is-bordercolor-green-90">
-              .is-bordercolor-green-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-cyan-10">
-              .is-bordercolor-cyan-10
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-20">
-              .is-bordercolor-cyan-20
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-30">
-              .is-bordercolor-cyan-30
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-40">
-              .is-bordercolor-cyan-40
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-50">
-              .is-bordercolor-cyan-50
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-60">
-              .is-bordercolor-cyan-60
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-70">
-              .is-bordercolor-cyan-70
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-80">
-              .is-bordercolor-cyan-80
-            </div>
-            <div class="has-border-solid is-bordercolor-cyan-90">
-              .is-bordercolor-cyan-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-blue-10">
-              .is-bordercolor-blue-10
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-20">
-              .is-bordercolor-blue-20
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-30">
-              .is-bordercolor-blue-30
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-40">
-              .is-bordercolor-blue-40
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-50">
-              .is-bordercolor-blue-50
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-60">
-              .is-bordercolor-blue-60
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-70">
-              .is-bordercolor-blue-70
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-80">
-              .is-bordercolor-blue-80
-            </div>
-            <div class="has-border-solid is-bordercolor-blue-90">
-              .is-bordercolor-blue-90
-            </div>
-          </div>
-          <div>
-            <div class="has-border-solid is-bordercolor-violet-10">
-              .is-bordercolor-violet-10
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-20">
-              .is-bordercolor-violet-20
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-30">
-              .is-bordercolor-violet-30
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-40">
-              .is-bordercolor-violet-40
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-50">
-              .is-bordercolor-violet-50
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-60">
-              .is-bordercolor-violet-60
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-70">
-              .is-bordercolor-violet-70
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-80">
-              .is-bordercolor-violet-80
-            </div>
-            <div class="has-border-solid is-bordercolor-violet-90">
-              .is-bordercolor-violet-90
-            </div>
-          </div>
+          <details class="accordion">
+            <summary class="accordion-summary">border</summary>
+            <div class="accordion-details">
+              <div class="columns">
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid">.has-border-solid</div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-dashed">.has-border-dashed</div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-dotted">.has-border-dotted</div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-width-xthin">
+                      .is-border-width-xthin
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-width-thin">
+                      .is-border-width-thin
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-width-medium">
+                      .is-border-width-medium
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-width-thick">
+                      .is-border-width-thick
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-width-xthick">
+                      .is-border-width-xthick
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-small">
+                      .is-border-radius-small
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-medium">
+                      .is-border-radius-medium
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-large">
+                      .is-border-radius-large
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-xlarge">
+                      .is-border-radius-xlarge
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-circle">
+                      .is-border-radius-circle
+                    </div>
+                  </div>
+                </div>
+                <div class="column-3 is-small-6 is-xsmall-12">
+                  <div class="p-0.5rem">
+                    <div class="has-border-solid is-border-radius-pill">
+                      .is-border-radius-pill
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
         </section>
         <section class="my-1rem">
           <button class="button" onclick="toggleModal()">modal open</button>

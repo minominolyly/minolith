@@ -42,40 +42,16 @@ function changeColor(color) {
     elem.className = `header is-sticky ${color}`;
   });
 
-  document.querySelectorAll(".badge").forEach((elem) => {
-    elem.className = `badge ${color}`;
-  });
-
-  document.querySelectorAll(".button").forEach((elem) => {
-    elem.className = `button ${color}`;
-  });
-
   document.querySelectorAll(".card").forEach((elem) => {
     elem.className = `card ${color}`;
-  });
-
-  document.querySelectorAll(".checkbox").forEach((elem) => {
-    elem.className = `checkbox ${color}`;
   });
 
   document.querySelectorAll(".input").forEach((elem) => {
     elem.className = `input ${color}`;
   });
 
-  document.querySelectorAll(".input-text").forEach((elem) => {
-    elem.className = `input-text ${color}`;
-  });
-
   document.querySelectorAll(".hamburger").forEach((elem) => {
     elem.className = `hamburger ${color}`;
-  });
-
-  document.querySelectorAll(".link").forEach((elem) => {
-    elem.className = `link ${color}`;
-  });
-
-  document.querySelectorAll(".loader").forEach((elem) => {
-    elem.className = `loader ${color}`;
   });
 
   document.querySelectorAll(".message").forEach((elem) => {
@@ -84,10 +60,6 @@ function changeColor(color) {
 
   document.querySelectorAll(".nav").forEach((elem) => {
     elem.className = `nav ${color}`;
-  });
-
-  document.querySelectorAll(".progress").forEach((elem) => {
-    elem.className = `progress ${color} is-50-percent`;
   });
 
   document.querySelectorAll(".gingham").forEach((elem) => {
@@ -100,5 +72,9 @@ function changeColor(color) {
 
   document.querySelectorAll(".accordion").forEach((elem) => {
     elem.className = `accordion ${color}`;
+  });
+
+  document.querySelectorAll(".modal").forEach((elem) => {
+    elem.className = `modal ${color}`;
   });
 }

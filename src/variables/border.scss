@@ -5,9 +5,10 @@ $border-width-medium: 0.125rem !default;
 $border-width-thick: 0.25rem !default;
 $border-width-xthick: 0.5rem !default;
 
-$border-radius-small: 0.2rem !default;
-$border-radius-medium: 0.25rem !default;
-$border-radius-large: 0.5rem !default;
+$border-radius-small: 0.25rem !default;
+$border-radius-medium: 0.5rem !default;
+$border-radius-large: 0.75rem !default;
+$border-radius-xlarge: 1rem !default;
 $border-radius-circle: 50% !default;
 $border-radius-pill: 50rem !default;
 
@@ -44,6 +45,10 @@ $borderRadiuses: (
   (
     "name": "large",
     "value": $border-radius-large,
+  ),
+  (
+    "name": "xlarge",
+    "value": $border-radius-xlarge,
   ),
   (
     "name": "circle",

@@ -1,5 +1,17 @@
 @use "sass:string";
 
+@function zeroPadding($num, $length) {
+  $numString: #{$num};
+  $numLength: string.length($numString);
+
+  @while $numLength < $length {
+    $numString: "0" + $numString;
+    $numLength: string.length($numString);
+  }
+
+  @return $numString;
+}
+
 @function strReplace($str, $substr, $newsubstr, $all: false) {
   $pos: string.index($str, $substr);
 

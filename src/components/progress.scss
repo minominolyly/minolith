@@ -7,7 +7,8 @@
     border-radius: var(--#{variables.$prefix}border-radius-pill);
     border-style: solid;
     border-width: var(--#{variables.$prefix}border-width-medium);
-    color: var(--#{variables.$prefix}color-default-border);
+    background-color: var(--#{variables.$prefix}color-default-progress-back);
+    color: var(--#{variables.$prefix}color-default-progress-fore);
     height: 1rem;
     position: relative;
     &::before {
@@ -31,8 +32,8 @@
     @each $color in variables.$colors {
     $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
-        color: var(--#{variables.$prefix}color-#{$colorName}-border);
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-progress-back);
+        color: var(--#{variables.$prefix}color-#{$colorName}-progress-fore);
       }
     }
   }

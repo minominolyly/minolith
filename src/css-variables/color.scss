@@ -16,22 +16,29 @@
   @each $color in variables.$colors {
     $name: map.get($color, "name");
     $hue: map.get($color, "hue");
-    $chroma: map.get($color, "chroma");
     $p: "0" !default;
     @for $i from 1 through 19  {
       $p: "" + ($i * 5);
       @if (string.length($p) == 1) {
         $p: "0" + $p;
       }
-      $lightness: variables.$color-lightness-50 !default;
+      $lightness: variables.$color-lightness-50;
+      $chroma: variables.$color-chroma-colorful;
+
       @if ($i < 10) {
         $lightness-offset: (10 - $i) * variables.$color-lightness-offset-darker;
-        $lightness: variables.$color-lightness-50 - $lightness-offset;
+        $lightness: variables.$color-lightness-50 + $lightness-offset;
+        $chroma-offset: (10 - $i) * variables.$color-chroma-colorful-offset-darker;
+        $chroma: $chroma + $chroma-offset;
       } @else if ($i > 10) {
         $lightness-offset: ($i - 10) * variables.$color-lightness-offset-lighter;
         $lightness: variables.$color-lightness-50 + $lightness-offset;
-      } @else if ($i == 10) {
-        $lightness: variables.$color-lightness-50;
+        $chroma-offset: ($i - 10) * variables.$color-chroma-colorful-offset-lighter;
+        $chroma: $chroma + $chroma-offset;
+      }
+
+      @if ($name == "default" or $name == "gray") {
+        $chroma: variables.$color-chroma-gray;
       }
 
       $oklch: #{$lightness} #{$chroma} #{$hue};
@@ -122,6 +129,13 @@
     }
     //#endregion accordion
 
+    //#region badge
+    $badge: map.get($colorShade, "badge");
+    @if ($badge != null) {
+      @include setColor($badge, "default", $name, "badge");
+    }
+    //#endregion badge
+
     //#region button
     $button: map.get($colorShade, "button");
     @if ($button != null) {
@@ -151,6 +165,34 @@
     }
     //#endregion card
 
+    //#region header
+    $header: map.get($colorShade, "header");
+    @if ($header != null) {
+      @include setColor($header, "default", $name, "header");
+    }
+    //#endregion header
+
+    //#region label
+    $label: map.get($colorShade, "label");
+    @if ($label != null) {
+      @include setColor($label, "default", $name, "label");
+    }
+    //#endregion label
+
+    //#region link
+    $link: map.get($colorShade, "link");
+    @if ($link != null) {
+      @include setColor($link, "default", $name, "link");
+    }
+    //#endregion link
+
+    //#region loader
+    $loader: map.get($colorShade, "loader");
+    @if ($loader != null) {
+      @include setColor($loader, "default", $name, "loader");
+    }
+    //#endregion loader
+
     //#region message
     $message: map.get($colorShade, "message");
     @if ($message != null) {
@@ -167,6 +209,13 @@
       }
     }
     //#endregion message
+
+    //#region progress
+    $progress: map.get($colorShade, "progress");
+    @if ($progress != null) {
+      @include setColor($progress, "default", $name, "progress");
+    }
+    //#endregion progress
 
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
@@ -189,6 +238,13 @@
         }
       }
       //#endregion accordion
+
+      //#region badge
+      $badge: map.get($colorShade, "badge");
+      @if ($badge != null) {
+        @include setColor($badge, $colorName, $name, "badge");
+      }
+      //#endregion badge
 
       //#region button
       $button: map.get($colorShade, "button");
@@ -219,6 +275,34 @@
       }
       //#endregion card
 
+      //#region header
+      $header: map.get($colorShade, "header");
+      @if ($header != null) {
+        @include setColor($header, $colorName, $name, "header");
+      }
+      //#endregion header
+
+      //#region label
+      $label: map.get($colorShade, "label");
+      @if ($label != null) {
+        @include setColor($label, $colorName, $name, "label");
+      }
+      //#endregion label
+
+      //#region link
+      $link: map.get($colorShade, "link");
+      @if ($link != null) {
+        @include setColor($link, $colorName, $name, "link");
+      }
+      //#endregion link
+
+      //#region loader
+      $loader: map.get($colorShade, "loader");
+      @if ($loader != null) {
+        @include setColor($link, $colorName, $name, "loader");
+      }
+      //#endregion loader
+
       //#region message
       $message: map.get($colorShade, "message");
       @if ($message != null) {
@@ -235,6 +319,14 @@
         }
       }
       //#endregion message
+
+      //#region progress
+      $progress: map.get($colorShade, "progress");
+      @if ($progress != null) {
+        @include setColor($link, $colorName, $name, "progress");
+      }
+      //#endregion progress
+
     }
   }
 }

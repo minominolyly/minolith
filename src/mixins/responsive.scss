@@ -104,7 +104,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-tablet-or-less {
+  &.is-small-or-less {
     @include screen("medium") {
       display: none !important;
     }
@@ -115,7 +115,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-tablet {
+  &.is-small {
     @include screen("xsmall") {
       display: none !important;
     }
@@ -129,12 +129,12 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-tablet-or-more {
+  &.is-small-or-more {
     @include screen("xsmall") {
       display: none !important;
     }
   }
-  &.is-desktop-or-less {
+  &.is-large-or-less {
     @include screen("large") {
       display: none !important;
     }
@@ -142,7 +142,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-desktop {
+  &.is-large {
     @include screen("xsmall") {
       display: none !important;
     }
@@ -156,7 +156,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-desktop-or-more {
+  &.is-large-or-more {
     @include screen("xsmall") {
       display: none !important;
     }
@@ -164,12 +164,12 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-widescreen-or-less {
+  &.is-large-or-less {
     @include screen("xlarge") {
       display: none !important;
     }
   }
-  &.is-widescreen {
+  &.is-large {
     @include screen("xsmall") {
       display: none !important;
     }
@@ -183,7 +183,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-widescreen-or-more {
+  &.is-large-or-more {
     @include screen("xsmall") {
       display: none !important;
     }
@@ -194,7 +194,7 @@ $offset: 0.02px;
       display: none !important;
     }
   }
-  &.is-fullhd {
+  &.is-xlarge {
     @include screen("xsmall") {
       display: none !important;
     }

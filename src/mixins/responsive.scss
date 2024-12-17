@@ -134,6 +134,36 @@ $offset: 0.02px;
       display: none !important;
     }
   }
+  &.is-medium-or-less {
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-medium {
+    @include screen("xsmall") {
+      display: none !important;
+    }
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("large") {
+      display: none !important;
+    }
+    @include screen("xlarge") {
+      display: none !important;
+    }
+  }
+  &.is-medium-or-more {
+    @include screen("small") {
+      display: none !important;
+    }
+    @include screen("xsmall") {
+      display: none !important;
+    }
+  }
   &.is-large-or-less {
     @include screen("large") {
       display: none !important;

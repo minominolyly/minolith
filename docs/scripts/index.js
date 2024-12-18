@@ -74,6 +74,10 @@ function changeColor(color) {
     elem.className = `accordion ${color}`;
   });
 
+  document.querySelectorAll(".dialogue").forEach((elem) => {
+    elem.className = `dialogue ${color}`;
+  });
+
   document.querySelectorAll(".modal").forEach((elem) => {
     elem.className = `modal ${color}`;
   });

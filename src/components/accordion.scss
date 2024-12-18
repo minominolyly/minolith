@@ -6,7 +6,10 @@
   color: var(--#{variables.$prefix}color-default-accordion-fore);
   background-color: var(--#{variables.$prefix}color-default-accordion-back);
   border-color: var(--#{variables.$prefix}color-default-accordion-border);
-  border-radius: calc(var(--#{variables.$prefix}border-radius-medium) + var(--#{variables.$prefix}border-width-thin));
+  border-radius: calc(
+    var(--#{variables.$prefix}border-radius-medium) +
+      var(--#{variables.$prefix}border-width-thin)
+  );
   border-style: solid;
   border-width: var(--#{variables.$prefix}border-width-thin);
   border-collapse: collapse;
@@ -83,15 +86,12 @@
     height: 0;
     display: none;
     padding: 1rem;
-    border-radius: 0 0
-    var(--#{variables.$prefix}border-radius-medium)
-      var(--#{variables.$prefix}border-radius-medium);
+    border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium);
   }
   &[open],
   is-open {
     .accordion-summary {
-      border-radius: var(--#{variables.$prefix}border-radius-medium)
-        var(--#{variables.$prefix}border-radius-medium) 0 0;
+      border-radius: var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium) 0 0;
       &:after {
         transform: rotate(180deg);
       }

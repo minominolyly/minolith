@@ -165,6 +165,28 @@
     }
     //#endregion card
 
+    //#region dialogue
+    $dialogue: map.get($colorShade, "dialogue");
+    @if ($dialogue != null) {
+      @include setColor($dialogue, "default", $name, "dialogue");
+
+      $dialogueAvatar: map.get($dialogue, "dialogueAvatar");
+      @if ($dialogueAvatar != null) {
+        @include setColor($dialogueAvatar, "default", $name, "dialogue-avatar");
+      }
+
+      $dialogueName: map.get($dialogue, "dialogueName");
+      @if ($dialogueName != null) {
+        @include setColor($dialogueName, "default", $name, "dialogue-name");
+      }
+
+      $dialogueMessage: map.get($dialogue, "dialogueMessage");
+      @if ($dialogueMessage != null) {
+        @include setColor($dialogueMessage, "default", $name, "dialogue-message");
+      }
+    }
+    //#endregion dialogue
+
     //#region header
     $header: map.get($colorShade, "header");
     @if ($header != null) {
@@ -274,6 +296,28 @@
         }
       }
       //#endregion card
+
+      //#region dialogue
+      $dialogue: map.get($colorShade, "dialogue");
+      @if ($dialogue != null) {
+        @include setColor($dialogue, $colorName, $name, "dialogue");
+
+        $dialogueAvatar: map.get($dialogue, "dialogueAvatar");
+        @if ($dialogueAvatar != null) {
+          @include setColor($dialogueAvatar, $colorName, $name, "dialogue-avatar");
+        }
+
+        $dialogueName: map.get($dialogue, "dialogueName");
+        @if ($dialogueName != null) {
+          @include setColor($dialogueName, $colorName, $name, "dialogue-name");
+        }
+
+        $dialogueMessage: map.get($dialogue, "dialogueMessage");
+        @if ($dialogueMessage != null) {
+          @include setColor($dialogueMessage, $colorName, $name, "dialogue-message");
+        }
+      }
+      //#endregion dialogue
 
       //#region header
       $header: map.get($colorShade, "header");

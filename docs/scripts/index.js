@@ -74,8 +74,12 @@ function changeColor(color) {
     elem.className = `accordion ${color}`;
   });
 
-  document.querySelectorAll(".dialogue").forEach((elem) => {
-    elem.className = `dialogue ${color}`;
+  document.querySelectorAll(".dialogue.is-avatar-left").forEach((elem) => {
+    elem.className = `dialogue is-avatar-left ${color}`;
+  });
+
+  document.querySelectorAll(".dialogue.is-avatar-right").forEach((elem) => {
+    elem.className = `dialogue is-avatar-right ${color}`;
   });
 
   document.querySelectorAll(".modal").forEach((elem) => {

@@ -86,11 +86,11 @@
       border-color: var(--#{variables.$prefix}color-default-dialogue-message-border);
       color: var(--#{variables.$prefix}color-default-dialogue-message-fore);
       position: relative;
-      top: 1rem;
+      top: 0.75rem;
       right: auto;
       width: fit-content;
       min-height: 6rem;
-      padding: 1rem 0.5rem 0.5rem 0.5rem;
+      padding: 1.25rem 0.5rem 0.5rem 0.5rem;
       z-index: 0;
       &:after,
       &:before {

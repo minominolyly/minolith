@@ -9,4 +9,6 @@ $z-index-modal-content: auto !default;
 
 $z-index-header-is-sticky: 100 !default;
 
-$columns-count: 12;
+$columns-count: 12 !default;
+
+$responsive-breakpoint-max-width-offset: 0.02px !default;

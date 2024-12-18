@@ -79,6 +79,7 @@ $color-light-lightness-card-footer-back: 80 !default;
 //#region color-light-lightness-header
 $color-light-lightness-header-fore: 5 !default;
 $color-light-lightness-header-back: 70 !default;
+$color-light-lightness-header-shadow: 70 !default;
 //#endregion color-light-lightness-header
 
 //#region color-light-lightness-label
@@ -153,26 +154,27 @@ $color-dark-lightness-card-footer-fore: 95 !default;
 $color-dark-lightness-card-footer-back: 20 !default;
 //#endregion color-dark-lightness-card
 
-//#region color-light-lightness-header
+//#region color-dark-lightness-header
 $color-dark-lightness-header-fore: 95 !default;
-$color-dark-lightness-header-back: 70 !default;
-//#endregion color-light-lightness-header
+$color-dark-lightness-header-back: 30 !default;
+$color-dark-lightness-header-shadow: 30 !default;
+//#endregion color-dark-lightness-header
 
-//#region color-light-lightness-label
+//#region color-dark-lightness-label
 $color-dark-lightness-label-fore: 80 !default;
-//#endregion color-light-lightness-label
+//#endregion color-dark-lightness-label
 
-//#region color-light-lightness-link
+//#region color-dark-lightness-link
 $color-dark-lightness-link-fore: 80 !default;
-//#endregion color-light-lightness-link
+//#endregion color-dark-lightness-link
 
-//#region color-light-lightness-loader
+//#region color-dark-lightness-loader
 $color-dark-lightness-loader-fore: 80 !default;
-//#endregion color-light-lightness-loader
+//#endregion color-dark-lightness-loader
 
-//#region color-light-lightness-progress
+//#region color-dark-lightness-progress
 $color-dark-lightness-progress-fore: 80 !default;
-//#endregion color-light-lightness-progress
+//#endregion color-dark-lightness-progress
 
 //#region color-dark-lightness-message
 $color-dark-lightness-message-fore: 95 !default;
@@ -191,6 +193,8 @@ $color-dark-lightness-progress-back: 5 !default;
 
 //#endregion color-dark-lightness
 
+//#region color-lightness-offset
+
 $color-light-lightness-offset-disabled-fore: 30 !default;
 $color-dark-lightness-offset-disabled-fore: -30 !default;
 $color-lightness-offset-disabled: 0 !default;
@@ -198,6 +202,8 @@ $color-lightness-offset-focus: 20 !default;
 $color-lightness-offset-hover: 5 !default;
 $color-lightness-offset-active: -5 !default;
 $color-lightness-offset-visited: 0 !default;
+
+//#endregion color-lightness-offset
 
 //#region colorShadesLight
 
@@ -286,6 +292,7 @@ $colorShadesLight: (
       header: (
         fore: functions.zeroPadding($color-light-lightness-header-fore, 2),
         back: functions.zeroPadding($color-light-lightness-header-back, 2),
+        shadow: functions.zeroPadding($color-light-lightness-header-shadow, 2),
       ),
       label: (
         fore: functions.zeroPadding($color-light-lightness-label-fore, 2),
@@ -735,6 +742,7 @@ $colorShadesDark: (
       header: (
         fore: functions.zeroPadding($color-dark-lightness-header-fore, 2),
         back: functions.zeroPadding($color-dark-lightness-header-back, 2),
+        shadow: functions.zeroPadding($color-dark-lightness-header-shadow, 2),
       ),
       label: (
         fore: functions.zeroPadding($color-dark-lightness-label-fore, 2),

@@ -32,7 +32,7 @@ html {
  */
 
 body {
-  font-family: var(--#{variables.$prefix}font-family-sans-serif);
+  font-family: var(--#{variables.$prefix}font-family-main);
   margin: 0;
 }
 
@@ -99,8 +99,8 @@ hr {
  */
 
 pre {
-  font-family: var(--#{variables.$prefix}font-family-monospace);
-  font-size: var(--#{variables.$prefix}font-family-monospace); /* 2 */
+  font-family: var(--#{variables.$prefix}font-family-code);
+  font-size: var(--#{variables.$prefix}font-size-normal); /* 2 */
 }
 
 /* Text-level semantics

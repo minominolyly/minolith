@@ -1,6 +1,10 @@
+$font-family-serif: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro",
+  serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-sans-serif: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-  "Hiragino Sans", Meiryo, sans-serif;
-$font-family-monospace: "Consolas", "Courier New", courier, monospace;
+  "Hiragino Sans", Meiryo, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol";
+$font-family-monospace: "Consolas", "Courier New", courier, monospace,
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-size-root: null !default;
 $font-size-base: 1rem !default;

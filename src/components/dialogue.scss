@@ -25,7 +25,7 @@
     width: 6rem;
     .dialogue-avatar {
       position: absolute;
-      top: 1.5rem;
+      top: 1rem;
       right: 0;
       left: 0;
       display: block;
@@ -39,7 +39,7 @@
         background-color: var(--#{variables.$prefix}color-default-dialogue-avatar-back);
         border-color: var(--#{variables.$prefix}color-default-dialogue-avatar-border);
         border-style: solid;
-        border-width: var(--#{variables.$prefix}border-width-thick);
+        border-width: var(--#{variables.$prefix}border-width-xthick);
         border-radius: var(--#{variables.$prefix}border-radius-circle);
       }
     }
@@ -50,8 +50,7 @@
     .dialogue-message {
       border-radius: var(--#{variables.$prefix}border-radius-medium);
       border-style: solid;
-      border-width: var(--#{variables.$prefix}border-width-thick);
-      min-width: 10rem;
+      border-width: var(--#{variables.$prefix}border-width-xthick);
     }
     .dialogue-name {
       background-color: var(--#{variables.$prefix}color-default-dialogue-name-back);
@@ -86,39 +85,38 @@
       border-color: var(--#{variables.$prefix}color-default-dialogue-message-border);
       color: var(--#{variables.$prefix}color-default-dialogue-message-fore);
       position: relative;
-      top: 0.75rem;
+      top: 0.6rem;
       right: auto;
       width: fit-content;
-      min-height: 6rem;
-      padding: 1.25rem 0.5rem 0.5rem 0.5rem;
+      padding: 1.75rem 1rem 1rem 1rem;
       z-index: 0;
       &:after,
       &:before {
         border-top-color: transparent;
         border-top-style: solid;
-        border-top-width: calc(var(--#{variables.$prefix}border-width-thick) + 0.5rem);
+        border-top-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.5rem);
         border-bottom-color: transparent;
         border-bottom-style: solid;
-        border-bottom-width: calc(var(--#{variables.$prefix}border-width-thick) + 0.5rem);
+        border-bottom-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.5rem);
         border-radius: var(--#{variables.$prefix}border-radius-medium);
         content: "";
         display: block;
         height: 0;
         position: absolute;
-        top: 1.25rem;
+        top: 1.6rem;
         right: auto;
         width: 0;
         z-index: -1;
       }
       &:before {
         border-right-color: var(--#{variables.$prefix}color-default-dialogue-message-border);
-        border-right-width: calc(var(--#{variables.$prefix}border-width-thick) + 0.5rem);
+        border-right-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.5rem);
         border-right-style: solid;
         left: -0.75rem;
       }
       &:after {
         border-right-color: var(--#{variables.$prefix}color-default-dialogue-message-back);
-        border-right-width: calc(var(--#{variables.$prefix}border-width-thick) + 0.75rem);
+        border-right-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.75rem);
         border-right-style: solid;
         left: -0.5rem;
       }
@@ -144,13 +142,13 @@
         }
         &:before {
           border-left-color: var(--#{variables.$prefix}color-default-dialogue-message-border);
-          border-left-width: 0.75rem;
+          border-left-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.5rem);
           border-left-style: solid;
           right: -0.75rem;
         }
         &:after {
           border-left-color: var(--#{variables.$prefix}color-default-dialogue-message-back);
-          border-left-width: 1rem;
+          border-left-width: calc(var(--#{variables.$prefix}border-width-xthick) + 0.75rem);
           border-left-style: solid;
           right: -0.5rem;
         }

@@ -6,7 +6,7 @@
   border-color: var(--#{variables.$prefix}color-default-border);
   border-radius:  var(--#{variables.$prefix}border-radius-medium);
   border-style: solid;
-  border-width: var(--border-width-medium);
+  border-width: var(--#{variables.$prefix}border-width-xthick);
   padding: 0.5rem;
   &::placeholder {
     color: var(--#{variables.$prefix}color-default-placeholder);

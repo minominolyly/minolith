@@ -21,8 +21,7 @@
       --#{variables.$prefix}color-default-accordion-summary-border
     );
     border-radius: calc(
-      var(--#{variables.$prefix}border-radius-medium) +
-        var(--#{variables.$prefix}border-width-thin)
+      var(--#{variables.$prefix}border-radius-medium)
     );
     cursor: pointer;
     display: block;

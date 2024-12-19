@@ -16,7 +16,7 @@
   @each $color in variables.$colors {
     $name: map.get($color, "name");
     $hue: map.get($color, "hue");
-    $p: "0" !default;
+    $p: "0";
     @for $i from 1 through 19  {
       $p: "" + ($i * 5);
       @if (string.length($p) == 1) {
@@ -52,18 +52,18 @@
 }
 
 @mixin setColor($colorShade, $colorName, $pseudoName, $componentName: "") {
-  $srcColorName: $colorName !default;
-  $destColorName: $colorName !default;
+  $srcColorName: $colorName;
+  $destColorName: $colorName;
   @if ($colorName == "default") {
     $srcColorName: "gray";
   }
 
-  $pseudo: "" !default;
+  $pseudo: "";
   @if ($pseudoName != "plain") {
     $pseudo: "-#{$pseudoName}"
   }
 
-  $component: "" !default;
+  $component: "";
   @if ($componentName != "") {
     $component: "-#{$componentName}"
   }

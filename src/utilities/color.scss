@@ -11,7 +11,7 @@
 
   @each $color in variables.$colors {
     $colorName: map.get($color, "name");
-    $numStr: "00" !default;
+    $numStr: "00";
     @for $p from 1 through 19 {
       $numStr: ($p * 5) + "";
       @if (string.length($numStr) == 1) {

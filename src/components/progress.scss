@@ -6,7 +6,7 @@
   @include mixins.animation() {
     border-radius: var(--#{variables.$prefix}border-radius-pill);
     border-style: solid;
-    border-width: var(--#{variables.$prefix}border-width-medium);
+    border-width: var(--#{variables.$prefix}border-width-thick);
     background-color: var(--#{variables.$prefix}color-default-progress-back);
     color: var(--#{variables.$prefix}color-default-progress-fore);
     height: 1rem;

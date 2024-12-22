@@ -74,18 +74,21 @@ $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
       top: 50%;
     }
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-      .upperpatty {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-      }
-      .club {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-      }
-      .lowerpatty {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+        .upperpatty {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+        }
+        .club {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+        }
+        .lowerpatty {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+        }
       }
     }
   }

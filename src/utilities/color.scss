@@ -13,34 +13,29 @@
     $colorName: map.get($color, "name");
     $numStr: "00";
     @for $p from 1 through 19 {
-      $numStr: ($p * 5) + "";
+      $numStr: "#{($p * 5)}";
       @if (string.length($numStr) == 1) {
         $numStr: "0" + $numStr;
       }
       //#region forecolor
-      .is-forecolor#{$derived}-#{$colorName}-#{$numStr},
       .forecolor#{$derived}-#{$colorName}-#{$numStr} {
         color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
       }
-      .is-forecolor#{$derived}-hover-#{$colorName}-#{$numStr},
       .forecolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
           color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-forecolor#{$derived}-#{$colorName}-focus-#{$numStr},
       .forecolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
           color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-forecolor#{$derived}-#{$colorName}-active-#{$numStr},
       .forecolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
           color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-forecolor#{$derived}-#{$colorName}-disabled-#{$numStr},
       .forecolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
@@ -50,29 +45,24 @@
       //#endregion forecolor
 
       //#region backcolor
-      .is-backcolor#{$derived}-#{$colorName}-#{$numStr},
       .backcolor#{$derived}-#{$colorName}-#{$numStr} {
         background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
       }
-      .is-backcolor#{$derived}-hover-#{$colorName}-#{$numStr},
       .backcolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
           background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-backcolor#{$derived}-#{$colorName}-focus-#{$numStr},
       .backcolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
           background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-backcolor#{$derived}-#{$colorName}-active-#{$numStr},
       .backcolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
           background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-backcolor#{$derived}-#{$colorName}-disabled-#{$numStr},
       .backcolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
@@ -82,33 +72,27 @@
       //#endregion backcolor
 
       //#region bordercolor
-      .is-bordercolor#{$derived}-#{$colorName}-#{$numStr},
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
         border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
       }
-      .is-bordercolor#{$derived}-#{$colorName}-#{$numStr},
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
         border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
       }
-      .is-bordercolor#{$derived}-hover-#{$colorName}-#{$numStr},
       .bordercolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
           border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-bordercolor#{$derived}-#{$colorName}-focus-#{$numStr},
       .bordercolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
           border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-bordercolor#{$derived}-#{$colorName}-active-#{$numStr},
       .bordercolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
           border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
         }
       }
-      .is-bordercolor#{$derived}-#{$colorName}-disabled-#{$numStr},
       .bordercolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
@@ -117,13 +101,11 @@
       }
 
       @each $borderSide in variables.$borderSides {
-        .is-bordercolor#{$derived}-#{$borderSide}-#{$colorName}-#{$numStr},
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-#{$numStr} {
           border-#{$borderSide}-color: var(
             --#{variables.$prefix}color-#{$colorName}-#{$numStr}
           ) !important;
         }
-        .is-bordercolor#{$derived}-#{$borderSide}-hover-#{$colorName}-#{$numStr},
         .bordercolor#{$derived}-#{$borderSide}-hover-#{$colorName}-#{$numStr} {
           &:hover {
             border-#{$borderSide}-color: var(
@@ -131,7 +113,6 @@
             ) !important;
           }
         }
-        .is-bordercolor#{$derived}-#{$borderSide}-#{$colorName}-focus-#{$numStr},
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-focus-#{$numStr} {
           &:focus {
             border-#{$borderSide}-color: var(
@@ -139,13 +120,11 @@
             ) !important;
           }
         }
-        .is-bordercolor#{$derived}-#{$borderSide}-#{$colorName}-active-#{$numStr},
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-active-#{$numStr} {
           &:active {
             border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
           }
         }
-        .is-bordercolor#{$derived}-#{$borderSide}-#{$colorName}-disabled-#{$numStr},
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-disabled-#{$numStr} {
           &[disabled],
           fieldset[disabled] {
@@ -158,14 +137,12 @@
       //#endregion bordercolor
 
       //#region highlighter
-      .is-highlighter#{$derived}-#{$colorName}-#{$numStr},
       .highlighter#{$derived}-#{$colorName}-#{$numStr} {
         background: linear-gradient(
           transparent 66.66%,
           var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
         ) !important;
       }
-      .is-highlighter#{$derived}-hover-#{$colorName}-#{$numStr},
       .highlighter#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
           background: linear-gradient(
@@ -174,7 +151,6 @@
           ) !important;
         }
       }
-      .is-highlighter#{$derived}-#{$colorName}-focus-#{$numStr},
       .highlighter#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
           background: linear-gradient(
@@ -183,7 +159,6 @@
           ) !important;
         }
       }
-      .is-highlighter#{$derived}-#{$colorName}-active-#{$numStr},
       .highlighter#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
           background: linear-gradient(
@@ -192,7 +167,6 @@
           ) !important;
         }
       }
-      .is-highlighter#{$derived}-#{$colorName}-disabled-#{$numStr},
       .highlighter#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {

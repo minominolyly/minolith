@@ -13,15 +13,14 @@
   &:visited {
     color: var(--#{variables.$prefix}color-default-link-visited-fore);
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      color: var(--#{variables.$prefix}color-#{$colorName}-link-fore);
-      // &:hover {
-      //   color: var(--#{variables.$prefix}color-#{$colorName}-hover-fore);
-      // }
-      &:visited {
-        color: var(--#{variables.$prefix}color-#{$colorName}-link-visited-fore);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        color: var(--#{variables.$prefix}color-#{$colorName}-link-fore);
+        &:visited {
+          color: var(--#{variables.$prefix}color-#{$colorName}-link-visited-fore);
+        }
       }
     }
   }

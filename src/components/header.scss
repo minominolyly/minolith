@@ -13,12 +13,15 @@
     width: 100%;
     z-index: var(--#{variables.$prefix}z-index-header-is-sticky);
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-header-back-oklch) / 0.5);
-      box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-#{$colorName}-shadow);
-      color: var(--#{variables.$prefix}color-#{$colorName}-header-fore);
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-header-back-oklch) / 0.5);
+        box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-#{$colorName}-shadow);
+        color: var(--#{variables.$prefix}color-#{$colorName}-header-fore);
+      }
     }
   }
 }

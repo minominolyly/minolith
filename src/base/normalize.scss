@@ -143,7 +143,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  font-family: var(--#{variables.$prefix}font-family-code); /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -386,4 +386,9 @@ template {
 
 [hidden] {
   display: none;
+}
+
+figure {
+  display: block;
+  margin: 0;
 }

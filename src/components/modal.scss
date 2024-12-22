@@ -17,7 +17,7 @@
   &.is-active {
     display: flex;
   }
-  .modal-content {
+  >.modal-content {
     max-height: 100%;
     max-width: 100%;
     min-height: 2rem;
@@ -27,10 +27,12 @@
     overflow-y: auto;
     z-index: var(--#{variables.$prefix}z-index-modal-content);
   }
-  @each $color in variables.$colors {
-  $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-back-oklch) / 0.75);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+    $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-back-oklch) / 0.75);
+      }
     }
   }
 }

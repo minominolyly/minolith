@@ -3,10 +3,12 @@
 
 .label {
   font-weight: var(--#{variables.$prefix}font-weight-semibold);
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      color: var(--#{variables.$prefix}color-#{$colorName}-label-fore);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        color: var(--#{variables.$prefix}color-#{$colorName}-label-fore);
+      }
     }
   }
 }

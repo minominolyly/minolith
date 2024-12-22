@@ -3,17 +3,38 @@
 
 .stripe {
   background-size: auto auto;
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    @for $p from 2 through 17 {
-      &.is-#{$colorName}-#{$p * 5} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-#{($p + 2) * 5});
+  background-color: var(--#{variables.$prefix}color-default-stripe-back);
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 0.75rem,
+    oklch(var(--#{variables.$prefix}color-default-stripe-fore-oklch) / 0.5) 0.75rem,
+    oklch(var(--#{variables.$prefix}color-default-stripe-fore-oklch) / 0.5) 1.5rem
+  );
+  @for $n from 0 through 8 {
+    $degree: $n * 45deg;
+    &.is-#{$degree} {
+      background-image: repeating-linear-gradient(
+        $degree,
+        transparent,
+        transparent 0.75rem,
+        oklch(var(--#{variables.$prefix}color-default-stripe-fore-oklch) / 0.5) 0.75rem,
+        oklch(var(--#{variables.$prefix}color-default-stripe-fore-oklch) / 0.5) 1.5rem
+      );
+    }
+  }
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-stripe-back);
         background-image: repeating-linear-gradient(
           0deg,
           transparent,
           transparent 0.75rem,
-          oklch(var(--#{variables.$prefix}color-#{$colorName}-#{$p * 5}-oklch) / 0.5) 0.75rem,
-          oklch(var(--#{variables.$prefix}color-#{$colorName}-#{$p * 5}-oklch) / 0.5) 1.5rem
+          oklch(var(--#{variables.$prefix}color-#{$colorName}-stripe-fore-oklch) / 0.5) 0.75rem,
+          oklch(var(--#{variables.$prefix}color-#{$colorName}-stripe-fore-oklch) / 0.5) 1.5rem
         );
         @for $n from 0 through 8 {
           $degree: $n * 45deg;
@@ -22,8 +43,8 @@
               $degree,
               transparent,
               transparent 0.75rem,
-              oklch(var(--#{variables.$prefix}color-#{$colorName}-#{$p * 5}-oklch) / 0.5) 0.75rem,
-              oklch(var(--#{variables.$prefix}color-#{$colorName}-#{$p * 5}-oklch) / 0.5) 1.5rem
+              oklch(var(--#{variables.$prefix}color-#{$colorName}-stripe-fore-oklch) / 0.5) 0.75rem,
+              oklch(var(--#{variables.$prefix}color-#{$colorName}-stripe-fore-oklch) / 0.5) 1.5rem
             );
           }
         }

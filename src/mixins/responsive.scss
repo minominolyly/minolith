@@ -39,60 +39,42 @@
 @mixin is-responsive($suffix: "") {
   @include screen("xsmall") {
     &.is-xsmall#{$suffix},
-    &.is-small-down#{$suffix},
     &.is-small-or-less#{$suffix},
-    &.is-medium-down#{$suffix},
     &.is-medium-or-less#{$suffix},
-    &.is-large-down#{$suffix},
     &.is-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("small") {
-    &.is-small-down#{$suffix},
     &.is-small-or-less#{$suffix},
     &.is-small#{$suffix},
-    &.is-small-up#{$suffix},
     &.is-small-or-more#{$suffix},
-    &.is-medium-down#{$suffix},
     &.is-medium-or-less#{$suffix},
-    &.is-large-down#{$suffix},
     &.is-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("medium") {
-    &.is-small-up#{$suffix},
     &.is-small-or-more#{$suffix},
-    &.is-medium-down#{$suffix},
     &.is-medium-or-less#{$suffix},
     &.is-medium#{$suffix},
-    &.is-medium-up#{$suffix},
     &.is-medium-or-more#{$suffix},
-    &.is-large-down#{$suffix},
     &.is-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("large") {
-    &.is-small-up#{$suffix},
     &.is-small-or-more#{$suffix},
-    &.is-medium-up#{$suffix},
     &.is-medium-or-more#{$suffix},
-    &.is-large-down#{$suffix},
     &.is-large-or-less#{$suffix},
     &.is-large#{$suffix},
-    &.is-large-up#{$suffix},
     &.is-large-or-more#{$suffix} {
       @content;
     }
   }
   @include screen("xlarge") {
-    &.is-small-up#{$suffix},
     &.is-small-or-more#{$suffix},
-    &.is-medium-up#{$suffix},
     &.is-medium-or-more#{$suffix},
-    &.is-large-up#{$suffix},
     &.is-large-or-more#{$suffix},
     &.is-xlarge#{$suffix} {
       @content;
@@ -117,8 +99,7 @@
     }
   }
 
-  &.is-small-or-less,
-  &.is-small-down {
+  &.is-small-or-less {
     @include screen("medium") {
       display: none !important;
     }
@@ -143,15 +124,13 @@
       display: none !important;
     }
   }
-  &.is-small-or-more,
-  &.is-small-up {
+  &.is-small-or-more {
     @include screen("xsmall") {
       display: none !important;
     }
   }
 
-  &.is-medium-or-less,
-  &.is-medium-down {
+  &.is-medium-or-less {
     @include screen("large") {
       display: none !important;
     }
@@ -173,8 +152,7 @@
       display: none !important;
     }
   }
-  &.is-medium-or-more,
-  &.is-medium-up {
+  &.is-medium-or-more {
     @include screen("small") {
       display: none !important;
     }
@@ -183,8 +161,7 @@
     }
   }
 
-  &.is-large-or-less,
-  &.is-large-down {
+  &.is-large-or-less {
     @include screen("xlarge") {
       display: none !important;
     }
@@ -203,8 +180,7 @@
       display: none !important;
     }
   }
-  &.is-large-or-more,
-  &.is-large-up {
+  &.is-large-or-more {
     @include screen("xsmall") {
       display: none !important;
     }

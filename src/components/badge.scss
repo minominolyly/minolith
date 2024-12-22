@@ -21,12 +21,14 @@
     padding: 0.125rem 0.25rem;
   }
 
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-back);
-      border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-border);
-      color: var(--#{variables.$prefix}color-#{$colorName}-badge-fore);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-border);
+        color: var(--#{variables.$prefix}color-#{$colorName}-badge-fore);
+      }
     }
   }
 
@@ -61,43 +63,44 @@
       color: var(--#{variables.$prefix}color-default-badge-disabled-fore);
     }
 
-    @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-border);
-        color: var(--#{variables.$prefix}color-#{$colorName}-badge-fore);
-        &.is-clickable {
-          &:focus,
-          &.is-focus,
-          &.is-focused {
-            background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-back);
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-border);
-            color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-fore);
-          }
-          &:hover,
-          &.is-hover,
-          &.is-hovered {
-            background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-back);
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-border);
-            color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-fore);
-          }
-          &:active,
-          &.is-active {
-            background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-back);
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-border);
-            color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-fore);
-          }
-          &[disabled],
-          fieldset[disabled],
-          &.is-disabled {
-            background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-back);
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-border);
-            color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-fore);
+    @if (not variables.$is-skelton) {
+      @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+        &.is-#{$colorName} {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-border);
+          color: var(--#{variables.$prefix}color-#{$colorName}-badge-fore);
+          &.is-clickable {
+            &:focus,
+            &.is-focus,
+            &.is-focused {
+              background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-back);
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-border);
+              color: var(--#{variables.$prefix}color-#{$colorName}-badge-focus-fore);
+            }
+            &:hover,
+            &.is-hover,
+            &.is-hovered {
+              background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-back);
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-border);
+              color: var(--#{variables.$prefix}color-#{$colorName}-badge-hover-fore);
+            }
+            &:active,
+            &.is-active {
+              background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-back);
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-border);
+              color: var(--#{variables.$prefix}color-#{$colorName}-badge-active-fore);
+            }
+            &[disabled],
+            fieldset[disabled],
+            &.is-disabled {
+              background-color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-back);
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-border);
+              color: var(--#{variables.$prefix}color-#{$colorName}-badge-disabled-fore);
+            }
           }
         }
       }
     }
   }
-
 }

@@ -1,5 +1,4 @@
 
-
 function toggleHamburger() {
   let hamburger = document.querySelector(".hamburger");
   if (hamburger) {
@@ -63,11 +62,11 @@ function changeColor(color) {
   });
 
   document.querySelectorAll(".gingham").forEach((elem) => {
-    elem.className = `gingham ${color}-60 is-aspect-ratio-16-9`;
+    elem.className = `gingham ${color} aspect-ratio-16-9`;
   });
 
   document.querySelectorAll(".stripe").forEach((elem) => {
-    elem.className = `stripe ${color}-60 is-aspect-ratio-16-9`;
+    elem.className = `stripe ${color} aspect-ratio-16-9`;
   });
 
   document.querySelectorAll(".accordion").forEach((elem) => {

@@ -38,6 +38,16 @@ $color-light-lightness-border: 70 !default;
 $color-light-lightness-placeholder: 70 !default;
 $color-light-lightness-shadow: 70 !default;
 
+//#region color-light-lightness-gingham
+$color-light-lightness-gingham-fore: 85 !default;
+$color-light-lightness-gingham-back: 95 !default;
+//#endregion color-light-lightness-gingham
+
+//#region color-light-lightness-stripe
+$color-light-lightness-stripe-fore: 85 !default;
+$color-light-lightness-stripe-back: 95 !default;
+//#endregion color-light-lightness-stripe
+
 //#region color-dark-lightness-accordion
 $color-light-lightness-accordion-fore: 5 !default;
 $color-light-lightness-accordion-back: 95 !default;
@@ -135,6 +145,16 @@ $color-dark-lightness-back: 5 !default;
 $color-dark-lightness-border: 50 !default;
 $color-dark-lightness-placeholder: 50 !default;
 $color-dark-lightness-shadow: 50 !default;
+
+//#region color-dark-lightness-gingham
+$color-dark-lightness-gingham-fore: 5 !default;
+$color-dark-lightness-gingham-back: 15 !default;
+//#endregion color-dark-lightness-gingham
+
+//#region color-dark-lightness-stripe
+$color-dark-lightness-stripe-fore: 5 !default;
+$color-dark-lightness-stripe-back: 15 !default;
+//#endregion color-dark-lightness-stripe
 
 //#region color-dark-lightness-accordion
 $color-dark-lightness-accordion-fore: 95 !default;
@@ -250,6 +270,14 @@ $colorShadesLight: (
       border: functions.zeroPadding($color-light-lightness-border, 2),
       placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
       shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      gingham: (
+        fore: functions.zeroPadding($color-light-lightness-gingham-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-gingham-back, 2),
+      ),
+      stripe: (
+        fore: functions.zeroPadding($color-light-lightness-stripe-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-stripe-back, 2),
+      ),
       accordion: (
         fore: functions.zeroPadding($color-light-lightness-accordion-fore, 2),
         back: functions.zeroPadding($color-light-lightness-accordion-back, 2),
@@ -726,6 +754,14 @@ $colorShadesDark: (
       border: functions.zeroPadding($color-dark-lightness-border, 2),
       placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
       shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
+      gingham: (
+        fore: functions.zeroPadding($color-dark-lightness-gingham-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-gingham-back, 2),
+      ),
+      stripe: (
+        fore: functions.zeroPadding($color-dark-lightness-stripe-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-stripe-back, 2),
+      ),
       accordion: (
         fore: functions.zeroPadding($color-dark-lightness-accordion-fore, 2),
         back: functions.zeroPadding($color-dark-lightness-accordion-back, 2),

@@ -1,0 +1,419 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>minolith</title>
+    <meta name="description" content="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="https://unpkg.com/minolith/dist/css/minolith-skelton.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="../dist/css/minolith-skelton.css"
+    />
+  </head>
+  <body class="tabula">
+    <header class="header is-sticky">
+      <div class="">
+        <nav class="nav" role="navigation" aria-label="main navigation">
+          <div class="nav-accordion is-small-or-less">
+            <div class="nav-brand">
+              <div class="left">
+                <div
+                  role="button"
+                  class="hamburger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="navbar-menu"
+                  onclick="toggleHamburger()"
+                >
+                  <span class="crown"></span
+                  ><span class="upperpatty" aria-hidden="true"></span
+                  ><span class="club" aria-hidden="true"></span
+                  ><span class="lowerpatty" aria-hidden="true"></span
+                  ><span class="heel"></span>
+                </div>
+              </div>
+              <span class="center"
+                ><a
+                  aria-current="page"
+                  hreflang="ja"
+                  href="/"
+                  class="link violet"
+                  >minolith</a
+                ></span
+              >
+              <span class="right"></span>
+            </div>
+            <div id="nav-menu" class="nav-menu">
+              <a class="nav-menu-item" onclick="changeColorScheme(`light`)">
+                <span>light</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColorScheme(`dark`)">
+                <span>dark</span>
+              </a>
+            </div>
+          </div>
+          <div class="nav-static is-medium-or-more">
+            <div class="nav-brand">
+              <div class="left">
+                <div class="mx-2rem">
+                  <a
+                    aria-current="page"
+                    hreflang="ja"
+                    href="/"
+                    class="link violet"
+                    >minolith</a
+                  >
+                </div>
+              </div>
+              <span class="right"></span>
+            </div>
+            <div id="nav-menu" class="nav-menu">
+              <a class="nav-menu-item" onclick="changeColorScheme(`light`)">
+                <span>light</span>
+              </a>
+              <a class="nav-menu-item" onclick="changeColorScheme(`dark`)">
+                <span>dark</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            <div class="dialogue is-avatar-left">
+              <div class="dialogue-avatar-container">
+                <img
+                  class="image dialogue-avatar is-circle"
+                  src="images/avatar.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="dialogue-content-container">
+                <div class="dialogue-name">minominolyly</div>
+                <div class="dialogue-message">
+                  If you need to use `color` and `utilities`, you can use <a class="link" href="index.html">minolith</a>.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+            <div class="dialogue is-avatar-left">
+              <div class="dialogue-avatar-container">
+                <img
+                  class="image dialogue-avatar is-circle"
+                  src="images/avatar.png"
+                  alt="avatar"
+                />
+              </div>
+              <div class="dialogue-content-container">
+                <div class="dialogue-name">User</div>
+                <div class="dialogue-message">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 0.5rem;margin-bottom: 0.5rem;">
+            <div class="dialogue is-avatar-right">
+              <div class="dialogue-content-container">
+                <div class="dialogue-name">User</div>
+                <div class="dialogue-message">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </div>
+              </div>
+              <div class="dialogue-avatar-container">
+                <img
+                  class="image dialogue-avatar is-circle"
+                  src="images/avatar.png"
+                  alt="avatar"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="columns">
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <span class="badge">.badge</span>
+              </div>
+            </div>
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <span class="badge is-small">.badge .is-small</span>
+              </div>
+            </div>
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <span class="badge is-clickable"
+                  >.badge .is-clickable</span
+                >
+              </div>
+            </div>
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <span class="badge is-clickable" disabled
+                  >.badge .is-clickable [disabled]</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="columns">
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <button class="button">.button</a>
+              </div>
+            </div>
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <button class="button" disabled>.button [disabled]</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="columns">
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <a class="link">.link</a>
+              </div>
+            </div>
+            <div class="column-3 small-6 xsmall-12">
+              <div style="padding: 0.5rem;">
+                <a class="link" disabled>.link [disabled]</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="column-3 small-6 xsmall-12">
+            <div style="padding: 0.5rem;">
+              <label class="label">.label</label>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <details class="accordion">
+            <summary class="accordion-summary">.input</summary>
+            <div class="accordion-details">
+              <div>
+                <div class="columns">
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder=".input text"
+                      />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <textarea
+                        class="input"
+                        placeholder=".input textarea"
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input
+                        type="password"
+                        class="input"
+                        placeholder=".input password"
+                      />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input type="date" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input type="time" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input type="datetime-local" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input type="color" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input id="checkbox" type="checkbox" class="input" />
+                      <label for="checkbox">.input checkbox</label>
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input id="radio" type="radio" class="input" />
+                      <label for="radio">.input radio</label>
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;">
+                      <input type="file" class="input" />
+                    </div>
+                  </div>
+                  <div class="column-3 small-6 xsmall-12">
+                    <div style="padding: 0.5rem;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div style="padding: 0.5rem;">
+            <div class="loader"></div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div style="padding: 0.5rem;">
+            <div class="progress is-50percent"></div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="message">
+            <div class="message-header">.message</div>
+            <div class="message-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="card">
+            <div class="card-header">.card</div>
+            <div class="card-body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+            <div class="card-footer">footer</div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="gingham" style="aspect-ratio: 16 / 9;">
+            gingham
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <div class="stripe" style="aspect-ratio: 16 / 9;">
+            stripe
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <details class="accordion">
+            <summary class="accordion-summary">.heading</summary>
+            <div class="accordion-details">
+              <h1 class="heading-1">.heading-1</h1>
+              <h2 class="heading-2">.heading-2</h2>
+              <h3 class="heading-3">.heading-3</h3>
+              <h4 class="heading-4">.heading-4</h4>
+              <h5 class="heading-5">.heading-5</h5>
+              <h6 class="heading-6">.heading-6</h6>
+            </div>
+          </details>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <button class="button" onclick="toggleModal()">modal open</button>
+          <div class="modal">
+            <div class="modal-content">
+              <div class="container">
+                <div style="margin-top: 1rem; margin-bottom: 1rem;">
+                  <div class="message">
+                    <div class="message-header">.message</div>
+                    <div class="message-body">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      Duis aute irure dolor in reprehenderit in voluptate velit
+                      esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                      sint occaecat cupidatat non proident, sunt in culpa qui
+                      officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                </div>
+                <div class="my-1rem centering">
+                  <button class="button" onclick="toggleModal()">
+                    modal close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section style="margin-top: 1rem; margin-bottom: 1rem;">
+          <details class="accordion">
+            <summary class="accordion-summary">accordion-summary</summary>
+            <div class="accordion-details">accordion-details</div>
+          </details>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="sns">
+          <div class="columns">
+            <div class="column">
+              <a
+                class="github margin-1"
+                href="https://github.com/minominolyly/minolith"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="copyright">© minominolyly</div>
+      </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

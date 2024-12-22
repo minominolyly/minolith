@@ -23,10 +23,12 @@
       width: 4rem;
     }
 
-    @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        background: var(--#{variables.$prefix}color-#{$colorName}-loader-fore);
+    @if (not variables.$is-skelton) {
+      @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+        &.is-#{$colorName} {
+          background: var(--#{variables.$prefix}color-#{$colorName}-loader-fore);
+        }
       }
     }
   }

@@ -21,7 +21,7 @@
     }
 
     @for $p from 0 through 100 {
-      &.is-#{$p}-percent {
+      &.is-#{$p}percent {
         $val: ((100 - $p) * 1%);
         &::before {
           inset: 0 $val 0 0;
@@ -29,11 +29,13 @@
       }
     }
 
-    @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-progress-back);
-        color: var(--#{variables.$prefix}color-#{$colorName}-progress-fore);
+    @if (not variables.$is-skelton) {
+      @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+        &.is-#{$colorName} {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-progress-back);
+          color: var(--#{variables.$prefix}color-#{$colorName}-progress-fore);
+        }
       }
     }
   }

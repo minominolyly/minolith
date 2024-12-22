@@ -1,44 +1,90 @@
-.is-display-block,
+@use "../functions/index.scss" as functions;
+
 .display-block {
   display: block !important;
 }
 
-.is-display-inline,
 .display-inline {
   display: inline !important;
 }
 
-.is-position-absolute,
+.display-inline-block {
+  display: inline-block !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.display-grid {
+  display: grid !important;
+}
+
 .position-absolute {
   position: absolute !important;
 }
 
-.is-position-fixed,
 .position-fixed {
   position: fixed !important;
 }
 
-.is-position-relative,
 .position-relative {
   position: relative !important;
 }
 
-.is-position-sticky,
 .position-sticky {
   position: sticky !important;
 }
 
-@for $p from 1 through 100 {
-  .top-#{$p} {
-    top: $p * 1% !important;
+.top-auto {
+  top: auto !important;
+}
+.right-auto {
+  right: auto !important;
+}
+.bottom-auto {
+  bottom: auto !important;
+}
+.left-auto {
+  left: auto !important;
+}
+
+.top-unset {
+  top: unset !important;
+}
+.right-unset {
+  right: unset !important;
+}
+.bottom-unset {
+  bottom: unset !important;
+}
+.left-unset {
+  left: unset !important;
+}
+
+@for $p from 0 through 4 {
+  .top-#{$p}percent {
+    top: $p * 25% !important;
   }
-  .right-#{$p} {
-    right: $p * 1% !important;
+  .right-#{$p}percent {
+    right: $p * 25% !important;
   }
-  .bottom-#{$p} {
-    bottom: $p * 1% !important;
+  .bottom-#{$p}percent {
+    bottom: $p * 25% !important;
   }
-  .left-#{$p} {
-    left: $p * 1% !important;
+  .left-#{$p}percent {
+    left: $p * 25% !important;
   }
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
 }

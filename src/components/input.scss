@@ -24,26 +24,29 @@
     background-color: var(--#{variables.$prefix}color-default-disabled-back);
     border-color: var(--#{variables.$prefix}color-default-disabled-border);
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
-      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-      color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-      &::placeholder {
-        color: var(--#{variables.$prefix}color-#{$colorName}-placeholder);
-      }
-      &:focus,
-      &.is-focus,
-      &.is-focused {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-focus-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-focus-border);
-      }
-      &[disabled],
-      fieldset[disabled],
-      &.is-disabled {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
+        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+        &::placeholder {
+          color: var(--#{variables.$prefix}color-#{$colorName}-placeholder);
+        }
+        &:focus,
+        &.is-focus,
+        &.is-focused {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-focus-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-focus-border);
+        }
+        &[disabled],
+        fieldset[disabled],
+        &.is-disabled {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+        }
       }
     }
   }
@@ -94,24 +97,26 @@
       }
     }
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
-      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-      &:checked {
-        &:after {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-        }
-      }
-      &[disabled],
-      fieldset[disabled],
-      &.is-disabled {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
         &:checked {
           &:after {
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+            border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+          }
+        }
+        &[disabled],
+        fieldset[disabled],
+        &.is-disabled {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+          &:checked {
+            &:after {
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+            }
           }
         }
       }
@@ -160,26 +165,28 @@
       }
     }
   }
-  @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
-    &.is-#{$colorName} {
-      background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
-      border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-      &:checked {
-        &:after {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-        }
-      }
-      &[disabled],
-      fieldset[disabled],
-      &.is-disabled {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
+        border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
         &:checked {
           &:after {
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
-            background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+            border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+            background-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
+          }
+        }
+        &[disabled],
+        fieldset[disabled],
+        &.is-disabled {
+          background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-back);
+          border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-border);
+          &:checked {
+            &:after {
+              border-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+              background-color: var(--#{variables.$prefix}color-#{$colorName}-disabled-fore);
+            }
           }
         }
       }

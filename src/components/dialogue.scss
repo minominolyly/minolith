@@ -266,10 +266,6 @@
         > .dialogue-name,
         > .dialogue-message {
           border-style: #{$border-style};
-          &:after,
-          &:before {
-            border-style: #{$border-style};
-          }
         }
       }
     }

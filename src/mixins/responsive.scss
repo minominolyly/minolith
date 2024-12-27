@@ -36,47 +36,47 @@
   }
 }
 
-@mixin is-responsive($suffix: "") {
+@mixin is-responsive($prefix: "is", $suffix: "") {
   @include screen("xsmall") {
-    &.is-xsmall#{$suffix},
-    &.is-small-or-less#{$suffix},
-    &.is-medium-or-less#{$suffix},
-    &.is-large-or-less#{$suffix} {
+    &.#{$prefix}-xsmall#{$suffix},
+    &.#{$prefix}-small-or-less#{$suffix},
+    &.#{$prefix}-medium-or-less#{$suffix},
+    &.#{$prefix}-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("small") {
-    &.is-small-or-less#{$suffix},
-    &.is-small#{$suffix},
-    &.is-small-or-more#{$suffix},
-    &.is-medium-or-less#{$suffix},
-    &.is-large-or-less#{$suffix} {
+    &.#{$prefix}-small-or-less#{$suffix},
+    &.#{$prefix}-small#{$suffix},
+    &.#{$prefix}-small-or-more#{$suffix},
+    &.#{$prefix}-medium-or-less#{$suffix},
+    &.#{$prefix}-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("medium") {
-    &.is-small-or-more#{$suffix},
-    &.is-medium-or-less#{$suffix},
-    &.is-medium#{$suffix},
-    &.is-medium-or-more#{$suffix},
-    &.is-large-or-less#{$suffix} {
+    &.#{$prefix}-small-or-more#{$suffix},
+    &.#{$prefix}-medium-or-less#{$suffix},
+    &.#{$prefix}-medium#{$suffix},
+    &.#{$prefix}-medium-or-more#{$suffix},
+    &.#{$prefix}-large-or-less#{$suffix} {
       @content;
     }
   }
   @include screen("large") {
-    &.is-small-or-more#{$suffix},
-    &.is-medium-or-more#{$suffix},
-    &.is-large-or-less#{$suffix},
-    &.is-large#{$suffix},
-    &.is-large-or-more#{$suffix} {
+    &.#{$prefix}-small-or-more#{$suffix},
+    &.#{$prefix}-medium-or-more#{$suffix},
+    &.#{$prefix}-large-or-less#{$suffix},
+    &.#{$prefix}-large#{$suffix},
+    &.#{$prefix}-large-or-more#{$suffix} {
       @content;
     }
   }
   @include screen("xlarge") {
-    &.is-small-or-more#{$suffix},
-    &.is-medium-or-more#{$suffix},
-    &.is-large-or-more#{$suffix},
-    &.is-xlarge#{$suffix} {
+    &.#{$prefix}-small-or-more#{$suffix},
+    &.#{$prefix}-medium-or-more#{$suffix},
+    &.#{$prefix}-large-or-more#{$suffix},
+    &.#{$prefix}-xlarge#{$suffix} {
       @content;
     }
   }
@@ -209,10 +209,15 @@
 }
 
 @mixin column() {
+  box-sizing: border-box;
   display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  max-width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
   position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding-top: calc(var(--#{variables.$prefix}gutter-y));
+  padding-right: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
+  padding-left: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
 }

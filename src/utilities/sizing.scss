@@ -1,32 +1,33 @@
 @use "../functions/index.scss" as functions;
 
-@for $p from 0 through 20 {
-  $escapedHalf: functions.strReplace(#{($p * 0.5)}, ".", "\\.");
-  .height-#{$escapedHalf}rem {
-    width: $p * 0.5rem !important;
-  }
-  .height-#{$escapedHalf}rem {
-    height: $p * 0.5rem !important;
-  }
-}
+// @for $p from 0 through 20 {
+//   $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
+//   .width-#{$escapedQuarter}rem {
+//     width: $p * 0.25rem !important;
+//   }
+//   .height-#{$escapedQuarter}rem {
+//     height: $p * 0.25rem !important;
+//   }
+// }
 
 @for $p from 1 through 4 {
-  .width-#{$p}percent {
+  $escaped: functions.strReplace(#{($p * 25)}, ".", "\\.");
+  .width-#{$escaped}percent {
     width: $p * 25% !important;
   }
-  .height-#{$p}percent {
+  .height-#{$escaped}percent {
     height: $p * 25% !important;
   }
-  .max-width-#{$p}percent {
+  .max-width-#{$escaped}percent {
     max-width: $p * 25% !important;
   }
-  .max-height-#{$p}percent {
+  .max-height-#{$escaped}percent {
     max-height: $p * 25% !important;
   }
-  .min-width-#{$p}percent {
+  .min-width-#{$escaped}percent {
     min-width: $p * 25% !important;
   }
-  .min-height-#{$p}percent {
+  .min-height-#{$escaped}percent {
     min-height: $p * 25% !important;
   }
 }

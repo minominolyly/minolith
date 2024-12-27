@@ -1,18 +1,48 @@
 @use "../variables/index.scss" as variables;
+@use "../functions/index.scss" as functions;
 @use "../mixins/index.scss" as mixins;
 
 .container {
-  margin: 0 auto;
-  padding: 0 1rem;
-  position: relative;
+  --#{variables.$prefix}gutter-x: 0;
+  --#{variables.$prefix}gutter-y: 0;
+  padding-top: calc(var(--#{variables.$prefix}gutter-y) * 0.5);
+  padding-bottom: calc(var(--#{variables.$prefix}gutter-y) * 0.5);
+  padding-right: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
+  padding-left: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
   width: auto;
+
+  @for $p from 0 through 20 {
+    $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
+    &.has-gutter-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    }
+    &.has-gutter-x-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+    }
+    &.has-gutter-y-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    }
+  }
+
   @include mixins.screen("medium") {
     max-width: variables.$breakpoint-medium;
+    &.is-fluid {
+      max-width: unset;
+    }
   }
   @include mixins.screen("large") {
     max-width: variables.$breakpoint-large;
+    &.is-fluid {
+      max-width: unset;
+    }
   }
   @include mixins.screen("xlarge") {
     max-width: variables.$breakpoint-xlarge;
+    &.is-fluid {
+      max-width: unset;
+    }
   }
 }

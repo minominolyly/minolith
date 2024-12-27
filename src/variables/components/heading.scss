@@ -1,0 +1,3 @@
+@use "../typography.scss" as typographyVariables;
+
+$font-family-heading: typographyVariables.$font-family-sans-serif !default;

@@ -75,80 +75,80 @@
   padding-bottom: auto !important;
 }
 
-@for $p from 0 through 20 {
-  $suffix: functions.strReplace(#{($p * 0.5)}, ".", "\\.");
+@for $p from 0 through 40 {
+  $suffix: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
 
-  .margin-#{$suffix},
+  .margin-#{$suffix}rem,
   .m-#{$suffix}rem {
-    margin: $p * 0.5rem !important;
+    margin: $p * 0.25rem !important;
   }
 
-  .margin-top-#{$suffix},
+  .margin-top-#{$suffix}rem,
   .mt-#{$suffix}rem {
-    margin-top: $p * 0.5rem !important;
+    margin-top: $p * 0.25rem !important;
   }
 
-  .margin-right-#{$suffix},
+  .margin-right-#{$suffix}rem,
   .mr-#{$suffix}rem {
-    margin-right: $p * 0.5rem !important;
+    margin-right: $p * 0.25rem !important;
   }
 
-  .margin-bottom-#{$suffix},
+  .margin-bottom-#{$suffix}rem,
   .mb-#{$suffix}rem {
-    margin-bottom: $p * 0.5rem !important;
+    margin-bottom: $p * 0.25rem !important;
   }
 
-  .ml-#{$suffix}rem,
-  .margin-left-#{$suffix} {
-    margin-left: $p * 0.5rem !important;
+  .margin-left-#{$suffix}rem,
+  .ml-#{$suffix}rem {
+    margin-left: $p * 0.25rem !important;
   }
 
   .margin-x-#{$suffix}rem,
   .mx-#{$suffix}rem {
-    margin-right: $p * 0.5rem !important;
-    margin-left: $p * 0.5rem !important;
+    margin-right: $p * 0.25rem !important;
+    margin-left: $p * 0.25rem !important;
   }
 
   .margin-y-#{$suffix}rem,
   .my-#{$suffix}rem {
-    margin-top: $p * 0.5rem !important;
-    margin-bottom: $p * 0.5rem !important;
+    margin-top: $p * 0.25rem !important;
+    margin-bottom: $p * 0.25rem !important;
   }
 
-  .padding-#{$suffix},
+  .padding-#{$suffix}rem,
   .p-#{$suffix}rem {
-    padding: $p * 0.5rem !important;
+    padding: $p * 0.25rem !important;
   }
 
-  .padding-top-#{$suffix},
+  .padding-top-#{$suffix}rem,
   .pt-#{$suffix}rem {
-    padding-top: $p * 0.5rem !important;
+    padding-top: $p * 0.25rem !important;
   }
 
-  .padding-right-#{$suffix},
+  .padding-right-#{$suffix}rem,
   .pr-#{$suffix}rem {
-    padding-right: $p * 0.5rem !important;
+    padding-right: $p * 0.25rem !important;
   }
 
-  .padding-bottom-#{$suffix},
+  .padding-bottom-#{$suffix}rem,
   .pb-#{$suffix}rem {
-    padding-bottom: $p * 0.5rem !important;
+    padding-bottom: $p * 0.25rem !important;
   }
 
-  .padding-left-#{$suffix},
+  .padding-left-#{$suffix}rem,
   .pl-#{$suffix}rem {
-    padding-left: $p * 0.5rem !important;
+    padding-left: $p * 0.25rem !important;
   }
 
   .padding-x-#{$suffix}rem,
   .px-#{$suffix}rem {
-    padding-right: $p * 0.5rem !important;
-    padding-left: $p * 0.5rem !important;
+    padding-right: $p * 0.25rem !important;
+    padding-left: $p * 0.25rem !important;
   }
 
   .padding-y-#{$suffix}rem,
   .py-#{$suffix}rem {
-    padding-top: $p * 0.5rem !important;
-    padding-bottom: $p * 0.5rem !important;
+    padding-top: $p * 0.25rem !important;
+    padding-bottom: $p * 0.25rem !important;
   }
 }

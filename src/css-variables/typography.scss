@@ -5,7 +5,6 @@
   --#{variables.$prefix}font-family-sans-serif: #{variables.$font-family-sans-serif};
   --#{variables.$prefix}font-family-monospace: #{variables.$font-family-monospace};
   --#{variables.$prefix}font-family-main: var(--#{variables.$prefix}font-family-sans-serif);
-  --#{variables.$prefix}font-family-heading: var(--#{variables.$prefix}font-family-sans-serif);
   --#{variables.$prefix}font-family-code: var(--#{variables.$prefix}font-family-monospace);
   --#{variables.$prefix}font-size-xsmall: #{variables.$font-size-xsmall};
   --#{variables.$prefix}font-size-small: #{variables.$font-size-small};

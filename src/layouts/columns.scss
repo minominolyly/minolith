@@ -1,11 +1,41 @@
 @use "sass:math";
 @use "../mixins/index.scss" as mixins;
 @use "../variables/index.scss" as variables;
+@use "../functions/index.scss" as functions;
 
 .columns {
+  --#{variables.$prefix}gutter-x: 0;
+  --#{variables.$prefix}gutter-y: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-top: calc(var(--#{variables.$prefix}gutter-y) * -1);
+  margin-right: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
+  margin-left: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
+
+  @for $p from 0 through 20 {
+    $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
+    &.has-gutter-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    }
+    &.has-gutter-x-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+    }
+    &.has-gutter-y-#{$escapedQuarter}rem {
+      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    }
+  }
+
+  >* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-top: calc(var(--#{variables.$prefix}gutter-y));
+    padding-right: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
+    padding-left: calc(var(--#{variables.$prefix}gutter-x) * 0.5);
+  }
+
   &.is-direction-row {
     flex-direction: row;
   }

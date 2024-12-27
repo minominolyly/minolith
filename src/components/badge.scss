@@ -33,8 +33,9 @@
   }
 
   &.is-clickable {
-    user-select: none;
     cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
     &:focus,
     &.is-focus,
     &.is-focused {

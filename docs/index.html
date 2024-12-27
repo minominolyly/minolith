@@ -163,13 +163,13 @@
       </div>
     </header>
     <main class="main">
-      <div class="container">
-        <section class="my-1rem">
-          <div class="my-0.5rem">
-            <div class="dialogue is-avatar-left">
+      <div class="container has-gutter-x-1rem">
+        <section class="py-0.5rem">
+          <div class="py-0.5rem">
+            <div class="dialogue is-left is-avatar-circle">
               <div class="dialogue-avatar-container">
                 <img
-                  class="image dialogue-avatar is-circle"
+                  class="image dialogue-avatar"
                   src="images/avatar.png"
                   alt="avatar"
                 />
@@ -177,52 +177,102 @@
               <div class="dialogue-content-container">
                 <div class="dialogue-name">minominolyly</div>
                 <div class="dialogue-message">
-                  <p>minolith is still alpha.</p>
-                  <p>If you don't need to use `color` and `utilities`, you can use
-                    <a class="link" href="skelton.html">minolith-skelton</a>.</p>
-                  <p>If you want to use in React Project, you can use <a class="link" href="https://minominolyly.github.io/react-minolith/">react-minolith</a></p>
+                  <div class="dialogue-message-inner">
+                    <p>minolith is still alpha.</p>
+                    <p>
+                      If you don't need to use `color` and `utilities`, you can
+                      use
+                      <a class="link" href="skelton.html">minolith-skelton</a>.
+                    </p>
+                    <p>
+                      If you want to use in React Project, you can use
+                      <a
+                        class="link"
+                        href="https://minominolyly.github.io/react-minolith/"
+                        >react-minolith</a
+                      >
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="py-0.5rem">
+            <div class="dialogue is-right is-avatar-circle is-border-width-xthick">
+              <div class="dialogue-content-container">
+                <div class="dialogue-name">minominolyly</div>
+                <div class="dialogue-message">
+                  <div class="dialogue-message-inner">
+                    <p>minolith is still alpha.</p>
+                    <p>
+                      If you don't need to use `color` and `utilities`, you can
+                      use
+                      <a class="link" href="skelton.html">minolith-skelton</a>.
+                    </p>
+                    <p>
+                      If you want to use in React Project, you can use
+                      <a
+                        class="link"
+                        href="https://minominolyly.github.io/react-minolith/"
+                        >react-minolith</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="dialogue-avatar-container">
+                <img
+                  class="image dialogue-avatar"
+                  src="images/avatar.png"
+                  alt="avatar"
+                />
+              </div>
+            </div>
+          </div>
         </section>
-        <section class="my-1rem">
+        <section class="py-0.5rem">
           <details class="accordion">
             <summary class="accordion-summary">Installation</summary>
             <div class="accordion-details">
-              <section class="my-0.5rem">
+              <section class="py-0.5rem">
                 <h3 class="headding-3">Use minolith Sass library</h3>
-                <section class="my-0.5rem">
+                <section class="py-0.5rem">
                   <h4 class="headding-4">Install the NPM package</h4>
-                  <div class="my-0.5rem">
-                    <p>
-                      minolith is available through npm.
-                    </p>
+                  <div class="py-0.5rem">
+                    <p>minolith is available through npm.</p>
                     <figure>
-                      <pre class="language-shell" data-dependencies="shell"><code>npm install minolith</code></pre>
+                      <pre
+                        class="language-shell"
+                        data-dependencies="shell"
+                      ><code>npm install minolith</code></pre>
                     </figure>
                   </div>
                 </section>
               </section>
-              <section class="my-0.5rem">
+              <section class="py-0.5rem">
                 <h3 class="headding-3">Use minolith CSS</h3>
-                <section class="my-0.5rem">
+                <section class="py-0.5rem">
                   <h4 class="headding-4">From CDN</h4>
-                  <div class="my-0.5rem">
-                    <div class="my-0.5rem">
+                  <div class="py-0.5rem">
+                    <div class="py-0.5rem">
                       <p>
                         You can import the CSS file directly from
                         <a class="link" href="https://unpkg.com">unpkg.com</a>
                       </p>
                       <figure>
-                        <pre class="language-html" data-dependencies="html"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;https://unpkg.com/minolith/dist/css/minolith.min.css&quot; /&gt;</code></pre>
+                        <pre
+                          class="language-html"
+                          data-dependencies="html"
+                        ><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;https://unpkg.com/minolith/dist/css/minolith.min.css&quot; /&gt;</code></pre>
                       </figure>
                       <p>
                         If you need to use `utilities`, you can use
                         `minolith-utilities.css`.
                       </p>
                       <figure>
-                        <pre class="language-html" data-dependencies="html"
+                        <pre
+                          class="language-html"
+                          data-dependencies="html"
                         ><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;all&quot; href=&quot;https://unpkg.com/minolith/dist/css/minolith-utilities.min.css&quot; /&gt;</code></pre>
                       </figure>
                     </div>
@@ -232,11 +282,118 @@
             </div>
           </details>
         </section>
-        <section class="my-1rem">
+        <section class="py-0.5rem">
+          <details class="accordion">
+            <summary class="accordion-summary">layouts</summary>
+            <div class="accordion-details">
+              <section class="py-0.5rem">
+                <details class="accordion">
+                  <summary class="accordion-summary">columns</summary>
+                  <div class="accordion-details">
+                    <section class="py-0.5rem">
+                      <div class="columns">
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                      </div>
+                    </section>
+                    <section class="py-0.5rem">
+                      <div class="columns">
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                      </div>
+                    </section>
+                    <section class="py-0.5rem">
+                      <div class="columns">
+                        <div class="column-2"><div class="border-solid padding-1rem">.column-2</div></div>
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                        <div class="column-2"><div class="border-solid padding-1rem">.column-2</div></div>
+                        <div class="column-3"><div class="border-solid padding-1rem">.column-3</div></div>
+                        <div class="column-2"><div class="border-solid padding-1rem">.column-2</div></div>
+                      </div>
+                    </section>
+                    <section class="py-0.5rem">
+                      <div class="columns has-gutter-1rem">
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                      </div>
+                    </section>
+                    <section class="py-0.5rem">
+                      <div class="columns has-gutter-y-1rem">
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                      </div>
+                    </section>
+                    <section class="py-0.5rem">
+                      <div class="columns has-gutter-x-1rem">
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                        <div class="column"><div class="border-solid padding-1rem">.column</div></div>
+                      </div>
+                    </section>
+                  </div>
+                </details>
+              </section>
+              <section class="py-0.5rem">
+                <details class="accordion">
+                  <summary class="accordion-summary">container</summary>
+                  <div class="accordion-details">
+                    <section>
+                      <div class="container">
+                        .container
+                      </div>
+                    </section>
+                  </div>
+                </details>
+              </section>
+            </div>
+          </details>
+        </section>
+        <section class="py-0.5rem">
           <details class="accordion">
             <summary class="accordion-summary">components</summary>
             <div class="accordion-details">
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.heading</summary>
                   <div class="accordion-details">
@@ -249,7 +406,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.badge</summary>
                   <div class="accordion-details">
@@ -262,7 +419,9 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <span class="badge is-is-small">.badge .is-small</span>
+                            <span class="badge is-is-small"
+                              >.badge .is-small</span
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -291,12 +450,16 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <span class="badge is-orange">.badge .is-orange</span>
+                            <span class="badge is-orange"
+                              >.badge .is-orange</span
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <span class="badge is-yellow">.badge .is-yellow</span>
+                            <span class="badge is-yellow"
+                              >.badge .is-yellow</span
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -316,12 +479,16 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <span class="badge is-violet">.badge .is-violet</span>
+                            <span class="badge is-violet"
+                              >.badge .is-violet</span
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <span class="badge is-magenta">.badge .is-magenta</span>
+                            <span class="badge is-magenta"
+                              >.badge .is-magenta</span
+                            >
                           </div>
                         </div>
                       </div>
@@ -329,7 +496,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.button</summary>
                   <div class="accordion-details">
@@ -349,12 +516,16 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <button class="button is-gray">.button .is-gray</button>
+                            <button class="button is-gray">
+                              .button .is-gray
+                            </button>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <button class="button is-red">.button .is-red</button>
+                            <button class="button is-red">
+                              .button .is-red
+                            </button>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -373,17 +544,23 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <button class="button is-green">.button .is-green</button>
+                            <button class="button is-green">
+                              .button .is-green
+                            </button>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <button class="button is-cyan">.button .is-cyan</button>
+                            <button class="button is-cyan">
+                              .button .is-cyan
+                            </button>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <button class="button is-blue">.button .is-blue</button>
+                            <button class="button is-blue">
+                              .button .is-blue
+                            </button>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -405,7 +582,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.link</summary>
                   <div class="accordion-details">
@@ -471,7 +648,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.label</summary>
                   <div class="accordion-details">
@@ -494,17 +671,23 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <label class="label is-orange">.label .is-orange</label>
+                            <label class="label is-orange"
+                              >.label .is-orange</label
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <label class="label is-yellow">.label .is-yellow</label>
+                            <label class="label is-yellow"
+                              >.label .is-yellow</label
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <label class="label is-green">.label .is-green</label>
+                            <label class="label is-green"
+                              >.label .is-green</label
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -519,12 +702,16 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <label class="label is-violet">.label .is-violet</label>
+                            <label class="label is-violet"
+                              >.label .is-violet</label
+                            >
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <label class="label is-magenta">.label .is-magenta</label>
+                            <label class="label is-magenta"
+                              >.label .is-magenta</label
+                            >
                           </div>
                         </div>
                       </div>
@@ -532,7 +719,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.input</summary>
                   <div class="accordion-details">
@@ -586,7 +773,11 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <input id="checkbox" type="checkbox" class="input" />
+                            <input
+                              id="checkbox"
+                              type="checkbox"
+                              class="input"
+                            />
                             <label for="checkbox">.input checkbox</label>
                           </div>
                         </div>
@@ -609,7 +800,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.loader</summary>
                   <div class="accordion-details">
@@ -670,7 +861,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">.progress</summary>
                   <div class="accordion-details">
@@ -731,56 +922,61 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <div class="message">
                   <div class="message-header">.message</div>
                   <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                   </div>
                 </div>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <div class="card">
                   <div class="card-header">.card</div>
                   <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
                   </div>
                   <div class="card-footer">footer</div>
                 </div>
               </section>
-              <section class="my-1rem">
-                <button class="button" onclick="toggleModal()">modal open</button>
+              <section class="py-0.5rem">
+                <button class="button" onclick="toggleModal()">
+                  modal open
+                </button>
                 <div class="modal">
                   <div class="modal-content">
                     <div class="container">
-                      <div class="my-1rem">
+                      <div class="py-0.5rem">
                         <div class="message">
                           <div class="message-header">.message</div>
                           <div class="message-body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                            sint occaecat cupidatat non proident, sunt in culpa qui
-                            officia deserunt mollit anim id est laborum.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
                           </div>
                         </div>
                       </div>
-                      <div class="my-1rem centering">
+                      <div class="py-0.5rem centering">
                         <button class="button" onclick="toggleModal()">
                           modal close
                         </button>
@@ -789,15 +985,15 @@
                   </div>
                 </div>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">dialogue</summary>
                   <div class="accordion-details">
-                    <div class="my-0.5rem">
-                      <div class="dialogue is-avatar-left">
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-red">
                         <div class="dialogue-avatar-container">
                           <img
-                            class="image dialogue-avatar is-circle"
+                            class="image dialogue-avatar"
                             src="images/avatar.png"
                             alt="avatar"
                           />
@@ -805,36 +1001,150 @@
                         <div class="dialogue-content-container">
                           <div class="dialogue-name">User</div>
                           <div class="dialogue-message">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="my-0.5rem">
-                      <div class="dialogue is-avatar-right">
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-right is-border-width-xthin is-orange">
                         <div class="dialogue-content-container">
                           <div class="dialogue-name">User</div>
                           <div class="dialogue-message">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                            do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum
-                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
                           </div>
                         </div>
                         <div class="dialogue-avatar-container">
                           <img
-                            class="image dialogue-avatar is-circle"
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-border-width-thin is-yellow">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">User</div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-right is-border-width-medium is-cyan">
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">User</div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-avatar-circle is-border-width-thick is-blue">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">User</div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-right is-avatar-circle is-border-width-xthick is-violet">
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">User</div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit, sed do eiusmod tempor incididunt ut labore et
+                              dolore magna aliqua. Ut enim ad minim veniam, quis
+                              nostrud exercitation ullamco laboris nisi ut aliquip
+                              ex ea commodo consequat. Duis aute irure dolor in
+                              reprehenderit in voluptate velit esse cillum dolore
+                              eu fugiat nulla pariatur. Excepteur sint occaecat
+                              cupidatat non proident, sunt in culpa qui officia
+                              deserunt mollit anim id est laborum.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
                             src="images/avatar.png"
                             alt="avatar"
                           />
@@ -844,7 +1154,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">accordion-summary</summary>
                   <div class="accordion-details">accordion-details</div>
@@ -853,24 +1163,24 @@
             </div>
           </details>
         </section>
-        <section class="my-1rem">
+        <section class="py-0.5rem">
           <details class="accordion">
             <summary class="accordion-summary">backgrounds</summary>
             <div class="accordion-details">
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <div class="gingham aspect-ratio-16-9">gingham</div>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <div class="stripe aspect-ratio-16-9">stripe</div>
               </section>
             </div>
           </details>
         </section>
-        <section class="my-1rem">
+        <section class="py-0.5rem">
           <details class="accordion">
             <summary class="accordion-summary">utilities</summary>
             <div class="accordion-details">
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">typography</summary>
                   <div class="accordion-details">
@@ -929,15 +1239,19 @@
                       <div class="font-size-xxxlarge">.font-size-xxxlarge</div>
                     </div>
                     <div class="p-0.5rem">
-                      <div class="font-size-xxxxlarge">.font-size-xxxxlarge</div>
+                      <div class="font-size-xxxxlarge">
+                        .font-size-xxxxlarge
+                      </div>
                     </div>
                     <div class="p-0.5rem">
-                      <div class="font-size-xxxxxlarge">.font-size-xxxxxlarge</div>
+                      <div class="font-size-xxxxxlarge">
+                        .font-size-xxxxxlarge
+                      </div>
                     </div>
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">color</summary>
                   <div class="accordion-details">
@@ -945,48 +1259,124 @@
                       <div class="columns">
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="forecolor-gray-05">.forecolor-gray-05</div>
-                            <div class="forecolor-gray-10">.forecolor-gray-10</div>
-                            <div class="forecolor-gray-15">.forecolor-gray-15</div>
-                            <div class="forecolor-gray-20">.forecolor-gray-20</div>
-                            <div class="forecolor-gray-25">.forecolor-gray-25</div>
-                            <div class="forecolor-gray-30">.forecolor-gray-30</div>
-                            <div class="forecolor-gray-35">.forecolor-gray-35</div>
-                            <div class="forecolor-gray-40">.forecolor-gray-40</div>
-                            <div class="forecolor-gray-45">.forecolor-gray-45</div>
-                            <div class="forecolor-gray-50">.forecolor-gray-50</div>
-                            <div class="forecolor-gray-55">.forecolor-gray-55</div>
-                            <div class="forecolor-gray-60">.forecolor-gray-60</div>
-                            <div class="forecolor-gray-65">.forecolor-gray-65</div>
-                            <div class="forecolor-gray-70">.forecolor-gray-70</div>
-                            <div class="forecolor-gray-75">.forecolor-gray-75</div>
-                            <div class="forecolor-gray-80">.forecolor-gray-80</div>
-                            <div class="forecolor-gray-85">.forecolor-gray-85</div>
-                            <div class="forecolor-gray-90">.forecolor-gray-90</div>
-                            <div class="forecolor-gray-95">.forecolor-gray-95</div>
+                            <div class="forecolor-gray-05">
+                              .forecolor-gray-05
+                            </div>
+                            <div class="forecolor-gray-10">
+                              .forecolor-gray-10
+                            </div>
+                            <div class="forecolor-gray-15">
+                              .forecolor-gray-15
+                            </div>
+                            <div class="forecolor-gray-20">
+                              .forecolor-gray-20
+                            </div>
+                            <div class="forecolor-gray-25">
+                              .forecolor-gray-25
+                            </div>
+                            <div class="forecolor-gray-30">
+                              .forecolor-gray-30
+                            </div>
+                            <div class="forecolor-gray-35">
+                              .forecolor-gray-35
+                            </div>
+                            <div class="forecolor-gray-40">
+                              .forecolor-gray-40
+                            </div>
+                            <div class="forecolor-gray-45">
+                              .forecolor-gray-45
+                            </div>
+                            <div class="forecolor-gray-50">
+                              .forecolor-gray-50
+                            </div>
+                            <div class="forecolor-gray-55">
+                              .forecolor-gray-55
+                            </div>
+                            <div class="forecolor-gray-60">
+                              .forecolor-gray-60
+                            </div>
+                            <div class="forecolor-gray-65">
+                              .forecolor-gray-65
+                            </div>
+                            <div class="forecolor-gray-70">
+                              .forecolor-gray-70
+                            </div>
+                            <div class="forecolor-gray-75">
+                              .forecolor-gray-75
+                            </div>
+                            <div class="forecolor-gray-80">
+                              .forecolor-gray-80
+                            </div>
+                            <div class="forecolor-gray-85">
+                              .forecolor-gray-85
+                            </div>
+                            <div class="forecolor-gray-90">
+                              .forecolor-gray-90
+                            </div>
+                            <div class="forecolor-gray-95">
+                              .forecolor-gray-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="forecolor-red-05">.forecolor-red-05</div>
-                            <div class="forecolor-red-10">.forecolor-red-10</div>
-                            <div class="forecolor-red-15">.forecolor-red-15</div>
-                            <div class="forecolor-red-20">.forecolor-red-20</div>
-                            <div class="forecolor-red-25">.forecolor-red-25</div>
-                            <div class="forecolor-red-30">.forecolor-red-30</div>
-                            <div class="forecolor-red-35">.forecolor-red-35</div>
-                            <div class="forecolor-red-40">.forecolor-red-40</div>
-                            <div class="forecolor-red-45">.forecolor-red-45</div>
-                            <div class="forecolor-red-50">.forecolor-red-50</div>
-                            <div class="forecolor-red-55">.forecolor-red-55</div>
-                            <div class="forecolor-red-60">.forecolor-red-60</div>
-                            <div class="forecolor-red-65">.forecolor-red-65</div>
-                            <div class="forecolor-red-70">.forecolor-red-70</div>
-                            <div class="forecolor-red-75">.forecolor-red-75</div>
-                            <div class="forecolor-red-80">.forecolor-red-80</div>
-                            <div class="forecolor-red-85">.forecolor-red-85</div>
-                            <div class="forecolor-red-90">.forecolor-red-90</div>
-                            <div class="forecolor-red-95">.forecolor-red-95</div>
+                            <div class="forecolor-red-05">
+                              .forecolor-red-05
+                            </div>
+                            <div class="forecolor-red-10">
+                              .forecolor-red-10
+                            </div>
+                            <div class="forecolor-red-15">
+                              .forecolor-red-15
+                            </div>
+                            <div class="forecolor-red-20">
+                              .forecolor-red-20
+                            </div>
+                            <div class="forecolor-red-25">
+                              .forecolor-red-25
+                            </div>
+                            <div class="forecolor-red-30">
+                              .forecolor-red-30
+                            </div>
+                            <div class="forecolor-red-35">
+                              .forecolor-red-35
+                            </div>
+                            <div class="forecolor-red-40">
+                              .forecolor-red-40
+                            </div>
+                            <div class="forecolor-red-45">
+                              .forecolor-red-45
+                            </div>
+                            <div class="forecolor-red-50">
+                              .forecolor-red-50
+                            </div>
+                            <div class="forecolor-red-55">
+                              .forecolor-red-55
+                            </div>
+                            <div class="forecolor-red-60">
+                              .forecolor-red-60
+                            </div>
+                            <div class="forecolor-red-65">
+                              .forecolor-red-65
+                            </div>
+                            <div class="forecolor-red-70">
+                              .forecolor-red-70
+                            </div>
+                            <div class="forecolor-red-75">
+                              .forecolor-red-75
+                            </div>
+                            <div class="forecolor-red-80">
+                              .forecolor-red-80
+                            </div>
+                            <div class="forecolor-red-85">
+                              .forecolor-red-85
+                            </div>
+                            <div class="forecolor-red-90">
+                              .forecolor-red-90
+                            </div>
+                            <div class="forecolor-red-95">
+                              .forecolor-red-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -1113,71 +1503,185 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="forecolor-green-05">.forecolor-green-05</div>
-                            <div class="forecolor-green-10">.forecolor-green-10</div>
-                            <div class="forecolor-green-15">.forecolor-green-15</div>
-                            <div class="forecolor-green-20">.forecolor-green-20</div>
-                            <div class="forecolor-green-25">.forecolor-green-25</div>
-                            <div class="forecolor-green-30">.forecolor-green-30</div>
-                            <div class="forecolor-green-35">.forecolor-green-35</div>
-                            <div class="forecolor-green-40">.forecolor-green-40</div>
-                            <div class="forecolor-green-45">.forecolor-green-45</div>
-                            <div class="forecolor-green-50">.forecolor-green-50</div>
-                            <div class="forecolor-green-55">.forecolor-green-55</div>
-                            <div class="forecolor-green-60">.forecolor-green-60</div>
-                            <div class="forecolor-green-65">.forecolor-green-65</div>
-                            <div class="forecolor-green-70">.forecolor-green-70</div>
-                            <div class="forecolor-green-75">.forecolor-green-75</div>
-                            <div class="forecolor-green-80">.forecolor-green-80</div>
-                            <div class="forecolor-green-85">.forecolor-green-85</div>
-                            <div class="forecolor-green-90">.forecolor-green-90</div>
-                            <div class="forecolor-green-95">.forecolor-green-95</div>
+                            <div class="forecolor-green-05">
+                              .forecolor-green-05
+                            </div>
+                            <div class="forecolor-green-10">
+                              .forecolor-green-10
+                            </div>
+                            <div class="forecolor-green-15">
+                              .forecolor-green-15
+                            </div>
+                            <div class="forecolor-green-20">
+                              .forecolor-green-20
+                            </div>
+                            <div class="forecolor-green-25">
+                              .forecolor-green-25
+                            </div>
+                            <div class="forecolor-green-30">
+                              .forecolor-green-30
+                            </div>
+                            <div class="forecolor-green-35">
+                              .forecolor-green-35
+                            </div>
+                            <div class="forecolor-green-40">
+                              .forecolor-green-40
+                            </div>
+                            <div class="forecolor-green-45">
+                              .forecolor-green-45
+                            </div>
+                            <div class="forecolor-green-50">
+                              .forecolor-green-50
+                            </div>
+                            <div class="forecolor-green-55">
+                              .forecolor-green-55
+                            </div>
+                            <div class="forecolor-green-60">
+                              .forecolor-green-60
+                            </div>
+                            <div class="forecolor-green-65">
+                              .forecolor-green-65
+                            </div>
+                            <div class="forecolor-green-70">
+                              .forecolor-green-70
+                            </div>
+                            <div class="forecolor-green-75">
+                              .forecolor-green-75
+                            </div>
+                            <div class="forecolor-green-80">
+                              .forecolor-green-80
+                            </div>
+                            <div class="forecolor-green-85">
+                              .forecolor-green-85
+                            </div>
+                            <div class="forecolor-green-90">
+                              .forecolor-green-90
+                            </div>
+                            <div class="forecolor-green-95">
+                              .forecolor-green-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="forecolor-cyan-05">.forecolor-cyan-05</div>
-                            <div class="forecolor-cyan-10">.forecolor-cyan-10</div>
-                            <div class="forecolor-cyan-15">.forecolor-cyan-15</div>
-                            <div class="forecolor-cyan-20">.forecolor-cyan-20</div>
-                            <div class="forecolor-cyan-25">.forecolor-cyan-25</div>
-                            <div class="forecolor-cyan-30">.forecolor-cyan-30</div>
-                            <div class="forecolor-cyan-35">.forecolor-cyan-35</div>
-                            <div class="forecolor-cyan-40">.forecolor-cyan-40</div>
-                            <div class="forecolor-cyan-45">.forecolor-cyan-45</div>
-                            <div class="forecolor-cyan-50">.forecolor-cyan-50</div>
-                            <div class="forecolor-cyan-55">.forecolor-cyan-55</div>
-                            <div class="forecolor-cyan-60">.forecolor-cyan-60</div>
-                            <div class="forecolor-cyan-65">.forecolor-cyan-65</div>
-                            <div class="forecolor-cyan-70">.forecolor-cyan-70</div>
-                            <div class="forecolor-cyan-75">.forecolor-cyan-75</div>
-                            <div class="forecolor-cyan-80">.forecolor-cyan-80</div>
-                            <div class="forecolor-cyan-85">.forecolor-cyan-85</div>
-                            <div class="forecolor-cyan-90">.forecolor-cyan-90</div>
-                            <div class="forecolor-cyan-95">.forecolor-cyan-95</div>
+                            <div class="forecolor-cyan-05">
+                              .forecolor-cyan-05
+                            </div>
+                            <div class="forecolor-cyan-10">
+                              .forecolor-cyan-10
+                            </div>
+                            <div class="forecolor-cyan-15">
+                              .forecolor-cyan-15
+                            </div>
+                            <div class="forecolor-cyan-20">
+                              .forecolor-cyan-20
+                            </div>
+                            <div class="forecolor-cyan-25">
+                              .forecolor-cyan-25
+                            </div>
+                            <div class="forecolor-cyan-30">
+                              .forecolor-cyan-30
+                            </div>
+                            <div class="forecolor-cyan-35">
+                              .forecolor-cyan-35
+                            </div>
+                            <div class="forecolor-cyan-40">
+                              .forecolor-cyan-40
+                            </div>
+                            <div class="forecolor-cyan-45">
+                              .forecolor-cyan-45
+                            </div>
+                            <div class="forecolor-cyan-50">
+                              .forecolor-cyan-50
+                            </div>
+                            <div class="forecolor-cyan-55">
+                              .forecolor-cyan-55
+                            </div>
+                            <div class="forecolor-cyan-60">
+                              .forecolor-cyan-60
+                            </div>
+                            <div class="forecolor-cyan-65">
+                              .forecolor-cyan-65
+                            </div>
+                            <div class="forecolor-cyan-70">
+                              .forecolor-cyan-70
+                            </div>
+                            <div class="forecolor-cyan-75">
+                              .forecolor-cyan-75
+                            </div>
+                            <div class="forecolor-cyan-80">
+                              .forecolor-cyan-80
+                            </div>
+                            <div class="forecolor-cyan-85">
+                              .forecolor-cyan-85
+                            </div>
+                            <div class="forecolor-cyan-90">
+                              .forecolor-cyan-90
+                            </div>
+                            <div class="forecolor-cyan-95">
+                              .forecolor-cyan-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="forecolor-blue-05">.forecolor-blue-05</div>
-                            <div class="forecolor-blue-10">.forecolor-blue-10</div>
-                            <div class="forecolor-blue-15">.forecolor-blue-15</div>
-                            <div class="forecolor-blue-20">.forecolor-blue-20</div>
-                            <div class="forecolor-blue-25">.forecolor-blue-25</div>
-                            <div class="forecolor-blue-30">.forecolor-blue-30</div>
-                            <div class="forecolor-blue-35">.forecolor-blue-35</div>
-                            <div class="forecolor-blue-40">.forecolor-blue-40</div>
-                            <div class="forecolor-blue-45">.forecolor-blue-45</div>
-                            <div class="forecolor-blue-50">.forecolor-blue-50</div>
-                            <div class="forecolor-blue-55">.forecolor-blue-55</div>
-                            <div class="forecolor-blue-60">.forecolor-blue-60</div>
-                            <div class="forecolor-blue-65">.forecolor-blue-65</div>
-                            <div class="forecolor-blue-70">.forecolor-blue-70</div>
-                            <div class="forecolor-blue-75">.forecolor-blue-75</div>
-                            <div class="forecolor-blue-80">.forecolor-blue-80</div>
-                            <div class="forecolor-blue-85">.forecolor-blue-85</div>
-                            <div class="forecolor-blue-90">.forecolor-blue-90</div>
-                            <div class="forecolor-blue-95">.forecolor-blue-95</div>
+                            <div class="forecolor-blue-05">
+                              .forecolor-blue-05
+                            </div>
+                            <div class="forecolor-blue-10">
+                              .forecolor-blue-10
+                            </div>
+                            <div class="forecolor-blue-15">
+                              .forecolor-blue-15
+                            </div>
+                            <div class="forecolor-blue-20">
+                              .forecolor-blue-20
+                            </div>
+                            <div class="forecolor-blue-25">
+                              .forecolor-blue-25
+                            </div>
+                            <div class="forecolor-blue-30">
+                              .forecolor-blue-30
+                            </div>
+                            <div class="forecolor-blue-35">
+                              .forecolor-blue-35
+                            </div>
+                            <div class="forecolor-blue-40">
+                              .forecolor-blue-40
+                            </div>
+                            <div class="forecolor-blue-45">
+                              .forecolor-blue-45
+                            </div>
+                            <div class="forecolor-blue-50">
+                              .forecolor-blue-50
+                            </div>
+                            <div class="forecolor-blue-55">
+                              .forecolor-blue-55
+                            </div>
+                            <div class="forecolor-blue-60">
+                              .forecolor-blue-60
+                            </div>
+                            <div class="forecolor-blue-65">
+                              .forecolor-blue-65
+                            </div>
+                            <div class="forecolor-blue-70">
+                              .forecolor-blue-70
+                            </div>
+                            <div class="forecolor-blue-75">
+                              .forecolor-blue-75
+                            </div>
+                            <div class="forecolor-blue-80">
+                              .forecolor-blue-80
+                            </div>
+                            <div class="forecolor-blue-85">
+                              .forecolor-blue-85
+                            </div>
+                            <div class="forecolor-blue-90">
+                              .forecolor-blue-90
+                            </div>
+                            <div class="forecolor-blue-95">
+                              .forecolor-blue-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -1306,48 +1810,124 @@
                       <div class="columns">
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="backcolor-gray-05">.backcolor-gray-05</div>
-                            <div class="backcolor-gray-10">.backcolor-gray-10</div>
-                            <div class="backcolor-gray-15">.backcolor-gray-15</div>
-                            <div class="backcolor-gray-20">.backcolor-gray-20</div>
-                            <div class="backcolor-gray-25">.backcolor-gray-25</div>
-                            <div class="backcolor-gray-30">.backcolor-gray-30</div>
-                            <div class="backcolor-gray-35">.backcolor-gray-35</div>
-                            <div class="backcolor-gray-40">.backcolor-gray-40</div>
-                            <div class="backcolor-gray-45">.backcolor-gray-45</div>
-                            <div class="backcolor-gray-50">.backcolor-gray-50</div>
-                            <div class="backcolor-gray-55">.backcolor-gray-55</div>
-                            <div class="backcolor-gray-60">.backcolor-gray-60</div>
-                            <div class="backcolor-gray-65">.backcolor-gray-65</div>
-                            <div class="backcolor-gray-70">.backcolor-gray-70</div>
-                            <div class="backcolor-gray-75">.backcolor-gray-75</div>
-                            <div class="backcolor-gray-80">.backcolor-gray-80</div>
-                            <div class="backcolor-gray-85">.backcolor-gray-85</div>
-                            <div class="backcolor-gray-90">.backcolor-gray-90</div>
-                            <div class="backcolor-gray-95">.backcolor-gray-95</div>
+                            <div class="backcolor-gray-05">
+                              .backcolor-gray-05
+                            </div>
+                            <div class="backcolor-gray-10">
+                              .backcolor-gray-10
+                            </div>
+                            <div class="backcolor-gray-15">
+                              .backcolor-gray-15
+                            </div>
+                            <div class="backcolor-gray-20">
+                              .backcolor-gray-20
+                            </div>
+                            <div class="backcolor-gray-25">
+                              .backcolor-gray-25
+                            </div>
+                            <div class="backcolor-gray-30">
+                              .backcolor-gray-30
+                            </div>
+                            <div class="backcolor-gray-35">
+                              .backcolor-gray-35
+                            </div>
+                            <div class="backcolor-gray-40">
+                              .backcolor-gray-40
+                            </div>
+                            <div class="backcolor-gray-45">
+                              .backcolor-gray-45
+                            </div>
+                            <div class="backcolor-gray-50">
+                              .backcolor-gray-50
+                            </div>
+                            <div class="backcolor-gray-55">
+                              .backcolor-gray-55
+                            </div>
+                            <div class="backcolor-gray-60">
+                              .backcolor-gray-60
+                            </div>
+                            <div class="backcolor-gray-65">
+                              .backcolor-gray-65
+                            </div>
+                            <div class="backcolor-gray-70">
+                              .backcolor-gray-70
+                            </div>
+                            <div class="backcolor-gray-75">
+                              .backcolor-gray-75
+                            </div>
+                            <div class="backcolor-gray-80">
+                              .backcolor-gray-80
+                            </div>
+                            <div class="backcolor-gray-85">
+                              .backcolor-gray-85
+                            </div>
+                            <div class="backcolor-gray-90">
+                              .backcolor-gray-90
+                            </div>
+                            <div class="backcolor-gray-95">
+                              .backcolor-gray-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="backcolor-red-05">.backcolor-red-05</div>
-                            <div class="backcolor-red-10">.backcolor-red-10</div>
-                            <div class="backcolor-red-15">.backcolor-red-15</div>
-                            <div class="backcolor-red-20">.backcolor-red-20</div>
-                            <div class="backcolor-red-25">.backcolor-red-25</div>
-                            <div class="backcolor-red-30">.backcolor-red-30</div>
-                            <div class="backcolor-red-35">.backcolor-red-35</div>
-                            <div class="backcolor-red-40">.backcolor-red-40</div>
-                            <div class="backcolor-red-45">.backcolor-red-45</div>
-                            <div class="backcolor-red-50">.backcolor-red-50</div>
-                            <div class="backcolor-red-55">.backcolor-red-55</div>
-                            <div class="backcolor-red-60">.backcolor-red-60</div>
-                            <div class="backcolor-red-65">.backcolor-red-65</div>
-                            <div class="backcolor-red-70">.backcolor-red-70</div>
-                            <div class="backcolor-red-75">.backcolor-red-75</div>
-                            <div class="backcolor-red-80">.backcolor-red-80</div>
-                            <div class="backcolor-red-85">.backcolor-red-85</div>
-                            <div class="backcolor-red-90">.backcolor-red-90</div>
-                            <div class="backcolor-red-95">.backcolor-red-95</div>
+                            <div class="backcolor-red-05">
+                              .backcolor-red-05
+                            </div>
+                            <div class="backcolor-red-10">
+                              .backcolor-red-10
+                            </div>
+                            <div class="backcolor-red-15">
+                              .backcolor-red-15
+                            </div>
+                            <div class="backcolor-red-20">
+                              .backcolor-red-20
+                            </div>
+                            <div class="backcolor-red-25">
+                              .backcolor-red-25
+                            </div>
+                            <div class="backcolor-red-30">
+                              .backcolor-red-30
+                            </div>
+                            <div class="backcolor-red-35">
+                              .backcolor-red-35
+                            </div>
+                            <div class="backcolor-red-40">
+                              .backcolor-red-40
+                            </div>
+                            <div class="backcolor-red-45">
+                              .backcolor-red-45
+                            </div>
+                            <div class="backcolor-red-50">
+                              .backcolor-red-50
+                            </div>
+                            <div class="backcolor-red-55">
+                              .backcolor-red-55
+                            </div>
+                            <div class="backcolor-red-60">
+                              .backcolor-red-60
+                            </div>
+                            <div class="backcolor-red-65">
+                              .backcolor-red-65
+                            </div>
+                            <div class="backcolor-red-70">
+                              .backcolor-red-70
+                            </div>
+                            <div class="backcolor-red-75">
+                              .backcolor-red-75
+                            </div>
+                            <div class="backcolor-red-80">
+                              .backcolor-red-80
+                            </div>
+                            <div class="backcolor-red-85">
+                              .backcolor-red-85
+                            </div>
+                            <div class="backcolor-red-90">
+                              .backcolor-red-90
+                            </div>
+                            <div class="backcolor-red-95">
+                              .backcolor-red-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -1474,71 +2054,185 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="backcolor-green-05">.backcolor-green-05</div>
-                            <div class="backcolor-green-10">.backcolor-green-10</div>
-                            <div class="backcolor-green-15">.backcolor-green-15</div>
-                            <div class="backcolor-green-20">.backcolor-green-20</div>
-                            <div class="backcolor-green-25">.backcolor-green-25</div>
-                            <div class="backcolor-green-30">.backcolor-green-30</div>
-                            <div class="backcolor-green-35">.backcolor-green-35</div>
-                            <div class="backcolor-green-40">.backcolor-green-40</div>
-                            <div class="backcolor-green-45">.backcolor-green-45</div>
-                            <div class="backcolor-green-50">.backcolor-green-50</div>
-                            <div class="backcolor-green-55">.backcolor-green-55</div>
-                            <div class="backcolor-green-60">.backcolor-green-60</div>
-                            <div class="backcolor-green-65">.backcolor-green-65</div>
-                            <div class="backcolor-green-70">.backcolor-green-70</div>
-                            <div class="backcolor-green-75">.backcolor-green-75</div>
-                            <div class="backcolor-green-80">.backcolor-green-80</div>
-                            <div class="backcolor-green-85">.backcolor-green-85</div>
-                            <div class="backcolor-green-90">.backcolor-green-90</div>
-                            <div class="backcolor-green-95">.backcolor-green-95</div>
+                            <div class="backcolor-green-05">
+                              .backcolor-green-05
+                            </div>
+                            <div class="backcolor-green-10">
+                              .backcolor-green-10
+                            </div>
+                            <div class="backcolor-green-15">
+                              .backcolor-green-15
+                            </div>
+                            <div class="backcolor-green-20">
+                              .backcolor-green-20
+                            </div>
+                            <div class="backcolor-green-25">
+                              .backcolor-green-25
+                            </div>
+                            <div class="backcolor-green-30">
+                              .backcolor-green-30
+                            </div>
+                            <div class="backcolor-green-35">
+                              .backcolor-green-35
+                            </div>
+                            <div class="backcolor-green-40">
+                              .backcolor-green-40
+                            </div>
+                            <div class="backcolor-green-45">
+                              .backcolor-green-45
+                            </div>
+                            <div class="backcolor-green-50">
+                              .backcolor-green-50
+                            </div>
+                            <div class="backcolor-green-55">
+                              .backcolor-green-55
+                            </div>
+                            <div class="backcolor-green-60">
+                              .backcolor-green-60
+                            </div>
+                            <div class="backcolor-green-65">
+                              .backcolor-green-65
+                            </div>
+                            <div class="backcolor-green-70">
+                              .backcolor-green-70
+                            </div>
+                            <div class="backcolor-green-75">
+                              .backcolor-green-75
+                            </div>
+                            <div class="backcolor-green-80">
+                              .backcolor-green-80
+                            </div>
+                            <div class="backcolor-green-85">
+                              .backcolor-green-85
+                            </div>
+                            <div class="backcolor-green-90">
+                              .backcolor-green-90
+                            </div>
+                            <div class="backcolor-green-95">
+                              .backcolor-green-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="backcolor-cyan-05">.backcolor-cyan-05</div>
-                            <div class="backcolor-cyan-10">.backcolor-cyan-10</div>
-                            <div class="backcolor-cyan-15">.backcolor-cyan-15</div>
-                            <div class="backcolor-cyan-20">.backcolor-cyan-20</div>
-                            <div class="backcolor-cyan-25">.backcolor-cyan-25</div>
-                            <div class="backcolor-cyan-30">.backcolor-cyan-30</div>
-                            <div class="backcolor-cyan-35">.backcolor-cyan-35</div>
-                            <div class="backcolor-cyan-40">.backcolor-cyan-40</div>
-                            <div class="backcolor-cyan-45">.backcolor-cyan-45</div>
-                            <div class="backcolor-cyan-50">.backcolor-cyan-50</div>
-                            <div class="backcolor-cyan-55">.backcolor-cyan-55</div>
-                            <div class="backcolor-cyan-60">.backcolor-cyan-60</div>
-                            <div class="backcolor-cyan-65">.backcolor-cyan-65</div>
-                            <div class="backcolor-cyan-70">.backcolor-cyan-70</div>
-                            <div class="backcolor-cyan-75">.backcolor-cyan-75</div>
-                            <div class="backcolor-cyan-80">.backcolor-cyan-80</div>
-                            <div class="backcolor-cyan-85">.backcolor-cyan-85</div>
-                            <div class="backcolor-cyan-90">.backcolor-cyan-90</div>
-                            <div class="backcolor-cyan-95">.backcolor-cyan-95</div>
+                            <div class="backcolor-cyan-05">
+                              .backcolor-cyan-05
+                            </div>
+                            <div class="backcolor-cyan-10">
+                              .backcolor-cyan-10
+                            </div>
+                            <div class="backcolor-cyan-15">
+                              .backcolor-cyan-15
+                            </div>
+                            <div class="backcolor-cyan-20">
+                              .backcolor-cyan-20
+                            </div>
+                            <div class="backcolor-cyan-25">
+                              .backcolor-cyan-25
+                            </div>
+                            <div class="backcolor-cyan-30">
+                              .backcolor-cyan-30
+                            </div>
+                            <div class="backcolor-cyan-35">
+                              .backcolor-cyan-35
+                            </div>
+                            <div class="backcolor-cyan-40">
+                              .backcolor-cyan-40
+                            </div>
+                            <div class="backcolor-cyan-45">
+                              .backcolor-cyan-45
+                            </div>
+                            <div class="backcolor-cyan-50">
+                              .backcolor-cyan-50
+                            </div>
+                            <div class="backcolor-cyan-55">
+                              .backcolor-cyan-55
+                            </div>
+                            <div class="backcolor-cyan-60">
+                              .backcolor-cyan-60
+                            </div>
+                            <div class="backcolor-cyan-65">
+                              .backcolor-cyan-65
+                            </div>
+                            <div class="backcolor-cyan-70">
+                              .backcolor-cyan-70
+                            </div>
+                            <div class="backcolor-cyan-75">
+                              .backcolor-cyan-75
+                            </div>
+                            <div class="backcolor-cyan-80">
+                              .backcolor-cyan-80
+                            </div>
+                            <div class="backcolor-cyan-85">
+                              .backcolor-cyan-85
+                            </div>
+                            <div class="backcolor-cyan-90">
+                              .backcolor-cyan-90
+                            </div>
+                            <div class="backcolor-cyan-95">
+                              .backcolor-cyan-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="backcolor-blue-05">.backcolor-blue-05</div>
-                            <div class="backcolor-blue-10">.backcolor-blue-10</div>
-                            <div class="backcolor-blue-15">.backcolor-blue-15</div>
-                            <div class="backcolor-blue-20">.backcolor-blue-20</div>
-                            <div class="backcolor-blue-25">.backcolor-blue-25</div>
-                            <div class="backcolor-blue-30">.backcolor-blue-30</div>
-                            <div class="backcolor-blue-35">.backcolor-blue-35</div>
-                            <div class="backcolor-blue-40">.backcolor-blue-40</div>
-                            <div class="backcolor-blue-45">.backcolor-blue-45</div>
-                            <div class="backcolor-blue-50">.backcolor-blue-50</div>
-                            <div class="backcolor-blue-55">.backcolor-blue-55</div>
-                            <div class="backcolor-blue-60">.backcolor-blue-60</div>
-                            <div class="backcolor-blue-65">.backcolor-blue-65</div>
-                            <div class="backcolor-blue-70">.backcolor-blue-70</div>
-                            <div class="backcolor-blue-75">.backcolor-blue-75</div>
-                            <div class="backcolor-blue-80">.backcolor-blue-80</div>
-                            <div class="backcolor-blue-85">.backcolor-blue-85</div>
-                            <div class="backcolor-blue-90">.backcolor-blue-90</div>
-                            <div class="backcolor-blue-95">.backcolor-blue-95</div>
+                            <div class="backcolor-blue-05">
+                              .backcolor-blue-05
+                            </div>
+                            <div class="backcolor-blue-10">
+                              .backcolor-blue-10
+                            </div>
+                            <div class="backcolor-blue-15">
+                              .backcolor-blue-15
+                            </div>
+                            <div class="backcolor-blue-20">
+                              .backcolor-blue-20
+                            </div>
+                            <div class="backcolor-blue-25">
+                              .backcolor-blue-25
+                            </div>
+                            <div class="backcolor-blue-30">
+                              .backcolor-blue-30
+                            </div>
+                            <div class="backcolor-blue-35">
+                              .backcolor-blue-35
+                            </div>
+                            <div class="backcolor-blue-40">
+                              .backcolor-blue-40
+                            </div>
+                            <div class="backcolor-blue-45">
+                              .backcolor-blue-45
+                            </div>
+                            <div class="backcolor-blue-50">
+                              .backcolor-blue-50
+                            </div>
+                            <div class="backcolor-blue-55">
+                              .backcolor-blue-55
+                            </div>
+                            <div class="backcolor-blue-60">
+                              .backcolor-blue-60
+                            </div>
+                            <div class="backcolor-blue-65">
+                              .backcolor-blue-65
+                            </div>
+                            <div class="backcolor-blue-70">
+                              .backcolor-blue-70
+                            </div>
+                            <div class="backcolor-blue-75">
+                              .backcolor-blue-75
+                            </div>
+                            <div class="backcolor-blue-80">
+                              .backcolor-blue-80
+                            </div>
+                            <div class="backcolor-blue-85">
+                              .backcolor-blue-85
+                            </div>
+                            <div class="backcolor-blue-90">
+                              .backcolor-blue-90
+                            </div>
+                            <div class="backcolor-blue-95">
+                              .backcolor-blue-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -1728,25 +2422,63 @@
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
                           <div class="p-0.5rem">
-                            <div class="highlighter-red-05">.highlighter-red-05</div>
-                            <div class="highlighter-red-10">.highlighter-red-10</div>
-                            <div class="highlighter-red-15">.highlighter-red-15</div>
-                            <div class="highlighter-red-20">.highlighter-red-20</div>
-                            <div class="highlighter-red-25">.highlighter-red-25</div>
-                            <div class="highlighter-red-30">.highlighter-red-30</div>
-                            <div class="highlighter-red-35">.highlighter-red-35</div>
-                            <div class="highlighter-red-40">.highlighter-red-40</div>
-                            <div class="highlighter-red-45">.highlighter-red-45</div>
-                            <div class="highlighter-red-50">.highlighter-red-50</div>
-                            <div class="highlighter-red-55">.highlighter-red-55</div>
-                            <div class="highlighter-red-60">.highlighter-red-60</div>
-                            <div class="highlighter-red-65">.highlighter-red-65</div>
-                            <div class="highlighter-red-70">.highlighter-red-70</div>
-                            <div class="highlighter-red-75">.highlighter-red-75</div>
-                            <div class="highlighter-red-80">.highlighter-red-80</div>
-                            <div class="highlighter-red-85">.highlighter-red-85</div>
-                            <div class="highlighter-red-90">.highlighter-red-90</div>
-                            <div class="highlighter-red-95">.highlighter-red-95</div>
+                            <div class="highlighter-red-05">
+                              .highlighter-red-05
+                            </div>
+                            <div class="highlighter-red-10">
+                              .highlighter-red-10
+                            </div>
+                            <div class="highlighter-red-15">
+                              .highlighter-red-15
+                            </div>
+                            <div class="highlighter-red-20">
+                              .highlighter-red-20
+                            </div>
+                            <div class="highlighter-red-25">
+                              .highlighter-red-25
+                            </div>
+                            <div class="highlighter-red-30">
+                              .highlighter-red-30
+                            </div>
+                            <div class="highlighter-red-35">
+                              .highlighter-red-35
+                            </div>
+                            <div class="highlighter-red-40">
+                              .highlighter-red-40
+                            </div>
+                            <div class="highlighter-red-45">
+                              .highlighter-red-45
+                            </div>
+                            <div class="highlighter-red-50">
+                              .highlighter-red-50
+                            </div>
+                            <div class="highlighter-red-55">
+                              .highlighter-red-55
+                            </div>
+                            <div class="highlighter-red-60">
+                              .highlighter-red-60
+                            </div>
+                            <div class="highlighter-red-65">
+                              .highlighter-red-65
+                            </div>
+                            <div class="highlighter-red-70">
+                              .highlighter-red-70
+                            </div>
+                            <div class="highlighter-red-75">
+                              .highlighter-red-75
+                            </div>
+                            <div class="highlighter-red-80">
+                              .highlighter-red-80
+                            </div>
+                            <div class="highlighter-red-85">
+                              .highlighter-red-85
+                            </div>
+                            <div class="highlighter-red-90">
+                              .highlighter-red-90
+                            </div>
+                            <div class="highlighter-red-95">
+                              .highlighter-red-95
+                            </div>
                           </div>
                         </div>
                         <div class="column-3 is-small-6 is-xsmall-12">
@@ -2732,7 +3464,7 @@
                   </div>
                 </details>
               </section>
-              <section class="my-1rem">
+              <section class="py-0.5rem">
                 <details class="accordion">
                   <summary class="accordion-summary">border</summary>
                   <div class="accordion-details">

@@ -12,6 +12,8 @@ $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
   display: inline-block;
   height: $hamburger-size;
   position: relative;
+  touch-action: manipulation;
+  user-select: none;
   width: $hamburger-size;
   .crown,
   .upperpatty,

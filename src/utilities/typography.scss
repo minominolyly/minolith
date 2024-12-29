@@ -89,21 +89,21 @@
 }
 
 .font-weight-light {
-  font-size: var(--#{variables.$prefix}font-weight-light) !important;
+  font-weight: var(--#{variables.$prefix}font-weight-light) !important;
 }
 
 .font-weight-normal {
-  font-size: var(--#{variables.$prefix}font-weight-normal) !important;
+  font-weight: var(--#{variables.$prefix}font-weight-normal) !important;
 }
 
 .font-weight-medium {
-  font-size: var(--#{variables.$prefix}font-weight-medium) !important;
+  font-weight: var(--#{variables.$prefix}font-weight-medium) !important;
 }
 
 .font-weight-semibold {
-  font-size: var(--#{variables.$prefix}font-weight-semibold) !important;
+  font-weight: var(--#{variables.$prefix}font-weight-semibold) !important;
 }
 
 .font-weight-bold {
-  font-size: var(--#{variables.$prefix}font-weight-bold) !important;
+  font-weight: var(--#{variables.$prefix}font-weight-bold) !important;
 }

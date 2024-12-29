@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: minolith
+message: >-
+  design system by minominolyly
+type: software
+authors:
+  - name: minominolyly
+repository-code: "https://github.com/minominolyly/minolith"
+url: "https://minominolyly.github.io/minolith/"
+license: MIT

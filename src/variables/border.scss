@@ -1,4 +1,3 @@
-
 $border-width-xthin: 0.05rem !default;
 $border-width-thin: 0.075rem !default;
 $border-width-medium: 0.1rem !default;
@@ -15,48 +14,39 @@ $border-radius-xlarge: 1rem !default;
 $border-radius-circle: 50% !default;
 $border-radius-pill: 50rem !default;
 
-$borderSides: (
-  "top",
-  "right",
-  "bottom",
-  "left",
-);
+$borderSides: ("top", "right", "bottom", "left");
 
-$borderStyles: (
-  "solid",
-  "dashed",
-  "dotted",
-);
+$borderStyles: ("solid", "dashed", "dotted");
 
 $borderWidths: (
   (
     "name": "xthin",
-    "value": $border-radius-small,
+    "value": $border-width-xthin,
   ),
   (
     "name": "thin",
-    "value": $border-radius-medium,
+    "value": $border-width-thin,
   ),
   (
     "name": "medium",
-    "value": $border-radius-large,
+    "value": $border-width-medium,
   ),
   (
     "name": "thick",
-    "value": $border-radius-xlarge,
+    "value": $border-width-thick,
   ),
   (
     "name": "xthick",
-    "value": $border-radius-circle,
+    "value": $border-width-xthick,
   ),
   (
     "name": "xxthick",
-    "value": $border-radius-pill,
+    "value": $border-width-xxthick,
   ),
   (
     "name": "xxxthick",
-    "value": $border-radius-pill,
-  ),
+    "value": $border-width-xxxthick,
+  )
 ) !default;
 
 $borderRadiuses: (
@@ -87,5 +77,5 @@ $borderRadiuses: (
   (
     "name": "pill",
     "value": $border-radius-pill,
-  ),
+  )
 ) !default;

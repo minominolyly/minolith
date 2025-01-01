@@ -2,13 +2,11 @@
 @use "sass:map";
 
 :root {
-  --#{variables.$prefix}border-width-xthin: #{variables.$border-width-xthin};
-  --#{variables.$prefix}border-width-thin: #{variables.$border-width-thin};
-  --#{variables.$prefix}border-width-medium: #{variables.$border-width-medium};
-  --#{variables.$prefix}border-width-thick: #{variables.$border-width-thick};
-  --#{variables.$prefix}border-width-xthick: #{variables.$border-width-xthick};
-  --#{variables.$prefix}border-width-xxthick: #{variables.$border-width-xxthick};
-  --#{variables.$prefix}border-width-xxxthick: #{variables.$border-width-xxxthick};
+  @each $borderWidth in variables.$borderWidths {
+    $name: map.get($borderWidth, "name");
+    $value: map.get($borderWidth, "value");
+    --#{variables.$prefix}border-width-#{$name}: #{$value};
+  }
 
   @each $borderRadius in variables.$borderRadiuses {
     $name: map.get($borderRadius, "name");

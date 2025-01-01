@@ -9,7 +9,9 @@
   @each $borderSide in variables.$borderSides {
     .border-#{$borderSide}-#{$borderStyle} {
       border-#{$borderSide}-style: #{$borderStyle};
-      border-#{$borderSide}-width: var(--#{variables.$prefix}border-width-medium);
+      border-#{$borderSide}-width: var(
+        --#{variables.$prefix}border-width-medium
+      );
     }
   }
 }
@@ -21,7 +23,9 @@
   }
   @each $borderSide in variables.$borderSides {
     .border-#{$borderSide}-width-#{$name} {
-      border-#{$borderSide}-width: var(--#{variables.$prefix}border-width-#{$name});
+      border-#{$borderSide}-width: var(
+        --#{variables.$prefix}border-width-#{$name}
+      );
     }
   }
 }

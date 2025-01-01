@@ -6,8 +6,21 @@
   border-color: var(--#{variables.$prefix}color-default-border);
   border-radius:  var(--#{variables.$prefix}border-radius-medium);
   border-style: solid;
-  border-width: var(--#{variables.$prefix}border-width-xthick);
+  border-width: var(--#{variables.$prefix}border-width-medium);
   padding: 0.5rem;
+  @each $borderRadius in variables.$borderRadiuses {
+    $name: map.get($borderRadius, "name");
+    &.is-border-radius-#{$name} {
+      border-radius:  var(--#{variables.$prefix}border-radius-#{$name});
+    }
+  }
+  @each $borderWidth in variables.$borderWidths {
+    $name: map.get($borderWidth, "name");
+    &.is-border-width-#{$name} {
+      border-width:  var(--#{variables.$prefix}border-radius-#{$name});
+    }
+  }
+
   &::placeholder {
     color: var(--#{variables.$prefix}color-default-placeholder);
   }
@@ -69,17 +82,29 @@
   &:after {
     background-color: transparent;
     border-color: transparent;
-    border-radius: 25%;
+    border-radius: 0%;
     border-style: solid;
     border-width: 0 var(--#{variables.$prefix}border-width-medium) var(--#{variables.$prefix}border-width-medium) 0;
     content: "";
     display: block;
     height: 1rem;
-    left: 0.25rem;
     position: absolute;
     top: -0.33rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
     transform: rotate(45deg);
     width: 0.5rem;
+  }
+  @each $borderWidth in variables.$borderWidths {
+    $name: map.get($borderWidth, "name");
+    &.is-border-width-#{$name} {
+      &:after {
+        border-right-width: var(--#{variables.$prefix}border-radius-#{$name});
+        border-bottom-width: var(--#{variables.$prefix}border-radius-#{$name});
+      }
+    }
   }
   &:checked {
     &:after {
@@ -143,10 +168,21 @@
     content: "";
     display: block;
     height: 0.5rem;
-    left: 0.125rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
     position: absolute;
-    top: 0.125rem;
     width: 0.5rem;
+  }
+  @each $borderWidth in variables.$borderWidths {
+    $name: map.get($borderWidth, "name");
+    &.is-border-width-#{$name} {
+      &:after {
+        border-width:  var(--#{variables.$prefix}border-radius-#{$name});
+      }
+    }
   }
   &:checked {
     &:after {

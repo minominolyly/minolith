@@ -7,6 +7,7 @@ $border-width-xthick: 0.2rem !default;
 $border-width-xxthick: 0.25rem !default;
 $border-width-xxxthick: 0.5rem !default;
 
+$border-radius-xsmall: 0.125rem !default;
 $border-radius-small: 0.25rem !default;
 $border-radius-medium: 0.5rem !default;
 $border-radius-large: 0.75rem !default;
@@ -28,16 +29,41 @@ $borderStyles: (
 );
 
 $borderWidths: (
-  "xthin",
-  "thin",
-  "medium",
-  "thick",
-  "xthick",
-  "xxthick",
-  "xxxthick",
-);
+  (
+    "name": "xthin",
+    "value": $border-radius-small,
+  ),
+  (
+    "name": "thin",
+    "value": $border-radius-medium,
+  ),
+  (
+    "name": "medium",
+    "value": $border-radius-large,
+  ),
+  (
+    "name": "thick",
+    "value": $border-radius-xlarge,
+  ),
+  (
+    "name": "xthick",
+    "value": $border-radius-circle,
+  ),
+  (
+    "name": "xxthick",
+    "value": $border-radius-pill,
+  ),
+  (
+    "name": "xxxthick",
+    "value": $border-radius-pill,
+  ),
+) !default;
 
 $borderRadiuses: (
+  (
+    "name": "xsmall",
+    "value": $border-radius-xsmall,
+  ),
   (
     "name": "small",
     "value": $border-radius-small,

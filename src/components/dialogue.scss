@@ -90,9 +90,10 @@
   }
 
   @each $borderWidth in variables.$borderWidths {
-    &.is-border-width-#{$borderWidth} {
+    $name: map.get($borderWidth, "name");
+    &.is-border-width-#{$name} {
       --#{variables.$prefix}dialogue-border-width: var(
-        --#{variables.$prefix}border-width-#{$borderWidth}
+        --#{variables.$prefix}border-width-#{$name}
       );
     }
   }

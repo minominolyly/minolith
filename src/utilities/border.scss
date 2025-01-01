@@ -15,12 +15,13 @@
 }
 
 @each $borderWidth in variables.$borderWidths {
-  .border-width-#{$borderWidth} {
-    border-width: var(--#{variables.$prefix}border-width-#{$borderWidth});
+  $name: map.get($borderWidth, "name");
+  .border-width-#{$name} {
+    border-width: var(--#{variables.$prefix}border-width-#{$name});
   }
   @each $borderSide in variables.$borderSides {
-    .border-#{$borderSide}-width-#{$borderWidth} {
-      border-#{$borderSide}-width: var(--#{variables.$prefix}border-width-#{$borderWidth});
+    .border-#{$borderSide}-width-#{$name} {
+      border-#{$borderSide}-width: var(--#{variables.$prefix}border-width-#{$name});
     }
   }
 }

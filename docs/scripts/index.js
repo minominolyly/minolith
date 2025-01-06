@@ -61,6 +61,10 @@ function changeColor(color) {
     elem.className = `nav ${color}`;
   });
 
+  document.querySelectorAll(".dot").forEach((elem) => {
+    elem.className = `dot ${color} aspect-ratio-16-9`;
+  });
+
   document.querySelectorAll(".gingham").forEach((elem) => {
     elem.className = `gingham ${color} aspect-ratio-16-9`;
   });

@@ -233,6 +233,13 @@
 
     //#region backgrounds
 
+    //#region dot
+    $dot: map.get($colorShade, "dot");
+    @if ($dot != null) {
+      @include setColor($dot, "default", $name, "dot");
+    }
+    //#endregion dot
+
     //#region gingham
     $gingham: map.get($colorShade, "gingham");
     @if ($gingham != null) {
@@ -387,6 +394,13 @@
         //#endregion components
 
         //#region backgrounds
+
+        //#region dot
+        $dot: map.get($colorShade, "dot");
+        @if ($dot != null) {
+          @include setColor($dot, $colorName, $name, "dot");
+        }
+        //#endregion dot
 
         //#region gingham
         $gingham: map.get($colorShade, "gingham");

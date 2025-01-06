@@ -38,6 +38,11 @@ $color-light-lightness-border: 70 !default;
 $color-light-lightness-placeholder: 70 !default;
 $color-light-lightness-shadow: 70 !default;
 
+//#region color-light-lightness-dot
+$color-light-lightness-dot-fore: 85 !default;
+$color-light-lightness-dot-back: 95 !default;
+//#endregion color-light-lightness-dot
+
 //#region color-light-lightness-gingham
 $color-light-lightness-gingham-fore: 85 !default;
 $color-light-lightness-gingham-back: 95 !default;
@@ -145,6 +150,11 @@ $color-dark-lightness-back: 5 !default;
 $color-dark-lightness-border: 50 !default;
 $color-dark-lightness-placeholder: 50 !default;
 $color-dark-lightness-shadow: 50 !default;
+
+//#region color-dark-lightness-dot
+$color-dark-lightness-dot-fore: 5 !default;
+$color-dark-lightness-dot-back: 15 !default;
+//#endregion color-dark-lightness-dot
 
 //#region color-dark-lightness-gingham
 $color-dark-lightness-gingham-fore: 5 !default;
@@ -270,6 +280,10 @@ $colorShadesLight: (
       border: functions.zeroPadding($color-light-lightness-border, 2),
       placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
       shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      dot: (
+        fore: functions.zeroPadding($color-light-lightness-dot-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-dot-back, 2),
+      ),
       gingham: (
         fore: functions.zeroPadding($color-light-lightness-gingham-fore, 2),
         back: functions.zeroPadding($color-light-lightness-gingham-back, 2),
@@ -754,6 +768,10 @@ $colorShadesDark: (
       border: functions.zeroPadding($color-dark-lightness-border, 2),
       placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
       shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
+      dot: (
+        fore: functions.zeroPadding($color-dark-lightness-dot-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-dot-back, 2),
+      ),
       gingham: (
         fore: functions.zeroPadding($color-dark-lightness-gingham-fore, 2),
         back: functions.zeroPadding($color-dark-lightness-gingham-back, 2),

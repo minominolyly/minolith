@@ -1,7 +1,9 @@
 @use "sass:map";
 @use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
 
 .header {
+  @include mixins.element();
   display: block;
   width: 100%;
   box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-default-shadow);

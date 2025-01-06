@@ -1,5 +1,7 @@
+@use "../mixins/index.scss" as mixins;
 
 .list {
+  @include mixins.element();
   display: block;
   list-style: none;
   &.is-style-decimal {

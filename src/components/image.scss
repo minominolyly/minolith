@@ -1,4 +1,7 @@
+@use "../mixins/index.scss" as mixins;
+
 .image {
+  @include mixins.element();
   display: inline-block;
   vertical-align: middle;
   width: 100%;

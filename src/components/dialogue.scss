@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
 
 @mixin dialogue-message-arrow-base() {
   &:after,
@@ -26,6 +27,7 @@
 }
 
 .dialogue {
+  @include mixins.element();
   --#{variables.$prefix}dialogue-avatar-size: var(
     --#{variables.$prefix}dialogue-avatar-size-default
   );
@@ -100,6 +102,7 @@
 
   > .dialogue-avatar-container,
   > .dialogue-content-container {
+    @include mixins.element();
     display: block;
     max-width: 100%;
     margin: 0;
@@ -110,6 +113,7 @@
     flex: 0 0 var(--#{variables.$prefix}dialogue-avatar-size);
     padding-top: var(--#{variables.$prefix}dialogue-avatar-top-offset);
     > .dialogue-avatar {
+      @include mixins.element();
       aspect-ratio: 1;
       display: block;
       align-items: center;
@@ -131,6 +135,7 @@
       border-width: var(--#{variables.$prefix}dialogue-border-width);
     }
     > .dialogue-name {
+      @include mixins.element();
       background-color: var(
         --#{variables.$prefix}color-default-dialogue-name-back
       );
@@ -147,6 +152,7 @@
       z-index: 1;
     }
     > .dialogue-message {
+      @include mixins.element();
       background-color: var(
         --#{variables.$prefix}color-default-dialogue-message-back
       );

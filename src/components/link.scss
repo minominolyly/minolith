@@ -1,7 +1,9 @@
 @use "sass:map";
 @use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
 
 .link {
+  @include mixins.element();
   color: var(--#{variables.$prefix}color-default-link-fore);
   text-decoration: underline;
   &:hover {

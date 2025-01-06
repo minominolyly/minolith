@@ -3,6 +3,7 @@
 @use "../mixins/index.scss" as mixins;
 
 .loader {
+  @include mixins.element();
   @include mixins.animation() {
     animation-iteration-count: infinite;
     animation-name: loader-lotate;

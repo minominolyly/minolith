@@ -6,7 +6,7 @@
 .columns {
   --#{variables.$prefix}gutter-x: 0;
   --#{variables.$prefix}gutter-y: 0;
-  box-sizing: border-box;
+  @include mixins.element();
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -64,6 +64,7 @@
   }
 
   .column {
+    @include mixins.element();
     @include mixins.column();
     flex-grow: 1;
     flex-shrink: 0;
@@ -76,6 +77,7 @@
   }
   @for $num from 1 through variables.$columns-count {
     .column-#{$num} {
+      @include mixins.element();
       @include mixins.column();
       flex-basis: math.percentage(math.div($num, variables.$columns-count));
       max-width: math.percentage(math.div($num, variables.$columns-count));

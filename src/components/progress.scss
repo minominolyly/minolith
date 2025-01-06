@@ -3,6 +3,7 @@
 @use "../mixins/index.scss" as mixins;
 
 .progress {
+  @include mixins.element();
   @include mixins.animation() {
     border-radius: var(--#{variables.$prefix}border-radius-pill);
     border-style: solid;

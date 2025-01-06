@@ -209,7 +209,6 @@
 }
 
 @mixin column() {
-  box-sizing: border-box;
   display: block;
   flex-grow: 0;
   flex-shrink: 0;

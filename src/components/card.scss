@@ -1,7 +1,9 @@
 @use "sass:map";
 @use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
 
 .card {
+  @include mixins.element();
   display: block;
   background-color: var(--#{variables.$prefix}color-default-card-back);
   border-radius: calc(
@@ -16,6 +18,7 @@
     box-shadow: 0 0.5rem 0.5rem var(--#{variables.$prefix}color-card-shadow);
   }
   >.card-header {
+    @include mixins.element();
     background-color: var(--#{variables.$prefix}color-default-card-header-back);
     border-radius: var(--#{variables.$prefix}border-radius-medium)
       var(--#{variables.$prefix}border-radius-medium) 0 0;
@@ -26,6 +29,7 @@
     font-weight: var(--#{variables.$prefix}font-weight-semibold);
   }
   >.card-body {
+    @include mixins.element();
     background-color: var(--#{variables.$prefix}color-default-card-body-back);
     color: var(--#{variables.$prefix}color-default-card-body-fore);
     padding: 0.5rem;
@@ -43,6 +47,7 @@
     }
   }
   >.card-footer {
+    @include mixins.element();
     background-color: var(--#{variables.$prefix}color-default-card-footer-back);
     border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium)
       var(--#{variables.$prefix}border-radius-medium);

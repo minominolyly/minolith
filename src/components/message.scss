@@ -24,6 +24,9 @@
     color: var(--#{variables.$prefix}color-default-message-body-fore);
     display: block;
     padding: 0.5rem;
+    &:first-child {
+      border-radius: var(--#{variables.$prefix}border-radius-medium);
+    }
   }
   @if (not variables.$is-skelton) {
     @each $color in variables.$colors {

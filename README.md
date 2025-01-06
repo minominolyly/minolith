@@ -4,6 +4,8 @@
 [![NPM Version](https://img.shields.io/npm/v/minolith)](https://www.npmjs.com/package/minolith)
 [![npm downloads](https://img.shields.io/npm/dm/minolith)](https://www.npmjs.com/package/minolith)
 
+[![NPM](https://nodei.co/npm/minolith.png)](https://nodei.co/npm/minolith/)
+
 ## Overview
 
 minolith is an open-source sass library.

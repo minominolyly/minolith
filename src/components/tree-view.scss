@@ -1,0 +1,24 @@
+.tree-view {
+  color: var(--#{variables.$prefix}color-default-tree-view-fore);
+  background-color: var(--#{variables.$prefix}color-default-tree-view-back);
+  border-color: var(--#{variables.$prefix}color-default-tree-view-border);
+  border-collapse: collapse;
+  display: block;
+  >.tree-view-node {
+    cursor: pointer;
+    display: block;
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+    &::after {
+      @include icons.chevron() {
+        transform: rotate(90deg);
+        content: "";
+        left: 1rem;
+        position: absolute;
+        top: calc(50% - 0.25rem);
+      }
+    }
+  }
+}

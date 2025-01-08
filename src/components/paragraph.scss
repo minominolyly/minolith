@@ -1,0 +1,12 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
+
+.paragraph {
+  @include mixins.element();
+  line-height: 1.5;
+  display: block;
+  margin: 0;
+  margin-block: 0.5rem;
+  margin-inline: 0;
+}

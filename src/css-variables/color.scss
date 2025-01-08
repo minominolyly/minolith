@@ -126,6 +126,13 @@
     }
     //#endregion badge
 
+    //#region blockquote
+    $blockquote: map.get($colorShade, "blockquote");
+    @if ($blockquote != null) {
+      @include setColor($blockquote, "default", $name, "blockquote");
+    }
+    //#endregion blockquote
+
     //#region button
     $button: map.get($colorShade, "button");
     @if ($button != null) {
@@ -287,6 +294,13 @@
           @include setColor($badge, $colorName, $name, "badge");
         }
         //#endregion badge
+
+        //#region blockquote
+        $blockquote: map.get($colorShade, "blockquote");
+        @if ($blockquote != null) {
+          @include setColor($blockquote, $colorName, $name, "blockquote");
+        }
+        //#endregion blockquote
 
         //#region button
         $button: map.get($colorShade, "button");

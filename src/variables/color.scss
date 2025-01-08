@@ -78,6 +78,11 @@ $color-light-lightness-badge-back: 85 !default;
 $color-light-lightness-badge-border: 70 !default;
 //#endregion color-light-lightness-badge
 
+//#region color-light-lightness-blockquote
+$color-light-lightness-blockquote-fore: 70 !default;
+$color-light-lightness-blockquote-border: 70 !default;
+//#endregion color-light-lightness-blockquote
+
 //#region color-light-lightness-card
 $color-light-lightness-card-fore: 5 !default;
 $color-light-lightness-card-back: 70 !default;
@@ -178,14 +183,22 @@ $color-dark-lightness-accordion-details-back: 5 !default;
 $color-dark-lightness-accordion-details-border: 30 !default;
 //#endregion color-dark-lightness-accordion
 
+//#region color-light-lightness-badge
+$color-dark-lightness-badge-fore: 95 !default;
+$color-dark-lightness-badge-back: 15 !default;
+$color-dark-lightness-badge-border: 30 !default;
+//#endregion color-light-lightness-badge
+
+//#region color-light-lightness-blockquote
+$color-dark-lightness-blockquote-fore: 70 !default;
+$color-dark-lightness-blockquote-border: 70 !default;
+//#endregion color-light-lightness-blockquote
+
 //#region color-dark-lightness-button
 $color-dark-lightness-button-fore: 95 !default;
 $color-dark-lightness-button-back: 30 !default;
 $color-dark-lightness-button-border: 30 !default;
 $color-dark-lightness-button-shadow: 30 !default;
-$color-dark-lightness-badge-fore: 95 !default;
-$color-dark-lightness-badge-back: 15 !default;
-$color-dark-lightness-badge-border: 30 !default;
 //#endregion color-dark-lightness-button
 
 //#region color-dark-lightness-card
@@ -336,6 +349,10 @@ $colorShadesLight: (
         fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
         back: functions.zeroPadding($color-light-lightness-badge-back, 2),
         border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+      ),
+      blockquote: (
+        fore: functions.zeroPadding($color-light-lightness-blockquote-fore, 2),
+        border: functions.zeroPadding($color-light-lightness-blockquote-border, 2),
       ),
       button: (
         fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
@@ -823,6 +840,10 @@ $colorShadesDark: (
         fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
         back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
         border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+      ),
+      blockquote: (
+        fore: functions.zeroPadding($color-dark-lightness-blockquote-fore, 2),
+        border: functions.zeroPadding($color-dark-lightness-blockquote-border, 2),
       ),
       button: (
         fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),

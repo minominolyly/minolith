@@ -1,0 +1,88 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+@use "../icons/index.scss" as icons;
+@use "../mixins/index.scss" as mixins;
+
+.blockquote {
+  --#{variables.$prefix}blockquote-icon-font-size: var(
+    --#{variables.$prefix}font-size-xxxlarge
+  );
+  --#{variables.$prefix}blockquote-border-left-width: var(
+    --#{variables.$prefix}border-width-thick
+  );
+  @include mixins.element();
+  position: relative;
+  color: var(--#{variables.$prefix}color-default-blockquote-fore);
+  border-left-color: var(--#{variables.$prefix}color-default-blockquote-border);
+  border-left-style: solid;
+  border-left-width: var(--#{variables.$prefix}blockquote-border-left-width);
+  margin: 0;
+  margin-block: unset;
+  margin-inline: unset;
+  padding: 0.5rem;
+  &.is-italic {
+    font-style: italic;
+  }
+  &.has-quote,
+  &.has-quote-before {
+    padding-left: 1.5rem;
+    &::before {
+      position: absolute;
+      top: 0;
+      overflow-y: hidden;
+      height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
+      left: 0.5rem;
+      quotes: initial;
+      content: open-quote;
+      display: block;
+      max-width: 100%;
+      color: var(--#{variables.$prefix}color-default-blockquote-fore);
+      font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
+    }
+  }
+  &.has-quote,
+  &.has-quote-after {
+    padding-right: 1.5rem;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      overflow-y: hidden;
+      height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
+      right: 0.5rem;
+      quotes: initial;
+      content: close-quote;
+      display: block;
+      max-width: 100%;
+      color: var(--#{variables.$prefix}color-default-blockquote-fore);
+      font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
+    }
+  }
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        border-left-color: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-border
+        );
+        color: var(--#{variables.$prefix}color-#{$colorName}-blockquote-fore);
+        &.has-quote,
+        &.has-quote-before {
+          &::before {
+            color: var(
+              --#{variables.$prefix}color-#{$colorName}-blockquote-fore
+            );
+          }
+        }
+        &.has-quote,
+        &.has-quote-after {
+          &::before {
+            color: var(
+              --#{variables.$prefix}color-#{$colorName}-blockquote-fore
+            );
+          }
+        }
+      }
+    }
+  }
+}

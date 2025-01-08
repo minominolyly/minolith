@@ -31,6 +31,7 @@
       top: 0;
       overflow-y: hidden;
       height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
+      width: var(--#{variables.$prefix}blockquote-icon-font-size);
       left: 0.5rem;
       quotes: initial;
       content: open-quote;
@@ -48,6 +49,7 @@
       bottom: 0;
       overflow-y: hidden;
       height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
+      width: var(--#{variables.$prefix}blockquote-icon-font-size);
       right: 0.5rem;
       quotes: initial;
       content: close-quote;

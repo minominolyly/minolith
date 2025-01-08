@@ -76,7 +76,7 @@
         }
         &.has-quote,
         &.has-quote-after {
-          &::before {
+          &::after {
             color: var(
               --#{variables.$prefix}color-#{$colorName}-blockquote-fore
             );

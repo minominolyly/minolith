@@ -13,6 +13,7 @@
   @include mixins.element();
   position: relative;
   color: var(--#{variables.$prefix}color-default-blockquote-fore);
+  background-color: var(--#{variables.$prefix}color-default-blockquote-back);
   border-left-color: var(--#{variables.$prefix}color-default-blockquote-border);
   border-left-style: solid;
   border-left-width: var(--#{variables.$prefix}blockquote-border-left-width);
@@ -31,7 +32,7 @@
       top: 0;
       overflow-y: hidden;
       height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
-      width: var(--#{variables.$prefix}blockquote-icon-font-size);
+      width: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
       left: 0.5rem;
       quotes: initial;
       content: open-quote;
@@ -49,7 +50,7 @@
       bottom: 0;
       overflow-y: hidden;
       height: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
-      width: var(--#{variables.$prefix}blockquote-icon-font-size);
+      width: calc(var(--#{variables.$prefix}blockquote-icon-font-size) / 2);
       right: 0.5rem;
       quotes: initial;
       content: close-quote;
@@ -64,6 +65,7 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
+        background-color: var(--#{variables.$prefix}color-#{$colorName}-blockquote-back);
         border-left-color: var(
           --#{variables.$prefix}color-#{$colorName}-blockquote-border
         );

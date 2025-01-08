@@ -79,8 +79,9 @@ $color-light-lightness-badge-border: 70 !default;
 //#endregion color-light-lightness-badge
 
 //#region color-light-lightness-blockquote
-$color-light-lightness-blockquote-fore: 70 !default;
-$color-light-lightness-blockquote-border: 70 !default;
+$color-light-lightness-blockquote-fore: 50 !default;
+$color-light-lightness-blockquote-back: 90 !default;
+$color-light-lightness-blockquote-border: 50 !default;
 //#endregion color-light-lightness-blockquote
 
 //#region color-light-lightness-card
@@ -191,6 +192,7 @@ $color-dark-lightness-badge-border: 30 !default;
 
 //#region color-light-lightness-blockquote
 $color-dark-lightness-blockquote-fore: 70 !default;
+$color-dark-lightness-blockquote-back: 20 !default;
 $color-dark-lightness-blockquote-border: 70 !default;
 //#endregion color-light-lightness-blockquote
 
@@ -352,6 +354,7 @@ $colorShadesLight: (
       ),
       blockquote: (
         fore: functions.zeroPadding($color-light-lightness-blockquote-fore, 2),
+        back: functions.zeroPadding($color-light-lightness-blockquote-back, 2),
         border: functions.zeroPadding($color-light-lightness-blockquote-border, 2),
       ),
       button: (
@@ -843,6 +846,7 @@ $colorShadesDark: (
       ),
       blockquote: (
         fore: functions.zeroPadding($color-dark-lightness-blockquote-fore, 2),
+        back: functions.zeroPadding($color-dark-lightness-blockquote-back, 2),
         border: functions.zeroPadding($color-dark-lightness-blockquote-border, 2),
       ),
       button: (

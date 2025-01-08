@@ -3,6 +3,73 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
+@mixin forecolor($colorName, $numStr) {
+  @if ($colorName == "rainbow") {
+    background-clip: text !important;
+    background-image: linear-gradient(
+      135deg,
+      var(--#{variables.$prefix}color-red-#{$numStr}),
+      var(--#{variables.$prefix}color-orange-#{$numStr}),
+      var(--#{variables.$prefix}color-yellow-#{$numStr}),
+      var(--#{variables.$prefix}color-green-#{$numStr}),
+      var(--#{variables.$prefix}color-cyan-#{$numStr}),
+      var(--#{variables.$prefix}color-blue-#{$numStr}),
+      var(--#{variables.$prefix}color-violet-#{$numStr}),
+      var(--#{variables.$prefix}color-magenta-#{$numStr})
+    ) !important;
+    color: transparent !important;
+  } @else {
+    color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+  }
+}
+
+@mixin backcolor($colorName, $numStr) {
+  @if ($colorName == "rainbow") {
+    background-image: linear-gradient(
+      135deg,
+      var(--#{variables.$prefix}color-red-#{$numStr}),
+      var(--#{variables.$prefix}color-orange-#{$numStr}),
+      var(--#{variables.$prefix}color-yellow-#{$numStr}),
+      var(--#{variables.$prefix}color-green-#{$numStr}),
+      var(--#{variables.$prefix}color-cyan-#{$numStr}),
+      var(--#{variables.$prefix}color-blue-#{$numStr}),
+      var(--#{variables.$prefix}color-violet-#{$numStr}),
+      var(--#{variables.$prefix}color-magenta-#{$numStr})
+    ) !important;
+  } @else {
+    background-color: var(
+      --#{variables.$prefix}color-#{$colorName}-#{$numStr}
+    ) !important;
+  }
+}
+
+@mixin bordercolor($colorName, $numStr, $borderSide: "") {
+  @if ($borderSide == "") {
+    @if ($colorName == "rainbow") {
+      // not available
+    } @else {
+      border-color: var(
+        --#{variables.$prefix}color-#{$colorName}-#{$numStr}
+      ) !important;
+    }
+  } @else {
+    @if ($colorName == "rainbow") {
+      // not available
+    } @else {
+      border-#{$borderSide}-color: var(
+        --#{variables.$prefix}color-#{$colorName}-#{$numStr}
+      ) !important;
+    }
+  }
+}
+
+@mixin highlighter($colorName, $numStr) {
+  background: linear-gradient(
+    transparent 66.66%,
+    var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
+  ) !important;
+}
+
 @mixin colorUtilities($colorScheme: "") {
   $derived: "";
   @if $colorScheme != "" {
@@ -19,118 +86,110 @@
       }
       //#region forecolor
       .forecolor#{$derived}-#{$colorName}-#{$numStr} {
-        color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+        @include forecolor($colorName, $numStr);
       }
       .forecolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
-          color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
-          color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
-          color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
-          color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include forecolor($colorName, $numStr);
         }
       }
       //#endregion forecolor
 
       //#region backcolor
       .backcolor#{$derived}-#{$colorName}-#{$numStr} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+        @include backcolor($colorName, $numStr);
       }
       .backcolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include backcolor($colorName, $numStr);
         }
       }
       //#endregion backcolor
 
       //#region bordercolor
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+        @include bordercolor($colorName, $numStr);
       }
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+        @include bordercolor($colorName, $numStr);
       }
       .bordercolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
-          border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+          @include bordercolor($colorName, $numStr);
         }
       }
 
       @each $borderSide in variables.$borderSides {
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-#{$numStr} {
-          border-#{$borderSide}-color: var(
-            --#{variables.$prefix}color-#{$colorName}-#{$numStr}
-          ) !important;
+          @include bordercolor($colorName, $numStr, $borderSide);
         }
         .bordercolor#{$derived}-#{$borderSide}-hover-#{$colorName}-#{$numStr} {
           &:hover {
-            border-#{$borderSide}-color: var(
-              --#{variables.$prefix}color-#{$colorName}-#{$numStr}
-            ) !important;
+            @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-focus-#{$numStr} {
           &:focus {
-            border-#{$borderSide}-color: var(
-              --#{variables.$prefix}color-#{$colorName}-#{$numStr}
-            ) !important;
+            @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-active-#{$numStr} {
           &:active {
-            border-color: var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) !important;
+            @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-disabled-#{$numStr} {
           &[disabled],
           fieldset[disabled] {
-            border-#{$borderSide}-color: var(
-              --#{variables.$prefix}color-#{$colorName}-#{$numStr}
-            ) !important;
+            @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
       }
@@ -138,48 +197,125 @@
 
       //#region highlighter
       .highlighter#{$derived}-#{$colorName}-#{$numStr} {
-        background: linear-gradient(
-          transparent 66.66%,
-          var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-        ) !important;
+        @include highlighter($colorName, $numStr);
       }
       .highlighter#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
-          background: linear-gradient(
-            transparent 66.66%,
-            var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-          ) !important;
+          @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
-          background: linear-gradient(
-            transparent 66.66%,
-            var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-          ) !important;
+          @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
-          background: linear-gradient(
-            transparent 66.66%,
-            var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-          ) !important;
+          @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
-          background: linear-gradient(
-            transparent 66.66%,
-            var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-          ) !important;
+          @include highlighter($colorName, $numStr);
         }
       }
       //#endregion highlighter
-
     }
   }
+
+  //#region rainbow
+
+  $numStr: "00";
+  @for $p from 1 through 19 {
+    $numStr: "#{($p * 5)}";
+    @if (string.length($numStr) == 1) {
+      $numStr: "0" + $numStr;
+    }
+    //#region forecolor
+    .forecolor#{$derived}-rainbow-#{$numStr} {
+      @include forecolor("rainbow", $numStr);
+    }
+    .forecolor#{$derived}-hover-rainbow-#{$numStr} {
+      &:hover {
+        @include forecolor("rainbow", $numStr);
+      }
+    }
+    .forecolor#{$derived}-rainbow-focus-#{$numStr} {
+      &:focus {
+        @include forecolor("rainbow", $numStr);
+      }
+    }
+    .forecolor#{$derived}-rainbow-active-#{$numStr} {
+      &:active {
+        @include forecolor("rainbow", $numStr);
+      }
+    }
+    .forecolor#{$derived}-rainbow-disabled-#{$numStr} {
+      &[disabled],
+      fieldset[disabled] {
+        @include forecolor("rainbow", $numStr);
+      }
+    }
+    //#endregion forecolor
+
+    //#region backcolor
+    .backcolor#{$derived}-rainbow-#{$numStr} {
+      @include backcolor("rainbow", $numStr);
+    }
+    .backcolor#{$derived}-hover-rainbow-#{$numStr} {
+      &:hover {
+        @include backcolor("rainbow", $numStr);
+      }
+    }
+    .backcolor#{$derived}-rainbow-focus-#{$numStr} {
+      &:focus {
+        @include backcolor("rainbow", $numStr);
+      }
+    }
+    .backcolor#{$derived}-rainbow-active-#{$numStr} {
+      &:active {
+        @include backcolor("rainbow", $numStr);
+      }
+    }
+    .backcolor#{$derived}-rainbow-disabled-#{$numStr} {
+      &[disabled],
+      fieldset[disabled] {
+        @include backcolor("rainbow", $numStr);
+      }
+    }
+    //#endregion backcolor
+
+    // bordercolor is not available
+
+    // highlighter is not available
+    .highlighter#{$derived}-rainbow-#{$numStr} {
+      @include highlighter("rainbow", $numStr);
+    }
+    .highlighter#{$derived}-hover-rainbow-#{$numStr} {
+      &:hover {
+        @include highlighter("rainbow", $numStr);
+      }
+    }
+    .highlighter#{$derived}-rainbow-focus-#{$numStr} {
+      &:focus {
+        @include highlighter("rainbow", $numStr);
+      }
+    }
+    .highlighter#{$derived}-rainbow-active-#{$numStr} {
+      &:active {
+        @include highlighter("rainbow", $numStr);
+      }
+    }
+    .highlighter#{$derived}-rainbow-disabled-#{$numStr} {
+      &[disabled],
+      fieldset[disabled] {
+        @include highlighter("rainbow", $numStr);
+      }
+    }
+    //#endregion highlighter
+  }
+  //#endregion rainbow
 }
 
 @include colorUtilities();

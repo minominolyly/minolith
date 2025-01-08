@@ -30,6 +30,7 @@
     display: block;
     padding: 1rem;
     position: relative;
+    touch-action: manipulation;
     list-style: none;
     &::marker,
     &::-webkit-details-marker {

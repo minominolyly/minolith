@@ -5,4 +5,5 @@
   background-color: var(--#{variables.$prefix}color-default-back);
   font-family: var(--#{variables.$prefix}font-family-main);
   z-index: var(--#{variables.$prefix}z-index-tabula);
+  text-size-adjust: 100%;
 }

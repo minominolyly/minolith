@@ -52,7 +52,7 @@ If you need to use `utilities`, you can use `minolith-utilities.css`.
   rel="stylesheet"
   type="text/css"
   media="all"
-  href="https://unpkg.com/minolith/dist/css/minolith.min.css"
+  href="https://unpkg.com/minolith/dist/css/minolith-utilities.min.css"
 />
 ```
 

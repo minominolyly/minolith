@@ -89,7 +89,7 @@
   position: relative;
   vertical-align: middle;
   width: 1rem;
-  &:after {
+  &::after {
     background-color: transparent;
     border-color: transparent;
     border-radius: 0%;
@@ -111,14 +111,14 @@
   @each $borderWidth in variables.$borderWidths {
     $name: map.get($borderWidth, "name");
     &.is-border-width-#{$name} {
-      &:after {
+      &::after {
         border-right-width: var(--#{variables.$prefix}border-radius-#{$name});
         border-bottom-width: var(--#{variables.$prefix}border-radius-#{$name});
       }
     }
   }
   &:checked {
-    &:after {
+    &::after {
       border-color: var(--#{variables.$prefix}color-default-fore);
     }
   }
@@ -128,7 +128,7 @@
     background-color: var(--#{variables.$prefix}color-default-disabled-back);
     border-color: var(--#{variables.$prefix}color-default-disabled-border);
     &:checked {
-      &:after {
+      &::after {
         border-color: var(--#{variables.$prefix}color-default-disabled-fore);
       }
     }
@@ -140,7 +140,7 @@
         background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
         border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
         &:checked {
-          &:after {
+          &::after {
             border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
           }
         }
@@ -154,7 +154,7 @@
             --#{variables.$prefix}color-#{$colorName}-disabled-border
           );
           &:checked {
-            &:after {
+            &::after {
               border-color: var(
                 --#{variables.$prefix}color-#{$colorName}-disabled-fore
               );
@@ -176,7 +176,7 @@
   position: relative;
   vertical-align: middle;
   width: 1rem;
-  &:after {
+  &::after {
     background-color: transparent;
     border-color: transparent;
     border-radius: 50%;
@@ -196,13 +196,13 @@
   @each $borderWidth in variables.$borderWidths {
     $name: map.get($borderWidth, "name");
     &.is-border-width-#{$name} {
-      &:after {
+      &::after {
         border-width: var(--#{variables.$prefix}border-radius-#{$name});
       }
     }
   }
   &:checked {
-    &:after {
+    &::after {
       background-color: var(--#{variables.$prefix}color-default-fore);
       border-color: var(--#{variables.$prefix}color-default-fore);
     }
@@ -213,7 +213,7 @@
     background-color: var(--#{variables.$prefix}color-default-disabled-back);
     border-color: var(--#{variables.$prefix}color-default-disabled-border);
     &:checked {
-      &:after {
+      &::after {
         border-color: var(--#{variables.$prefix}color-default-disabled-fore);
       }
     }
@@ -225,7 +225,7 @@
         background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
         border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
         &:checked {
-          &:after {
+          &::after {
             border-color: var(--#{variables.$prefix}color-#{$colorName}-fore);
             background-color: var(
               --#{variables.$prefix}color-#{$colorName}-fore
@@ -242,7 +242,7 @@
             --#{variables.$prefix}color-#{$colorName}-disabled-border
           );
           &:checked {
-            &:after {
+            &::after {
               border-color: var(
                 --#{variables.$prefix}color-#{$colorName}-disabled-fore
               );

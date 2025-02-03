@@ -3,8 +3,8 @@
 @use "../mixins/index.scss" as mixins;
 
 @mixin dialogue-message-arrow-base() {
-  &:after,
-  &:before {
+  &::after,
+  &::before {
     border-top-color: transparent;
     border-top-style: solid;
     border-top-width: calc(
@@ -184,12 +184,12 @@
       > .dialogue-message {
         right: auto;
         @include dialogue-message-arrow-base();
-        &:after,
-        &:before {
+        &::after,
+        &::before {
           border-left: none;
           right: auto;
         }
-        &:before {
+        &::before {
           border-right-color: var(
             --#{variables.$prefix}color-default-dialogue-message-border
           );
@@ -201,7 +201,7 @@
             (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width))
           );
         }
-        &:after {
+        &::after {
           border-right-color: var(
             --#{variables.$prefix}color-default-dialogue-message-back
           );
@@ -227,12 +227,12 @@
       > .dialogue-message {
         left: auto;
         @include dialogue-message-arrow-base();
-        &:after,
-        &:before {
+        &::after,
+        &::before {
           border-right: none;
           left: auto;
         }
-        &:before {
+        &::before {
           border-left-color: var(
             --#{variables.$prefix}color-default-dialogue-message-border
           );
@@ -244,7 +244,7 @@
             (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width))
           );
         }
-        &:after {
+        &::after {
           border-left-color: var(
             --#{variables.$prefix}color-default-dialogue-message-back
           );
@@ -314,7 +314,7 @@
             color: var(
               --#{variables.$prefix}color-#{$colorName}-dialogue-message-fore
             );
-            &:after {
+            &::after {
               border-right-color: var(
                 --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
               );
@@ -322,7 +322,7 @@
                 --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
               );
             }
-            &:before {
+            &::before {
               border-right-color: var(
                 --#{variables.$prefix}color-#{$colorName}-dialogue-message-border
               );

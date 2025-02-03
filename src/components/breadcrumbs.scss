@@ -17,7 +17,7 @@
         @include mixins.element();
         content: var(--#{variables.$prefix}breadcrumb-divider);
         margin: 0 0.5rem;
-        color: var(--#{variables.$prefix}color-default-breadcrumb-devider-fore);
+        color: var(--#{variables.$prefix}color-default-breadcrumb-divider-fore);
         user-select: none;
       }
     }
@@ -32,7 +32,7 @@
           &:has(~ .breadcrumb) {
             &::after {
               color: var(
-                --#{variables.$prefix}color-#{$colorName}-breadcrumb-devider-fore
+                --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
               );
             }
           }

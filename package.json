@@ -1,6 +1,6 @@
 {
   "name": "minolith",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "design system by minominolyly",
   "main": "src/minolith.scss",
   "scripts": {

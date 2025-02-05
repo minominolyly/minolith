@@ -11,29 +11,60 @@
     aspect-ratio: 1;
     border-radius: 50%;
     background: var(--#{variables.$prefix}color-default-loader-fore);
-    mask: conic-gradient(#0000 10%, var(--#{variables.$prefix}color-default-back)),
-      linear-gradient(var(--#{variables.$prefix}color-default-back) 0 0) content-box;
+    mask: conic-gradient(
+        #0000 10%,
+        var(--#{variables.$prefix}color-default-back)
+      ),
+      linear-gradient(var(--#{variables.$prefix}color-default-back) 0 0)
+        content-box;
     mask-composite: subtract;
-    width: 2rem;
-    padding: 0.5rem;
-    &.is-small {
-      width: 1rem;
+    width: 1rem;
+    padding: 0.25rem;
+    height: auto;
+
+    &.is-large {
+      width: 2rem;
       padding: 0.25rem;
     }
-    &.is-large {
+
+    &.is-xlarge {
+      width: 3rem;
+      padding: 0.25rem;
+    }
+
+    &.is-xxlarge {
       width: 4rem;
+      padding: 0.5rem;
+    }
+
+    &.is-xxxlarge {
+      width: 6rem;
+      padding: 0.8rem;
+    }
+
+    &.is-xxxxlarge {
+      width: 8rem;
+      padding: 1rem;
+    }
+
+    &.is-xxxxxlarge {
+      width: 10rem;
+      padding: 1rem;
     }
 
     @if (not variables.$is-skelton) {
       @each $color in variables.$colors {
-      $colorName: map.get($color, "name");
+        $colorName: map.get($color, "name");
         &.is-#{$colorName} {
-          background: var(--#{variables.$prefix}color-#{$colorName}-loader-fore);
+          background: var(
+            --#{variables.$prefix}color-#{$colorName}-loader-fore
+          );
         }
       }
     }
   }
 }
+
 @keyframes loader-lotate {
   to {
     transform: rotate(1turn);

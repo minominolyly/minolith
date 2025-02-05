@@ -63,16 +63,16 @@
 }
 
 @for $p from 0 through 4 {
-  .top-#{$p}percent {
+  .top-#{$p * 25}percent {
     top: $p * 25% !important;
   }
-  .right-#{$p}percent {
+  .right-#{$p * 25}percent {
     right: $p * 25% !important;
   }
-  .bottom-#{$p}percent {
+  .bottom-#{$p * 25}percent {
     bottom: $p * 25% !important;
   }
-  .left-#{$p}percent {
+  .left-#{$p * 25}percent {
     left: $p * 25% !important;
   }
 }

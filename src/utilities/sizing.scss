@@ -61,6 +61,36 @@
   aspect-ratio: 1 / 1.414;
 }
 
+.aspect-ratio-trading-card-small-landscape {
+  @include aspect-ratio-base();
+  aspect-ratio: 86 / 59;
+}
+
+.aspect-ratio-trading-card-small-portrait {
+  @include aspect-ratio-base();
+  aspect-ratio: 59 / 86;
+}
+
+.aspect-ratio-trading-card-standard-landscape {
+  @include aspect-ratio-base();
+  aspect-ratio: 88 / 63;
+}
+
+.aspect-ratio-trading-card-standard-portrait {
+  @include aspect-ratio-base();
+  aspect-ratio: 63 / 88;
+}
+
+.aspect-ratio-trading-card-arcade-landscape {
+  @include aspect-ratio-base();
+  aspect-ratio: 81 / 58;
+}
+
+.aspect-ratio-trading-card-arcade-portrait {
+  @include aspect-ratio-base();
+  aspect-ratio: 58 / 81;
+}
+
 .aspect-ratio-2-3 {
   @include aspect-ratio-base();
   aspect-ratio: 2 / 3;

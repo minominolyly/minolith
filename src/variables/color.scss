@@ -127,15 +127,15 @@ $color-light-lightness-header-shadow: 70 !default;
 //#endregion color-light-lightness-header
 
 //#region color-light-lightness-label
-$color-light-lightness-label-fore: 70 !default;
+$color-light-lightness-label-fore: 60 !default;
 //#endregion color-light-lightness-label
 
 //#region color-light-lightness-link
-$color-light-lightness-link-fore: 70 !default;
+$color-light-lightness-link-fore: 60 !default;
 //#endregion color-light-lightness-link
 
 //#region color-light-lightness-loader
-$color-light-lightness-loader-fore: 70 !default;
+$color-light-lightness-loader-fore: 60 !default;
 //#endregion color-light-lightness-loader
 
 //#region color-light-lightness-message
@@ -252,15 +252,15 @@ $color-dark-lightness-header-shadow: 30 !default;
 //#endregion color-dark-lightness-header
 
 //#region color-dark-lightness-label
-$color-dark-lightness-label-fore: 80 !default;
+$color-dark-lightness-label-fore: 70 !default;
 //#endregion color-dark-lightness-label
 
 //#region color-dark-lightness-link
-$color-dark-lightness-link-fore: 80 !default;
+$color-dark-lightness-link-fore: 70 !default;
 //#endregion color-dark-lightness-link
 
 //#region color-dark-lightness-loader
-$color-dark-lightness-loader-fore: 80 !default;
+$color-dark-lightness-loader-fore: 70 !default;
 //#endregion color-dark-lightness-loader
 
 //#region color-dark-lightness-progress
@@ -1275,7 +1275,7 @@ $colorShadesDark: (
       link: (
         fore:
           functions.zeroPadding(
-            $color-light-lightness-link-fore + $color-lightness-offset-visited,
+            $color-dark-lightness-link-fore + $color-lightness-offset-visited,
             2
           ),
       ),

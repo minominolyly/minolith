@@ -319,21 +319,21 @@
         }
         //#endregion blockquote
 
-      //#region breadcrumbs
-      $breadcrumbs: map.get($colorShade, "breadcrumbs");
-      @if ($breadcrumbs != null) {
-        @include setColor($breadcrumbs, $colorName, $name, "breadcrumbs");
+        //#region breadcrumbs
+        $breadcrumbs: map.get($colorShade, "breadcrumbs");
+        @if ($breadcrumbs != null) {
+          @include setColor($breadcrumbs, $colorName, $name, "breadcrumbs");
 
-        $breadcrumb: map.get($breadcrumbs, "breadcrumb");
-        @if ($breadcrumb != null) {
-          @include setColor($breadcrumb, $colorName, $name, "breadcrumb");
+          $breadcrumb: map.get($breadcrumbs, "breadcrumb");
+          @if ($breadcrumb != null) {
+            @include setColor($breadcrumb, $colorName, $name, "breadcrumb");
+          }
+          $breadcrumbDivider: map.get($breadcrumbs, "breadcrumbDivider");
+          @if ($breadcrumbDivider != null) {
+            @include setColor($breadcrumbDivider, $colorName, $name, "breadcrumb-divider");
+          }
         }
-        $breadcrumbDivider: map.get($breadcrumbs, "breadcrumbDivider");
-        @if ($breadcrumbDivider != null) {
-          @include setColor($breadcrumbDivider, $colorName, $name, "breadcrumb-divider");
-        }
-      }
-      //#endregion breadcrumbs
+        //#endregion breadcrumbs
 
         //#region button
         $button: map.get($colorShade, "button");
@@ -410,7 +410,7 @@
         //#region loader
         $loader: map.get($colorShade, "loader");
         @if ($loader != null) {
-          @include setColor($link, $colorName, $name, "loader");
+          @include setColor($loader, $colorName, $name, "loader");
         }
         //#endregion loader
 

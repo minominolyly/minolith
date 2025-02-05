@@ -5,6 +5,7 @@
 .label {
   @include mixins.element();
   font-weight: var(--#{variables.$prefix}font-weight-semibold);
+  color: var(--#{variables.$prefix}color-default-label-fore);
   @if (not variables.$is-skelton) {
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");

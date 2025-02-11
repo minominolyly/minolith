@@ -6,13 +6,13 @@
 }
 
 .rhombus {
-  --#{variables.$prefix}rhombus-size: 1rem;
   --#{variables.$prefix}rhombus-color-fore: oklch(
     var(--#{variables.$prefix}color-default-rhombus-fore-oklch) / 0.5
   );
   --#{variables.$prefix}rhombus-color-back: var(
     --#{variables.$prefix}color-default-rhombus-back
   );
+  --#{variables.$prefix}rhombus-size: 1rem;
 
   @include mixins.element();
 

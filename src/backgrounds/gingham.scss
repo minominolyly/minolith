@@ -36,7 +36,7 @@
   @for $n from 0 through 6 {
     $degree: $n * 15deg;
     &.is-#{$degree} {
-      --#{variables.$prefix}gingham-degree: $degree;
+      --#{variables.$prefix}gingham-degree: #{$degree};
     }
   }
 

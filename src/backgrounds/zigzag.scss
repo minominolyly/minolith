@@ -51,7 +51,7 @@
   @for $n from 0 through 24 {
     $degree: $n * 15deg;
     &.is-#{$degree} {
-      --#{variables.$prefix}zigzag-degree: $degree;
+      --#{variables.$prefix}zigzag-degree: #{$degree};
     }
   }
 

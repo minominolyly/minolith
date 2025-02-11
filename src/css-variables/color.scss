@@ -8,7 +8,7 @@
   $hue: map.get($color, "hue");
 
   $p: "0";
-  @for $i from 1 through 19  {
+  @for $i from 1 through 19 {
     $p: "" + ($i * 5);
     @if (string.length($p) == 1) {
       $p: "0" + $p;
@@ -19,12 +19,14 @@
     @if ($i < 10) {
       $lightness-offset: (10 - $i) * variables.$color-lightness-offset-darker;
       $lightness: variables.$color-lightness-50 + $lightness-offset;
-      $chroma-offset: (10 - $i) * variables.$color-chroma-colorful-offset-darker;
+      $chroma-offset: (10 - $i) *
+        variables.$color-chroma-colorful-offset-darker;
       $chroma: $chroma + $chroma-offset;
     } @else if ($i > 10) {
       $lightness-offset: ($i - 10) * variables.$color-lightness-offset-lighter;
       $lightness: variables.$color-lightness-50 + $lightness-offset;
-      $chroma-offset: ($i - 10) * variables.$color-chroma-colorful-offset-lighter;
+      $chroma-offset: ($i - 10) *
+        variables.$color-chroma-colorful-offset-lighter;
       $chroma: $chroma + $chroma-offset;
     }
 
@@ -48,57 +50,65 @@
 
   $pseudo: "";
   @if ($pseudoName != "plain") {
-    $pseudo: "-#{$pseudoName}"
+    $pseudo: "-#{$pseudoName}";
   }
 
   $component: "";
   @if ($componentName != "") {
-    $component: "-#{$componentName}"
+    $component: "-#{$componentName}";
   }
 
   $fore: map.get($colorShade, "fore");
   @if ($fore != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$fore});
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore-oklch:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$fore}-oklch);
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$fore}
+    );
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore-oklch: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$fore}-oklch
+    );
   }
 
   $back: map.get($colorShade, "back");
   @if ($back != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$back});
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back-oklch:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$back}-oklch);
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$back}
+    );
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back-oklch: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$back}-oklch
+    );
   }
 
   $border: map.get($colorShade, "border");
   @if ($border != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-border:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$border});
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-border: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$border}
+    );
   }
 
   $placeholder: map.get($colorShade, "placeholder");
   @if ($placeholder != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-placeholder:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$placeholder});
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-placeholder: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$placeholder}
+    );
   }
 
   $shadow: map.get($colorShade, "shadow");
   @if ($shadow != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-shadow:
-      var(--#{variables.$prefix}color-#{$srcColorName}-#{$shadow});
+    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-shadow: var(
+      --#{variables.$prefix}color-#{$srcColorName}-#{$shadow}
+    );
   }
 }
 
 @mixin setColorShades($colorShades) {
-
   @each $colorShade in $colorShades {
     $name: map.get($colorShade, "name");
 
     @include setColor($colorShade, "default", $name);
 
-    --#{variables.$prefix}color-default-code-back: var(--#{variables.$prefix}color-gray-10);
+    --#{variables.$prefix}color-default-code-back: var(
+      --#{variables.$prefix}color-gray-10
+    );
 
     //#region components
 
@@ -109,12 +119,22 @@
 
       $accordionSummary: map.get($accordion, "accordionSummary");
       @if ($accordionSummary != null) {
-        @include setColor($accordionSummary, "default", $name, "accordion-summary");
+        @include setColor(
+          $accordionSummary,
+          "default",
+          $name,
+          "accordion-summary"
+        );
       }
 
       $accordionDetails: map.get($accordion, "accordionDetails");
       @if ($accordionDetails != null) {
-        @include setColor($accordionDetails, "default", $name, "accordion-details");
+        @include setColor(
+          $accordionDetails,
+          "default",
+          $name,
+          "accordion-details"
+        );
       }
     }
     //#endregion accordion
@@ -145,7 +165,12 @@
 
       $breadcrumbDivider: map.get($breadcrumbs, "breadcrumbDivider");
       @if ($breadcrumbDivider != null) {
-        @include setColor($breadcrumbDivider, "default", $name, "breadcrumb-divider");
+        @include setColor(
+          $breadcrumbDivider,
+          "default",
+          $name,
+          "breadcrumb-divider"
+        );
       }
     }
     //#endregion breadcrumbs
@@ -196,7 +221,12 @@
 
       $dialogueMessage: map.get($dialogue, "dialogueMessage");
       @if ($dialogueMessage != null) {
-        @include setColor($dialogueMessage, "default", $name, "dialogue-message");
+        @include setColor(
+          $dialogueMessage,
+          "default",
+          $name,
+          "dialogue-message"
+        );
       }
     }
     //#endregion dialogue
@@ -271,12 +301,26 @@
     }
     //#endregion gingham
 
+    //#region rhombus
+    $rhombus: map.get($colorShade, "rhombus");
+    @if ($rhombus != null) {
+      @include setColor($rhombus, "default", $name, "rhombus");
+    }
+    //#endregion rhombus
+
     //#region stripe
     $stripe: map.get($colorShade, "stripe");
     @if ($stripe != null) {
       @include setColor($stripe, "default", $name, "stripe");
     }
     //#endregion stripe
+
+    //#region zigzag
+    $zigzag: map.get($colorShade, "zigzag");
+    @if ($zigzag != null) {
+      @include setColor($zigzag, "default", $name, "zigzag");
+    }
+    //#endregion zigzag
 
     //#endregion backgrounds
 
@@ -295,12 +339,22 @@
 
           $accordionSummary: map.get($accordion, "accordionSummary");
           @if ($accordionSummary != null) {
-            @include setColor($accordionSummary, $colorName, $name, "accordion-summary");
+            @include setColor(
+              $accordionSummary,
+              $colorName,
+              $name,
+              "accordion-summary"
+            );
           }
 
           $accordionDetails: map.get($accordion, "accordionDetails");
           @if ($accordionDetails != null) {
-            @include setColor($accordionDetails, $colorName, $name, "accordion-details");
+            @include setColor(
+              $accordionDetails,
+              $colorName,
+              $name,
+              "accordion-details"
+            );
           }
         }
         //#endregion accordion
@@ -330,7 +384,12 @@
           }
           $breadcrumbDivider: map.get($breadcrumbs, "breadcrumbDivider");
           @if ($breadcrumbDivider != null) {
-            @include setColor($breadcrumbDivider, $colorName, $name, "breadcrumb-divider");
+            @include setColor(
+              $breadcrumbDivider,
+              $colorName,
+              $name,
+              "breadcrumb-divider"
+            );
           }
         }
         //#endregion breadcrumbs
@@ -371,17 +430,32 @@
 
           $dialogueAvatar: map.get($dialogue, "dialogueAvatar");
           @if ($dialogueAvatar != null) {
-            @include setColor($dialogueAvatar, $colorName, $name, "dialogue-avatar");
+            @include setColor(
+              $dialogueAvatar,
+              $colorName,
+              $name,
+              "dialogue-avatar"
+            );
           }
 
           $dialogueName: map.get($dialogue, "dialogueName");
           @if ($dialogueName != null) {
-            @include setColor($dialogueName, $colorName, $name, "dialogue-name");
+            @include setColor(
+              $dialogueName,
+              $colorName,
+              $name,
+              "dialogue-name"
+            );
           }
 
           $dialogueMessage: map.get($dialogue, "dialogueMessage");
           @if ($dialogueMessage != null) {
-            @include setColor($dialogueMessage, $colorName, $name, "dialogue-message");
+            @include setColor(
+              $dialogueMessage,
+              $colorName,
+              $name,
+              "dialogue-message"
+            );
           }
         }
         //#endregion dialogue
@@ -421,7 +495,12 @@
 
           $messageHeader: map.get($message, "messageHeader");
           @if ($messageHeader != null) {
-            @include setColor($messageHeader, $colorName, $name, "message-header");
+            @include setColor(
+              $messageHeader,
+              $colorName,
+              $name,
+              "message-header"
+            );
           }
 
           $messageBody: map.get($message, "messageBody");
@@ -456,6 +535,13 @@
         }
         //#endregion gingham
 
+        //#region rhombus
+        $rhombus: map.get($colorShade, "rhombus");
+        @if ($rhombus != null) {
+          @include setColor($rhombus, $colorName, $name, "rhombus");
+        }
+        //#endregion rhombus
+
         //#region stripe
         $stripe: map.get($colorShade, "stripe");
         @if ($stripe != null) {
@@ -463,8 +549,14 @@
         }
         //#endregion stripe
 
-        //#endregion backgrounds
+        //#region zigzag
+        $zigzag: map.get($colorShade, "zigzag");
+        @if ($zigzag != null) {
+          @include setColor($zigzag, $colorName, $name, "zigzag");
+        }
+        //#endregion zigzag
 
+        //#endregion backgrounds
       }
     }
   }

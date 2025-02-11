@@ -1,0 +1,71 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+@use "../mixins/index.scss" as mixins;
+
+.zigzag {
+  --#{variables.$prefix}zigzag-size: 1rem;
+  --#{variables.$prefix}zigzag-color-fore: oklch(
+    var(--#{variables.$prefix}color-default-zigzag-fore-oklch) / 0.5
+  );
+  --#{variables.$prefix}zigzag-color-back: var(
+    --#{variables.$prefix}color-default-zigzag-back
+  );
+
+  @include mixins.element();
+
+  background-color: var(--#{variables.$prefix}zigzag-color-back);
+  background-image: linear-gradient(
+      calc(45deg * 3),
+      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      calc(45deg * 5),
+      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      calc(45deg * 7),
+      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      var(--#{variables.$prefix}zigzag-color-back) 25%
+    );
+  background-position: var(--#{variables.$prefix}zigzag-size) 0,
+    var(--#{variables.$prefix}zigzag-size) 0, 0 0, 0 0;
+  background-size: calc(var(--#{variables.$prefix}zigzag-size) * 2)
+    calc(var(--#{variables.$prefix}zigzag-size) * 2);
+  background-repeat: repeat;
+
+  &.is-small {
+    --#{variables.$prefix}zigzag-size: 0.5rem;
+  }
+
+  &.is-large {
+    --#{variables.$prefix}zigzag-size: 4rem;
+  }
+
+  @for $n from 0 through 24 {
+    $degree: $n * 15deg;
+    &.is-#{$degree} {
+      --#{variables.$prefix}zigzag-degree: degree;
+    }
+  }
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$colors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}zigzag-color-fore: oklch(
+          var(--#{variables.$prefix}color-#{$colorName}-zigzag-fore-oklch) / 0.5
+        );
+        --#{variables.$prefix}zigzag-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-zigzag-back
+        );
+      }
+    }
+  }
+}

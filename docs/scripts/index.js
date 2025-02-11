@@ -69,8 +69,16 @@ function changeColor(color) {
     elem.className = `gingham ${color} aspect-ratio-16-9`;
   });
 
+  document.querySelectorAll(".rhombus").forEach((elem) => {
+    elem.className = `rhombus ${color} aspect-ratio-16-9`;
+  });
+
   document.querySelectorAll(".stripe").forEach((elem) => {
     elem.className = `stripe ${color} aspect-ratio-16-9`;
+  });
+
+  document.querySelectorAll(".zigzag").forEach((elem) => {
+    elem.className = `zigzag ${color} aspect-ratio-16-9`;
   });
 
   document.querySelectorAll(".accordion").forEach((elem) => {

@@ -3,56 +3,40 @@
 @use "../mixins/index.scss" as mixins;
 
 .gingham {
+  --#{variables.$prefix}gingham-color-fore: oklch(
+    var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
+  );
+  --#{variables.$prefix}gingham-color-back: var(
+    --#{variables.$prefix}color-default-gingham-back
+  );
+  --#{variables.$prefix}gingham-degree: 0deg;
+
   @include mixins.element();
   background-size: auto auto;
-  background-color: var(--#{variables.$prefix}color-default-gingham-back);
+  background-color: var(--#{variables.$prefix}gingham-color-back);
   background-image: repeating-linear-gradient(
-      0deg,
+      var(--#{variables.$prefix}gingham-degree),
       transparent,
       transparent 0.75rem,
-      oklch(var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5)
+      var(--#{variables.$prefix}gingham-color-fore)
         0.75rem,
-      oklch(var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5)
+      var(--#{variables.$prefix}gingham-color-fore)
         1.5rem
     ),
     repeating-linear-gradient(
-      90deg,
+      calc(var(--#{variables.$prefix}gingham-degree) + 90deg),
       transparent,
       transparent 0.75rem,
-      oklch(var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5)
+      var(--#{variables.$prefix}gingham-color-fore)
         0.75rem,
-      oklch(var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5)
+      var(--#{variables.$prefix}gingham-color-fore)
         1.5rem
     );
-  @for $n from 0 through 4 {
-    $degree: $n * 45deg;
+
+  @for $n from 0 through 6 {
+    $degree: $n * 15deg;
     &.is-#{$degree} {
-      background-image: repeating-linear-gradient(
-          $degree,
-          transparent,
-          transparent 0.75rem,
-          oklch(
-              var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
-            )
-            0.75rem,
-          oklch(
-              var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
-            )
-            1.5rem
-        ),
-        repeating-linear-gradient(
-          $degree + 90deg,
-          transparent,
-          transparent 0.75rem,
-          oklch(
-              var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
-            )
-            0.75rem,
-          oklch(
-              var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
-            )
-            1.5rem
-        );
+      --#{variables.$prefix}gingham-degree: degree;
     }
   }
 
@@ -60,90 +44,12 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: var(
+        --#{variables.$prefix}gingham-color-fore: oklch(
+          var(--#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch) / 0.5
+        );
+        --#{variables.$prefix}gingham-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-gingham-back
         );
-        background-image: repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 0.75rem,
-            oklch(
-                var(
-                    --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                  ) /
-                  0.5
-              )
-              0.75rem,
-            oklch(
-                var(
-                    --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                  ) /
-                  0.5
-              )
-              1.5rem
-          ),
-          repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 0.75rem,
-            oklch(
-                var(
-                    --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                  ) /
-                  0.5
-              )
-              0.75rem,
-            oklch(
-                var(
-                    --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                  ) /
-                  0.5
-              )
-              1.5rem
-          );
-        @for $n from 0 through 4 {
-          $degree: $n * 45deg;
-          &.is-#{$degree} {
-            background-image: repeating-linear-gradient(
-                $degree,
-                transparent,
-                transparent 0.75rem,
-                oklch(
-                    var(
-                        --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                      ) /
-                      0.5
-                  )
-                  0.75rem,
-                oklch(
-                    var(
-                        --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                      ) /
-                      0.5
-                  )
-                  1.5rem
-              ),
-              repeating-linear-gradient(
-                $degree + 90deg,
-                transparent,
-                transparent 0.75rem,
-                oklch(
-                    var(
-                        --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                      ) /
-                      0.5
-                  )
-                  0.75rem,
-                oklch(
-                    var(
-                        --#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch
-                      ) /
-                      0.5
-                  )
-                  1.5rem
-              );
-          }
-        }
       }
     }
   }

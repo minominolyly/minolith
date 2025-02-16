@@ -6,14 +6,23 @@
   @include mixins.element();
   display: block;
   width: 100%;
-  box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-default-shadow);
-  backdrop-filter: blur(0.25rem);
+  box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-default-header-shadow);
+  backdrop-filter: var(--#{variables.$prefix}header-backdrop-filter);
+
   &.is-sticky {
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: var(--#{variables.$prefix}z-index-header-is-sticky);
+    z-index: var(--#{variables.$prefix}header-z-index-is-sticky);
+  }
+
+  &.is-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: var(--#{variables.$prefix}header-z-index-is-fixed);
   }
 
   @if (not variables.$is-skelton) {
@@ -21,7 +30,7 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-header-back-oklch) / 0.5);
-        box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-#{$colorName}-shadow);
+        box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-#{$colorName}-header-shadow);
         color: var(--#{variables.$prefix}color-#{$colorName}-header-fore);
       }
     }

@@ -9,8 +9,10 @@
     background-image: linear-gradient(
       135deg,
       var(--#{variables.$prefix}color-red-#{$numStr}),
+      var(--#{variables.$prefix}color-coral-#{$numStr}),
       var(--#{variables.$prefix}color-orange-#{$numStr}),
       var(--#{variables.$prefix}color-yellow-#{$numStr}),
+      var(--#{variables.$prefix}color-lime-#{$numStr}),
       var(--#{variables.$prefix}color-green-#{$numStr}),
       var(--#{variables.$prefix}color-cyan-#{$numStr}),
       var(--#{variables.$prefix}color-blue-#{$numStr}),
@@ -28,8 +30,10 @@
     background-image: linear-gradient(
       135deg,
       var(--#{variables.$prefix}color-red-#{$numStr}),
+      var(--#{variables.$prefix}color-coral-#{$numStr}),
       var(--#{variables.$prefix}color-orange-#{$numStr}),
       var(--#{variables.$prefix}color-yellow-#{$numStr}),
+      var(--#{variables.$prefix}color-lime-#{$numStr}),
       var(--#{variables.$prefix}color-green-#{$numStr}),
       var(--#{variables.$prefix}color-cyan-#{$numStr}),
       var(--#{variables.$prefix}color-blue-#{$numStr}),
@@ -64,10 +68,14 @@
 }
 
 @mixin highlighter($colorName, $numStr) {
-  background: linear-gradient(
-    transparent 66.66%,
-    var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
-  ) !important;
+  @if ($colorName == "rainbow") {
+    // not available
+  } @else {
+    background: linear-gradient(
+      transparent 66.66%,
+      var(--#{variables.$prefix}color-#{$colorName}-#{$numStr}) 33.33%
+    ) !important;
+  }
 }
 
 @mixin colorUtilities($colorScheme: "") {
@@ -286,34 +294,9 @@
     }
     //#endregion backcolor
 
-    // bordercolor is not available
+    // NOTE: bordercolor is not available
 
-    // highlighter is not available
-    .highlighter#{$derived}-rainbow-#{$numStr} {
-      @include highlighter("rainbow", $numStr);
-    }
-    .highlighter#{$derived}-hover-rainbow-#{$numStr} {
-      &:hover {
-        @include highlighter("rainbow", $numStr);
-      }
-    }
-    .highlighter#{$derived}-rainbow-focus-#{$numStr} {
-      &:focus {
-        @include highlighter("rainbow", $numStr);
-      }
-    }
-    .highlighter#{$derived}-rainbow-active-#{$numStr} {
-      &:active {
-        @include highlighter("rainbow", $numStr);
-      }
-    }
-    .highlighter#{$derived}-rainbow-disabled-#{$numStr} {
-      &[disabled],
-      fieldset[disabled] {
-        @include highlighter("rainbow", $numStr);
-      }
-    }
-    //#endregion highlighter
+    // NOTE: highlighter is not available
   }
   //#endregion rainbow
 }

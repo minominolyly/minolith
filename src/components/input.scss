@@ -263,6 +263,47 @@
   height: 2.5rem;
 }
 
+.input-range {
+  @extend .input;
+  appearance: none;
+  cursor: pointer;
+  border-radius: var(--#{variables.$prefix}border-radius-pill);
+  width: 100%;
+  height: 1rem;
+  padding: 0;
+  .input-range-track {
+    cursor: pointer;
+    background-color: var(--#{variables.$prefix}color-default-back);
+  }
+  .input-range-thumb {
+    appearance: none;
+    background-color: var(--#{variables.$prefix}color-default-border);
+    border-radius: var(--#{variables.$prefix}border-radius-circle);
+    cursor: pointer;
+    width: 2rem;
+  }
+  &:focus,
+  &.is-focus,
+  &.is-focused {
+    &::-webkit-slider-runnable-track,
+    &::-moz-range-track {
+      background-color: var(--#{variables.$prefix}color-default-focus-back);
+    }
+  }
+  &::-webkit-slider-runnable-track {
+    @extend .input-range-track;
+  }
+  &::-moz-range-track {
+    @extend .input-range-track;
+  }
+  &::-webkit-slider-thumb {
+    @extend .input-range-thumb;
+  }
+  &::-moz-range-thumb {
+    @extend .input-range-thumb;
+  }
+}
+
 .input[type="text"],
 .input[type="email"],
 .input[type="number"],
@@ -290,4 +331,8 @@ textarea {
 
 .input[type="color"] {
   @extend .input-color;
+}
+
+.input[type="range"] {
+  @extend .input-range;
 }

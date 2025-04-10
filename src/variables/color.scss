@@ -17,6 +17,7 @@ $color-chroma-colorful-offset-darker: -0.01 !default;
 
 $color-hue-gray: 290 !default;
 $color-hue-red: 0 !default;
+$color-hue-coral: 40 !default;
 $color-hue-orange: 70 !default;
 $color-hue-yellow: 90 !default;
 $color-hue-lime: 120 !default;
@@ -1335,12 +1336,20 @@ $colors: (
     "hue": $color-hue-red,
   ),
   (
+    "name": "coral",
+    "hue": $color-hue-coral,
+  ),
+  (
     "name": "orange",
     "hue": $color-hue-orange,
   ),
   (
     "name": "yellow",
     "hue": $color-hue-yellow,
+  ),
+  (
+    "name": "lime",
+    "hue": $color-hue-lime,
   ),
   (
     "name": "green",

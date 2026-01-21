@@ -573,6 +573,7 @@
 }
 
 :root {
+  color-scheme: light dark;
   @each $color in variables.$colors {
     $name: map.get($color, "name");
     @if ($name == "gray") {
@@ -581,8 +582,6 @@
       @include setColorVariables($color);
     }
   }
-
-  @include setColorLight();
 }
 
 @include mixins.setCssVariableColorScheme("light") {

@@ -4,8 +4,8 @@
 @use "../functions/index.scss" as functions;
 
 .columns {
-  --#{variables.$prefix}gutter-x: 0;
-  --#{variables.$prefix}gutter-y: 0;
+  --#{variables.$prefix}gutter-x: 0rem;
+  --#{variables.$prefix}gutter-y: 0rem;
   @include mixins.element();
   display: flex;
   flex-direction: row;

@@ -3,8 +3,8 @@
 @use "../mixins/index.scss" as mixins;
 
 .container {
-  --#{variables.$prefix}gutter-x: 0;
-  --#{variables.$prefix}gutter-y: 0;
+  --#{variables.$prefix}gutter-x: 0rem;
+  --#{variables.$prefix}gutter-y: 0rem;
   @include mixins.element();
   padding-top: calc(var(--#{variables.$prefix}gutter-y) * 0.5);
   padding-bottom: calc(var(--#{variables.$prefix}gutter-y) * 0.5);

@@ -10,7 +10,8 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: calc(var(--#{variables.$prefix}gutter-y) * -1);
+  margin-top: calc(var(--#{variables.$prefix}gutter-y) * -0.5);
+  margin-bottom: calc(var(--#{variables.$prefix}gutter-y) * -0.5);
   margin-right: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
   margin-left: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
   @for $p from 0 through 20 {

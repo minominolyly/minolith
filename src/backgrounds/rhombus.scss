@@ -7,7 +7,8 @@
 
 .rhombus {
   --#{variables.$prefix}rhombus-color-fore: oklch(
-    var(--#{variables.$prefix}color-default-rhombus-fore-oklch) / 0.5
+    from var(--#{variables.$prefix}color-default-rhombus-fore) l c h /
+      calc(alpha - 0.5)
   );
   --#{variables.$prefix}rhombus-color-back: var(
     --#{variables.$prefix}color-default-rhombus-back
@@ -17,12 +18,34 @@
   @include mixins.element();
 
   background-color: var(--#{variables.$prefix}rhombus-color-back);
-  background-image: linear-gradient(135deg, var(--#{variables.$prefix}rhombus-color-fore) 25%, transparent 25%),
-    linear-gradient(225deg, var(--#{variables.$prefix}rhombus-color-fore) 25%, transparent 25%),
-    linear-gradient(45deg, var(--#{variables.$prefix}rhombus-color-fore) 25%, transparent 25%),
-    linear-gradient(315deg, var(--#{variables.$prefix}rhombus-color-fore) 25%, var(--#{variables.$prefix}rhombus-color-back) 25%);
-  background-position: var(--#{variables.$prefix}rhombus-size) 0, var(--#{variables.$prefix}rhombus-size) 0, 0 0, 0 0;
-  background-size: var(--#{variables.$prefix}rhombus-size) var(--#{variables.$prefix}rhombus-size);
+  background-image:
+    linear-gradient(
+      135deg,
+      var(--#{variables.$prefix}rhombus-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      225deg,
+      var(--#{variables.$prefix}rhombus-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      45deg,
+      var(--#{variables.$prefix}rhombus-color-fore) 25%,
+      transparent 25%
+    ),
+    linear-gradient(
+      315deg,
+      var(--#{variables.$prefix}rhombus-color-fore) 25%,
+      var(--#{variables.$prefix}rhombus-color-back) 25%
+    );
+  background-position:
+    var(--#{variables.$prefix}rhombus-size) 0,
+    var(--#{variables.$prefix}rhombus-size) 0,
+    0 0,
+    0 0;
+  background-size: var(--#{variables.$prefix}rhombus-size)
+    var(--#{variables.$prefix}rhombus-size);
   background-repeat: repeat;
 
   &.is-small {
@@ -38,7 +61,11 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}rhombus-color-fore: oklch(
-          var(--#{variables.$prefix}color-#{$colorName}-rhombus-fore-oklch) / 0.5
+          from var(--#{variables.$prefix}color-#{$colorName}-rhombus-fore)
+            l
+            c
+            h /
+            calc(alpha - 0.5)
         );
         --#{variables.$prefix}rhombus-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-rhombus-back

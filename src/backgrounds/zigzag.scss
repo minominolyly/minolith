@@ -5,7 +5,8 @@
 .zigzag {
   --#{variables.$prefix}zigzag-size: 1rem;
   --#{variables.$prefix}zigzag-color-fore: oklch(
-    var(--#{variables.$prefix}color-default-zigzag-fore-oklch) / 0.5
+    from var(--#{variables.$prefix}color-default-zigzag-fore) l c h /
+      calc(alpha - 0.5)
   );
   --#{variables.$prefix}zigzag-color-back: var(
     --#{variables.$prefix}color-default-zigzag-back
@@ -14,7 +15,8 @@
   @include mixins.element();
 
   background-color: var(--#{variables.$prefix}zigzag-color-back);
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       calc(45deg * 3),
       var(--#{variables.$prefix}zigzag-color-fore) 25%,
       transparent 25%
@@ -34,8 +36,11 @@
       var(--#{variables.$prefix}zigzag-color-fore) 25%,
       var(--#{variables.$prefix}zigzag-color-back) 25%
     );
-  background-position: var(--#{variables.$prefix}zigzag-size) 0,
-    var(--#{variables.$prefix}zigzag-size) 0, 0 0, 0 0;
+  background-position:
+    var(--#{variables.$prefix}zigzag-size) 0,
+    var(--#{variables.$prefix}zigzag-size) 0,
+    0 0,
+    0 0;
   background-size: calc(var(--#{variables.$prefix}zigzag-size) * 2)
     calc(var(--#{variables.$prefix}zigzag-size) * 2);
   background-repeat: repeat;
@@ -60,7 +65,11 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}zigzag-color-fore: oklch(
-          var(--#{variables.$prefix}color-#{$colorName}-zigzag-fore-oklch) / 0.5
+          from var(--#{variables.$prefix}color-#{$colorName}-zigzag-fore)
+            l
+            c
+            h /
+            calc(alpha - 0.5)
         );
         --#{variables.$prefix}zigzag-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-zigzag-back

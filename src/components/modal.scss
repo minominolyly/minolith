@@ -5,7 +5,11 @@
 .modal {
   @include mixins.element();
   align-items: center;
-  background-color: oklch(var(--#{variables.$prefix}color-default-back-oklch) / 0.75);
+  background-color: oklch(
+    from var(--#{variables.$prefix}color-default-back) l c h /
+      calc(alpha - 0.25)
+  );
+  border: none;
   display: none;
   flex-direction: column;
   height: 100vh;
@@ -19,7 +23,7 @@
   &.is-active {
     display: flex;
   }
-  >.modal-content {
+  > .modal-content {
     @include mixins.element();
     max-height: 100%;
     max-width: 100%;
@@ -32,9 +36,15 @@
   }
   @if (not variables.$is-skelton) {
     @each $color in variables.$colors {
-    $colorName: map.get($color, "name");
+      $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: oklch(var(--#{variables.$prefix}color-#{$colorName}-back-oklch) / 0.75);
+        background-color: oklch(
+          from var(--#{variables.$prefix}color-#{$colorName}-back)
+            l
+            c
+            h /
+            calc(alpha - 0.25)
+        );
       }
     }
   }

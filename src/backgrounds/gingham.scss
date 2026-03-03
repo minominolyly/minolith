@@ -4,7 +4,8 @@
 
 .gingham {
   --#{variables.$prefix}gingham-color-fore: oklch(
-    var(--#{variables.$prefix}color-default-gingham-fore-oklch) / 0.5
+    from var(--#{variables.$prefix}color-default-gingham-fore) l c h /
+      calc(alpha - 0.5)
   );
   --#{variables.$prefix}gingham-color-back: var(
     --#{variables.$prefix}color-default-gingham-back
@@ -45,7 +46,8 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}gingham-color-fore: oklch(
-          var(--#{variables.$prefix}color-#{$colorName}-gingham-fore-oklch) / 0.5
+          from var(--#{variables.$prefix}color-#{$colorName}-gingham-fore) l c h /
+      calc(alpha - 0.5)
         );
         --#{variables.$prefix}gingham-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-gingham-back

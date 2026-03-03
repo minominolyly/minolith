@@ -317,1010 +317,1284 @@ $color-lightness-offset-visited: 0 !default;
 
 //#endregion color-lightness-offset
 
-//#region colorShadesLight
+//#region colorShades
 
-$colorShadesLight: (
+$colorShades: (
   //#region plain
   (
       name: "plain",
-      fore: functions.zeroPadding($color-light-lightness-fore, 2),
-      back: functions.zeroPadding($color-light-lightness-back, 2),
-      border: functions.zeroPadding($color-light-lightness-border, 2),
-      placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
-      shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      fore: (
+        light: functions.zeroPadding($color-light-lightness-fore, 2),
+        dark: functions.zeroPadding($color-dark-lightness-fore, 2),
+      ),
+      back: (
+        light: functions.zeroPadding($color-light-lightness-back, 2),
+        dark: functions.zeroPadding($color-dark-lightness-back, 2),
+      ),
+      border: (
+        light: functions.zeroPadding($color-light-lightness-border, 2),
+        dark: functions.zeroPadding($color-dark-lightness-border, 2),
+      ),
+      placeholder: (
+        light: functions.zeroPadding($color-light-lightness-placeholder, 2),
+        dark: functions.zeroPadding($color-dark-lightness-placeholder, 2),
+      ),
+      shadow: (
+        light: functions.zeroPadding($color-light-lightness-shadow, 2),
+        dark: functions.zeroPadding($color-dark-lightness-shadow, 2),
+      ),
       dot: (
-        fore: functions.zeroPadding($color-light-lightness-dot-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-dot-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-dot-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-dot-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-dot-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-dot-back, 2),
+        ),
       ),
       gingham: (
-        fore: functions.zeroPadding($color-light-lightness-gingham-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-gingham-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-gingham-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-gingham-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-gingham-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-gingham-back, 2),
+        ),
       ),
       rhombus: (
-        fore: functions.zeroPadding($color-light-lightness-rhombus-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-rhombus-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-rhombus-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-rhombus-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-rhombus-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-rhombus-back, 2),
+        ),
       ),
       stripe: (
-        fore: functions.zeroPadding($color-light-lightness-stripe-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-stripe-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-stripe-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-stripe-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-stripe-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-stripe-back, 2),
+        ),
       ),
       zigzag: (
-        fore: functions.zeroPadding($color-light-lightness-zigzag-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-zigzag-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-zigzag-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-zigzag-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-zigzag-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-zigzag-back, 2),
+        ),
       ),
       accordion: (
-        fore: functions.zeroPadding($color-light-lightness-accordion-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-accordion-back, 2),
-        border:
-          functions.zeroPadding($color-light-lightness-accordion-border, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-accordion-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-accordion-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-accordion-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-accordion-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-accordion-border,
+              2
+            ),
+          dark: functions.zeroPadding($color-dark-lightness-accordion-border, 2),
+        ),
         accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-back,
-              2
-            ),
-          border:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-border,
-              2
-            ),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-border,
+                2
+              ),
+          ),
         ),
         accordionDetails: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-details-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-details-back,
-              2
-            ),
-          border:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-details-border,
-              2
-            ),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-details-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-details-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-details-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-details-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-details-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-details-border,
+                2
+              ),
+          ),
         ),
       ),
       badge: (
-        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-badge-back, 2),
-        border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-badge-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-badge-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+        ),
       ),
       blockquote: (
-        fore: functions.zeroPadding($color-light-lightness-blockquote-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-blockquote-back, 2),
-        border: functions.zeroPadding($color-light-lightness-blockquote-border, 2),
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-blockquote-fore,
+              2
+            ),
+          dark: functions.zeroPadding($color-dark-lightness-blockquote-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding(
+              $color-light-lightness-blockquote-back,
+              2
+            ),
+          dark: functions.zeroPadding($color-dark-lightness-blockquote-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-blockquote-border,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-blockquote-border,
+              2
+            ),
+        ),
       ),
       breadcrumbs: (
-        fore: functions.zeroPadding($color-light-lightness-breadcrumbs-fore, 2),
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-breadcrumbs-fore,
+              2
+            ),
+          dark: functions.zeroPadding($color-dark-lightness-breadcrumbs-fore, 2),
+        ),
         breadcrumb: (
-          fore: functions.zeroPadding($color-light-lightness-breadcrumb-fore, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-breadcrumb-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-breadcrumb-fore,
+                2
+              ),
+          ),
         ),
         breadcrumbDivider: (
-          fore: functions.zeroPadding($color-light-lightness-breadcrumb-divider-fore, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-breadcrumb-divider-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-breadcrumb-divider-fore,
+                2
+              ),
+          ),
         ),
       ),
       button: (
-        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-button-back, 2),
-        border: functions.zeroPadding($color-light-lightness-button-border, 2),
-        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-button-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-button-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-button-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+        ),
       ),
       card: (
-        fore: functions.zeroPadding($color-light-lightness-card-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-card-back, 2),
-        border: functions.zeroPadding($color-light-lightness-card-border, 2),
-        shadow: functions.zeroPadding($color-light-lightness-card-shadow, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-card-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-card-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-card-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-card-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-card-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-card-border, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding($color-light-lightness-card-shadow, 2),
+          dark: functions.zeroPadding($color-dark-lightness-card-shadow, 2),
+        ),
         cardHeader: (
-          fore:
-            functions.zeroPadding($color-light-lightness-card-header-fore, 2),
-          back:
-            functions.zeroPadding($color-light-lightness-card-header-back, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-header-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-card-header-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-header-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-card-header-back,
+                2
+              ),
+          ),
         ),
         cardBody: (
-          fore: functions.zeroPadding($color-light-lightness-card-body-fore, 2),
-          back: functions.zeroPadding($color-light-lightness-card-body-back, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-body-fore,
+                2
+              ),
+            dark: functions.zeroPadding($color-dark-lightness-card-body-fore, 2),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-body-back,
+                2
+              ),
+            dark: functions.zeroPadding($color-dark-lightness-card-body-back, 2),
+          ),
         ),
         cardFooter: (
-          fore:
-            functions.zeroPadding($color-light-lightness-card-footer-fore, 2),
-          back:
-            functions.zeroPadding($color-light-lightness-card-footer-back, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-footer-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-card-footer-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-card-footer-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-card-footer-back,
+                2
+              ),
+          ),
         ),
       ),
       dialogue: (
-        fore: functions.zeroPadding($color-light-lightness-dialogue-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-dialogue-back, 2),
-        border: functions.zeroPadding($color-light-lightness-dialogue-border, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-dialogue-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-dialogue-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-dialogue-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-dialogue-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-dialogue-border,
+              2
+            ),
+          dark: functions.zeroPadding($color-dark-lightness-dialogue-border, 2),
+        ),
         dialogueAvatar: (
-          fore: functions.zeroPadding($color-light-lightness-dialogue-avatar-fore, 2),
-          back: functions.zeroPadding($color-light-lightness-dialogue-avatar-back, 2),
-          border: functions.zeroPadding($color-light-lightness-dialogue-avatar-border, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-avatar-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-avatar-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-avatar-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-avatar-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-avatar-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-avatar-border,
+                2
+              ),
+          ),
         ),
         dialogueName: (
-          fore: functions.zeroPadding($color-light-lightness-dialogue-name-fore, 2),
-          back: functions.zeroPadding($color-light-lightness-dialogue-name-back, 2),
-          border: functions.zeroPadding($color-light-lightness-dialogue-name-border, 2),
-          shadow: functions.zeroPadding($color-light-lightness-dialogue-name-shadow, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-name-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-name-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-name-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-name-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-name-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-name-border,
+                2
+              ),
+          ),
+          shadow: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-name-shadow,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-name-shadow,
+                2
+              ),
+          ),
         ),
         dialogueMessage: (
-          fore: functions.zeroPadding($color-light-lightness-dialogue-message-fore, 2),
-          back: functions.zeroPadding($color-light-lightness-dialogue-message-back, 2),
-          border: functions.zeroPadding($color-light-lightness-dialogue-message-border, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-message-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-message-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-message-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-message-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-dialogue-message-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-dialogue-message-border,
+                2
+              ),
+          ),
         ),
       ),
       header: (
-        fore: functions.zeroPadding($color-light-lightness-header-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-header-back, 2),
-        shadow: functions.zeroPadding($color-light-lightness-header-shadow, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-header-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-header-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-header-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-header-back, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding($color-light-lightness-header-shadow, 2),
+          dark: functions.zeroPadding($color-dark-lightness-header-shadow, 2),
+        ),
       ),
       label: (
-        fore: functions.zeroPadding($color-light-lightness-label-fore, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-label-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-label-fore, 2),
+        ),
       ),
       loader: (
-        fore: functions.zeroPadding($color-light-lightness-loader-fore, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-loader-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-loader-fore, 2),
+        ),
       ),
       link: (
-        fore: functions.zeroPadding($color-light-lightness-link-fore, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-link-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-link-fore, 2),
+        ),
       ),
       message: (
-        fore: functions.zeroPadding($color-light-lightness-message-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-message-back, 2),
-        border: functions.zeroPadding($color-light-lightness-message-border, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-message-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-message-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-message-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-message-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-message-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-message-border, 2),
+        ),
         messageHeader: (
-          fore:
-            functions.zeroPadding($color-light-lightness-message-header-fore, 2),
-          back:
-            functions.zeroPadding($color-light-lightness-message-header-back, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-message-header-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-message-header-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-message-header-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-message-header-back,
+                2
+              ),
+          ),
         ),
         messageBody: (
-          fore:
-            functions.zeroPadding($color-light-lightness-message-body-fore, 2),
-          back:
-            functions.zeroPadding($color-light-lightness-message-body-back, 2),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-message-body-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-message-body-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-message-body-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-message-body-back,
+                2
+              ),
+          ),
         ),
       ),
       progress: (
-        fore: functions.zeroPadding($color-light-lightness-progress-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-progress-back, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-progress-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-progress-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-progress-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-progress-back, 2),
+        ),
       ),
     ),
   //#endregion plain
   //#region disabled
   (
       name: "disabled",
-      fore:
-        functions.zeroPadding(
-          $color-light-lightness-fore +
-            $color-light-lightness-offset-disabled-fore,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-light-lightness-back + $color-lightness-offset-disabled,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-light-lightness-border + $color-lightness-offset-disabled,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-light-lightness-placeholder + $color-lightness-offset-disabled,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-light-lightness-shadow + $color-lightness-offset-disabled,
-          2
-        ),
+      fore: (
+        light: functions.zeroPadding(
+            $color-light-lightness-fore +
+              $color-light-lightness-offset-disabled-fore,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-fore +
+              $color-dark-lightness-offset-disabled-fore,
+            2
+          ),
+      ),
+      back: (
+        light: functions.zeroPadding(
+            $color-light-lightness-back + $color-lightness-offset-disabled,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-back + $color-lightness-offset-disabled,
+            2
+          ),
+      ),
+      border: (
+        light: functions.zeroPadding(
+            $color-light-lightness-border + $color-lightness-offset-disabled,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-border + $color-lightness-offset-disabled,
+            2
+          ),
+      ),
+      placeholder: (
+        light: functions.zeroPadding(
+            $color-light-lightness-placeholder +
+              $color-lightness-offset-disabled,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-placeholder + $color-lightness-offset-disabled,
+            2
+          ),
+      ),
+      shadow: (
+        light: functions.zeroPadding(
+            $color-light-lightness-shadow + $color-lightness-offset-disabled,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-shadow + $color-lightness-offset-disabled,
+            2
+          ),
+      ),
       accordion: (
         accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-fore +
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-fore +
+                  $color-light-lightness-offset-disabled-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-fore +
+                  $color-dark-lightness-offset-disabled-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-back +
+                  $color-lightness-offset-disabled,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-back +
+                  $color-lightness-offset-disabled,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-border +
+                  $color-lightness-offset-disabled,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-border +
+                  $color-lightness-offset-disabled,
+                2
+              ),
+          ),
+        ),
+      ),
+      badge: (
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-fore +
                 $color-light-lightness-offset-disabled-fore,
               2
             ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-back +
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-fore +
+                $color-dark-lightness-offset-disabled-fore,
+              2
+            ),
+        ),
+        back: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-back +
                 $color-lightness-offset-disabled,
               2
             ),
-          border:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-border +
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-back +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-border +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-border +
                 $color-lightness-offset-disabled,
               2
             ),
         ),
       ),
-      badge: (
-        fore:
-          functions.zeroPadding(
-            $color-light-lightness-badge-fore +
-              $color-light-lightness-offset-disabled-fore,
-            2
-          ),
-        back:
-          functions.zeroPadding(
-            $color-light-lightness-badge-back + $color-lightness-offset-disabled,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-badge-border +
-              $color-lightness-offset-disabled,
-            2
-          ),
-      ),
       button: (
-        fore:
-          functions.zeroPadding(
-            $color-light-lightness-button-fore +
-              $color-light-lightness-offset-disabled-fore,
-            2
-          ),
-        back:
-          functions.zeroPadding(
-            $color-light-lightness-button-back +
-              $color-lightness-offset-disabled,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-button-border +
-              $color-lightness-offset-disabled,
-            2
-          ),
-        shadow:
-          functions.zeroPadding(
-            $color-light-lightness-button-shadow +
-              $color-lightness-offset-disabled,
-            2
-          ),
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-fore +
+                $color-light-lightness-offset-disabled-fore,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-fore +
+                $color-dark-lightness-offset-disabled-fore,
+              2
+            ),
+        ),
+        back: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-back +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-back +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-border +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-border +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
+        shadow: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-shadow +
+                $color-lightness-offset-disabled,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-shadow +
+                $color-lightness-offset-disabled,
+              2
+            ),
+        ),
       ),
     ),
   //#endregion disabled
   //#region hover
   (
       name: "hover",
-      fore:
-        functions.zeroPadding(
-          $color-light-lightness-fore + $color-lightness-offset-hover,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-light-lightness-back + $color-lightness-offset-hover,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-light-lightness-border + $color-lightness-offset-hover,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-light-lightness-placeholder + $color-lightness-offset-hover,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-light-lightness-shadow + $color-lightness-offset-hover,
-          2
-        ),
+      fore: (
+        light: functions.zeroPadding(
+            $color-light-lightness-fore + $color-lightness-offset-hover,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-fore + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      back: (
+        light: functions.zeroPadding(
+            $color-light-lightness-back + $color-lightness-offset-hover,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-back + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      border: (
+        light: functions.zeroPadding(
+            $color-light-lightness-border + $color-lightness-offset-hover,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-border + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      placeholder: (
+        light: functions.zeroPadding(
+            $color-light-lightness-placeholder + $color-lightness-offset-hover,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-placeholder + $color-lightness-offset-hover,
+            2
+          ),
+      ),
+      shadow: (
+        light: functions.zeroPadding(
+            $color-light-lightness-shadow + $color-lightness-offset-hover,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-shadow + $color-lightness-offset-hover,
+            2
+          ),
+      ),
       accordion: (
         accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-fore,
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-fore +
+                  $color-lightness-offset-hover,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-fore +
+                  $color-lightness-offset-hover,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-back +
+                  $color-lightness-offset-hover,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-back +
+                  $color-lightness-offset-hover,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-border +
+                  $color-lightness-offset-hover,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-border +
+                  $color-lightness-offset-hover,
+                2
+              ),
+          ),
+        ),
+      ),
+      badge: (
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-fore + $color-lightness-offset-hover,
               2
             ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-back +
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-fore + $color-lightness-offset-hover,
+              2
+            ),
+        ),
+        back: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-back + $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-back + $color-lightness-offset-hover,
+              2
+            ),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-badge-border +
+                $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-badge-border + $color-lightness-offset-hover,
+              2
+            ),
+        ),
+      ),
+      button: (
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-fore + $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-fore + $color-lightness-offset-hover,
+              2
+            ),
+        ),
+        back: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-back + $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-back + $color-lightness-offset-hover,
+              2
+            ),
+        ),
+        border: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-border +
+                $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-border +
                 $color-lightness-offset-hover,
               2
             ),
         ),
-      ),
-      badge: (
-        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
-        back:
-          functions.zeroPadding(
-            $color-light-lightness-badge-back + $color-lightness-offset-hover,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-badge-border + $color-lightness-offset-hover,
-            2
-          ),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
-            $color-light-lightness-button-back + $color-lightness-offset-hover,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-button-border + $color-lightness-offset-hover,
-            2
-          ),
-        shadow: "50",
+        shadow: (
+          light: functions.zeroPadding(
+              $color-light-lightness-button-shadow +
+                $color-lightness-offset-hover,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-button-shadow +
+                $color-lightness-offset-hover,
+              2
+            ),
+        ),
       ),
     ),
   //#endregion hover
   //#region focus
   (
       name: "focus",
-      fore: functions.zeroPadding($color-light-lightness-fore, 2),
-      back: functions.zeroPadding($color-light-lightness-back, 2),
-      border:
-        functions.zeroPadding(
-          $color-light-lightness-border + $color-lightness-offset-focus,
-          2
-        ),
-      placeholder: functions.zeroPadding($color-light-lightness-placeholder, 2),
-      shadow: functions.zeroPadding($color-light-lightness-shadow, 2),
+      fore: (
+        light: functions.zeroPadding(
+            $color-light-lightness-fore + $color-lightness-offset-focus,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-fore + $color-lightness-offset-focus,
+            2
+          ),
+      ),
+      back: (
+        light: functions.zeroPadding(
+            $color-light-lightness-back + $color-lightness-offset-focus,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-back + $color-lightness-offset-focus,
+            2
+          ),
+      ),
+      border: (
+        light: functions.zeroPadding(
+            $color-light-lightness-border + $color-lightness-offset-focus,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-border + $color-lightness-offset-focus,
+            2
+          ),
+      ),
+      placeholder: (
+        light: functions.zeroPadding(
+            $color-light-lightness-placeholder + $color-lightness-offset-focus,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-placeholder + $color-lightness-offset-focus,
+            2
+          ),
+      ),
+      shadow: (
+        light: functions.zeroPadding(
+            $color-light-lightness-shadow + $color-lightness-offset-focus,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-shadow + $color-lightness-offset-focus,
+            2
+          ),
+      ),
       accordion: (
         accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-back,
-              2
-            ),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-fore,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-fore,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-back,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-back,
+                2
+              ),
+          ),
+          border: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-border,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-border,
+                2
+              ),
+          ),
         ),
       ),
       badge: (
-        fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-badge-back, 2),
-        border: functions.zeroPadding($color-light-lightness-badge-border, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-badge-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-badge-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+        ),
       ),
       button: (
-        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-        back: functions.zeroPadding($color-light-lightness-button-back, 2),
-        border: functions.zeroPadding($color-light-lightness-button-border, 2),
-        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-button-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-button-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-button-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+        ),
       ),
     ),
   //#endregion focus
   //#region active
   (
       name: "active",
-      fore:
-        functions.zeroPadding(
-          $color-light-lightness-fore + $color-lightness-offset-active,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-light-lightness-back + $color-lightness-offset-active,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-light-lightness-border + $color-lightness-offset-active,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-light-lightness-placeholder + $color-lightness-offset-active,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-light-lightness-shadow + $color-lightness-offset-active,
-          2
-        ),
+      fore: (
+        light: functions.zeroPadding(
+            $color-light-lightness-fore + $color-lightness-offset-active,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-fore + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      back: (
+        light: functions.zeroPadding(
+            $color-light-lightness-back + $color-lightness-offset-active,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-back + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      border: (
+        light: functions.zeroPadding(
+            $color-light-lightness-border + $color-lightness-offset-active,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-border + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      placeholder: (
+        light: functions.zeroPadding(
+            $color-light-lightness-placeholder + $color-lightness-offset-active,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-placeholder + $color-lightness-offset-active,
+            2
+          ),
+      ),
+      shadow: (
+        light: functions.zeroPadding(
+            $color-light-lightness-shadow + $color-lightness-offset-active,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-shadow + $color-lightness-offset-active,
+            2
+          ),
+      ),
       accordion: (
         accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-light-lightness-accordion-summary-back +
-                $color-lightness-offset-active,
-              2
-            ),
+          fore: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-fore +
+                  $color-lightness-offset-active,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-fore +
+                  $color-lightness-offset-active,
+                2
+              ),
+          ),
+          back: (
+            light: functions.zeroPadding(
+                $color-light-lightness-accordion-summary-back +
+                  $color-lightness-offset-active,
+                2
+              ),
+            dark: functions.zeroPadding(
+                $color-dark-lightness-accordion-summary-back +
+                  $color-lightness-offset-active,
+                2
+              ),
+          ),
         ),
       ),
       badge: (
-        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding(
             $color-light-lightness-badge-back + $color-lightness-offset-active,
             2
           ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-badge-border + $color-lightness-offset-active,
-            2
-          ),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
-            $color-light-lightness-button-back + $color-lightness-offset-active,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-light-lightness-button-border +
-              $color-lightness-offset-active,
-            2
-          ),
-        shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
-      ),
-    ),
-  //#endregion active
-  //#region visited
-  (
-    name: "visited",
-    fore:
-      functions.zeroPadding(
-        $color-light-lightness-fore + $color-lightness-offset-visited,
-        2
-      ),
-    back:
-      functions.zeroPadding(
-        $color-light-lightness-back + $color-lightness-offset-visited,
-        2
-      ),
-    border:
-      functions.zeroPadding(
-        $color-light-lightness-border + $color-lightness-offset-visited,
-        2
-      ),
-    placeholder:
-      functions.zeroPadding(
-        $color-light-lightness-placeholder + $color-lightness-offset-visited,
-        2
-      ),
-    shadow:
-      functions.zeroPadding(
-        $color-light-lightness-shadow + $color-lightness-offset-visited,
-        2
-      ),
-    badge: (
-      fore: functions.zeroPadding($color-light-lightness-badge-fore, 2),
-      back: functions.zeroPadding($color-light-lightness-badge-back, 2),
-      border: functions.zeroPadding($color-light-lightness-badge-border, 2),
-    ),
-    button: (
-      fore: functions.zeroPadding($color-light-lightness-button-fore, 2),
-      back: functions.zeroPadding($color-light-lightness-button-back, 2),
-      border: functions.zeroPadding($color-light-lightness-button-border, 2),
-      shadow: functions.zeroPadding($color-light-lightness-button-shadow, 2),
-    ),
-    link: (
-      fore:
-        functions.zeroPadding(
-          $color-light-lightness-link-fore + $color-lightness-offset-visited,
-          2
-        ),
-    ),
-  )
-  //#endregion visited
-);
-
-//#endregion colorShadesLight
-
-//#region colorShadesDark
-
-$colorShadesDark: (
-  //#region plain
-  (
-      name: "plain",
-      fore: functions.zeroPadding($color-dark-lightness-fore, 2),
-      back: functions.zeroPadding($color-dark-lightness-back, 2),
-      border: functions.zeroPadding($color-dark-lightness-border, 2),
-      placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
-      shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
-      dot: (
-        fore: functions.zeroPadding($color-dark-lightness-dot-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-dot-back, 2),
-      ),
-      gingham: (
-        fore: functions.zeroPadding($color-dark-lightness-gingham-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-gingham-back, 2),
-      ),
-      rhombus: (
-        fore: functions.zeroPadding($color-dark-lightness-rhombus-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-rhombus-back, 2),
-      ),
-      stripe: (
-        fore: functions.zeroPadding($color-dark-lightness-stripe-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-stripe-back, 2),
-      ),
-      zigzag: (
-        fore: functions.zeroPadding($color-dark-lightness-zigzag-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-zigzag-back, 2),
-      ),
-      accordion: (
-        fore: functions.zeroPadding($color-dark-lightness-accordion-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-accordion-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-accordion-border, 2),
-        accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-back,
-              2
-            ),
-          border:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-border,
-              2
-            ),
-        ),
-        accordionDetails: (
-          fore:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-details-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-details-back,
-              2
-            ),
-          border:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-details-border,
-              2
-            ),
-        ),
-      ),
-      badge: (
-        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
-      ),
-      blockquote: (
-        fore: functions.zeroPadding($color-dark-lightness-blockquote-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-blockquote-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-blockquote-border, 2),
-      ),
-      breadcrumbs: (
-        fore: functions.zeroPadding($color-dark-lightness-breadcrumbs-fore, 2),
-        breadcrumb: (
-          fore: functions.zeroPadding($color-dark-lightness-breadcrumb-fore, 2),
-        ),
-        breadcrumbDivider: (
-          fore: functions.zeroPadding($color-dark-lightness-breadcrumb-divider-fore, 2),
-        ),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
-        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
-      ),
-      card: (
-        fore: functions.zeroPadding($color-dark-lightness-card-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-card-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-card-border, 2),
-        shadow: functions.zeroPadding($color-dark-lightness-card-shadow, 2),
-        cardHeader: (
-          fore: functions.zeroPadding($color-dark-lightness-card-header-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-card-header-back, 2),
-        ),
-        cardBody: (
-          fore: functions.zeroPadding($color-dark-lightness-card-body-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-card-body-back, 2),
-        ),
-        cardFooter: (
-          fore: functions.zeroPadding($color-dark-lightness-card-footer-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-card-footer-back, 2),
-        ),
-      ),
-      dialogue: (
-        fore: functions.zeroPadding($color-dark-lightness-dialogue-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-dialogue-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-dialogue-border, 2),
-        dialogueAvatar: (
-          fore: functions.zeroPadding($color-dark-lightness-dialogue-avatar-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-dialogue-avatar-back, 2),
-          border: functions.zeroPadding($color-dark-lightness-dialogue-avatar-border, 2),
-        ),
-        dialogueName: (
-          fore: functions.zeroPadding($color-dark-lightness-dialogue-name-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-dialogue-name-back, 2),
-          border: functions.zeroPadding($color-dark-lightness-dialogue-name-border, 2),
-          shadow: functions.zeroPadding($color-dark-lightness-dialogue-name-shadow, 2),
-        ),
-        dialogueMessage: (
-          fore: functions.zeroPadding($color-dark-lightness-dialogue-message-fore, 2),
-          back: functions.zeroPadding($color-dark-lightness-dialogue-message-back, 2),
-          border: functions.zeroPadding($color-dark-lightness-dialogue-message-border, 2),
-        ),
-      ),
-      header: (
-        fore: functions.zeroPadding($color-dark-lightness-header-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-header-back, 2),
-        shadow: functions.zeroPadding($color-dark-lightness-header-shadow, 2),
-      ),
-      label: (
-        fore: functions.zeroPadding($color-dark-lightness-label-fore, 2),
-      ),
-      link: (
-        fore: functions.zeroPadding($color-dark-lightness-link-fore, 2),
-      ),
-      loader: (
-        fore: functions.zeroPadding($color-dark-lightness-loader-fore, 2),
-      ),
-      message: (
-        fore: functions.zeroPadding($color-dark-lightness-message-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-message-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-message-border, 2),
-        messageHeader: (
-          fore:
-            functions.zeroPadding($color-dark-lightness-message-header-fore, 2),
-          back:
-            functions.zeroPadding($color-dark-lightness-message-header-back, 2),
-        ),
-        messageBody: (
-          fore:
-            functions.zeroPadding($color-dark-lightness-message-body-fore, 2),
-          back:
-            functions.zeroPadding($color-dark-lightness-message-body-back, 2),
-        ),
-      ),
-      progress: (
-        fore: functions.zeroPadding($color-dark-lightness-progress-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-progress-back, 2),
-      ),
-    ),
-  //#endregion plain
-  //#region disabled
-  (
-      name: "disabled",
-      fore:
-        functions.zeroPadding(
-          $color-dark-lightness-fore + $color-dark-lightness-offset-disabled-fore,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-dark-lightness-back + $color-lightness-offset-disabled,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-dark-lightness-border + $color-lightness-offset-disabled,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-dark-lightness-placeholder + $color-lightness-offset-disabled,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-dark-lightness-shadow + $color-lightness-offset-disabled,
-          2
-        ),
-      accordion: (
-        accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-fore +
-              $color-dark-lightness-offset-disabled-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-back +
-                $color-lightness-offset-disabled,
-              2
-            ),
-          border:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-border +
-                $color-lightness-offset-disabled,
-              2
-            ),
-        ),
-      ),
-      badge: (
-        fore:
-          functions.zeroPadding(
-            $color-dark-lightness-badge-fore +
-            $color-dark-lightness-offset-disabled-fore,
-            2
-          ),
-        back:
-          functions.zeroPadding(
-            $color-dark-lightness-badge-back + $color-lightness-offset-disabled,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-dark-lightness-badge-border +
-              $color-lightness-offset-disabled,
-            2
-          ),
-      ),
-      button: (
-        fore:
-          functions.zeroPadding(
-            $color-dark-lightness-button-fore +
-            $color-dark-lightness-offset-disabled-fore,
-            2
-          ),
-        back:
-          functions.zeroPadding(
-            $color-dark-lightness-button-back + $color-lightness-offset-disabled,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-dark-lightness-button-border +
-              $color-lightness-offset-disabled,
-            2
-          ),
-        shadow:
-          functions.zeroPadding(
-            $color-dark-lightness-button-shadow +
-              $color-lightness-offset-disabled,
-            2
-          ),
-      ),
-    ),
-  //#endregion disabled
-  //#region hover
-  (
-      name: "hover",
-      fore:
-        functions.zeroPadding(
-          $color-dark-lightness-fore + $color-lightness-offset-hover,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-dark-lightness-back + $color-lightness-offset-hover,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-dark-lightness-border + $color-lightness-offset-hover,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-dark-lightness-placeholder + $color-lightness-offset-hover,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-dark-lightness-shadow + $color-lightness-offset-hover,
-          2
-        ),
-      accordion: (
-        accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-back +
-                $color-lightness-offset-hover,
-              2
-            ),
-        ),
-      ),
-      badge: (
-        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
-        back:
-          functions.zeroPadding(
-            $color-dark-lightness-badge-back + $color-lightness-offset-hover,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-dark-lightness-badge-border + $color-lightness-offset-hover,
-            2
-          ),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
-            $color-dark-lightness-button-back + $color-lightness-offset-hover,
-            2
-          ),
-        border:
-          functions.zeroPadding(
-            $color-dark-lightness-button-border + $color-lightness-offset-hover,
-            2
-          ),
-        shadow: "50",
-      ),
-    ),
-  //#endregion hover
-  //#region focus
-  (
-      name: "focus",
-      fore: functions.zeroPadding($color-dark-lightness-fore, 2),
-      back: functions.zeroPadding($color-dark-lightness-back, 2),
-      border:
-        functions.zeroPadding(
-          $color-dark-lightness-border + $color-lightness-offset-focus,
-          2
-        ),
-      placeholder: functions.zeroPadding($color-dark-lightness-placeholder, 2),
-      shadow: functions.zeroPadding($color-dark-lightness-shadow, 2),
-      accordion: (
-        accordionSummary: (
-          fore: "95",
-          back: "30",
-          border: "50",
-        ),
-      ),
-      badge: (
-        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
-        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
-      ),
-    ),
-  //#endregion focus
-  //#region active
-  (
-      name: "active",
-      fore:
-        functions.zeroPadding(
-          $color-dark-lightness-fore + $color-lightness-offset-active,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-dark-lightness-back + $color-lightness-offset-active,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-dark-lightness-border + $color-lightness-offset-active,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-dark-lightness-placeholder + $color-lightness-offset-active,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-dark-lightness-shadow + $color-lightness-offset-active,
-          2
-        ),
-      accordion: (
-        accordionSummary: (
-          fore:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-fore,
-              2
-            ),
-          back:
-            functions.zeroPadding(
-              $color-dark-lightness-accordion-summary-back +
-                $color-lightness-offset-active,
-              2
-            ),
-        ),
-      ),
-      badge: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
+          dark: functions.zeroPadding(
             $color-dark-lightness-badge-back + $color-lightness-offset-active,
             2
           ),
-        border:
-          functions.zeroPadding(
+        ),
+        border: (
+          light: functions.zeroPadding(
+            $color-light-lightness-badge-border + $color-lightness-offset-active,
+            2
+          ),
+          dark: functions.zeroPadding(
             $color-dark-lightness-badge-border + $color-lightness-offset-active,
             2
           ),
+        ),
       ),
       button: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back:
-          functions.zeroPadding(
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-button-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding(
+            $color-light-lightness-button-back + $color-lightness-offset-active,
+            2
+          ),
+          dark: functions.zeroPadding(
             $color-dark-lightness-button-back + $color-lightness-offset-active,
             2
           ),
-        border:
-          functions.zeroPadding(
+        ),
+        border: (
+          light: functions.zeroPadding(
+            $color-light-lightness-button-border + $color-lightness-offset-active,
+            2
+          ),
+          dark: functions.zeroPadding(
             $color-dark-lightness-button-border + $color-lightness-offset-active,
             2
           ),
-        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding(
+            $color-light-lightness-button-shadow + $color-lightness-offset-active,
+            2
+          ),
+          dark: functions.zeroPadding(
+            $color-dark-lightness-button-shadow + $color-lightness-offset-active,
+            2
+          ),
+        ),
       ),
     ),
   //#endregion active
   //#region visited
   (
       name: "visited",
-      fore:
-        functions.zeroPadding(
-          $color-dark-lightness-fore + $color-lightness-offset-visited,
-          2
-        ),
-      back:
-        functions.zeroPadding(
-          $color-dark-lightness-back + $color-lightness-offset-visited,
-          2
-        ),
-      border:
-        functions.zeroPadding(
-          $color-dark-lightness-border + $color-lightness-offset-visited,
-          2
-        ),
-      placeholder:
-        functions.zeroPadding(
-          $color-dark-lightness-placeholder + $color-lightness-offset-visited,
-          2
-        ),
-      shadow:
-        functions.zeroPadding(
-          $color-dark-lightness-shadow + $color-lightness-offset-visited,
-          2
-        ),
-      badge: (
-        fore: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-badge-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-badge-border, 2),
-      ),
-      button: (
-        fore: functions.zeroPadding($color-dark-lightness-button-fore, 2),
-        back: functions.zeroPadding($color-dark-lightness-button-back, 2),
-        border: functions.zeroPadding($color-dark-lightness-button-border, 2),
-        shadow: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
-      ),
-      link: (
-        fore:
-          functions.zeroPadding(
-            $color-dark-lightness-link-fore + $color-lightness-offset-visited,
+      fore: (
+        light: functions.zeroPadding(
+            $color-light-lightness-fore + $color-lightness-offset-visited,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-fore + $color-lightness-offset-visited,
             2
           ),
       ),
-    )
-    //#endregion visited
+      back: (
+        light: functions.zeroPadding(
+            $color-light-lightness-back + $color-lightness-offset-visited,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-back + $color-lightness-offset-visited,
+            2
+          ),
+      ),
+      border: (
+        light: functions.zeroPadding(
+            $color-light-lightness-border + $color-lightness-offset-visited,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-border + $color-lightness-offset-visited,
+            2
+          ),
+      ),
+      placeholder: (
+        light: functions.zeroPadding(
+            $color-light-lightness-placeholder + $color-lightness-offset-visited,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-placeholder + $color-lightness-offset-visited,
+            2
+          ),
+      ),
+      shadow: (
+        light: functions.zeroPadding(
+            $color-light-lightness-shadow + $color-lightness-offset-visited,
+            2
+          ),
+        dark: functions.zeroPadding(
+            $color-dark-lightness-shadow + $color-lightness-offset-visited,
+            2
+          ),
+      ),
+      badge: (
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-badge-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-badge-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-badge-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-badge-border, 2),
+        ),
+      ),
+      button: (
+        fore: (
+          light: functions.zeroPadding($color-light-lightness-button-fore, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-fore, 2),
+        ),
+        back: (
+          light: functions.zeroPadding($color-light-lightness-button-back, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-back, 2),
+        ),
+        border: (
+          light: functions.zeroPadding($color-light-lightness-button-border, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-border, 2),
+        ),
+        shadow: (
+          light: functions.zeroPadding($color-light-lightness-button-shadow, 2),
+          dark: functions.zeroPadding($color-dark-lightness-button-shadow, 2),
+        ),
+      ),
+      link: (
+        fore: (
+          light: functions.zeroPadding(
+              $color-light-lightness-link-fore + $color-lightness-offset-visited,
+              2
+            ),
+          dark: functions.zeroPadding(
+              $color-dark-lightness-link-fore + $color-lightness-offset-visited,
+              2
+            ),
+        ),
+      ),
+    ) //#endregion visited
 );
 
-//#endregion colorShadesDark
+//#endregion colorShades
 
 //#endregion define color shades array
 

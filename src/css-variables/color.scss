@@ -36,7 +36,6 @@
 
     $oklch: #{$lightness} #{$chroma} #{$hue};
 
-    --#{variables.$prefix}color-#{$name}-#{$p}-oklch: #{$oklch};
     --#{variables.$prefix}color-#{$name}-#{$p}: oklch(#{$oklch});
   }
 }
@@ -60,43 +59,62 @@
 
   $fore: map.get($colorShade, "fore");
   @if ($fore != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$fore}
-    );
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore-oklch: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$fore}-oklch
-    );
+    $light: map.get($fore, "light");
+    $dark: map.get($fore, "dark");
+    @if ($light != null and $dark != null) {
+      --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-fore: light-dark(
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$light}),
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$dark})
+      );
+    }
   }
 
   $back: map.get($colorShade, "back");
   @if ($back != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$back}
-    );
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back-oklch: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$back}-oklch
-    );
+    $light: map.get($back, "light");
+    $dark: map.get($back, "dark");
+    @if ($light != null and $dark != null) {
+      --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-back: light-dark(
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$light}),
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$dark})
+      );
+    }
   }
 
   $border: map.get($colorShade, "border");
   @if ($border != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-border: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$border}
-    );
+    $light: map.get($border, "light");
+    $dark: map.get($border, "dark");
+    @if ($light != null and $dark != null) {
+      --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-border: light-dark(
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$light}),
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$dark})
+      );
+    }
   }
 
   $placeholder: map.get($colorShade, "placeholder");
   @if ($placeholder != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-placeholder: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$placeholder}
-    );
+    $light: map.get($placeholder, "light");
+    $dark: map.get($placeholder, "dark");
+    @if ($light != null and $dark != null) {
+      --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-placeholder: light-dark(
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$light}),
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$dark})
+      );
+    }
   }
 
   $shadow: map.get($colorShade, "shadow");
   @if ($shadow != null) {
-    --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-shadow: var(
-      --#{variables.$prefix}color-#{$srcColorName}-#{$shadow}
-    );
+    $light: map.get($shadow, "light");
+    $dark: map.get($shadow, "dark");
+    @if ($light != null and $dark != null) {
+      --#{variables.$prefix}color-#{$destColorName}#{$component}#{$pseudo}-shadow: light-dark(
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$light}),
+        var(--#{variables.$prefix}color-#{$srcColorName}-#{$dark})
+      );
+    }
   }
 }
 
@@ -562,16 +580,6 @@
   }
 }
 
-@mixin setColorLight() {
-  @include setColorShades(variables.$colorShadesLight);
-  color-scheme: light;
-}
-
-@mixin setColorDark() {
-  @include setColorShades(variables.$colorShadesDark);
-  color-scheme: dark;
-}
-
 :root {
   color-scheme: light dark;
   @each $color in variables.$colors {
@@ -582,12 +590,25 @@
       @include setColorVariables($color);
     }
   }
+  @include setColorShades(variables.$colorShades);
 }
 
-@include mixins.setCssVariableColorScheme("light") {
-  @include setColorLight();
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
 }
 
-@include mixins.setCssVariableColorScheme("dark") {
-  @include setColorDark();
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
 }

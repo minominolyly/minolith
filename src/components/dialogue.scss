@@ -87,6 +87,7 @@
         border-style: solid;
         border-width: var(--#{variables.$prefix}dialogue-border-width);
         border-radius: var(--#{variables.$prefix}border-radius-circle);
+        user-select: none;
       }
     }
   }

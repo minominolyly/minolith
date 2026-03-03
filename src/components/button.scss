@@ -49,16 +49,6 @@
       width: 5rem;
     }
   }
-  &:hover,
-  &.is-hovered,
-  &.is-hovered {
-    outline: none;
-    background-color: var(
-      --#{variables.$prefix}color-default-button-hover-back
-    );
-    border-color: var(--#{variables.$prefix}color-default-button-hover-border);
-    color: var(--#{variables.$prefix}color-default-button-hover-fore);
-  }
   &:focus,
   &.is-focus,
   &.is-focused {
@@ -68,6 +58,16 @@
     );
     border-color: var(--#{variables.$prefix}color-default-button-focus-border);
     color: var(--#{variables.$prefix}color-default-button-focus-fore);
+  }
+  &:hover,
+  &.is-hovered,
+  &.is-hovered {
+    outline: none;
+    background-color: var(
+      --#{variables.$prefix}color-default-button-hover-back
+    );
+    border-color: var(--#{variables.$prefix}color-default-button-hover-border);
+    color: var(--#{variables.$prefix}color-default-button-hover-fore);
   }
   &:active,
   &.is-active {

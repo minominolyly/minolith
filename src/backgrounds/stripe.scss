@@ -4,7 +4,8 @@
 
 .stripe {
   --#{variables.$prefix}stripe-color-fore: oklch(
-    var(--#{variables.$prefix}color-default-stripe-fore-oklch) / 0.5
+    from var(--#{variables.$prefix}color-default-stripe-fore) l c h /
+      calc(alpha - 0.5)
   );
   --#{variables.$prefix}stripe-color-back: var(
     --#{variables.$prefix}color-default-stripe-back
@@ -34,7 +35,11 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}stripe-color-fore: oklch(
-          var(--#{variables.$prefix}color-#{$colorName}-stripe-fore-oklch) / 0.5
+          from var(--#{variables.$prefix}color-#{$colorName}-stripe-fore)
+            l
+            c
+            h /
+            calc(alpha - 0.5)
         );
         --#{variables.$prefix}stripe-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-stripe-back

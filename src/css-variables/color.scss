@@ -580,7 +580,7 @@
   }
 }
 
-:root {
+:where(:root) {
   color-scheme: light dark;
   @each $color in variables.$colors {
     $name: map.get($color, "name");

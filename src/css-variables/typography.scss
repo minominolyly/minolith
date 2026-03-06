@@ -1,6 +1,6 @@
 @use "../variables/index.scss" as variables;
 
-:root {
+:where(:root) {
   --#{variables.$prefix}font-family-serif: #{variables.$font-family-serif};
   --#{variables.$prefix}font-family-sans-serif: #{variables.$font-family-sans-serif};
   --#{variables.$prefix}font-family-monospace: #{variables.$font-family-monospace};

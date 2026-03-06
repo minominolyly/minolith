@@ -94,26 +94,41 @@
       }
       //#region forecolor
       .forecolor#{$derived}-#{$colorName}-#{$numStr} {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include forecolor($colorName, $numStr);
       }
       .forecolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include forecolor($colorName, $numStr);
         }
       }
       .forecolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include forecolor($colorName, $numStr);
         }
       }
@@ -121,26 +136,41 @@
 
       //#region backcolor
       .backcolor#{$derived}-#{$colorName}-#{$numStr} {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include backcolor($colorName, $numStr);
       }
       .backcolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include backcolor($colorName, $numStr);
         }
       }
       .backcolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include backcolor($colorName, $numStr);
         }
       }
@@ -148,55 +178,88 @@
 
       //#region bordercolor
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include bordercolor($colorName, $numStr);
       }
       .bordercolor#{$derived}-#{$colorName}-#{$numStr} {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include bordercolor($colorName, $numStr);
       }
       .bordercolor#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include bordercolor($colorName, $numStr);
         }
       }
       .bordercolor#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include bordercolor($colorName, $numStr);
         }
       }
 
       @each $borderSide in variables.$borderSides {
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-#{$numStr} {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include bordercolor($colorName, $numStr, $borderSide);
         }
         .bordercolor#{$derived}-#{$borderSide}-hover-#{$colorName}-#{$numStr} {
           &:hover {
+            @if ($colorScheme != null) {
+              color-scheme: string.unquote($colorScheme);
+            }
             @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-focus-#{$numStr} {
           &:focus {
+            @if ($colorScheme != null) {
+              color-scheme: string.unquote($colorScheme);
+            }
             @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-active-#{$numStr} {
           &:active {
+            @if ($colorScheme != null) {
+              color-scheme: string.unquote($colorScheme);
+            }
             @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
         .bordercolor#{$derived}-#{$borderSide}-#{$colorName}-disabled-#{$numStr} {
           &[disabled],
           fieldset[disabled] {
+            @if ($colorScheme != null) {
+              color-scheme: string.unquote($colorScheme);
+            }
             @include bordercolor($colorName, $numStr, $borderSide);
           }
         }
@@ -205,26 +268,41 @@
 
       //#region highlighter
       .highlighter#{$derived}-#{$colorName}-#{$numStr} {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include highlighter($colorName, $numStr);
       }
       .highlighter#{$derived}-hover-#{$colorName}-#{$numStr} {
         &:hover {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-focus-#{$numStr} {
         &:focus {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-active-#{$numStr} {
         &:active {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include highlighter($colorName, $numStr);
         }
       }
       .highlighter#{$derived}-#{$colorName}-disabled-#{$numStr} {
         &[disabled],
         fieldset[disabled] {
+          @if ($colorScheme != null) {
+            color-scheme: string.unquote($colorScheme);
+          }
           @include highlighter($colorName, $numStr);
         }
       }
@@ -242,26 +320,43 @@
     }
     //#region forecolor
     .forecolor#{$derived}-rainbow-#{$numStr} {
+      @if ($colorScheme != null) {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
+      }
       @include forecolor("rainbow", $numStr);
     }
     .forecolor#{$derived}-hover-rainbow-#{$numStr} {
       &:hover {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include forecolor("rainbow", $numStr);
       }
     }
     .forecolor#{$derived}-rainbow-focus-#{$numStr} {
       &:focus {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include forecolor("rainbow", $numStr);
       }
     }
     .forecolor#{$derived}-rainbow-active-#{$numStr} {
       &:active {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include forecolor("rainbow", $numStr);
       }
     }
     .forecolor#{$derived}-rainbow-disabled-#{$numStr} {
       &[disabled],
       fieldset[disabled] {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include forecolor("rainbow", $numStr);
       }
     }
@@ -269,26 +364,41 @@
 
     //#region backcolor
     .backcolor#{$derived}-rainbow-#{$numStr} {
+      @if ($colorScheme != null) {
+        color-scheme: string.unquote($colorScheme);
+      }
       @include backcolor("rainbow", $numStr);
     }
     .backcolor#{$derived}-hover-rainbow-#{$numStr} {
       &:hover {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include backcolor("rainbow", $numStr);
       }
     }
     .backcolor#{$derived}-rainbow-focus-#{$numStr} {
       &:focus {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include backcolor("rainbow", $numStr);
       }
     }
     .backcolor#{$derived}-rainbow-active-#{$numStr} {
       &:active {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include backcolor("rainbow", $numStr);
       }
     }
     .backcolor#{$derived}-rainbow-disabled-#{$numStr} {
       &[disabled],
       fieldset[disabled] {
+        @if ($colorScheme != null) {
+          color-scheme: string.unquote($colorScheme);
+        }
         @include backcolor("rainbow", $numStr);
       }
     }
@@ -302,9 +412,5 @@
 }
 
 @include colorUtilities();
-@include mixins.setColorScheme("light") {
-  @include colorUtilities("light");
-}
-@include mixins.setColorScheme("dark") {
-  @include colorUtilities("dark");
-}
+@include colorUtilities("light");
+@include colorUtilities("dark");

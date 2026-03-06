@@ -1,6 +1,6 @@
 @use "../variables/index.scss" as variables;
 
-:root {
+:where(:root) {
   --#{variables.$prefix}animation-speed-heavy: #{variables.$animation-speed-heavy};
   --#{variables.$prefix}animation-speed-slower: #{variables.$animation-speed-slower};
   --#{variables.$prefix}animation-speed-slow: #{variables.$animation-speed-slow};

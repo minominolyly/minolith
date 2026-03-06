@@ -1,7 +1,7 @@
 @use "../variables/index.scss" as variables;
 @use "sass:map";
 
-:root {
+:where(:root) {
   @each $borderWidth in variables.$borderWidths {
     $name: map.get($borderWidth, "name");
     $value: map.get($borderWidth, "value");

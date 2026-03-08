@@ -1,6 +1,7 @@
 @use "../variables/index.scss" as variables;
 
-:root {
+:where(:root) {
+  scrollbar-gutter: stable;
   @if variables.$enable-smooth-scroll {
     @media (prefers-reduced-motion: no-preference) {
       scroll-behavior: smooth;

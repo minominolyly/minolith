@@ -3,13 +3,27 @@
 @use "../mixins/index.scss" as mixins;
 
 .progress {
+  --#{variables.$prefix}color-progress-fore: var(
+    --#{variables.$prefix}color-default-progress-fore,
+    --#{variables.$prefix}color-default-fore
+  );
+  --#{variables.$prefix}color-progress-back: var(
+    --#{variables.$prefix}color-default-progress-back,
+    --#{variables.$prefix}color-default-back
+  );
+  --#{variables.$prefix}color-progress-border: var(
+    --#{variables.$prefix}color-default-progress-border,
+    --#{variables.$prefix}color-default-border
+  );
+  --#{variables.$prefix}progress-percent: 0;
+
   @include mixins.element();
   @include mixins.animation() {
     border-radius: var(--#{variables.$prefix}border-radius-pill);
     border-style: solid;
     border-width: var(--#{variables.$prefix}border-width-thick);
-    background-color: var(--#{variables.$prefix}color-default-progress-back);
-    color: var(--#{variables.$prefix}color-default-progress-fore);
+    background-color: var(--#{variables.$prefix}color-progress-back);
+    color: var(--#{variables.$prefix}color-progress-fore);
     height: 1rem;
     position: relative;
     &::before {
@@ -19,23 +33,32 @@
       inset: 0 100% 0 0;
       border-radius: inherit;
       background: currentColor;
+      inset: 0 calc((100 - var(--#{variables.$prefix}progress-percent)) * 1%) 0
+        0;
     }
 
     @for $p from 0 through 100 {
       &.is-#{$p}percent {
-        $val: ((100 - $p) * 1%);
-        &::before {
-          inset: 0 $val 0 0;
-        }
+        --#{variables.$prefix}progress-percent: #{$p};
       }
     }
 
     @if (not variables.$is-skelton) {
       @each $color in variables.$colors {
-      $colorName: map.get($color, "name");
+        $colorName: map.get($color, "name");
         &.is-#{$colorName} {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-progress-back);
-          color: var(--#{variables.$prefix}color-#{$colorName}-progress-fore);
+          --#{variables.$prefix}color-progress-fore: var(
+            --#{variables.$prefix}color-#{$colorName}-progress-fore,
+            --#{variables.$prefix}color-#{$colorName}-fore
+          );
+          --#{variables.$prefix}color-progress-back: var(
+            --#{variables.$prefix}color-#{$colorName}-progress-back,
+            --#{variables.$prefix}color-#{$colorName}-back
+          );
+          --#{variables.$prefix}color-progress-border: var(
+            --#{variables.$prefix}color-#{$colorName}-progress-border,
+            --#{variables.$prefix}color-#{$colorName}-border
+          );
         }
       }
     }

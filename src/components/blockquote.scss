@@ -4,17 +4,30 @@
 @use "../mixins/index.scss" as mixins;
 
 .blockquote {
+  //#region local css variables
+  --#{variables.$prefix}color-blockquote-fore: var(
+    --#{variables.$prefix}color-default-blockquote-fore
+  );
+  --#{variables.$prefix}color-blockquote-back: var(
+    --#{variables.$prefix}color-default-blockquote-back
+  );
+  --#{variables.$prefix}color-blockquote-border: var(
+    --#{variables.$prefix}color-default-blockquote-border
+  );
+
   --#{variables.$prefix}blockquote-icon-font-size: var(
     --#{variables.$prefix}font-size-xxxlarge
   );
   --#{variables.$prefix}blockquote-border-left-width: var(
     --#{variables.$prefix}border-width-thick
   );
+  //#endregion local css variables
+
   @include mixins.element();
   position: relative;
-  color: var(--#{variables.$prefix}color-default-blockquote-fore);
-  background-color: var(--#{variables.$prefix}color-default-blockquote-back);
-  border-left-color: var(--#{variables.$prefix}color-default-blockquote-border);
+  color: var(--#{variables.$prefix}color-blockquote-fore);
+  background-color: var(--#{variables.$prefix}color-blockquote-back);
+  border-left-color: var(--#{variables.$prefix}color-blockquote-border);
   border-left-style: solid;
   border-left-width: var(--#{variables.$prefix}blockquote-border-left-width);
   margin: 0;
@@ -38,7 +51,7 @@
       content: open-quote;
       display: block;
       max-width: 100%;
-      color: var(--#{variables.$prefix}color-default-blockquote-fore);
+      color: var(--#{variables.$prefix}color-blockquote-fore);
       font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
     }
   }
@@ -65,27 +78,18 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-blockquote-back);
-        border-left-color: var(
+
+        //#region local css variables
+        --#{variables.$prefix}color-blockquote-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-fore
+        );
+        --#{variables.$prefix}color-blockquote-back: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-back
+        );
+        --#{variables.$prefix}color-blockquote-border: var(
           --#{variables.$prefix}color-#{$colorName}-blockquote-border
         );
-        color: var(--#{variables.$prefix}color-#{$colorName}-blockquote-fore);
-        &.has-quote,
-        &.has-quote-before {
-          &::before {
-            color: var(
-              --#{variables.$prefix}color-#{$colorName}-blockquote-fore
-            );
-          }
-        }
-        &.has-quote,
-        &.has-quote-after {
-          &::after {
-            color: var(
-              --#{variables.$prefix}color-#{$colorName}-blockquote-fore
-            );
-          }
-        }
+        //#endregion local css variables
       }
     }
   }

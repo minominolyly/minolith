@@ -5,7 +5,7 @@
 .dot {
   --#{variables.$prefix}dot-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-dot-fore) l c h /
-      calc(alpha - 0.5)
+      0.5
   );
   --#{variables.$prefix}dot-color-back: var(
     --#{variables.$prefix}color-default-dot-back
@@ -31,19 +31,19 @@
   background-repeat: repeat;
   background-size: 2rem 2rem;
 
-  &.is-coin {
-    --#{variables.$prefix}dot-size: 30%;
-  }
-
-  &.is-polka {
-    --#{variables.$prefix}dot-size: 20%;
-  }
-
-  &.is-pin {
-    --#{variables.$prefix}dot-size: 10%;
-  }
-
   @if (not variables.$is-skelton) {
+    &.is-coin {
+      --#{variables.$prefix}dot-size: 30%;
+    }
+
+    &.is-polka {
+      --#{variables.$prefix}dot-size: 20%;
+    }
+
+    &.is-pin {
+      --#{variables.$prefix}dot-size: 10%;
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
@@ -52,7 +52,7 @@
             l
             c
             h /
-            calc(alpha - 0.5)
+            0.5
         );
         --#{variables.$prefix}dot-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-dot-back

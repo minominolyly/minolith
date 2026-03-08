@@ -2,15 +2,540 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
+@mixin nav-menu-item-base() {
+  @include mixins.element();
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  line-height: 1.5;
+  max-width: 100%;
+  padding: 0.5rem;
+  position: relative;
+  text-decoration: none;
+  color: var(--#{variables.$prefix}color-nav-menu-item-fore);
+  text-shadow:
+    2px 2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    -2px 2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    2px -2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    -2px -2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    2px 0px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    0px 2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    -2px 0px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      ),
+    0px -2px 1px
+      oklch(
+        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
+          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+      );
+  > .nav-menu-item-icon {
+    @include mixins.element();
+    filter: drop-shadow(
+        2px 2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+      )
+      drop-shadow(
+        -2px 2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+      )
+      drop-shadow(
+        2px -2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+      )
+      drop-shadow(
+        -2px -2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+      );
+  }
+  &[onclick],
+  &:any-link,
+  &.is-clickable {
+    cursor: pointer;
+    &:focus,
+    &.is-focus,
+    &.is-focused {
+      color: var(--#{variables.$prefix}color-nav-menu-item-focus-fore);
+      text-shadow:
+        2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          );
+      > .nav-menu-item-icon {
+        filter: drop-shadow(
+            2px 2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px 2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            2px -2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px -2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          );
+      }
+    }
+    &:hover,
+    &.is-hovered,
+    &.is-hovered {
+      color: var(--#{variables.$prefix}color-nav-menu-item-hover-fore);
+      text-shadow:
+        2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+              h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          );
+      > .nav-menu-item-icon {
+        filter: drop-shadow(
+            2px 2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px 2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            2px -2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px -2px 1px
+              oklch(
+                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          );
+      }
+    }
+    &:active,
+    &.is-active {
+      color: var(--#{variables.$prefix}color-nav-menu-item-active-fore);
+      text-shadow:
+        2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+              c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          );
+      > .nav-menu-item-icon {
+        filter: drop-shadow(
+            2px 2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px 2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            2px -2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px -2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          );
+      }
+    }
+    &[disabled],
+    fieldset[disabled],
+    &.is-disabled {
+      color: var(--#{variables.$prefix}color-nav-menu-item-disabled-fore);
+      text-shadow:
+        2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px 2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        -2px 0px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          ),
+        0px -2px 1px
+          oklch(
+            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+              l c h /
+              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+          );
+      > .nav-menu-item-icon {
+        filter: drop-shadow(
+            2px 2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px 2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            2px -2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          )
+          drop-shadow(
+            -2px -2px 1px
+              oklch(
+                from
+                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  l c h /
+                  var(
+                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                  )
+              )
+          );
+      }
+    }
+  }
+}
+
 .nav {
+  --#{variables.$prefix}color-nav-fore: var(
+    --#{variables.$prefix}color-default-nav-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}color-nav-back: var(
+    --#{variables.$prefix}color-default-nav-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+  --#{variables.$prefix}color-nav-border: var(
+    --#{variables.$prefix}color-default-nav-border,
+    var(--#{variables.$prefix}color-default-border)
+  );
+
+  --#{variables.$prefix}color-nav-menu-item-fore: var(
+    --#{variables.$prefix}color-default-nav-menu-item-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}color-nav-menu-item-shadow: var(
+    --#{variables.$prefix}color-default-nav-menu-item-shadow,
+    var(--#{variables.$prefix}color-default-shadow)
+  );
+  --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha: 0.5;
+
+  --#{variables.$prefix}color-nav-menu-item-focus-fore: var(
+    --#{variables.$prefix}color-default-nav-menu-item-focus-fore,
+    var(--#{variables.$prefix}color-default-focus-fore)
+  );
+  --#{variables.$prefix}color-nav-menu-item-focus-shadow: var(
+    --#{variables.$prefix}color-default-nav-menu-item-focus-shadow,
+    var(--#{variables.$prefix}color-default-focus-shadow)
+  );
+
+  --#{variables.$prefix}color-nav-menu-item-hover-fore: var(
+    --#{variables.$prefix}color-default-nav-menu-item-hover-fore,
+    var(--#{variables.$prefix}color-default-hover-fore)
+  );
+  --#{variables.$prefix}color-nav-menu-item-hover-shadow: var(
+    --#{variables.$prefix}color-default-nav-menu-item-hover-shadow,
+    var(--#{variables.$prefix}color-default-hover-shadow)
+  );
+
+  --#{variables.$prefix}color-nav-menu-item-active-fore: var(
+    --#{variables.$prefix}color-default-nav-menu-item-active-fore,
+    var(--#{variables.$prefix}color-default-active-fore)
+  );
+  --#{variables.$prefix}color-nav-menu-item-active-shadow: var(
+    --#{variables.$prefix}color-default-nav-menu-item-active-shadow,
+    var(--#{variables.$prefix}color-default-active-shadow)
+  );
+
+  --#{variables.$prefix}color-nav-menu-item-disabled-fore: var(
+    --#{variables.$prefix}color-default-nav-menu-item-disabled-fore,
+    var(--#{variables.$prefix}color-default-disabled-fore)
+  );
+  --#{variables.$prefix}color-nav-menu-item-disabled-shadow: var(
+    --#{variables.$prefix}color-default-nav-menu-item-disabled-shadow,
+    var(--#{variables.$prefix}color-default-disabled-shadow)
+  );
+
   @include mixins.element();
   min-height: 4rem;
   padding: 0.25rem 0;
-  .nav-static {
+  > .nav-static {
     @include mixins.element();
     @include mixins.add-responsible-visible() {
       display: flex;
-      .nav-brand {
+      > .nav-brand {
         @include mixins.element();
         display: flex;
         flex-basis: 0;
@@ -19,12 +544,12 @@
         max-width: 100%;
         margin: auto;
         position: relative;
-        .nav-brand-left,
-        .nav-brand-center,
-        .nav-brand-right,
-        .left,
-        .center,
-        .right {
+        > .nav-brand-left,
+        > .nav-brand-center,
+        > .nav-brand-right,
+        > .left,
+        > .center,
+        > .right {
           @include mixins.element();
           display: block;
           flex-basis: 0;
@@ -34,21 +559,21 @@
           margin: auto;
           position: relative;
         }
-        .nav-brand-left,
-        .left {
+        > .nav-brand-left,
+        > .left {
           margin: auto auto auto 0;
           text-align: left;
           flex-basis: 30%;
           max-width: 30%;
           width: 30%;
         }
-        .nav-brand-right,
-        .right {
+        > .nav-brand-right,
+        > .right {
           margin: auto 0 auto auto;
           text-align: right;
         }
       }
-      .nav-menu {
+      > .nav-menu {
         @include mixins.element();
         display: flex;
         flex-basis: 0;
@@ -57,77 +582,14 @@
         max-width: 100%;
         margin: auto;
         position: relative;
-        .nav-menu-item {
-          @include mixins.element();
-          cursor: pointer;
-          display: block;
-          flex-basis: 0;
-          flex-grow: 1;
-          flex-shrink: 1;
-          line-height: 1.5;
-          margin: 0.25em;
-          max-width: 100%;
-          padding: 0.5rem;
-          position: relative;
-          text-decoration: none;
-          color: var(--#{variables.$prefix}color-default-fore);
-          text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            2px -2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px -2px 1px var(--#{variables.$prefix}color-default-shadow),
-            2px 0px 1px var(--#{variables.$prefix}color-default-shadow),
-            0px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px 0px 1px var(--#{variables.$prefix}color-default-shadow),
-            0px -2px 1px var(--#{variables.$prefix}color-default-shadow);
-          .icon {
-            @include mixins.element();
-            filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-shadow));
-          }
-          &:hover {
-            color: var(--#{variables.$prefix}color-default-fore-hover);
-            text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              2px 0px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              0px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px 0px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              0px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow);
-            opacity: 0.8;
-            .icon {
-              filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow));
-            }
-          }
-          &:active {
-            color: var(--#{variables.$prefix}color-default-fore-active);
-            text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              2px 0px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              0px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px 0px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              0px -2px 1px var(--#{variables.$prefix}color-default-active-shadow);
-            .icon {
-              filter: drop-shadow(
-                  2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow)
-                )
-                drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow))
-                drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow))
-                drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow));
-            }
-          }
+        > .nav-menu-item {
+          @include nav-menu-item-base();
         }
       }
     }
   }
-  .nav-accordion {
+
+  > .nav-accordion {
     @include mixins.element();
     @include mixins.add-responsible-visible() {
       display: block;
@@ -173,67 +635,7 @@
           display: block;
         }
         .nav-menu-item {
-          @include mixins.element();
-          color: var(--#{variables.$prefix}color-default-fore);
-          width: 100%;
-          display: block;
-          cursor: pointer;
-          line-height: 1.5;
-          margin: 0.25em 0;
-          max-width: 100%;
-          padding: 0.5rem;
-          position: relative;
-          text-decoration: none;
-          text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            2px -2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px -2px 1px var(--#{variables.$prefix}color-default-shadow),
-            2px 0px 1px var(--#{variables.$prefix}color-default-shadow),
-            0px 2px 1px var(--#{variables.$prefix}color-default-shadow),
-            -2px 0px 1px var(--#{variables.$prefix}color-default-shadow),
-            0px -2px 1px var(--#{variables.$prefix}color-default-shadow);
-          .icon {
-            filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-shadow))
-              drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-shadow));
-          }
-          &:hover {
-            color: var(--#{variables.$prefix}color-default-fore-hover);
-            text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              2px 0px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              0px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              -2px 0px 1px var(--#{variables.$prefix}color-default-hover-shadow),
-              0px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow);
-            .icon {
-              filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow))
-                drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-hover-shadow));
-            }
-          }
-          &:active {
-            color: var(--#{variables.$prefix}color-default-fore-active);
-            text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              2px 0px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              0px 2px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              -2px 0px 1px var(--#{variables.$prefix}color-default-active-shadow),
-              0px -2px 1px var(--#{variables.$prefix}color-default-active-shadow);
-            .icon {
-              filter: drop-shadow(
-                  2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow)
-                )
-                drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-default-active-shadow))
-                drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow))
-                drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-default-active-shadow));
-            }
-          }
+          @include nav-menu-item-base();
         }
       }
     }
@@ -243,144 +645,59 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-        .nav-accordion {
-          .nav-menu {
-            .nav-menu-item {
-              color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-              text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow);
-              .icon {
-                filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow));
-              }
-              &:hover {
-                color: var(--#{variables.$prefix}color-#{$colorName}-fore-hover);
-                text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow);
-                opacity: 0.8;
-                .icon {
-                  filter: drop-shadow(
-                      2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    )
-                    drop-shadow(
-                      -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    )
-                    drop-shadow(
-                      2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    )
-                    drop-shadow(
-                      -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    );
-                }
-              }
-              &:active {
-                color: var(--#{variables.$prefix}color-#{$colorName}-fore-active);
-                text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow);
-                .icon {
-                  filter: drop-shadow(
-                      2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    )
-                    drop-shadow(
-                      -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    )
-                    drop-shadow(
-                      2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    )
-                    drop-shadow(
-                      -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    );
-                }
-              }
-            }
-          }
-        }
+        --#{variables.$prefix}color-nav-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}color-nav-back: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
+        );
+        --#{variables.$prefix}color-nav-border: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-border,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
+        );
 
-        .nav-static {
-          .nav-menu {
-            .nav-menu-item {
-              color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-              text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow),
-                0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow);
-              .icon {
-                filter: drop-shadow(2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow))
-                  drop-shadow(-2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-shadow));
-              }
-              &:hover {
-                color: var(--#{variables.$prefix}color-#{$colorName}-fore-hover);
-                text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow),
-                  0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow);
-                opacity: 0.8;
-                .icon {
-                  filter: drop-shadow(
-                      2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    )
-                    drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow))
-                    drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow))
-                    drop-shadow(
-                      -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-                    );
-                }
-              }
-              &:active {
-                color: var(--#{variables.$prefix}color-#{$colorName}-fore-active);
-                text-shadow: 2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  0px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  -2px 0px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow),
-                  0px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow);
-                .icon {
-                  filter: drop-shadow(
-                      2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    )
-                    drop-shadow(-2px 2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow))
-                    drop-shadow(2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow))
-                    drop-shadow(
-                      -2px -2px 1px var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-                    );
-                }
-              }
-            }
-          }
-        }
+        --#{variables.$prefix}color-nav-menu-item-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}color-nav-menu-item-focus-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-fore)
+        );
+        --#{variables.$prefix}color-nav-menu-item-hover-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-fore)
+        );
+        --#{variables.$prefix}color-nav-menu-item-active-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-active-fore)
+        );
+        --#{variables.$prefix}color-nav-menu-item-disabled-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-fore)
+        );
+        --#{variables.$prefix}color-nav-menu-item-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-shadow)
+        );
+        --#{variables.$prefix}color-nav-menu-item-focus-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-shadow)
+        );
+        --#{variables.$prefix}color-nav-menu-item-hover-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
+        );
+        --#{variables.$prefix}color-nav-menu-item-active-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
+        );
+        --#{variables.$prefix}color-nav-menu-item-disabled-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-shadow)
+        );
       }
     }
   }

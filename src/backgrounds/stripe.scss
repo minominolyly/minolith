@@ -5,7 +5,7 @@
 .stripe {
   --#{variables.$prefix}stripe-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-stripe-fore) l c h /
-      calc(alpha - 0.5)
+      0.5
   );
   --#{variables.$prefix}stripe-color-back: var(
     --#{variables.$prefix}color-default-stripe-back
@@ -23,14 +23,14 @@
     var(--#{variables.$prefix}stripe-color-fore) 1.5rem
   );
 
-  @for $n from 0 through 24 {
-    $degree: $n * 15deg;
-    &.is-#{$degree} {
-      --#{variables.$prefix}stripe-degree: #{$degree};
-    }
-  }
-
   @if (not variables.$is-skelton) {
+    @for $n from 0 through 24 {
+      $degree: $n * 15deg;
+      &.is-#{$degree} {
+        --#{variables.$prefix}stripe-degree: #{$degree};
+      }
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
@@ -39,7 +39,7 @@
             l
             c
             h /
-            calc(alpha - 0.5)
+            0.5
         );
         --#{variables.$prefix}stripe-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-stripe-back

@@ -294,6 +294,21 @@
     }
     //#endregion message
 
+    //#region nav
+    $nav: map.get($colorShade, "nav");
+    @if ($nav != null) {
+      @include setColor($nav, "default", $name, "nav");
+      $navMenu: map.get($nav, "navMenu");
+      @if ($navMenu != null) {
+        @include setColor($navMenu, "default", $name, "nav-menu");
+        $navMenuItem: map.get($navMenu, "navMenuItem");
+        @if ($navMenuItem != null) {
+          @include setColor($navMenuItem, "default", $name, "nav-menu-item");
+        }
+      }
+    }
+    //#endregion nav
+
     //#region progress
     $progress: map.get($colorShade, "progress");
     @if ($progress != null) {
@@ -528,10 +543,25 @@
         }
         //#endregion message
 
+        //#region nav
+        $nav: map.get($colorShade, "nav");
+        @if ($nav != null) {
+          @include setColor($nav, $colorName, $name, "nav");
+          $navMenu: map.get($nav, "navMenu");
+          @if ($navMenu != null) {
+            @include setColor($navMenu, $colorName, $name, "nav-menu");
+            $navMenuItem: map.get($navMenu, "navMenuItem");
+            @if ($navMenuItem != null) {
+              @include setColor($navMenuItem, $colorName, $name, "nav-menu-item");
+            }
+          }
+        }
+        //#endregion nav
+
         //#region progress
         $progress: map.get($colorShade, "progress");
         @if ($progress != null) {
-          @include setColor($link, $colorName, $name, "progress");
+          @include setColor($progress, $colorName, $name, "progress");
         }
         //#endregion progress
 

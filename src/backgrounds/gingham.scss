@@ -4,8 +4,7 @@
 
 .gingham {
   --#{variables.$prefix}gingham-color-fore: oklch(
-    from var(--#{variables.$prefix}color-default-gingham-fore) l c h /
-      calc(alpha - 0.5)
+    from var(--#{variables.$prefix}color-default-gingham-fore) l c h / 0.5
   );
   --#{variables.$prefix}gingham-color-back: var(
     --#{variables.$prefix}color-default-gingham-back
@@ -15,39 +14,39 @@
   @include mixins.element();
   background-size: auto auto;
   background-color: var(--#{variables.$prefix}gingham-color-back);
-  background-image: repeating-linear-gradient(
+  background-image:
+    repeating-linear-gradient(
       var(--#{variables.$prefix}gingham-degree),
       transparent,
       transparent 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore)
-        0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore)
-        1.5rem
+      var(--#{variables.$prefix}gingham-color-fore) 0.75rem,
+      var(--#{variables.$prefix}gingham-color-fore) 1.5rem
     ),
     repeating-linear-gradient(
       calc(var(--#{variables.$prefix}gingham-degree) + 90deg),
       transparent,
       transparent 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore)
-        0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore)
-        1.5rem
+      var(--#{variables.$prefix}gingham-color-fore) 0.75rem,
+      var(--#{variables.$prefix}gingham-color-fore) 1.5rem
     );
 
-  @for $n from 0 through 6 {
-    $degree: $n * 15deg;
-    &.is-#{$degree} {
-      --#{variables.$prefix}gingham-degree: #{$degree};
-    }
-  }
-
   @if (not variables.$is-skelton) {
+    @for $n from 0 through 6 {
+      $degree: $n * 15deg;
+      &.is-#{$degree} {
+        --#{variables.$prefix}gingham-degree: #{$degree};
+      }
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}gingham-color-fore: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-gingham-fore) l c h /
-      calc(alpha - 0.5)
+          from var(--#{variables.$prefix}color-#{$colorName}-gingham-fore)
+            l
+            c
+            h /
+            0.5
         );
         --#{variables.$prefix}gingham-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-gingham-back

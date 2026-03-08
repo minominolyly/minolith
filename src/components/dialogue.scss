@@ -27,7 +27,41 @@
 }
 
 .dialogue {
-  @include mixins.element();
+  //#region local css variables
+  --#{variables.$prefix}color-dialogue-fore: var(
+    --#{variables.$prefix}color-default-dialogue-fore
+  );
+  --#{variables.$prefix}color-dialogue-back: var(
+    --#{variables.$prefix}color-default-dialogue-back
+  );
+  --#{variables.$prefix}color-dialogue-border: var(
+    --#{variables.$prefix}color-default-dialogue-border
+  );
+  --#{variables.$prefix}color-dialogue-avatar-back: var(
+    --#{variables.$prefix}color-default-dialogue-back
+  );
+  --#{variables.$prefix}color-dialogue-avatar-border: var(
+    --#{variables.$prefix}color-default-dialogue-border
+  );
+  --#{variables.$prefix}color-dialogue-name-fore: var(
+    --#{variables.$prefix}color-default-dialogue-name-fore
+  );
+  --#{variables.$prefix}color-dialogue-name-back: var(
+    --#{variables.$prefix}color-default-dialogue-name-back
+  );
+  --#{variables.$prefix}color-dialogue-name-border: var(
+    --#{variables.$prefix}color-default-dialogue-name-border
+  );
+  --#{variables.$prefix}color-dialogue-message-fore: var(
+    --#{variables.$prefix}color-default-dialogue-message-fore
+  );
+  --#{variables.$prefix}color-dialogue-message-back: var(
+    --#{variables.$prefix}color-default-dialogue-message-back
+  );
+  --#{variables.$prefix}color-dialogue-message-border: var(
+    --#{variables.$prefix}color-default-dialogue-message-border
+  );
+
   --#{variables.$prefix}dialogue-avatar-size: var(
     --#{variables.$prefix}dialogue-avatar-size-default
   );
@@ -39,7 +73,8 @@
         var(--#{variables.$prefix}dialogue-name-padding-y) * 2 +
           var(--#{variables.$prefix}dialogue-border-width) * 2 +
           var(--#{variables.$prefix}dialogue-name-font-size)
-      ) / 2
+      ) /
+      2
   );
   --#{variables.$prefix}dialogue-messege-arrow-top-offset: calc(
     (-1 * var(--#{variables.$prefix}dialogue-messege-top-offset)) +
@@ -48,7 +83,10 @@
       var(--#{variables.$prefix}dialogue-avatar-top-offset) +
       (var(--#{variables.$prefix}dialogue-avatar-size) / 2)
   );
+  --#{variables.$prefix}dialogue-border-style: solid;
+  //#endregion local css variables
 
+  @include mixins.element();
   display: flex;
   max-width: 100%;
   margin: 0;
@@ -74,30 +112,14 @@
         (
           var(--#{variables.$prefix}dialogue-avatar-size) +
             var(--#{variables.$prefix}dialogue-border-width) * 2
-        ) / 2
+        ) /
+        2
     );
     > .dialogue-avatar-container {
       > .dialogue-avatar {
-        background-color: var(
-          --#{variables.$prefix}color-default-dialogue-avatar-back
-        );
-        border-color: var(
-          --#{variables.$prefix}color-default-dialogue-avatar-border
-        );
-        border-style: solid;
-        border-width: var(--#{variables.$prefix}dialogue-border-width);
         border-radius: var(--#{variables.$prefix}border-radius-circle);
         user-select: none;
       }
-    }
-  }
-
-  @each $borderWidth in variables.$borderWidths {
-    $name: map.get($borderWidth, "name");
-    &.is-border-width-#{$name} {
-      --#{variables.$prefix}dialogue-border-width: var(
-        --#{variables.$prefix}border-width-#{$name}
-      );
     }
   }
 
@@ -116,6 +138,7 @@
     > .dialogue-avatar {
       @include mixins.element();
       aspect-ratio: 1;
+      background-color: var(--#{variables.$prefix}color-dialogue-avatar-back);
       display: block;
       align-items: center;
       justify-content: center;
@@ -123,6 +146,11 @@
       width: var(--#{variables.$prefix}dialogue-avatar-size);
       margin: 0 auto;
       overflow: hidden;
+      &.has-border {
+        border-color: var(--#{variables.$prefix}color-dialogue-avatar-border);
+        border-style: var(--#{variables.$prefix}dialogue-border-style);
+        border-width: var(--#{variables.$prefix}dialogue-border-width);
+      }
     }
   }
   > .dialogue-content-container {
@@ -132,18 +160,14 @@
     > .dialogue-message {
       min-height: 1rem;
       border-radius: var(--#{variables.$prefix}border-radius-medium);
-      border-style: solid;
       border-width: var(--#{variables.$prefix}dialogue-border-width);
+      border-style: var(--#{variables.$prefix}dialogue-border-style);
     }
     > .dialogue-name {
       @include mixins.element();
-      background-color: var(
-        --#{variables.$prefix}color-default-dialogue-name-back
-      );
-      border-color: var(
-        --#{variables.$prefix}color-default-dialogue-name-border
-      );
-      color: var(--#{variables.$prefix}color-default-dialogue-name-fore);
+      background-color: var(--#{variables.$prefix}color-dialogue-name-back);
+      border-color: var(--#{variables.$prefix}color-dialogue-name-border);
+      color: var(--#{variables.$prefix}color-dialogue-name-fore);
       font-size: var(--#{variables.$prefix}dialogue-name-font-size);
       position: absolute;
       top: 0;
@@ -154,13 +178,9 @@
     }
     > .dialogue-message {
       @include mixins.element();
-      background-color: var(
-        --#{variables.$prefix}color-default-dialogue-message-back
-      );
-      border-color: var(
-        --#{variables.$prefix}color-default-dialogue-message-border
-      );
-      color: var(--#{variables.$prefix}color-default-dialogue-message-fore);
+      background-color: var(--#{variables.$prefix}color-dialogue-message-back);
+      border-color: var(--#{variables.$prefix}color-dialogue-message-border);
+      color: var(--#{variables.$prefix}color-dialogue-message-fore);
       position: relative;
       top: var(--#{variables.$prefix}dialogue-messege-top-offset);
       padding-top: calc(
@@ -192,7 +212,7 @@
         }
         &::before {
           border-right-color: var(
-            --#{variables.$prefix}color-default-dialogue-message-border
+            --#{variables.$prefix}color-dialogue-message-border
           );
           border-right-width: var(
             --#{variables.$prefix}dialogue-messege-arrow-width
@@ -204,7 +224,7 @@
         }
         &::after {
           border-right-color: var(
-            --#{variables.$prefix}color-default-dialogue-message-back
+            --#{variables.$prefix}color-dialogue-message-back
           );
           border-right-width: var(
             --#{variables.$prefix}dialogue-messege-arrow-width
@@ -235,7 +255,7 @@
         }
         &::before {
           border-left-color: var(
-            --#{variables.$prefix}color-default-dialogue-message-border
+            --#{variables.$prefix}color-dialogue-message-border
           );
           border-left-width: var(
             --#{variables.$prefix}dialogue-messege-arrow-width
@@ -247,7 +267,7 @@
         }
         &::after {
           border-left-color: var(
-            --#{variables.$prefix}color-default-dialogue-message-back
+            --#{variables.$prefix}color-dialogue-message-back
           );
           border-left-width: var(
             --#{variables.$prefix}dialogue-messege-arrow-width
@@ -261,21 +281,19 @@
       }
     }
   }
+
+  @each $borderWidth in variables.$borderWidths {
+    $name: map.get($borderWidth, "name");
+    &.is-border-width-#{$name} {
+      --#{variables.$prefix}dialogue-border-width: var(
+        --#{variables.$prefix}border-width-#{$name}
+      );
+    }
+  }
+
   @each $border-style in variables.$borderStyles {
     &.is-border-style-#{$border-style} {
-      &.is-avatar-circle {
-        > .dialogue-avatar-container {
-          > .dialogue-avatar {
-            border-style: #{$border-style};
-          }
-        }
-      }
-      > .dialogue-content-container {
-        > .dialogue-name,
-        > .dialogue-message {
-          border-style: #{$border-style};
-        }
-      }
+      --#{variables.$prefix}dialogue-border-style: #{$border-style};
     }
   }
 
@@ -283,56 +301,39 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        > .dialogue-avatar-container {
-          > .dialogue-avatar {
-            background-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-avatar-back
-            );
-            border-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-avatar-border
-            );
-          }
-        }
-        > .dialogue-content-container {
-          > .dialogue-name {
-            background-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-name-back
-            );
-            border-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-name-border
-            );
-            color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-name-fore
-            );
-          }
-          > .dialogue-message {
-            background-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
-            );
-            border-color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-message-border
-            );
-            color: var(
-              --#{variables.$prefix}color-#{$colorName}-dialogue-message-fore
-            );
-            &::after {
-              border-right-color: var(
-                --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
-              );
-              border-left-color: var(
-                --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
-              );
-            }
-            &::before {
-              border-right-color: var(
-                --#{variables.$prefix}color-#{$colorName}-dialogue-message-border
-              );
-              border-left-color: var(
-                --#{variables.$prefix}color-#{$colorName}-dialogue-message-border
-              );
-            }
-          }
-        }
+        --#{variables.$prefix}color-dialogue-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-fore
+        );
+        --#{variables.$prefix}color-dialogue-back: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-back
+        );
+        --#{variables.$prefix}color-dialogue-border: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-border
+        );
+        --#{variables.$prefix}color-dialogue-avatar-back: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-avatar-back
+        );
+        --#{variables.$prefix}color-dialogue-avatar-border: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-avatar-border
+        );
+        --#{variables.$prefix}color-dialogue-name-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-name-fore
+        );
+        --#{variables.$prefix}color-dialogue-name-back: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-name-back
+        );
+        --#{variables.$prefix}color-dialogue-name-border: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-name-border
+        );
+        --#{variables.$prefix}color-dialogue-message-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-message-fore
+        );
+        --#{variables.$prefix}color-dialogue-message-back: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-message-back
+        );
+        --#{variables.$prefix}color-dialogue-message-border: var(
+          --#{variables.$prefix}color-#{$colorName}-dialogue-message-border
+        );
       }
     }
   }

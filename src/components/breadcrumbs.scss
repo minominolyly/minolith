@@ -4,6 +4,15 @@
 @use "../mixins/index.scss" as mixins;
 
 .breadcrumbs {
+  //#region local css variables
+  --#{variables.$prefix}color-breadcrumb-fore: var(
+    --#{variables.$prefix}color-default-breadcrumb-fore
+  );
+  --#{variables.$prefix}color-breadcrumb-divider-fore: var(
+    --#{variables.$prefix}color-default-breadcrumb-divider-fore
+  );
+  //#endregion local css variables
+
   @include mixins.element();
   display: flex;
   flex-wrap: wrap;
@@ -11,13 +20,13 @@
   > .breadcrumb {
     @include mixins.element();
     text-wrap: wrap;
-    color: var(--#{variables.$prefix}color-default-breadcrumb-fore);
+    color: var(--#{variables.$prefix}color-breadcrumb-fore);
     &:has(~ .breadcrumb) {
       &::after {
         @include mixins.element();
         content: var(--#{variables.$prefix}breadcrumb-divider);
         margin: 0 0.5rem;
-        color: var(--#{variables.$prefix}color-default-breadcrumb-divider-fore);
+        color: var(--#{variables.$prefix}color-breadcrumb-divider-fore);
         user-select: none;
       }
     }
@@ -27,16 +36,14 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        > .breadcrumb {
-          color: var(--#{variables.$prefix}color-#{$colorName}-breadcrumb-fore);
-          &:has(~ .breadcrumb) {
-            &::after {
-              color: var(
-                --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
-              );
-            }
-          }
-        }
+        //#region local css variables
+        --#{variables.$prefix}color-breadcrumb-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-fore
+        );
+        --#{variables.$prefix}color-breadcrumb-divider-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
+        );
+        //#endregion local css variables
       }
     }
   }

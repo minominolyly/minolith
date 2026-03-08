@@ -3,23 +3,27 @@
 @use "../mixins/index.scss" as mixins;
 
 .modal {
+  --#{variables.$prefix}color-modal-back: var(
+    --#{variables.$prefix}color-default-back
+  );
+
   @include mixins.element();
   align-items: center;
   background-color: oklch(
-    from var(--#{variables.$prefix}color-default-back) l c h /
-      calc(alpha - 0.25)
+    from var(--#{variables.$prefix}color-modal-back) l c h / 0.75
   );
   border: none;
   display: none;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   left: 0;
   overflow: hidden;
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
   z-index: var(--#{variables.$prefix}z-index-modal);
+  overscroll-behavior-block: contain;
   &.is-active {
     display: flex;
   }
@@ -38,12 +42,8 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-back)
-            l
-            c
-            h /
-            calc(alpha - 0.25)
+        --#{variables.$prefix}color-modal-back: var(
+          --#{variables.$prefix}color-#{$colorName}-back
         );
       }
     }

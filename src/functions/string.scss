@@ -29,3 +29,15 @@
   }
   @return $str;
 }
+
+@function colorLightnessNumberToString($num) {
+  @if ($num <= 5) {
+    @return "05";
+  }
+
+  @if ($num >= 95) {
+    @return "95";
+  }
+
+  @return zeroPadding($num, 2);
+}

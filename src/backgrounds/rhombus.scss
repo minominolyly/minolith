@@ -8,7 +8,7 @@
 .rhombus {
   --#{variables.$prefix}rhombus-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-rhombus-fore) l c h /
-      calc(alpha - 0.5)
+      0.5
   );
   --#{variables.$prefix}rhombus-color-back: var(
     --#{variables.$prefix}color-default-rhombus-back
@@ -48,15 +48,15 @@
     var(--#{variables.$prefix}rhombus-size);
   background-repeat: repeat;
 
-  &.is-small {
-    --#{variables.$prefix}rhombus-size: 0.5rem;
-  }
-
-  &.is-large {
-    --#{variables.$prefix}rhombus-size: 2rem;
-  }
-
   @if (not variables.$is-skelton) {
+    &.is-small {
+      --#{variables.$prefix}rhombus-size: 0.5rem;
+    }
+
+    &.is-large {
+      --#{variables.$prefix}rhombus-size: 2rem;
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
@@ -65,7 +65,7 @@
             l
             c
             h /
-            calc(alpha - 0.5)
+            0.5
         );
         --#{variables.$prefix}rhombus-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-rhombus-back

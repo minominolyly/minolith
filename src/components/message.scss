@@ -3,29 +3,63 @@
 @use "../mixins/index.scss" as mixins;
 
 .message {
+  //#region local css variables
+  --#{variables.$prefix}color-message-fore: var(
+    --#{variables.$prefix}color-default-message-fore
+  );
+  --#{variables.$prefix}color-message-back: var(
+    --#{variables.$prefix}color-default-message-back
+  );
+  --#{variables.$prefix}color-message-border: var(
+    --#{variables.$prefix}color-default-message-border
+  );
+
+  --#{variables.$prefix}color-message-header-fore: var(
+    --#{variables.$prefix}color-default-message-header-fore
+  );
+  --#{variables.$prefix}color-message-header-back: var(
+    --#{variables.$prefix}color-default-message-header-back
+  );
+  --#{variables.$prefix}color-message-header-border: var(
+    --#{variables.$prefix}color-default-message-header-border
+  );
+
+  --#{variables.$prefix}color-message-body-fore: var(
+    --#{variables.$prefix}color-default-message-body-fore
+  );
+  --#{variables.$prefix}color-message-body-back: var(
+    --#{variables.$prefix}color-default-message-body-back
+  );
+  --#{variables.$prefix}color-message-body-border: var(
+    --#{variables.$prefix}color-default-message-body-border
+  );
+  //#endregion local css variables
+
   @include mixins.element();
   display: block;
-  background-color: var(--#{variables.$prefix}color-default-message-back);
-  border-color: var(--#{variables.$prefix}color-default-message-border);
+  background-color: var(--#{variables.$prefix}color-message-back);
+  border-color: var(--#{variables.$prefix}color-message-border);
   border-radius: var(--#{variables.$prefix}border-radius-medium);
   border-style: solid;
   border-width: var(--#{variables.$prefix}border-width-thin);
-  color: var(--#{variables.$prefix}color-default-messaage-fore);
-  >.message-header {
+  color: var(--#{variables.$prefix}color-messaage-fore);
+  > .message-header {
     @include mixins.element();
-    background-color: var(--#{variables.$prefix}color-default-message-header-back);
-    border-radius: var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium) 0 0;
-    color: var(--#{variables.$prefix}color-default-message-header-fore);
+    background-color: var(--#{variables.$prefix}color-message-header-back);
+    border-radius: var(--#{variables.$prefix}border-radius-medium)
+      var(--#{variables.$prefix}border-radius-medium) 0 0;
+    color: var(--#{variables.$prefix}color-message-header-fore);
     display: block;
     font-size: var(--#{variables.$prefix}font-size-medium);
     font-weight: var(--#{variables.$prefix}font-weight-semibold);
     padding: 0.5rem;
   }
-  >.message-body {
+  > .message-body {
     @include mixins.element();
-    background-color: var(--#{variables.$prefix}color-default-message-body-back);
-    border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium) var(--#{variables.$prefix}border-radius-medium);
-    color: var(--#{variables.$prefix}color-default-message-body-fore);
+    background-color: var(--#{variables.$prefix}color-message-body-back);
+    border-radius: 0 0 var(--#{variables.$prefix}border-radius-medium)
+      var(--#{variables.$prefix}border-radius-medium);
+    color: var(--#{variables.$prefix}color-message-body-fore);
     display: block;
     padding: 0.5rem;
     &:first-child {
@@ -36,17 +70,35 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-message-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-message-border);
-        color: var(--#{variables.$prefix}color-#{$colorName}-message-fore);
-        >.message-header {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-message-header-back);
-          color: var(--#{variables.$prefix}color-#{$colorName}-message-header-fore);
-        }
-        >.message-body {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-message-body-back);
-          color: var(--#{variables.$prefix}color-#{$colorName}-message-body-fore);
-        }
+        --#{variables.$prefix}color-message-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-message-fore
+        );
+        --#{variables.$prefix}color-message-back: var(
+          --#{variables.$prefix}color-#{$colorName}-message-back
+        );
+        --#{variables.$prefix}color-message-border: var(
+          --#{variables.$prefix}color-#{$colorName}-message-border
+        );
+
+        --#{variables.$prefix}color-message-header-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-message-header-fore
+        );
+        --#{variables.$prefix}color-message-header-back: var(
+          --#{variables.$prefix}color-#{$colorName}-message-header-back
+        );
+        --#{variables.$prefix}color-message-header-border: var(
+          --#{variables.$prefix}color-#{$colorName}-message-header-border
+        );
+
+        --#{variables.$prefix}color-message-body-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-message-body-fore
+        );
+        --#{variables.$prefix}color-message-body-back: var(
+          --#{variables.$prefix}color-#{$colorName}-message-body-back
+        );
+        --#{variables.$prefix}color-message-body-border: var(
+          --#{variables.$prefix}color-#{$colorName}-message-body-border
+        );
       }
     }
   }

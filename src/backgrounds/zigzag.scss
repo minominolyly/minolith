@@ -6,7 +6,7 @@
   --#{variables.$prefix}zigzag-size: 1rem;
   --#{variables.$prefix}zigzag-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-zigzag-fore) l c h /
-      calc(alpha - 0.5)
+      0.5
   );
   --#{variables.$prefix}zigzag-color-back: var(
     --#{variables.$prefix}color-default-zigzag-back
@@ -45,22 +45,22 @@
     calc(var(--#{variables.$prefix}zigzag-size) * 2);
   background-repeat: repeat;
 
-  &.is-small {
-    --#{variables.$prefix}zigzag-size: 0.5rem;
-  }
-
-  &.is-large {
-    --#{variables.$prefix}zigzag-size: 4rem;
-  }
-
-  @for $n from 0 through 24 {
-    $degree: $n * 15deg;
-    &.is-#{$degree} {
-      --#{variables.$prefix}zigzag-degree: #{$degree};
-    }
-  }
-
   @if (not variables.$is-skelton) {
+    &.is-small {
+      --#{variables.$prefix}zigzag-size: 0.5rem;
+    }
+
+    &.is-large {
+      --#{variables.$prefix}zigzag-size: 4rem;
+    }
+
+    @for $n from 0 through 24 {
+      $degree: $n * 15deg;
+      &.is-#{$degree} {
+        --#{variables.$prefix}zigzag-degree: #{$degree};
+      }
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
@@ -69,7 +69,7 @@
             l
             c
             h /
-            calc(alpha - 0.5)
+            0.5
         );
         --#{variables.$prefix}zigzag-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-zigzag-back

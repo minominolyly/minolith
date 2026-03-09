@@ -3,6 +3,10 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.loader) {
+  --#{variables.$prefix}loader-color-fore: var(
+    --#{variables.$prefix}color-default-loader-fore
+  );
+
   @include mixins.element();
   @include mixins.animation() {
     animation-iteration-count: infinite;
@@ -10,11 +14,9 @@
     animation-timing-function: linear;
     aspect-ratio: 1;
     border-radius: 50%;
-    background: var(--#{variables.$prefix}color-default-loader-fore);
-    mask: conic-gradient(
-        #0000 10%,
-        var(--#{variables.$prefix}color-default-back)
-      ),
+    background: var(--#{variables.$prefix}loader-color-fore);
+    mask:
+      conic-gradient(#0000 10%, var(--#{variables.$prefix}color-default-back)),
       linear-gradient(var(--#{variables.$prefix}color-default-back) 0 0)
         content-box;
     mask-composite: subtract;
@@ -56,7 +58,16 @@
       @each $color in variables.$colors {
         $colorName: map.get($color, "name");
         &.is-#{$colorName} {
-          background: var(
+          --#{variables.$prefix}loader-color-fore: var(
+            --#{variables.$prefix}color-#{$colorName}-loader-fore
+          );
+        }
+      }
+
+      @each $semanticColor in variables.$semanticColors {
+        $colorName: map.get($semanticColor, "name");
+        &.is-#{$colorName} {
+          --#{variables.$prefix}loader-color-fore: var(
             --#{variables.$prefix}color-#{$colorName}-loader-fore
           );
         }

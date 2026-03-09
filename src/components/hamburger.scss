@@ -1,20 +1,30 @@
 @use "sass:map";
 @use "../variables/index.scss" as variables;
-
-$hamburger-size: 3.5rem;
-$hamburger-line-height: 0.2rem;
-$hamburger-line-color: var(--#{variables.$prefix}color-default-border);
+@use "../mixins/index.scss" as mixins;
 
 :where(.hamburger) {
-  color: var(--#{variables.$prefix}color-default-fore);
+  --#{variables.$prefix}hamburger-color-fore: var(
+    --#{variables.$prefix}color-default-hamburger-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}hamburger-line-color-back: var(
+    --#{variables.$prefix}color-default-hamburger-line-back,
+    var(--#{variables.$prefix}color-default-border)
+  );
+
+  --#{variables.$prefix}hamburger-size: 3.5rem;
+  --#{variables.$prefix}hamburger-line-height: 0.2rem;
+
+  @include mixins.element();
+  color: var(--#{variables.$prefix}hamburger-color-fore);
   border-radius: 0.25rem;
   cursor: pointer;
   display: inline-block;
-  height: $hamburger-size;
+  height: var(--#{variables.$prefix}hamburger-size);
   position: relative;
   touch-action: manipulation;
   user-select: none;
-  width: $hamburger-size;
+  width: var(--#{variables.$prefix}hamburger-size);
   .crown,
   .upperpatty,
   .club,
@@ -33,46 +43,52 @@ $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
     line-height: 1;
     text-align: center;
     top: 0.25em;
-    width: $hamburger-size;
+    width: var(--#{variables.$prefix}hamburger-size);
   }
   .upperpatty {
-    animation: hamburger-upperpatty .75s forwards;
-    background-color: $hamburger-line-color;
-    height: $hamburger-line-height;
-    top: calc((-1 * #{$hamburger-line-height}) - (#{$hamburger-size} / 5) + 50%);
-    width: calc(#{$hamburger-size} / 5 * 3);
+    animation: hamburger-upperpatty 0.75s forwards;
+    background-color: var(--#{variables.$prefix}hamburger-line-color-back);
+    height: var(--#{variables.$prefix}hamburger-line-height);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) -
+        (var(--#{variables.$prefix}hamburger-size) / 5) + 50%
+    );
+    width: calc(var(--#{variables.$prefix}hamburger-size) / 5 * 3);
   }
   .club {
-    background-color: $hamburger-line-color;
-    height: $hamburger-line-height;
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
-    transition: all .25s .25s;
-    width: calc(#{$hamburger-size} / 5 * 3);
+    background-color: var(--#{variables.$prefix}hamburger-line-color-back);
+    height: var(--#{variables.$prefix}hamburger-line-height);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
+    transition: all 0.25s 0.25s;
+    width: calc(var(--#{variables.$prefix}hamburger-size) / 5 * 3);
   }
   .lowerpatty {
-    animation: hamburger-lowerpatty .75s forwards;
-    background-color: $hamburger-line-color;
-    height: $hamburger-line-height;
-    top: calc((-1 * #{$hamburger-line-height}) + (#{$hamburger-size}/ 5) + 50%);
-    width: calc(#{$hamburger-size} / 5 * 3);
+    animation: hamburger-lowerpatty 0.75s forwards;
+    background-color: var(--#{variables.$prefix}hamburger-line-color-back);
+    height: var(--#{variables.$prefix}hamburger-line-height);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) +
+        (var(--#{variables.$prefix}hamburger-size)/ 5) + 50%
+    );
+    width: calc(var(--#{variables.$prefix}hamburger-size) / 5 * 3);
   }
   .heel {
     bottom: 0.5em;
     font-size: 0.5em;
     line-height: 1;
     text-align: center;
-    width: $hamburger-size;
+    width: var(--#{variables.$prefix}hamburger-size);
   }
   &.is-active {
     .upperpatty {
-      animation: hamburger-upperpatty-is-active .75s forwards;
+      animation: hamburger-upperpatty-is-active 0.75s forwards;
       top: 50%;
     }
     .club {
       opacity: 0;
     }
     .lowerpatty {
-      animation: hamburger-lowerpatty-is-active .75s forwards;
+      animation: hamburger-lowerpatty-is-active 0.75s forwards;
       top: 50%;
     }
   }
@@ -81,16 +97,27 @@ $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-        .upperpatty {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-        }
-        .club {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-        }
-        .lowerpatty {
-          background-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-        }
+        --#{variables.$prefix}hamburger-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-hamburger-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}hamburger-line-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-hamburger-line-back,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
+        );
+      }
+    }
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}hamburger-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-hamburger-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}hamburger-line-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-hamburger-line-back,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
+        );
       }
     }
   }
@@ -100,58 +127,70 @@ $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
 @keyframes hamburger-upperpatty {
   0% {
     transform: rotate(45deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
   50% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
   100% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) - (#{$hamburger-size} / 5) + 50%);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) -
+        (var(--#{variables.$prefix}hamburger-size) / 5) + 50%
+    );
   }
 }
 
-@keyframes hamburger-upperpatty-is-active{
+@keyframes hamburger-upperpatty-is-active {
   0% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) - (#{$hamburger-size} / 5) + 50%);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) -
+        (var(--#{variables.$prefix}hamburger-size) / 5) + 50%
+    );
   }
   50% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
-  100%{
+  100% {
     transform: rotate(45deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
 }
 @keyframes hamburger-lowerpatty {
   0% {
     transform: rotate(-45deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
   50% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
   100% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + (#{$hamburger-size} / 5) + 50%);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) +
+        (var(--#{variables.$prefix}hamburger-size) / 5) + 50%
+    );
   }
 }
 @keyframes hamburger-lowerpatty-is-active {
   0% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + (#{$hamburger-size} / 5) + 50%);
+    top: calc(
+      (-1 * var(--#{variables.$prefix}hamburger-line-height)) +
+        (var(--#{variables.$prefix}hamburger-size) / 5) + 50%
+    );
   }
   50% {
     transform: rotate(0deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
   100% {
     transform: rotate(-45deg);
-    top: calc((-1 * #{$hamburger-line-height}) + 50%);
+    top: calc((-1 * var(--#{variables.$prefix}hamburger-line-height)) + 50%);
   }
 }
 //#endregion keyframes

@@ -3,10 +3,23 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.header) {
+  --#{variables.$prefix}header-color-fore: var(
+    --#{variables.$prefix}color-default-header-fore,
+    --#{variables.$prefix}color-default-fore,
+  );
+  --#{variables.$prefix}header-color-back: var(
+    --#{variables.$prefix}color-default-header-back,
+    --#{variables.$prefix}color-default-back,
+  );
+  --#{variables.$prefix}header-color-shadow: var(
+    --#{variables.$prefix}color-default-header-shadow,
+    --#{variables.$prefix}color-default-shadow,
+  );
+
   @include mixins.element();
   display: block;
   width: 100%;
-  box-shadow: 0 0 0.5rem var(--#{variables.$prefix}color-default-header-shadow);
+  box-shadow: 0 0 0.5rem var(--#{variables.$prefix}header-color-shadow);
   backdrop-filter: var(--#{variables.$prefix}header-backdrop-filter);
 
   &.is-sticky {
@@ -29,8 +42,21 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
+        --#{variables.$prefix}header-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-header-fore,
+          --#{variables.$prefix}color-#{$colorName}-fore,
+        );
+        --#{variables.$prefix}header-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-header-back,
+          --#{variables.$prefix}color-#{$colorName}-back,
+        );
+        --#{variables.$prefix}header-color-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-header-shadow,
+          --#{variables.$prefix}color-#{$colorName}-shadow,
+        );
+
         background-color: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-header-back)
+          from var(--#{variables.$prefix}header-color-back)
             l
             c
             h /
@@ -39,8 +65,39 @@
         box-shadow: 0
           0
           0.5rem
-          var(--#{variables.$prefix}color-#{$colorName}-header-shadow);
-        color: var(--#{variables.$prefix}color-#{$colorName}-header-fore);
+          var(--#{variables.$prefix}header-color-shadow);
+        color: var(--#{variables.$prefix}header-color-fore);
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}header-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-header-fore,
+          --#{variables.$prefix}color-#{$colorName}-fore,
+        );
+        --#{variables.$prefix}header-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-header-back,
+          --#{variables.$prefix}color-#{$colorName}-back,
+        );
+        --#{variables.$prefix}header-color-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-header-shadow,
+          --#{variables.$prefix}color-#{$colorName}-shadow,
+        );
+
+        background-color: oklch(
+          from var(--#{variables.$prefix}header-color-back)
+            l
+            c
+            h /
+            0.5
+        );
+        box-shadow: 0
+          0
+          0.5rem
+          var(--#{variables.$prefix}header-color-shadow);
+        color: var(--#{variables.$prefix}header-color-fore);
       }
     }
   }

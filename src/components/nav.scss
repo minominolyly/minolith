@@ -13,61 +13,61 @@
   padding: 0.5rem;
   position: relative;
   text-decoration: none;
-  color: var(--#{variables.$prefix}color-nav-menu-item-fore);
+  color: var(--#{variables.$prefix}nav-menu-item-color-fore);
   text-shadow:
     2px 2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     -2px 2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     2px -2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     -2px -2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     2px 0px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     0px 2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     -2px 0px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       ),
     0px -2px 1px
       oklch(
-        from var(--#{variables.$prefix}color-nav-menu-item-shadow) l c h /
-          var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+        from var(--#{variables.$prefix}nav-menu-item-color-shadow) l c h /
+          var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
       );
   > .nav-menu-item-icon {
     @include mixins.element();
     filter: drop-shadow(
-        2px 2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+        2px 2px 1px var(--#{variables.$prefix}nav-menu-item-color-shadow)
       )
       drop-shadow(
-        -2px 2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+        -2px 2px 1px var(--#{variables.$prefix}nav-menu-item-color-shadow)
       )
       drop-shadow(
-        2px -2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+        2px -2px 1px var(--#{variables.$prefix}nav-menu-item-color-shadow)
       )
       drop-shadow(
-        -2px -2px 1px var(--#{variables.$prefix}color-nav-menu-item-shadow)
+        -2px -2px 1px var(--#{variables.$prefix}nav-menu-item-color-shadow)
       );
   }
   &[onclick],
@@ -77,94 +77,94 @@
     &:focus,
     &.is-focus,
     &.is-focused {
-      color: var(--#{variables.$prefix}color-nav-menu-item-focus-fore);
+      color: var(--#{variables.$prefix}nav-menu-item-color-focus-fore);
       text-shadow:
         2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-focus-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-focus-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           );
       > .nav-menu-item-icon {
         filter: drop-shadow(
             2px 2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             -2px 2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             2px -2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             -2px -2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           );
@@ -173,94 +173,94 @@
     &:hover,
     &.is-hovered,
     &.is-hovered {
-      color: var(--#{variables.$prefix}color-nav-menu-item-hover-fore);
+      color: var(--#{variables.$prefix}nav-menu-item-color-hover-fore);
       text-shadow:
         2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow) l c
+            from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow) l c
               h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           );
       > .nav-menu-item-icon {
         filter: drop-shadow(
             2px 2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             -2px 2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             2px -2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
           drop-shadow(
             -2px -2px 1px
               oklch(
-                from var(--#{variables.$prefix}color-nav-menu-item-hover-shadow)
+                from var(--#{variables.$prefix}nav-menu-item-color-hover-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           );
@@ -268,65 +268,65 @@
     }
     &:active,
     &.is-active {
-      color: var(--#{variables.$prefix}color-nav-menu-item-active-fore);
+      color: var(--#{variables.$prefix}nav-menu-item-color-active-fore);
       text-shadow:
         2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+            from var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
               c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           );
       > .nav-menu-item-icon {
         filter: drop-shadow(
             2px 2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
                   c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -334,10 +334,10 @@
             -2px 2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
                   c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -345,10 +345,10 @@
             2px -2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
                   c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -356,10 +356,10 @@
             -2px -2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-active-shadow) l
+                  var(--#{variables.$prefix}nav-menu-item-color-active-shadow) l
                   c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           );
@@ -368,65 +368,65 @@
     &[disabled],
     fieldset[disabled],
     &.is-disabled {
-      color: var(--#{variables.$prefix}color-nav-menu-item-disabled-fore);
+      color: var(--#{variables.$prefix}nav-menu-item-color-disabled-fore);
       text-shadow:
         2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px 2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         -2px 0px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           ),
         0px -2px 1px
           oklch(
-            from var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+            from var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
               l c h /
-              var(--#{variables.$prefix}color-nav-menu-item-text-shadow-alpha)
+              var(--#{variables.$prefix}nav-menu-item-color-text-shadow-alpha)
           );
       > .nav-menu-item-icon {
         filter: drop-shadow(
             2px 2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -434,10 +434,10 @@
             -2px 2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -445,10 +445,10 @@
             2px -2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           )
@@ -456,10 +456,10 @@
             -2px -2px 1px
               oklch(
                 from
-                  var(--#{variables.$prefix}color-nav-menu-item-disabled-shadow)
+                  var(--#{variables.$prefix}nav-menu-item-color-disabled-shadow)
                   l c h /
                   var(
-                    --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha
+                    --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha
                   )
               )
           );
@@ -469,61 +469,61 @@
 }
 
 :where(.nav) {
-  --#{variables.$prefix}color-nav-fore: var(
+  --#{variables.$prefix}nav-color-fore: var(
     --#{variables.$prefix}color-default-nav-fore,
     var(--#{variables.$prefix}color-default-fore)
   );
-  --#{variables.$prefix}color-nav-back: var(
+  --#{variables.$prefix}nav-color-back: var(
     --#{variables.$prefix}color-default-nav-back,
     var(--#{variables.$prefix}color-default-back)
   );
-  --#{variables.$prefix}color-nav-border: var(
+  --#{variables.$prefix}nav-color-border: var(
     --#{variables.$prefix}color-default-nav-border,
     var(--#{variables.$prefix}color-default-border)
   );
 
-  --#{variables.$prefix}color-nav-menu-item-fore: var(
+  --#{variables.$prefix}nav-menu-item-color-fore: var(
     --#{variables.$prefix}color-default-nav-menu-item-fore,
     var(--#{variables.$prefix}color-default-fore)
   );
-  --#{variables.$prefix}color-nav-menu-item-shadow: var(
+  --#{variables.$prefix}nav-menu-item-color-shadow: var(
     --#{variables.$prefix}color-default-nav-menu-item-shadow,
     var(--#{variables.$prefix}color-default-shadow)
   );
-  --#{variables.$prefix}color-nav-menu-item-text-shadow-alpha: 0.5;
+  --#{variables.$prefix}nav-menu-item-color-text-shadow-alpha: 0.5;
 
-  --#{variables.$prefix}color-nav-menu-item-focus-fore: var(
+  --#{variables.$prefix}nav-menu-item-color-focus-fore: var(
     --#{variables.$prefix}color-default-nav-menu-item-focus-fore,
     var(--#{variables.$prefix}color-default-focus-fore)
   );
-  --#{variables.$prefix}color-nav-menu-item-focus-shadow: var(
+  --#{variables.$prefix}nav-menu-item-color-focus-shadow: var(
     --#{variables.$prefix}color-default-nav-menu-item-focus-shadow,
     var(--#{variables.$prefix}color-default-focus-shadow)
   );
 
-  --#{variables.$prefix}color-nav-menu-item-hover-fore: var(
+  --#{variables.$prefix}nav-menu-item-color-hover-fore: var(
     --#{variables.$prefix}color-default-nav-menu-item-hover-fore,
     var(--#{variables.$prefix}color-default-hover-fore)
   );
-  --#{variables.$prefix}color-nav-menu-item-hover-shadow: var(
+  --#{variables.$prefix}nav-menu-item-color-hover-shadow: var(
     --#{variables.$prefix}color-default-nav-menu-item-hover-shadow,
     var(--#{variables.$prefix}color-default-hover-shadow)
   );
 
-  --#{variables.$prefix}color-nav-menu-item-active-fore: var(
+  --#{variables.$prefix}nav-menu-item-color-active-fore: var(
     --#{variables.$prefix}color-default-nav-menu-item-active-fore,
     var(--#{variables.$prefix}color-default-active-fore)
   );
-  --#{variables.$prefix}color-nav-menu-item-active-shadow: var(
+  --#{variables.$prefix}nav-menu-item-color-active-shadow: var(
     --#{variables.$prefix}color-default-nav-menu-item-active-shadow,
     var(--#{variables.$prefix}color-default-active-shadow)
   );
 
-  --#{variables.$prefix}color-nav-menu-item-disabled-fore: var(
+  --#{variables.$prefix}nav-menu-item-color-disabled-fore: var(
     --#{variables.$prefix}color-default-nav-menu-item-disabled-fore,
     var(--#{variables.$prefix}color-default-disabled-fore)
   );
-  --#{variables.$prefix}color-nav-menu-item-disabled-shadow: var(
+  --#{variables.$prefix}nav-menu-item-color-disabled-shadow: var(
     --#{variables.$prefix}color-default-nav-menu-item-disabled-shadow,
     var(--#{variables.$prefix}color-default-disabled-shadow)
   );
@@ -645,56 +645,115 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}color-nav-fore: var(
+        --#{variables.$prefix}nav-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-fore,
           var(--#{variables.$prefix}color-#{$colorName}-fore)
         );
-        --#{variables.$prefix}color-nav-back: var(
+        --#{variables.$prefix}nav-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-nav-back,
           var(--#{variables.$prefix}color-#{$colorName}-back)
         );
-        --#{variables.$prefix}color-nav-border: var(
+        --#{variables.$prefix}nav-color-border: var(
           --#{variables.$prefix}color-#{$colorName}-nav-border,
           var(--#{variables.$prefix}color-#{$colorName}-border)
         );
 
-        --#{variables.$prefix}color-nav-menu-item-fore: var(
+        --#{variables.$prefix}nav-menu-item-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-fore,
           var(--#{variables.$prefix}color-#{$colorName}-fore)
         );
-        --#{variables.$prefix}color-nav-menu-item-focus-fore: var(
+        --#{variables.$prefix}nav-menu-item-color-focus-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-fore,
           var(--#{variables.$prefix}color-#{$colorName}-focus-fore)
         );
-        --#{variables.$prefix}color-nav-menu-item-hover-fore: var(
+        --#{variables.$prefix}nav-menu-item-color-hover-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-fore,
           var(--#{variables.$prefix}color-#{$colorName}-hover-fore)
         );
-        --#{variables.$prefix}color-nav-menu-item-active-fore: var(
+        --#{variables.$prefix}nav-menu-item-color-active-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-fore,
           var(--#{variables.$prefix}color-#{$colorName}-active-fore)
         );
-        --#{variables.$prefix}color-nav-menu-item-disabled-fore: var(
+        --#{variables.$prefix}nav-menu-item-color-disabled-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-fore,
           var(--#{variables.$prefix}color-#{$colorName}-disabled-fore)
         );
-        --#{variables.$prefix}color-nav-menu-item-shadow: var(
+        --#{variables.$prefix}nav-menu-item-color-shadow: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-shadow,
           var(--#{variables.$prefix}color-#{$colorName}-shadow)
         );
-        --#{variables.$prefix}color-nav-menu-item-focus-shadow: var(
+        --#{variables.$prefix}nav-menu-item-color-focus-shadow: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-shadow,
           var(--#{variables.$prefix}color-#{$colorName}-focus-shadow)
         );
-        --#{variables.$prefix}color-nav-menu-item-hover-shadow: var(
+        --#{variables.$prefix}nav-menu-item-color-hover-shadow: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-shadow,
           var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
         );
-        --#{variables.$prefix}color-nav-menu-item-active-shadow: var(
+        --#{variables.$prefix}nav-menu-item-color-active-shadow: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-shadow,
           var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
         );
-        --#{variables.$prefix}color-nav-menu-item-disabled-shadow: var(
+        --#{variables.$prefix}nav-menu-item-color-disabled-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-shadow)
+        );
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}nav-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}nav-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
+        );
+        --#{variables.$prefix}nav-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-border,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
+        );
+
+        --#{variables.$prefix}nav-menu-item-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}nav-menu-item-color-focus-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-fore)
+        );
+        --#{variables.$prefix}nav-menu-item-color-hover-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-fore)
+        );
+        --#{variables.$prefix}nav-menu-item-color-active-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-active-fore)
+        );
+        --#{variables.$prefix}nav-menu-item-color-disabled-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-fore)
+        );
+        --#{variables.$prefix}nav-menu-item-color-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-shadow)
+        );
+        --#{variables.$prefix}nav-menu-item-color-focus-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-shadow)
+        );
+        --#{variables.$prefix}nav-menu-item-color-hover-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
+        );
+        --#{variables.$prefix}nav-menu-item-color-active-shadow: var(
+          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-shadow,
+          var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
+        );
+        --#{variables.$prefix}nav-menu-item-color-disabled-shadow: var(
           --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-shadow,
           var(--#{variables.$prefix}color-#{$colorName}-disabled-shadow)
         );

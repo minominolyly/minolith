@@ -10,7 +10,7 @@
   &.is-style-disc {
     list-style: disc;
   }
-  > .list-item {
+  > :where(.list-item) {
     display: list-item;
   }
 }

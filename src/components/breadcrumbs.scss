@@ -5,10 +5,19 @@
 
 :where(.breadcrumbs) {
   //#region local css variables
-  --#{variables.$prefix}color-breadcrumb-fore: var(
-    --#{variables.$prefix}color-default-breadcrumb-fore
+  --#{variables.$prefix}breadcrumb-color-fore: var(
+    --#{variables.$prefix}color-default-breadcrumb-fore,
+    var(--#{variables.$prefix}color-default-fore)
   );
-  --#{variables.$prefix}color-breadcrumb-divider-fore: var(
+  --#{variables.$prefix}breadcrumb-color-selection-fore: var(
+    --#{variables.$prefix}color-default-breadcrumb-selection-fore,
+    var(--#{variables.$prefix}color-default-selection-fore)
+  );
+  --#{variables.$prefix}breadcrumb-color-selection-back: var(
+    --#{variables.$prefix}color-default-breadcrumb-selection-back,
+    var(--#{variables.$prefix}color-default-selection-back)
+  );
+  --#{variables.$prefix}breadcrumb-divider-color-fore: var(
     --#{variables.$prefix}color-default-breadcrumb-divider-fore
   );
   //#endregion local css variables
@@ -17,16 +26,22 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  > .breadcrumb {
+  > :where(.breadcrumb) {
     @include mixins.element();
     text-wrap: wrap;
-    color: var(--#{variables.$prefix}color-breadcrumb-fore);
+    color: var(--#{variables.$prefix}breadcrumb-color-fore);
+    &::selection {
+      color: var(--#{variables.$prefix}breadcrumb-color-selection-fore);
+      background-color: var(
+        --#{variables.$prefix}breadcrumb-color-selection-back
+      );
+    }
     &:has(~ .breadcrumb) {
       &::after {
         @include mixins.element();
         content: var(--#{variables.$prefix}breadcrumb-divider);
         margin: 0 0.5rem;
-        color: var(--#{variables.$prefix}color-breadcrumb-divider-fore);
+        color: var(--#{variables.$prefix}breadcrumb-divider-color-fore);
         user-select: none;
       }
     }
@@ -37,11 +52,40 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         //#region local css variables
-        --#{variables.$prefix}color-breadcrumb-fore: var(
+        --#{variables.$prefix}breadcrumb-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-breadcrumb-fore
         );
-        --#{variables.$prefix}color-breadcrumb-divider-fore: var(
+        --#{variables.$prefix}breadcrumb-divider-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
+        );
+        --#{variables.$prefix}breadcrumb-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}breadcrumb-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+        //#endregion local css variables
+      }
+    }
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        //#region local css variables
+        --#{variables.$prefix}breadcrumb-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-fore
+        );
+        --#{variables.$prefix}breadcrumb-divider-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
+        );
+        --#{variables.$prefix}breadcrumb-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}breadcrumb-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
         );
         //#endregion local css variables
       }

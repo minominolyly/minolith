@@ -3,14 +3,14 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.modal) {
-  --#{variables.$prefix}color-modal-back: var(
+  --#{variables.$prefix}modal-color-back: var(
     --#{variables.$prefix}color-default-back
   );
 
   @include mixins.element();
   align-items: center;
   background-color: oklch(
-    from var(--#{variables.$prefix}color-modal-back) l c h / 0.75
+    from var(--#{variables.$prefix}modal-color-back) l c h / 0.75
   );
   border: none;
   display: none;
@@ -42,7 +42,16 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}color-modal-back: var(
+        --#{variables.$prefix}modal-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-back
+        );
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}modal-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-back
         );
       }

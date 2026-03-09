@@ -3,17 +3,17 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.footer) {
-  --#{variables.$prefix}color-footer-fore: var(
+  --#{variables.$prefix}footer-color-fore: var(
     --#{variables.$prefix}color-default-footer-fore
   );
-  --#{variables.$prefix}color-footer-back: var(
+  --#{variables.$prefix}footer-color-back: var(
     --#{variables.$prefix}color-default-footer-back
   );
 
   @include mixins.element();
 
-  background-color: var(--#{variables.$prefix}color-footer-back);
-  color: var(--#{variables.$prefix}color-footer-fore);
+  background-color: var(--#{variables.$prefix}footer-color-back);
+  color: var(--#{variables.$prefix}footer-color-fore);
   padding: 2rem 0;
   bottom: 0;
 
@@ -21,10 +21,21 @@
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}color-footer-fore: var(
+        --#{variables.$prefix}footer-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-footer-fore
         );
-        --#{variables.$prefix}color-footer-back: var(
+        --#{variables.$prefix}footer-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-footer-back
+        );
+      }
+    }
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}footer-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-footer-fore
+        );
+        --#{variables.$prefix}footer-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-footer-back
         );
       }

@@ -3,14 +3,62 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.label) {
+  --#{variables.$prefix}label-color-fore: var(
+    --#{variables.$prefix}color-default-label-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}label-color-selection-fore: var(
+    --#{variables.$prefix}color-default-label-selection-fore,
+    var(--#{variables.$prefix}color-default-selection-fore)
+  );
+  --#{variables.$prefix}label-color-selection-back: var(
+    --#{variables.$prefix}color-default-label-selection-back,
+    var(--#{variables.$prefix}color-default-selection-back)
+  );
+
   @include mixins.element();
   font-weight: var(--#{variables.$prefix}font-weight-semibold);
-  color: var(--#{variables.$prefix}color-default-label-fore);
+  color: var(--#{variables.$prefix}label-color-fore);
+
+  &::selection {
+    color: var(--#{variables.$prefix}label-color-selection-fore);
+    background-color: var(--#{variables.$prefix}label-color-selection-back);
+  }
+
   @if (not variables.$is-skelton) {
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        color: var(--#{variables.$prefix}color-#{$colorName}-label-fore);
+        --#{variables.$prefix}label-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-label-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}label-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-label-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}label-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-label-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}label-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-label-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}label-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-label-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}label-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-label-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
       }
     }
   }

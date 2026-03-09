@@ -1,9 +1,26 @@
 @use "../variables/index.scss" as variables;
 
 :where(.tabula) {
-  color: var(--#{variables.$prefix}color-default-fore);
-  background-color: var(--#{variables.$prefix}color-default-back);
+  --#{variables.$prefix}tabula-color-fore: var(
+    --#{variables.$prefix}color-default-fore
+  );
+  --#{variables.$prefix}tabula-color-back: var(
+    --#{variables.$prefix}color-default-back
+  );
+  --#{variables.$prefix}tabula-color-selection-fore: var(
+    --#{variables.$prefix}color-default-selection-fore
+  );
+  --#{variables.$prefix}tabula-color-selection-back: var(
+    --#{variables.$prefix}color-default-selection-back
+  );
+
+  color: var(--#{variables.$prefix}tabula-color-fore);
+  background-color: var(--#{variables.$prefix}tabula-color-back);
   font-family: var(--#{variables.$prefix}font-family-main);
   z-index: var(--#{variables.$prefix}z-index-tabula);
   text-size-adjust: 100%;
+  &::selection {
+    color: var(--#{variables.$prefix}tabula-color-selection-fore);
+    background-color: var(--#{variables.$prefix}tabula-color-selection-back);
+  }
 }

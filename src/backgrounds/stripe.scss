@@ -46,5 +46,21 @@
         );
       }
     }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}stripe-color-fore: oklch(
+          from var(--#{variables.$prefix}color-#{$colorName}-stripe-fore)
+            l
+            c
+            h /
+            0.5
+        );
+        --#{variables.$prefix}stripe-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-stripe-back
+        );
+      }
+    }
   }
 }

@@ -3,11 +3,35 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.link) {
+  --#{variables.$prefix}link-color-fore: var(
+    --#{variables.$prefix}color-default-link-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}link-color-visited-fore: var(
+    --#{variables.$prefix}color-default-link-visited-fore,
+    var(--#{variables.$prefix}color-default-visited-fore)
+  );
+
+  --#{variables.$prefix}link-color-selection-fore: var(
+    --#{variables.$prefix}color-default-link-selection-fore,
+    var(--#{variables.$prefix}color-default-selection-fore)
+  );
+  --#{variables.$prefix}link-color-selection-back: var(
+    --#{variables.$prefix}color-default-link-selection-back,
+    var(--#{variables.$prefix}color-default-selection-back)
+  );
+
   @include mixins.element();
-  color: var(--#{variables.$prefix}color-default-link-fore);
+  color: var(--#{variables.$prefix}link-color-fore);
   text-decoration: underline;
   touch-action: manipulation;
   cursor: pointer;
+
+  &::selection {
+    color: var(--#{variables.$prefix}link-color-selection-fore);
+    background-color: var(--#{variables.$prefix}link-color-selection-back);
+  }
+
   &:hover {
     text-decoration: none;
   }
@@ -15,16 +39,51 @@
     outline: none;
   }
   &:visited {
-    color: var(--#{variables.$prefix}color-default-link-visited-fore);
+    color: var(---#{variables.$prefix}link-color-visited-fore);
   }
+
   @if (not variables.$is-skelton) {
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        color: var(--#{variables.$prefix}color-#{$colorName}-link-fore);
-        &:visited {
-          color: var(--#{variables.$prefix}color-#{$colorName}-link-visited-fore);
-        }
+        --#{variables.$prefix}link-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}link-color-visited-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-visited-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-visited-fore)
+        );
+        --#{variables.$prefix}link-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}link-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-link-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}link-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}link-color-visited-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-visited-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-visited-fore)
+        );
+        --#{variables.$prefix}link-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-link-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}link-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-link-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
       }
     }
   }

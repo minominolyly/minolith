@@ -41,20 +41,12 @@ function changeColor(color) {
     elem.className = `header is-sticky ${color}`;
   });
 
-  document.querySelectorAll(".card").forEach((elem) => {
-    elem.className = `card ${color}`;
-  });
-
   document.querySelectorAll(".input").forEach((elem) => {
     elem.className = `input ${color}`;
   });
 
   document.querySelectorAll(".hamburger").forEach((elem) => {
     elem.className = `hamburger ${color}`;
-  });
-
-  document.querySelectorAll(".message").forEach((elem) => {
-    elem.className = `message ${color}`;
   });
 
   document.querySelectorAll(".nav").forEach((elem) => {
@@ -83,14 +75,6 @@ function changeColor(color) {
 
   document.querySelectorAll(".accordion").forEach((elem) => {
     elem.className = `accordion ${color}`;
-  });
-
-  document.querySelectorAll(".dialogue.is-avatar-left").forEach((elem) => {
-    elem.className = `dialogue is-avatar-left ${color}`;
-  });
-
-  document.querySelectorAll(".dialogue.is-avatar-right").forEach((elem) => {
-    elem.className = `dialogue is-avatar-right ${color}`;
   });
 
   document.querySelectorAll(".modal").forEach((elem) => {

@@ -224,71 +224,138 @@
 }
 
 :where(.input) {
+  --#{variables.$prefix}input-color-fore: var(
+    --#{variables.$prefix}color-default-input-fore
+  );
+  --#{variables.$prefix}input-color-back: var(
+    --#{variables.$prefix}color-default-input-back
+  );
+  --#{variables.$prefix}input-color-border: var(
+    --#{variables.$prefix}color-default-input-border
+  );
+  --#{variables.$prefix}input-color-placeholder: var(
+    --#{variables.$prefix}color-default-input-placeholder
+  );
+
+  --#{variables.$prefix}input-focus-color-back: var(
+    --#{variables.$prefix}color-default-input-focus-back
+  );
+  --#{variables.$prefix}input-focus-color-border: var(
+    --#{variables.$prefix}color-default-input-focus-border
+  );
+  --#{variables.$prefix}input-disabled-color-back: var(
+    --#{variables.$prefix}color-default-input-disabled-back
+  );
+  --#{variables.$prefix}input-disabled-color-border: var(
+    --#{variables.$prefix}color-default-input-disabled-border
+  );
+
+  --#{variables.$prefix}input-border-style: solid;
+  --#{variables.$prefix}input-border-width: var(
+    --#{variables.$prefix}border-width-medium
+  );
+  --#{variables.$prefix}input-border-radius: var(
+    --#{variables.$prefix}border-radius-medium
+  );
+
   @include mixins.element();
-  background-color: var(--#{variables.$prefix}color-default-back);
-  border-color: var(--#{variables.$prefix}color-default-border);
-  border-radius: var(--#{variables.$prefix}border-radius-medium);
-  border-style: solid;
-  border-width: var(--#{variables.$prefix}border-width-medium);
+  background-color: var(--#{variables.$prefix}input-color-back);
+  border-color: var(--#{variables.$prefix}input-color-border);
+  border-radius: var(--#{variables.$prefix}input-border-radius);
+  border-style: var(--#{variables.$prefix}input-border-style);
+  border-width: var(--#{variables.$prefix}input-border-width);
+  color: var(--#{variables.$prefix}input-color-fore);
   padding: 0.5rem;
-  @each $borderRadius in variables.$borderRadiuses {
-    $name: map.get($borderRadius, "name");
-    &.is-border-radius-#{$name} {
-      border-radius: var(--#{variables.$prefix}border-radius-#{$name});
-    }
-  }
-  @each $borderWidth in variables.$borderWidths {
-    $name: map.get($borderWidth, "name");
-    &.is-border-width-#{$name} {
-      border-width: var(--#{variables.$prefix}border-radius-#{$name});
-    }
-  }
   &::placeholder {
-    color: var(--#{variables.$prefix}color-default-placeholder);
+    color: var(--#{variables.$prefix}input-color-placeholder);
   }
   &:focus,
   &.is-focus,
   &.is-focused {
     outline: none;
-    background-color: var(--#{variables.$prefix}color-default-focus-back);
-    border-color: var(--#{variables.$prefix}color-default-focus-border);
+    background-color: var(--#{variables.$prefix}input-focus-color-back);
+    border-color: var(--#{variables.$prefix}input-focus-color-border);
   }
   &[disabled],
   fieldset[disabled],
   &.is-disabled {
-    background-color: var(--#{variables.$prefix}color-default-disabled-back);
-    border-color: var(--#{variables.$prefix}color-default-disabled-border);
+    background-color: var(--#{variables.$prefix}input-disabled-color-back);
+    border-color: var(--#{variables.$prefix}input-disabled-color-border);
   }
   @if (not variables.$is-skelton) {
+    @each $borderRadius in variables.$borderRadiuses {
+      $name: map.get($borderRadius, "name");
+      &.is-border-radius-#{$name} {
+        border-radius: var(--#{variables.$prefix}border-radius-#{$name});
+      }
+    }
+
+    @each $borderWidth in variables.$borderWidths {
+      $name: map.get($borderWidth, "name");
+      &.is-border-width-#{$name} {
+        border-width: var(--#{variables.$prefix}border-radius-#{$name});
+      }
+    }
+
     @each $color in variables.$colors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        background-color: var(--#{variables.$prefix}color-#{$colorName}-back);
-        border-color: var(--#{variables.$prefix}color-#{$colorName}-border);
-        color: var(--#{variables.$prefix}color-#{$colorName}-fore);
-        &::placeholder {
-          color: var(--#{variables.$prefix}color-#{$colorName}-placeholder);
-        }
-        &:focus,
-        &.is-focus,
-        &.is-focused {
-          background-color: var(
-            --#{variables.$prefix}color-#{$colorName}-focus-back
-          );
-          border-color: var(
-            --#{variables.$prefix}color-#{$colorName}-focus-border
-          );
-        }
-        &[disabled],
-        fieldset[disabled],
-        &.is-disabled {
-          background-color: var(
-            --#{variables.$prefix}color-#{$colorName}-disabled-back
-          );
-          border-color: var(
-            --#{variables.$prefix}color-#{$colorName}-disabled-border
-          );
-        }
+        --#{variables.$prefix}input-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-input-fore
+        );
+        --#{variables.$prefix}input-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-back
+        );
+        --#{variables.$prefix}input-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-border
+        );
+        --#{variables.$prefix}input-color-placeholder: var(
+          --#{variables.$prefix}color-#{$colorName}-input-placeholder
+        );
+
+        --#{variables.$prefix}input-focus-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-focus-back
+        );
+        --#{variables.$prefix}input-focus-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-focus-border
+        );
+        --#{variables.$prefix}input-disabled-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-disabled-back
+        );
+        --#{variables.$prefix}input-disabled-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-disabled-border
+        );
+      }
+    }
+
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}input-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-input-fore
+        );
+        --#{variables.$prefix}input-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-back
+        );
+        --#{variables.$prefix}input-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-border
+        );
+        --#{variables.$prefix}input-color-placeholder: var(
+          --#{variables.$prefix}color-#{$colorName}-input-placeholder
+        );
+
+        --#{variables.$prefix}input-focus-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-focus-back
+        );
+        --#{variables.$prefix}input-focus-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-focus-border
+        );
+        --#{variables.$prefix}input-disabled-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-input-disabled-back
+        );
+        --#{variables.$prefix}input-disabled-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-input-disabled-border
+        );
       }
     }
   }

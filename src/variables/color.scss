@@ -39,6 +39,9 @@ $color-light-lightness-border: 70 !default;
 $color-light-lightness-placeholder: 70 !default;
 $color-light-lightness-shadow: 70 !default;
 
+$color-light-lightness-selection-fore: 5 !default;
+$color-light-lightness-selection-back: 70 !default;
+
 //#region color-light-lightness-dot
 $color-light-lightness-dot-fore: 85 !default;
 $color-light-lightness-dot-back: 95 !default;
@@ -64,7 +67,7 @@ $color-light-lightness-zigzag-fore: 85 !default;
 $color-light-lightness-zigzag-back: 95 !default;
 //#endregion color-light-lightness-zigzag
 
-//#region color-dark-lightness-accordion
+//#region color-light-lightness-accordion
 $color-light-lightness-accordion-fore: 5 !default;
 $color-light-lightness-accordion-back: 95 !default;
 $color-light-lightness-accordion-border: 70 !default;
@@ -74,7 +77,7 @@ $color-light-lightness-accordion-summary-border: 70 !default;
 $color-light-lightness-accordion-details-fore: 5 !default;
 $color-light-lightness-accordion-details-back: 95 !default;
 $color-light-lightness-accordion-details-border: 70 !default;
-//#endregion color-dark-lightness-accordion
+//#endregion color-light-lightness-accordion
 
 //#region color-light-lightness-button
 $color-light-lightness-button-fore: 5 !default;
@@ -114,7 +117,7 @@ $color-light-lightness-card-footer-fore: 5 !default;
 $color-light-lightness-card-footer-back: 80 !default;
 //#endregion color-light-lightness-card
 
-//#region color-dark-lightness-dialogue
+//#region color-light-lightness-dialogue
 $color-light-lightness-dialogue-fore: 5 !default;
 $color-light-lightness-dialogue-back: 95 !default;
 $color-light-lightness-dialogue-border: 70 !default;
@@ -129,7 +132,7 @@ $color-light-lightness-dialogue-name-shadow: 70 !default;
 $color-light-lightness-dialogue-message-fore: 5 !default;
 $color-light-lightness-dialogue-message-back: 95 !default;
 $color-light-lightness-dialogue-message-border: 70 !default;
-//#endregion color-dark-lightness-dialogue
+//#endregion color-light-lightness-dialogue
 
 //#region color-light-lightness-header
 $color-light-lightness-header-fore: 5 !default;
@@ -140,6 +143,13 @@ $color-light-lightness-header-shadow: 70 !default;
 //#region color-light-lightness-label
 $color-light-lightness-label-fore: 60 !default;
 //#endregion color-light-lightness-label
+
+//#region color-light-lightness-input
+$color-light-lightness-input-fore: 5 !default;
+$color-light-lightness-input-back: 95 !default;
+$color-light-lightness-input-border: 60 !default;
+$color-light-lightness-input-placeholder: 60 !default;
+//#endregion color-light-lightness-input
 
 //#region color-light-lightness-link
 $color-light-lightness-link-fore: 60 !default;
@@ -182,6 +192,9 @@ $color-dark-lightness-border: 50 !default;
 $color-dark-lightness-placeholder: 50 !default;
 $color-dark-lightness-shadow: 50 !default;
 
+$color-dark-lightness-selection-fore: 95 !default;
+$color-dark-lightness-selection-back: 30 !default;
+
 //#region color-dark-lightness-dot
 $color-dark-lightness-dot-fore: 5 !default;
 $color-dark-lightness-dot-back: 15 !default;
@@ -219,23 +232,23 @@ $color-dark-lightness-accordion-details-back: 5 !default;
 $color-dark-lightness-accordion-details-border: 30 !default;
 //#endregion color-dark-lightness-accordion
 
-//#region color-light-lightness-badge
+//#region color-dark-lightness-badge
 $color-dark-lightness-badge-fore: 95 !default;
 $color-dark-lightness-badge-back: 15 !default;
 $color-dark-lightness-badge-border: 30 !default;
-//#endregion color-light-lightness-badge
+//#endregion color-dark-lightness-badge
 
-//#region color-light-lightness-blockquote
+//#region color-dark-lightness-blockquote
 $color-dark-lightness-blockquote-fore: 70 !default;
 $color-dark-lightness-blockquote-back: 20 !default;
 $color-dark-lightness-blockquote-border: 70 !default;
-//#endregion color-light-lightness-blockquote
+//#endregion color-dark-lightness-blockquote
 
-//#region color-light-lightness-blockquote
+//#region color-dark-lightness-blockquote
 $color-dark-lightness-breadcrumbs-fore: 70 !default;
 $color-dark-lightness-breadcrumb-fore: 70 !default;
 $color-dark-lightness-breadcrumb-divider-fore: 40 !default;
-//#endregion color-light-lightness-blockquote
+//#endregion color-dark-lightness-blockquote
 
 //#region color-dark-lightness-button
 $color-dark-lightness-button-fore: 95 !default;
@@ -279,6 +292,13 @@ $color-dark-lightness-header-fore: 95 !default;
 $color-dark-lightness-header-back: 30 !default;
 $color-dark-lightness-header-shadow: 30 !default;
 //#endregion color-dark-lightness-header
+
+//#region color-dark-lightness-input
+$color-dark-lightness-input-fore: 95 !default;
+$color-dark-lightness-input-back: 5 !default;
+$color-dark-lightness-input-border: 40 !default;
+$color-dark-lightness-input-placeholder: 40 !default;
+//#endregion color-dark-lightness-input
 
 //#region color-dark-lightness-label
 $color-dark-lightness-label-fore: 70 !default;
@@ -340,139 +360,93 @@ $colorShades: (
   (
       name: "plain",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore
-          ),
-        dark: functions.colorLightnessNumberToString($color-dark-lightness-fore),
+        light: $color-light-lightness-fore,
+        dark: $color-dark-lightness-fore,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back
-          ),
-        dark: functions.colorLightnessNumberToString($color-dark-lightness-back),
+        light: $color-light-lightness-back,
+        dark: $color-dark-lightness-back,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border
-          ),
+        light: $color-light-lightness-border,
+        dark: $color-dark-lightness-border,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder
-          ),
+        light: $color-light-lightness-placeholder,
+        dark: $color-dark-lightness-placeholder,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow
-          ),
+        light: $color-light-lightness-shadow,
+        dark: $color-dark-lightness-shadow,
+      ),
+      selection: (
+        fore: (
+          light: $color-light-lightness-selection-fore,
+          dark: $color-dark-lightness-selection-fore,
+        ),
+        back: (
+          light: $color-light-lightness-selection-back,
+          dark: $color-dark-lightness-selection-back,
+        ),
       ),
       //#region backgrounds
       //#region dot
       dot: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-dot-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-dot-fore
-              ),
+            light: $color-light-lightness-dot-fore,
+            dark: $color-dark-lightness-dot-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-dot-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-dot-back
-              ),
+            light: $color-light-lightness-dot-back,
+            dark: $color-dark-lightness-dot-back,
           ),
         ),
       //#endregion dot
       //#region gingham
       gingham: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-gingham-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-gingham-fore
-              ),
+            light: $color-light-lightness-gingham-fore,
+            dark: $color-dark-lightness-gingham-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-gingham-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-gingham-back
-              ),
+            light: $color-light-lightness-gingham-back,
+            dark: $color-dark-lightness-gingham-back,
           ),
         ),
       //#endregion gingham
       //#region rhombus
       rhombus: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-rhombus-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-rhombus-fore
-              ),
+            light: $color-light-lightness-rhombus-fore,
+            dark: $color-dark-lightness-rhombus-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-rhombus-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-rhombus-back
-              ),
+            light: $color-light-lightness-rhombus-back,
+            dark: $color-dark-lightness-rhombus-back,
           ),
         ),
       //#endregion rhombus
       //#region stripe
       stripe: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-stripe-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-stripe-fore
-              ),
+            light: $color-light-lightness-stripe-fore,
+            dark: $color-dark-lightness-stripe-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-stripe-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-stripe-back
-              ),
+            light: $color-light-lightness-stripe-back,
+            dark: $color-dark-lightness-stripe-back,
           ),
         ),
       //#endregion stripe
       //#region zigzag
       zigzag: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-zigzag-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-zigzag-fore
-              ),
+            light: $color-light-lightness-zigzag-fore,
+            dark: $color-dark-lightness-zigzag-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-zigzag-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-zigzag-back
-              ),
+            light: $color-light-lightness-zigzag-back,
+            dark: $color-dark-lightness-zigzag-back,
           ),
         ),
       //#endregion zigzag
@@ -481,79 +455,43 @@ $colorShades: (
       //#region accordion
       accordion: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-fore
-              ),
+            light: $color-light-lightness-accordion-fore,
+            dark: $color-dark-lightness-accordion-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-back
-              ),
+            light: $color-light-lightness-accordion-back,
+            dark: $color-dark-lightness-accordion-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-border
-              ),
+            light: $color-light-lightness-accordion-border,
+            dark: $color-dark-lightness-accordion-border,
           ),
           accordionSummary: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-summary-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-summary-fore
-                ),
+              light: $color-light-lightness-accordion-summary-fore,
+              dark: $color-dark-lightness-accordion-summary-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-summary-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-summary-back
-                ),
+              light: $color-light-lightness-accordion-summary-back,
+              dark: $color-dark-lightness-accordion-summary-back,
             ),
             border: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-summary-border
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-summary-border
-                ),
+              light: $color-light-lightness-accordion-summary-border,
+              dark: $color-dark-lightness-accordion-summary-border,
             ),
           ),
           accordionDetails: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-details-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-details-fore
-                ),
+              light: $color-light-lightness-accordion-details-fore,
+              dark: $color-dark-lightness-accordion-details-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-details-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-details-back
-                ),
+              light: $color-light-lightness-accordion-details-back,
+              dark: $color-dark-lightness-accordion-details-back,
             ),
             border: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-accordion-details-border
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-accordion-details-border
-                ),
+              light: $color-light-lightness-accordion-details-border,
+              dark: $color-dark-lightness-accordion-details-border,
             ),
           ),
         ),
@@ -561,87 +499,51 @@ $colorShades: (
       //#region badge
       badge: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-badge-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-badge-fore
-              ),
+            light: $color-light-lightness-badge-fore,
+            dark: $color-dark-lightness-badge-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-badge-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-badge-back
-              ),
+            light: $color-light-lightness-badge-back,
+            dark: $color-dark-lightness-badge-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-badge-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-badge-border
-              ),
+            light: $color-light-lightness-badge-border,
+            dark: $color-dark-lightness-badge-border,
           ),
         ),
       //#endregion badge
       //#region blockquote
       blockquote: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-blockquote-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-blockquote-fore
-              ),
+            light: $color-light-lightness-blockquote-fore,
+            dark: $color-dark-lightness-blockquote-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-blockquote-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-blockquote-back
-              ),
+            light: $color-light-lightness-blockquote-back,
+            dark: $color-dark-lightness-blockquote-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-blockquote-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-blockquote-border
-              ),
+            light: $color-light-lightness-blockquote-border,
+            dark: $color-dark-lightness-blockquote-border,
           ),
         ),
       //#endregion blockquote
       //#region breadcrumbs
       breadcrumbs: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-breadcrumbs-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-breadcrumbs-fore
-              ),
+            light: $color-light-lightness-breadcrumbs-fore,
+            dark: $color-dark-lightness-breadcrumbs-fore,
           ),
           breadcrumb: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-breadcrumb-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-breadcrumb-fore
-                ),
+              light: $color-light-lightness-breadcrumb-fore,
+              dark: $color-dark-lightness-breadcrumb-fore,
             ),
           ),
           breadcrumbDivider: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-breadcrumb-divider-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-breadcrumb-divider-fore
-                ),
+              light: $color-light-lightness-breadcrumb-divider-fore,
+              dark: $color-dark-lightness-breadcrumb-divider-fore,
             ),
           ),
         ),
@@ -649,125 +551,69 @@ $colorShades: (
       //#region button
       button: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-fore
-              ),
+            light: $color-light-lightness-button-fore,
+            dark: $color-dark-lightness-button-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-back
-              ),
+            light: $color-light-lightness-button-back,
+            dark: $color-dark-lightness-button-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-border
-              ),
+            light: $color-light-lightness-button-border,
+            dark: $color-dark-lightness-button-border,
           ),
           shadow: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-shadow
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-shadow
-              ),
+            light: $color-light-lightness-button-shadow,
+            dark: $color-dark-lightness-button-shadow,
           ),
         ),
       //#endregion button
       //#region card
       card: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-card-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-card-fore
-              ),
+            light: $color-light-lightness-card-fore,
+            dark: $color-dark-lightness-card-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-card-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-card-back
-              ),
+            light: $color-light-lightness-card-back,
+            dark: $color-dark-lightness-card-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-card-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-card-border
-              ),
+            light: $color-light-lightness-card-border,
+            dark: $color-dark-lightness-card-border,
           ),
           shadow: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-card-shadow
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-card-shadow
-              ),
+            light: $color-light-lightness-card-shadow,
+            dark: $color-dark-lightness-card-shadow,
           ),
           cardHeader: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-header-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-header-fore
-                ),
+              light: $color-light-lightness-card-header-fore,
+              dark: $color-dark-lightness-card-header-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-header-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-header-back
-                ),
+              light: $color-light-lightness-card-header-back,
+              dark: $color-dark-lightness-card-header-back,
             ),
           ),
           cardBody: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-body-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-body-fore
-                ),
+              light: $color-light-lightness-card-body-fore,
+              dark: $color-dark-lightness-card-body-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-body-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-body-back
-                ),
+              light: $color-light-lightness-card-body-back,
+              dark: $color-dark-lightness-card-body-back,
             ),
           ),
           cardFooter: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-footer-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-footer-fore
-                ),
+              light: $color-light-lightness-card-footer-fore,
+              dark: $color-dark-lightness-card-footer-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-card-footer-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-card-footer-back
-                ),
+              light: $color-light-lightness-card-footer-back,
+              dark: $color-dark-lightness-card-footer-back,
             ),
           ),
         ),
@@ -775,113 +621,61 @@ $colorShades: (
       //#region dialogue
       dialogue: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-dialogue-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-dialogue-fore
-              ),
+            light: $color-light-lightness-dialogue-fore,
+            dark: $color-dark-lightness-dialogue-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-dialogue-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-dialogue-back
-              ),
+            light: $color-light-lightness-dialogue-back,
+            dark: $color-dark-lightness-dialogue-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-dialogue-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-dialogue-border
-              ),
+            light: $color-light-lightness-dialogue-border,
+            dark: $color-dark-lightness-dialogue-border,
           ),
           dialogueAvatar: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-avatar-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-avatar-fore
-                ),
+              light: $color-light-lightness-dialogue-avatar-fore,
+              dark: $color-dark-lightness-dialogue-avatar-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-avatar-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-avatar-back
-                ),
+              light: $color-light-lightness-dialogue-avatar-back,
+              dark: $color-dark-lightness-dialogue-avatar-back,
             ),
             border: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-avatar-border
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-avatar-border
-                ),
+              light: $color-light-lightness-dialogue-avatar-border,
+              dark: $color-dark-lightness-dialogue-avatar-border,
             ),
           ),
           dialogueName: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-name-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-name-fore
-                ),
+              light: $color-light-lightness-dialogue-name-fore,
+              dark: $color-dark-lightness-dialogue-name-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-name-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-name-back
-                ),
+              light: $color-light-lightness-dialogue-name-back,
+              dark: $color-dark-lightness-dialogue-name-back,
             ),
             border: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-name-border
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-name-border
-                ),
+              light: $color-light-lightness-dialogue-name-border,
+              dark: $color-dark-lightness-dialogue-name-border,
             ),
             shadow: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-name-shadow
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-name-shadow
-                ),
+              light: $color-light-lightness-dialogue-name-shadow,
+              dark: $color-dark-lightness-dialogue-name-shadow,
             ),
           ),
           dialogueMessage: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-message-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-message-fore
-                ),
+              light: $color-light-lightness-dialogue-message-fore,
+              dark: $color-dark-lightness-dialogue-message-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-message-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-message-back
-                ),
+              light: $color-light-lightness-dialogue-message-back,
+              dark: $color-dark-lightness-dialogue-message-back,
             ),
             border: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-dialogue-message-border
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-dialogue-message-border
-                ),
+              light: $color-light-lightness-dialogue-message-border,
+              dark: $color-dark-lightness-dialogue-message-border,
             ),
           ),
         ),
@@ -889,127 +683,95 @@ $colorShades: (
       //#region header
       header: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-header-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-header-fore
-              ),
+            light: $color-light-lightness-header-fore,
+            dark: $color-dark-lightness-header-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-header-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-header-back
-              ),
+            light: $color-light-lightness-header-back,
+            dark: $color-dark-lightness-header-back,
           ),
           shadow: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-header-shadow
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-header-shadow
-              ),
+            light: $color-light-lightness-header-shadow,
+            dark: $color-dark-lightness-header-shadow,
           ),
         ),
       //#endregion header
       //#region label
       label: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-label-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-label-fore
-              ),
+            light: $color-light-lightness-label-fore,
+            dark: $color-dark-lightness-label-fore,
           ),
         ),
       //#endregion label
       //#region loader
       loader: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-loader-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-loader-fore
-              ),
+            light: $color-light-lightness-loader-fore,
+            dark: $color-dark-lightness-loader-fore,
           ),
         ),
       //#endregion loader
       //#region link
       link: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-link-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-link-fore
-              ),
+            light: $color-light-lightness-link-fore,
+            dark: $color-dark-lightness-link-fore,
           ),
         ),
       //#endregion link
+      //#region input
+      input: (
+          fore: (
+            light: $color-light-lightness-input-fore,
+            dark: $color-dark-lightness-input-fore,
+          ),
+          back: (
+            light: $color-light-lightness-input-back,
+            dark: $color-dark-lightness-input-back,
+          ),
+          border: (
+            light: $color-light-lightness-input-border,
+            dark: $color-dark-lightness-input-border,
+          ),
+          placeholder: (
+            light: $color-light-lightness-input-placeholder,
+            dark: $color-dark-lightness-input-placeholder,
+          ),
+        ),
+      //#endregion input
       //#region message
       message: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-message-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-message-fore
-              ),
+            light: $color-light-lightness-message-fore,
+            dark: $color-dark-lightness-message-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-message-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-message-back
-              ),
+            light: $color-light-lightness-message-back,
+            dark: $color-dark-lightness-message-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-message-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-message-border
-              ),
+            light: $color-light-lightness-message-border,
+            dark: $color-dark-lightness-message-border,
           ),
           messageHeader: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-message-header-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-message-header-fore
-                ),
+              light: $color-light-lightness-message-header-fore,
+              dark: $color-dark-lightness-message-header-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-message-header-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-message-header-back
-                ),
+              light: $color-light-lightness-message-header-back,
+              dark: $color-dark-lightness-message-header-back,
             ),
           ),
           messageBody: (
             fore: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-message-body-fore
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-message-body-fore
-                ),
+              light: $color-light-lightness-message-body-fore,
+              dark: $color-dark-lightness-message-body-fore,
             ),
             back: (
-              light: functions.colorLightnessNumberToString(
-                  $color-light-lightness-message-body-back
-                ),
-              dark: functions.colorLightnessNumberToString(
-                  $color-dark-lightness-message-body-back
-                ),
+              light: $color-light-lightness-message-body-back,
+              dark: $color-dark-lightness-message-body-back,
             ),
           ),
         ),
@@ -1017,46 +779,26 @@ $colorShades: (
       //#region nav
       nav: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-nav-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-nav-fore
-              ),
+            light: $color-light-lightness-nav-fore,
+            dark: $color-dark-lightness-nav-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-nav-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-nav-back
-              ),
+            light: $color-light-lightness-nav-back,
+            dark: $color-dark-lightness-nav-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-nav-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-nav-border
-              ),
+            light: $color-light-lightness-nav-border,
+            dark: $color-dark-lightness-nav-border,
           ),
           navMenu: (
             navMenuItem: (
               fore: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-fore
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-fore
-                  ),
+                light: $color-light-lightness-nav-fore,
+                dark: $color-dark-lightness-nav-fore,
               ),
               shadow: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-menu-item-shadow
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-menu-item-shadow
-                  ),
+                light: $color-light-lightness-nav-menu-item-shadow,
+                dark: $color-dark-lightness-nav-menu-item-shadow,
               ),
             ),
           ),
@@ -1064,20 +806,12 @@ $colorShades: (
       //#endregion nav
       progress: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-progress-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-progress-fore
-              ),
+            light: $color-light-lightness-progress-fore,
+            dark: $color-dark-lightness-progress-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-progress-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-progress-back
-              ),
+            light: $color-light-lightness-progress-back,
+            dark: $color-dark-lightness-progress-back,
           ),
         ),
       //#endregion components
@@ -1087,155 +821,96 @@ $colorShades: (
   (
       name: "disabled",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore +
-              $color-light-lightness-offset-disabled-fore
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-fore +
-              $color-dark-lightness-offset-disabled-fore
-          ),
+        light: $color-light-lightness-fore +
+          $color-light-lightness-offset-disabled-fore,
+        dark: $color-dark-lightness-fore +
+          $color-dark-lightness-offset-disabled-fore,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back + $color-lightness-offset-disabled
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-back + $color-lightness-offset-disabled
-          ),
+        light: $color-light-lightness-back + $color-lightness-offset-disabled,
+        dark: $color-dark-lightness-back + $color-lightness-offset-disabled,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border + $color-lightness-offset-disabled
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border + $color-lightness-offset-disabled
-          ),
+        light: $color-light-lightness-border + $color-lightness-offset-disabled,
+        dark: $color-dark-lightness-border + $color-lightness-offset-disabled,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder +
-              $color-lightness-offset-disabled
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder + $color-lightness-offset-disabled
-          ),
+        light: $color-light-lightness-placeholder +
+          $color-lightness-offset-disabled,
+        dark: $color-dark-lightness-placeholder +
+          $color-lightness-offset-disabled,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow + $color-lightness-offset-disabled
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow + $color-lightness-offset-disabled
-          ),
+        light: $color-light-lightness-shadow + $color-lightness-offset-disabled,
+        dark: $color-dark-lightness-shadow + $color-lightness-offset-disabled,
       ),
       accordion: (
         accordionSummary: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-fore +
-                  $color-light-lightness-offset-disabled-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-fore +
-                  $color-dark-lightness-offset-disabled-fore
-              ),
+            light: $color-light-lightness-accordion-summary-fore +
+              $color-light-lightness-offset-disabled-fore,
+            dark: $color-dark-lightness-accordion-summary-fore +
+              $color-dark-lightness-offset-disabled-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-back +
-                  $color-lightness-offset-disabled
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-back +
-                  $color-lightness-offset-disabled
-              ),
+            light: $color-light-lightness-accordion-summary-back +
+              $color-lightness-offset-disabled,
+            dark: $color-dark-lightness-accordion-summary-back +
+              $color-lightness-offset-disabled,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-border +
-                  $color-lightness-offset-disabled
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-border +
-                  $color-lightness-offset-disabled
-              ),
+            light: $color-light-lightness-accordion-summary-border +
+              $color-lightness-offset-disabled,
+            dark: $color-dark-lightness-accordion-summary-border +
+              $color-lightness-offset-disabled,
           ),
         ),
       ),
       badge: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-fore +
-                $color-light-lightness-offset-disabled-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-fore +
-                $color-dark-lightness-offset-disabled-fore
-            ),
+          light: $color-light-lightness-badge-fore +
+            $color-light-lightness-offset-disabled-fore,
+          dark: $color-dark-lightness-badge-fore +
+            $color-dark-lightness-offset-disabled-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-back +
-                $color-lightness-offset-disabled
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-back +
-                $color-lightness-offset-disabled
-            ),
+          light: $color-light-lightness-badge-back +
+            $color-lightness-offset-disabled,
+          dark: $color-dark-lightness-badge-back +
+            $color-lightness-offset-disabled,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-border +
-                $color-lightness-offset-disabled
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-border +
-                $color-lightness-offset-disabled
-            ),
+          light: $color-light-lightness-badge-border +
+            $color-lightness-offset-disabled,
+          dark: $color-dark-lightness-badge-border +
+            $color-lightness-offset-disabled,
         ),
       ),
       //#region button
       button: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-fore +
-                  $color-light-lightness-offset-disabled-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-fore +
-                  $color-dark-lightness-offset-disabled-fore
-              ),
+            light: $color-light-lightness-button-fore +
+              $color-light-lightness-offset-disabled-fore,
+            dark: $color-dark-lightness-button-fore +
+              $color-dark-lightness-offset-disabled-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-back +
-                  $color-lightness-offset-disabled
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-back +
-                  $color-lightness-offset-disabled
-              ),
+            light: $color-light-lightness-button-back +
+              $color-lightness-offset-disabled,
+            dark: $color-dark-lightness-button-back +
+              $color-lightness-offset-disabled,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-border +
-                  $color-lightness-offset-disabled
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-border +
-                  $color-lightness-offset-disabled
-              ),
+            light: $color-light-lightness-button-border +
+              $color-lightness-offset-disabled,
+            dark: $color-dark-lightness-button-border +
+              $color-lightness-offset-disabled,
           ),
           shadow: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-button-shadow +
-                  $color-lightness-offset-disabled
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-button-shadow +
-                  $color-lightness-offset-disabled
-              ),
+            light: $color-light-lightness-button-shadow +
+              $color-lightness-offset-disabled,
+            dark: $color-dark-lightness-button-shadow +
+              $color-lightness-offset-disabled,
           ),
         ),
       //#endregion button
@@ -1244,24 +919,16 @@ $colorShades: (
           navMenu: (
             navMenuItem: (
               fore: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-fore +
-                      $color-light-lightness-offset-disabled-fore
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-fore +
-                      $color-light-lightness-offset-disabled-fore
-                  ),
+                light: $color-light-lightness-nav-fore +
+                  $color-light-lightness-offset-disabled-fore,
+                dark: $color-dark-lightness-nav-fore +
+                  $color-light-lightness-offset-disabled-fore,
               ),
               shadow: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-disabled
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-disabled
-                  ),
+                light: $color-light-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-disabled,
+                dark: $color-dark-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-disabled,
               ),
             ),
           ),
@@ -1273,142 +940,89 @@ $colorShades: (
   (
       name: "hover",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore + $color-lightness-offset-hover
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-fore + $color-lightness-offset-hover
-          ),
+        light: $color-light-lightness-fore + $color-lightness-offset-hover,
+        dark: $color-dark-lightness-fore + $color-lightness-offset-hover,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back + $color-lightness-offset-hover
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-back + $color-lightness-offset-hover
-          ),
+        light: $color-light-lightness-back + $color-lightness-offset-hover,
+        dark: $color-dark-lightness-back + $color-lightness-offset-hover,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border + $color-lightness-offset-hover
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border + $color-lightness-offset-hover
-          ),
+        light: $color-light-lightness-border + $color-lightness-offset-hover,
+        dark: $color-dark-lightness-border + $color-lightness-offset-hover,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder + $color-lightness-offset-hover
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder + $color-lightness-offset-hover
-          ),
+        light: $color-light-lightness-placeholder +
+          $color-lightness-offset-hover,
+        dark: $color-dark-lightness-placeholder + $color-lightness-offset-hover,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow + $color-lightness-offset-hover
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow + $color-lightness-offset-hover
-          ),
+        light: $color-light-lightness-shadow + $color-lightness-offset-hover,
+        dark: $color-dark-lightness-shadow + $color-lightness-offset-hover,
       ),
       accordion: (
         accordionSummary: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-fore +
-                  $color-lightness-offset-hover
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-fore +
-                  $color-lightness-offset-hover
-              ),
+            light: $color-light-lightness-accordion-summary-fore +
+              $color-lightness-offset-hover,
+            dark: $color-dark-lightness-accordion-summary-fore +
+              $color-lightness-offset-hover,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-back +
-                  $color-lightness-offset-hover
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-back +
-                  $color-lightness-offset-hover
-              ),
+            light: $color-light-lightness-accordion-summary-back +
+              $color-lightness-offset-hover,
+            dark: $color-dark-lightness-accordion-summary-back +
+              $color-lightness-offset-hover,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-border +
-                  $color-lightness-offset-hover
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-border +
-                  $color-lightness-offset-hover
-              ),
+            light: $color-light-lightness-accordion-summary-border +
+              $color-lightness-offset-hover,
+            dark: $color-dark-lightness-accordion-summary-border +
+              $color-lightness-offset-hover,
           ),
         ),
       ),
       badge: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-fore + $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-badge-fore,
+          dark: $color-dark-lightness-badge-fore + $color-lightness-offset-hover,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-back + $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-back + $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-badge-back +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-badge-back + $color-lightness-offset-hover,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-border +
-                $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-border + $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-badge-border +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-badge-border +
+            $color-lightness-offset-hover,
         ),
       ),
       button: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-fore + $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-fore + $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-button-fore +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-button-fore +
+            $color-lightness-offset-hover,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-back + $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-back + $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-button-back +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-button-back +
+            $color-lightness-offset-hover,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-border +
-                $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-border +
-                $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-button-border +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-button-border +
+            $color-lightness-offset-hover,
         ),
         shadow: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-shadow +
-                $color-lightness-offset-hover
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-shadow +
-                $color-lightness-offset-hover
-            ),
+          light: $color-light-lightness-button-shadow +
+            $color-lightness-offset-hover,
+          dark: $color-dark-lightness-button-shadow +
+            $color-lightness-offset-hover,
         ),
       ),
       //#region nav
@@ -1416,24 +1030,16 @@ $colorShades: (
           navMenu: (
             navMenuItem: (
               fore: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-fore +
-                      $color-lightness-offset-hover
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-fore +
-                      $color-lightness-offset-hover
-                  ),
+                light: $color-light-lightness-nav-fore +
+                  $color-lightness-offset-hover,
+                dark: $color-dark-lightness-nav-fore +
+                  $color-lightness-offset-hover,
               ),
               shadow: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-hover
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-hover
-                  ),
+                light: $color-light-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-hover,
+                dark: $color-dark-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-hover,
               ),
             ),
           ),
@@ -1445,152 +1051,98 @@ $colorShades: (
   (
       name: "focus",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore + $color-lightness-offset-focus
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-fore + $color-lightness-offset-focus
-          ),
+        light: $color-light-lightness-fore + $color-lightness-offset-focus,
+        dark: $color-dark-lightness-fore + $color-lightness-offset-focus,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back + $color-lightness-offset-focus
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-back + $color-lightness-offset-focus
-          ),
+        light: $color-light-lightness-back + $color-lightness-offset-focus,
+        dark: $color-dark-lightness-back + $color-lightness-offset-focus,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border + $color-lightness-offset-focus
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border + $color-lightness-offset-focus
-          ),
+        light: $color-light-lightness-border + $color-lightness-offset-focus,
+        dark: $color-dark-lightness-border + $color-lightness-offset-focus,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder + $color-lightness-offset-focus
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder + $color-lightness-offset-focus
-          ),
+        light: $color-light-lightness-placeholder +
+          $color-lightness-offset-focus,
+        dark: $color-dark-lightness-placeholder + $color-lightness-offset-focus,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow + $color-lightness-offset-focus
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow + $color-lightness-offset-focus
-          ),
+        light: $color-light-lightness-shadow + $color-lightness-offset-focus,
+        dark: $color-dark-lightness-shadow + $color-lightness-offset-focus,
       ),
       accordion: (
         accordionSummary: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-fore
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-fore
-              ),
+            light: $color-light-lightness-accordion-summary-fore,
+            dark: $color-dark-lightness-accordion-summary-fore,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-back
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-back
-              ),
+            light: $color-light-lightness-accordion-summary-back,
+            dark: $color-dark-lightness-accordion-summary-back,
           ),
           border: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-border
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-border
-              ),
+            light: $color-light-lightness-accordion-summary-border,
+            dark: $color-dark-lightness-accordion-summary-border,
           ),
         ),
       ),
       badge: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-fore
-            ),
+          light: $color-light-lightness-badge-fore,
+          dark: $color-dark-lightness-badge-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-back
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-back
-            ),
+          light: $color-light-lightness-badge-back,
+          dark: $color-dark-lightness-badge-back,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-border
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-border
-            ),
+          light: $color-light-lightness-badge-border,
+          dark: $color-dark-lightness-badge-border,
         ),
       ),
       button: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-fore
-            ),
+          light: $color-light-lightness-button-fore,
+          dark: $color-dark-lightness-button-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-back
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-back
-            ),
+          light: $color-light-lightness-button-back,
+          dark: $color-dark-lightness-button-back,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-border
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-border
-            ),
+          light: $color-light-lightness-button-border,
+          dark: $color-dark-lightness-button-border,
         ),
         shadow: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-shadow
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-shadow
-            ),
+          light: $color-light-lightness-button-shadow,
+          dark: $color-dark-lightness-button-shadow,
         ),
       ),
+      //#region input
+      input: (
+          back: (
+            light: $color-light-lightness-input-back,
+            dark: $color-dark-lightness-input-back,
+          ),
+          border: (
+            light: $color-light-lightness-input-border +
+              $color-lightness-offset-focus,
+            dark: $color-dark-lightness-input-border +
+              $color-lightness-offset-focus,
+          ),
+        ),
       //#region nav
       nav: (
           navMenu: (
             navMenuItem: (
               fore: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-fore
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-fore
-                  ),
+                light: $color-light-lightness-nav-fore,
+                dark: $color-dark-lightness-nav-fore,
               ),
               shadow: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-menu-item-shadow
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-menu-item-shadow
-                  ),
+                light: $color-light-lightness-nav-menu-item-shadow,
+                dark: $color-dark-lightness-nav-menu-item-shadow,
               ),
             ),
           ),
@@ -1602,134 +1154,82 @@ $colorShades: (
   (
       name: "active",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore + $color-lightness-offset-active
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-fore + $color-lightness-offset-active
-          ),
+        light: $color-light-lightness-fore + $color-lightness-offset-active,
+        dark: $color-dark-lightness-fore + $color-lightness-offset-active,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back + $color-lightness-offset-active
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-back + $color-lightness-offset-active
-          ),
+        light: $color-light-lightness-back + $color-lightness-offset-active,
+        dark: $color-dark-lightness-back + $color-lightness-offset-active,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border + $color-lightness-offset-active
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border + $color-lightness-offset-active
-          ),
+        light: $color-light-lightness-border + $color-lightness-offset-active,
+        dark: $color-dark-lightness-border + $color-lightness-offset-active,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder + $color-lightness-offset-active
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder + $color-lightness-offset-active
-          ),
+        light: $color-light-lightness-placeholder +
+          $color-lightness-offset-active,
+        dark: $color-dark-lightness-placeholder + $color-lightness-offset-active,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow + $color-lightness-offset-active
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow + $color-lightness-offset-active
-          ),
+        light: $color-light-lightness-shadow + $color-lightness-offset-active,
+        dark: $color-dark-lightness-shadow + $color-lightness-offset-active,
       ),
       accordion: (
         accordionSummary: (
           fore: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-fore +
-                  $color-lightness-offset-active
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-fore +
-                  $color-lightness-offset-active
-              ),
+            light: $color-light-lightness-accordion-summary-fore +
+              $color-lightness-offset-active,
+            dark: $color-dark-lightness-accordion-summary-fore +
+              $color-lightness-offset-active,
           ),
           back: (
-            light: functions.colorLightnessNumberToString(
-                $color-light-lightness-accordion-summary-back +
-                  $color-lightness-offset-active
-              ),
-            dark: functions.colorLightnessNumberToString(
-                $color-dark-lightness-accordion-summary-back +
-                  $color-lightness-offset-active
-              ),
+            light: $color-light-lightness-accordion-summary-back +
+              $color-lightness-offset-active,
+            dark: $color-dark-lightness-accordion-summary-back +
+              $color-lightness-offset-active,
           ),
         ),
       ),
       badge: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-fore
-            ),
+          light: $color-light-lightness-badge-fore,
+          dark: $color-dark-lightness-badge-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-back + $color-lightness-offset-active
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-back + $color-lightness-offset-active
-            ),
+          light: $color-light-lightness-badge-back +
+            $color-lightness-offset-active,
+          dark: $color-dark-lightness-badge-back +
+            $color-lightness-offset-active,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-border +
-                $color-lightness-offset-active
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-border +
-                $color-lightness-offset-active
-            ),
+          light: $color-light-lightness-badge-border +
+            $color-lightness-offset-active,
+          dark: $color-dark-lightness-badge-border +
+            $color-lightness-offset-active,
         ),
       ),
       button: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-fore
-            ),
+          light: $color-light-lightness-button-fore,
+          dark: $color-dark-lightness-button-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-back +
-                $color-lightness-offset-active
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-back + $color-lightness-offset-active
-            ),
+          light: $color-light-lightness-button-back +
+            $color-lightness-offset-active,
+          dark: $color-dark-lightness-button-back +
+            $color-lightness-offset-active,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-border +
-                $color-lightness-offset-active
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-border +
-                $color-lightness-offset-active
-            ),
+          light: $color-light-lightness-button-border +
+            $color-lightness-offset-active,
+          dark: $color-dark-lightness-button-border +
+            $color-lightness-offset-active,
         ),
         shadow: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-shadow +
-                $color-lightness-offset-active
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-shadow +
-                $color-lightness-offset-active
-            ),
+          light: $color-light-lightness-button-shadow +
+            $color-lightness-offset-active,
+          dark: $color-dark-lightness-button-shadow +
+            $color-lightness-offset-active,
         ),
       ),
       //#region nav
@@ -1737,24 +1237,16 @@ $colorShades: (
           navMenu: (
             navMenuItem: (
               fore: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-fore +
-                      $color-lightness-offset-active
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-fore +
-                      $color-lightness-offset-active
-                  ),
+                light: $color-light-lightness-nav-fore +
+                  $color-lightness-offset-active,
+                dark: $color-dark-lightness-nav-fore +
+                  $color-lightness-offset-active,
               ),
               shadow: (
-                light: functions.colorLightnessNumberToString(
-                    $color-light-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-active
-                  ),
-                dark: functions.colorLightnessNumberToString(
-                    $color-dark-lightness-nav-menu-item-shadow +
-                      $color-lightness-offset-active
-                  ),
+                light: $color-light-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-active,
+                dark: $color-dark-lightness-nav-menu-item-shadow +
+                  $color-lightness-offset-active,
               ),
             ),
           ),
@@ -1766,113 +1258,65 @@ $colorShades: (
   (
       name: "visited",
       fore: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-fore + $color-lightness-offset-visited
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-fore + $color-lightness-offset-visited
-          ),
+        light: $color-light-lightness-fore + $color-lightness-offset-visited,
+        dark: $color-dark-lightness-fore + $color-lightness-offset-visited,
       ),
       back: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-back + $color-lightness-offset-visited
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-back + $color-lightness-offset-visited
-          ),
+        light: $color-light-lightness-back + $color-lightness-offset-visited,
+        dark: $color-dark-lightness-back + $color-lightness-offset-visited,
       ),
       border: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-border + $color-lightness-offset-visited
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-border + $color-lightness-offset-visited
-          ),
+        light: $color-light-lightness-border + $color-lightness-offset-visited,
+        dark: $color-dark-lightness-border + $color-lightness-offset-visited,
       ),
       placeholder: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-placeholder + $color-lightness-offset-visited
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-placeholder + $color-lightness-offset-visited
-          ),
+        light: $color-light-lightness-placeholder +
+          $color-lightness-offset-visited,
+        dark: $color-dark-lightness-placeholder +
+          $color-lightness-offset-visited,
       ),
       shadow: (
-        light: functions.colorLightnessNumberToString(
-            $color-light-lightness-shadow + $color-lightness-offset-visited
-          ),
-        dark: functions.colorLightnessNumberToString(
-            $color-dark-lightness-shadow + $color-lightness-offset-visited
-          ),
+        light: $color-light-lightness-shadow + $color-lightness-offset-visited,
+        dark: $color-dark-lightness-shadow + $color-lightness-offset-visited,
       ),
       badge: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-fore
-            ),
+          light: $color-light-lightness-badge-fore,
+          dark: $color-dark-lightness-badge-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-back
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-back
-            ),
+          light: $color-light-lightness-badge-back,
+          dark: $color-dark-lightness-badge-back,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-badge-border
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-badge-border
-            ),
+          light: $color-light-lightness-badge-border,
+          dark: $color-dark-lightness-badge-border,
         ),
       ),
       button: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-fore
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-fore
-            ),
+          light: $color-light-lightness-button-fore,
+          dark: $color-dark-lightness-button-fore,
         ),
         back: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-back
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-back
-            ),
+          light: $color-light-lightness-button-back,
+          dark: $color-dark-lightness-button-back,
         ),
         border: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-border
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-border
-            ),
+          light: $color-light-lightness-button-border,
+          dark: $color-dark-lightness-button-border,
         ),
         shadow: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-button-shadow
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-button-shadow
-            ),
+          light: $color-light-lightness-button-shadow,
+          dark: $color-dark-lightness-button-shadow,
         ),
       ),
       link: (
         fore: (
-          light: functions.colorLightnessNumberToString(
-              $color-light-lightness-link-fore + $color-lightness-offset-visited
-            ),
-          dark: functions.colorLightnessNumberToString(
-              $color-dark-lightness-link-fore + $color-lightness-offset-visited
-            ),
+          light: $color-light-lightness-link-fore +
+            $color-lightness-offset-visited,
+          dark: $color-dark-lightness-link-fore +
+            $color-lightness-offset-visited,
         ),
       ),
     ) //#endregion visited
@@ -1886,48 +1330,86 @@ $colorShades: (
 
 $colors: (
   (
-    "name": "gray",
-    "hue": $color-hue-gray,
+    name: "gray",
+    hue: $color-hue-gray,
   ),
   (
-    "name": "red",
-    "hue": $color-hue-red,
+    name: "red",
+    hue: $color-hue-red,
   ),
   (
-    "name": "coral",
-    "hue": $color-hue-coral,
+    name: "coral",
+    hue: $color-hue-coral,
   ),
   (
-    "name": "orange",
-    "hue": $color-hue-orange,
+    name: "orange",
+    hue: $color-hue-orange,
   ),
   (
-    "name": "yellow",
-    "hue": $color-hue-yellow,
+    name: "yellow",
+    hue: $color-hue-yellow,
   ),
   (
-    "name": "lime",
-    "hue": $color-hue-lime,
+    name: "lime",
+    hue: $color-hue-lime,
   ),
   (
-    "name": "green",
-    "hue": $color-hue-green,
+    name: "green",
+    hue: $color-hue-green,
   ),
   (
-    "name": "cyan",
-    "hue": $color-hue-cyan,
+    name: "cyan",
+    hue: $color-hue-cyan,
   ),
   (
-    "name": "blue",
-    "hue": $color-hue-blue,
+    name: "blue",
+    hue: $color-hue-blue,
   ),
   (
-    "name": "violet",
-    "hue": $color-hue-violet,
+    name: "violet",
+    hue: $color-hue-violet,
   ),
   (
-    "name": "magenta",
-    "hue": $color-hue-magenta,
+    name: "magenta",
+    hue: $color-hue-magenta,
+  )
+) !default;
+
+$semanticColors: (
+  (
+    name: "primary",
+    colorName: "violet",
+    lightnessOffset: 0,
+  ),
+  (
+    name: "secondary",
+    colorName: "gray",
+    lightnessOffset: -10,
+  ),
+  (
+    name: "tertiary",
+    colorName: "gray",
+    lightnessOffset: -20,
+  ),
+  (
+    name: "info",
+    colorName: "blue",
+    lightnessOffset: 0,
+  ),
+  (
+    name: "success",
+    colorName: "green",
+    lightnessOffset: 0,
+  ),
+  (
+    name: "warning",
+    colorName: "yellow",
+    lightnessOffset: 0,
+  ),
+  (
+    name: "danger",
+    colorName: "red",
+    lightnessOffset: 0,
   )
 ) !default;
 

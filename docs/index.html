@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -18,7 +18,7 @@
       type="text/css"
       media="all"
       href="https://unpkg.com/minolith/dist/css/minolith-utilities.min.css"
-    />
+    /> -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -250,7 +250,7 @@
           </div>
         </section>
         <section class="py-0.5rem">
-          <details class="accordion">
+          <details class="accordion is-primary">
             <summary class="accordion-summary">Installation</summary>
             <div class="accordion-details">
               <section class="py-0.5rem">
@@ -615,20 +615,7 @@
           <details class="accordion">
             <summary class="accordion-summary">components</summary>
             <div class="accordion-details">
-              <section class="py-0.5rem">
-                <details class="accordion">
-                  <summary class="accordion-summary">.heading</summary>
-                  <div class="accordion-details">
-                    <h1 class="heading-1">.heading-1</h1>
-                    <h2 class="heading-2">.heading-2</h2>
-                    <h3 class="heading-3">.heading-3</h3>
-                    <h4 class="heading-4">.heading-4</h4>
-                    <h5 class="heading-5">.heading-5</h5>
-                    <h6 class="heading-6">.heading-6</h6>
-                  </div>
-                </details>
-              </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="badge">
                 <details class="accordion">
                   <summary class="accordion-summary">.badge</summary>
                   <div class="accordion-details">
@@ -718,7 +705,7 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="blockquote">
                 <details class="accordion">
                   <summary class="accordion-summary">.blockquote</summary>
                   <div class="accordion-details">
@@ -760,6 +747,27 @@
                             <blockquote class="blockquote is-italic">
                               <p class="paragraph">.blockquote</p>
                               <p class="paragraph">.is-italic</p>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <div class="column-3 is-small-6 is-xsmall-12">
+                          <div class="p-0.5rem">
+                            <blockquote class="blockquote is-primary">
+                              <p class="paragraph">.blockquote .is-primary</p>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <div class="column-3 is-small-6 is-xsmall-12">
+                          <div class="p-0.5rem">
+                            <blockquote class="blockquote is-secondary">
+                              <p class="paragraph">.blockquote .is-secondary</p>
+                            </blockquote>
+                          </div>
+                        </div>
+                        <div class="column-3 is-small-6 is-xsmall-12">
+                          <div class="p-0.5rem">
+                            <blockquote class="blockquote is-tertiary">
+                              <p class="paragraph">.blockquote .is-tertiary</p>
                             </blockquote>
                           </div>
                         </div>
@@ -831,7 +839,7 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="breadcrumbs">
                 <details class="accordion">
                   <summary class="accordion-summary">.breadcrumbs</summary>
                   <div class="accordion-details">
@@ -981,7 +989,7 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="button">
                 <details class="accordion">
                   <summary class="accordion-summary">.button</summary>
                   <div class="accordion-details">
@@ -1067,7 +1075,478 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="card">
+                <details class="accordion">
+                  <summary class="accordion-summary">.card</summary>
+                  <div class="accordion-details">
+                    <div class="py-0.5rem">
+                      <div class="card">
+                        <div class="card-header">.card</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-gray">
+                        <div class="card-header">.card . is-gray</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-red">
+                        <div class="card-header">.card .is-red</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-coral">
+                        <div class="card-header">.card .is-coral</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-orange">
+                        <div class="card-header">.card .is-orange</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-yellow">
+                        <div class="card-header">.card .is-yellow</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-lime">
+                        <div class="card-header">.card .is-lime</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-green">
+                        <div class="card-header">.card .is-green</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-cyan">
+                        <div class="card-header">.card .is-cyan</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-blue">
+                        <div class="card-header">.card .is-blue</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-violet">
+                        <div class="card-header">.card .is-violet</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="card is-magenta">
+                        <div class="card-header">.card .is-magenta</div>
+                        <div class="card-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="card-footer">footer</div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <section class="py-0.5rem" name="dialogue">
+                <details class="accordion">
+                  <summary class="accordion-summary">.dialogue</summary>
+                  <div class="accordion-details">
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-gray">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-gray
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-red">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-red
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-coral">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-coral
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-orange">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-orange
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-yellow">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-yellow
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-lime">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-lime
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-green">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-green
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-cyan">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-cyan
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-blue">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-blue
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-violet">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-violet
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="dialogue is-left is-magenta">
+                        <div class="dialogue-avatar-container">
+                          <img
+                            class="image dialogue-avatar"
+                            src="images/avatar.png"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="dialogue-content-container">
+                          <div class="dialogue-name">
+                            .dialogue
+                          </div>
+                          <div class="dialogue-message">
+                            <div class="dialogue-message-inner">
+                              .dialogue .is-left .is-magenta
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </details>
+              </section>
+              <section class="py-0.5rem" name="heading">
+                <details class="accordion">
+                  <summary class="accordion-summary">.heading</summary>
+                  <div class="accordion-details">
+                    <h1 class="heading-1">.heading-1</h1>
+                    <h2 class="heading-2">.heading-2</h2>
+                    <h3 class="heading-3">.heading-3</h3>
+                    <h4 class="heading-4">.heading-4</h4>
+                    <h5 class="heading-5">.heading-5</h5>
+                    <h6 class="heading-6">.heading-6</h6>
+                  </div>
+                </details>
+              </section>
+              <section class="py-0.5rem" name="link">
                 <details class="accordion">
                   <summary class="accordion-summary">.link</summary>
                   <div class="accordion-details">
@@ -1133,7 +1612,7 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="label">
                 <details class="accordion">
                   <summary class="accordion-summary">.label</summary>
                   <div class="accordion-details">
@@ -1378,7 +1857,7 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
+              <section class="py-0.5rem" name="progress">
                 <details class="accordion">
                   <summary class="accordion-summary">.progress</summary>
                   <div class="accordion-details">
@@ -1439,36 +1918,192 @@
                   </div>
                 </details>
               </section>
-              <section class="py-0.5rem">
-                <div class="message">
-                  <div class="message-header">.message</div>
-                  <div class="message-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+              <section class="py-0.5rem" name="message">
+                <details class="accordion">
+                  <summary class="accordion-summary">.message</summary>
+                  <div class="accordion-details">
+                    <div class="py-0.5rem">
+                      <div class="message">
+                        <div class="message-header">.message</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-gray">
+                        <div class="message-header">.message .is-gray</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-red">
+                        <div class="message-header">.message .is-red</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-coral">
+                        <div class="message-header">.message .is-coral</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-orange">
+                        <div class="message-header">.message .is-orange</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-yellow">
+                        <div class="message-header">.message .is-yellow</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-lime">
+                        <div class="message-header">.message .is-lime</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-green">
+                        <div class="message-header">.message .is-green</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-cyan">
+                        <div class="message-header">.message .is-cyan</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-blue">
+                        <div class="message-header">.message .is-blue</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-violet">
+                        <div class="message-header">.message .is-violet</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="py-0.5rem">
+                      <div class="message is-magenta">
+                        <div class="message-header">.message .is-magenta</div>
+                        <div class="message-body">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                          do eiusmod tempor incididunt ut labore et dolore magna
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          Duis aute irure dolor in reprehenderit in voluptate velit
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                          occaecat cupidatat non proident, sunt in culpa qui officia
+                          deserunt mollit anim id est laborum.
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <section class="py-0.5rem">
-                <div class="card">
-                  <div class="card-header">.card</div>
-                  <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </div>
-                  <div class="card-footer">footer</div>
-                </div>
+                </details>
               </section>
               <section class="py-0.5rem">
                 <button class="button" onclick="toggleModal()">

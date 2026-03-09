@@ -5,14 +5,22 @@
 
 :where(.blockquote) {
   //#region local css variables
-  --#{variables.$prefix}color-blockquote-fore: var(
+  --#{variables.$prefix}blockquote-color-fore: var(
     --#{variables.$prefix}color-default-blockquote-fore
   );
-  --#{variables.$prefix}color-blockquote-back: var(
+  --#{variables.$prefix}blockquote-color-back: var(
     --#{variables.$prefix}color-default-blockquote-back
   );
-  --#{variables.$prefix}color-blockquote-border: var(
+  --#{variables.$prefix}blockquote-color-border: var(
     --#{variables.$prefix}color-default-blockquote-border
+  );
+  --#{variables.$prefix}blockquote-color-selection-fore: var(
+    --#{variables.$prefix}color-default-blockquote-selection-fore,
+    var(--#{variables.$prefix}color-default-selection-fore)
+  );
+  --#{variables.$prefix}blockquote-color-selection-back: var(
+    --#{variables.$prefix}color-default-blockquote-selection-back,
+    var(--#{variables.$prefix}color-default-selection-back)
   );
 
   --#{variables.$prefix}blockquote-icon-font-size: var(
@@ -25,15 +33,19 @@
 
   @include mixins.element();
   position: relative;
-  color: var(--#{variables.$prefix}color-blockquote-fore);
-  background-color: var(--#{variables.$prefix}color-blockquote-back);
-  border-left-color: var(--#{variables.$prefix}color-blockquote-border);
+  color: var(--#{variables.$prefix}blockquote-color-fore);
+  background-color: var(--#{variables.$prefix}blockquote-color-back);
+  border-left-color: var(--#{variables.$prefix}blockquote-color-border);
   border-left-style: solid;
   border-left-width: var(--#{variables.$prefix}blockquote-border-left-width);
   margin: 0;
   margin-block: unset;
   margin-inline: unset;
   padding: 0.5rem;
+  &::selection {
+    color: var(--#{variables.$prefix}blockquote-color-selection-fore);
+    background-color: var(--#{variables.$prefix}blockquote-color-selection-back);
+  }
   &.is-italic {
     font-style: italic;
   }
@@ -51,7 +63,7 @@
       content: open-quote;
       display: block;
       max-width: 100%;
-      color: var(--#{variables.$prefix}color-blockquote-fore);
+      color: var(--#{variables.$prefix}blockquote-color-fore);
       font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
     }
   }
@@ -69,7 +81,7 @@
       content: close-quote;
       display: block;
       max-width: 100%;
-      color: var(--#{variables.$prefix}color-blockquote-fore);
+      color: var(--#{variables.$prefix}blockquote-color-fore);
       font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
     }
   }
@@ -80,14 +92,47 @@
       &.is-#{$colorName} {
 
         //#region local css variables
-        --#{variables.$prefix}color-blockquote-fore: var(
+        --#{variables.$prefix}blockquote-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-blockquote-fore
         );
-        --#{variables.$prefix}color-blockquote-back: var(
+        --#{variables.$prefix}blockquote-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-blockquote-back
         );
-        --#{variables.$prefix}color-blockquote-border: var(
+        --#{variables.$prefix}blockquote-color-border: var(
           --#{variables.$prefix}color-#{$colorName}-blockquote-border
+        );
+        --#{variables.$prefix}blockquote-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}blockquote-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+        //#endregion local css variables
+      }
+    }
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+
+        //#region local css variables
+        --#{variables.$prefix}blockquote-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-fore
+        );
+        --#{variables.$prefix}blockquote-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-back
+        );
+        --#{variables.$prefix}blockquote-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-border
+        );
+        --#{variables.$prefix}blockquote-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}blockquote-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-blockquote-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
         );
         //#endregion local css variables
       }

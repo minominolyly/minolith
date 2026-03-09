@@ -4,60 +4,60 @@
 
 :where(.badge) {
   //#region local css variables
-  --#{variables.$prefix}color-badge-fore: var(
+  --#{variables.$prefix}badge-color-fore: var(
     --#{variables.$prefix}color-default-badge-fore
   );
-  --#{variables.$prefix}color-badge-back: var(
+  --#{variables.$prefix}badge-color-back: var(
     --#{variables.$prefix}color-default-badge-back
   );
-  --#{variables.$prefix}color-badge-border: var(
+  --#{variables.$prefix}badge-color-border: var(
     --#{variables.$prefix}color-default-badge-border
   );
 
   //#region focus
-  --#{variables.$prefix}color-badge-focus-fore: var(
+  --#{variables.$prefix}badge-color-focus-fore: var(
     --#{variables.$prefix}color-default-badge-focus-fore
   );
-  --#{variables.$prefix}color-badge-focus-back: var(
+  --#{variables.$prefix}badge-color-focus-back: var(
     --#{variables.$prefix}color-default-badge-focus-back
   );
-  --#{variables.$prefix}color-badge-focus-border: var(
+  --#{variables.$prefix}badge-color-focus-border: var(
     --#{variables.$prefix}color-default-badge-focus-border
   );
   //#endregion focus
 
   //#region hover
-  --#{variables.$prefix}color-badge-hover-fore: var(
+  --#{variables.$prefix}badge-color-hover-fore: var(
     --#{variables.$prefix}color-default-badge-hover-fore
   );
-  --#{variables.$prefix}color-badge-hover-back: var(
+  --#{variables.$prefix}badge-color-hover-back: var(
     --#{variables.$prefix}color-default-badge-hover-back
   );
-  --#{variables.$prefix}color-badge-hover-border: var(
+  --#{variables.$prefix}badge-color-hover-border: var(
     --#{variables.$prefix}color-default-badge-hover-border
   );
   //#endregion hover
 
   //#region active
-  --#{variables.$prefix}color-badge-active-fore: var(
+  --#{variables.$prefix}badge-color-active-fore: var(
     --#{variables.$prefix}color-default-badge-active-fore
   );
-  --#{variables.$prefix}color-badge-active-back: var(
+  --#{variables.$prefix}badge-color-active-back: var(
     --#{variables.$prefix}color-default-badge-active-back
   );
-  --#{variables.$prefix}color-badge-active-border: var(
+  --#{variables.$prefix}badge-color-active-border: var(
     --#{variables.$prefix}color-default-badge-active-border
   );
   //#endregion active
 
   //#region disabled
-  --#{variables.$prefix}color-badge-disabled-fore: var(
+  --#{variables.$prefix}badge-color-disabled-fore: var(
     --#{variables.$prefix}color-default-badge-disabled-fore
   );
-  --#{variables.$prefix}color-badge-disabled-back: var(
+  --#{variables.$prefix}badge-color-disabled-back: var(
     --#{variables.$prefix}color-default-badge-disabled-back
   );
-  --#{variables.$prefix}color-badge-disabled-border: var(
+  --#{variables.$prefix}badge-color-disabled-border: var(
     --#{variables.$prefix}color-default-badge-disabled-border
   );
   //#endregion disabled
@@ -66,12 +66,12 @@
 
   @include mixins.element();
   align-items: center;
-  background-color: var(--#{variables.$prefix}color-badge-back);
-  border-color: var(--#{variables.$prefix}color-badge-border);
+  background-color: var(--#{variables.$prefix}badge-color-back);
+  border-color: var(--#{variables.$prefix}badge-color-border);
   border-radius: var(--#{variables.$prefix}border-radius-medium);
   border-style: solid;
   border-width: var(--#{variables.$prefix}border-width-thin);
-  color: var(--#{variables.$prefix}color-badge-fore);
+  color: var(--#{variables.$prefix}badge-color-fore);
   display: inline-flex;
   font-size: var(--#{variables.$prefix}font-size-small);
   justify-content: center;
@@ -92,40 +92,40 @@
     &.is-focus,
     &.is-focused {
       background-color: var(
-        --#{variables.$prefix}color-badge-focus-back
+        --#{variables.$prefix}badge-color-focus-back
       );
-      border-color: var(--#{variables.$prefix}color-badge-focus-border);
-      color: var(--#{variables.$prefix}color-badge-focus-fore);
+      border-color: var(--#{variables.$prefix}badge-color-focus-border);
+      color: var(--#{variables.$prefix}badge-color-focus-fore);
     }
     &:hover,
     &.is-hovered,
     &.is-hovered {
       background-color: var(
-        --#{variables.$prefix}color-badge-hover-back
+        --#{variables.$prefix}badge-color-hover-back
       );
-      border-color: var(--#{variables.$prefix}color-badge-hover-border);
-      color: var(--#{variables.$prefix}color-badge-hover-fore);
+      border-color: var(--#{variables.$prefix}badge-color-hover-border);
+      color: var(--#{variables.$prefix}badge-color-hover-fore);
     }
     &:active,
     &.is-active {
       background-color: var(
-        --#{variables.$prefix}color-badge-active-back
+        --#{variables.$prefix}badge-color-active-back
       );
       border-color: var(
-        --#{variables.$prefix}color-badge-active-border
+        --#{variables.$prefix}badge-color-active-border
       );
-      color: var(--#{variables.$prefix}color-badge-active-fore);
+      color: var(--#{variables.$prefix}badge-color-active-fore);
     }
     &[disabled],
     fieldset[disabled],
     &.is-disabled {
       background-color: var(
-        --#{variables.$prefix}color-badge-disabled-back
+        --#{variables.$prefix}badge-color-disabled-back
       );
       border-color: var(
-        --#{variables.$prefix}color-badge-disabled-border
+        --#{variables.$prefix}badge-color-disabled-border
       );
-      color: var(--#{variables.$prefix}color-badge-disabled-fore);
+      color: var(--#{variables.$prefix}badge-color-disabled-fore);
     }
   }
 
@@ -134,60 +134,123 @@
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         //#region local css variables
-        --#{variables.$prefix}color-badge-fore: var(
+        --#{variables.$prefix}badge-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-badge-fore
         );
-        --#{variables.$prefix}color-badge-back: var(
+        --#{variables.$prefix}badge-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-badge-back
         );
-        --#{variables.$prefix}color-badge-border: var(
+        --#{variables.$prefix}badge-color-border: var(
           --#{variables.$prefix}color-#{$colorName}-badge-border
         );
 
         //#region focus
-        --#{variables.$prefix}color-badge-focus-fore: var(
+        --#{variables.$prefix}badge-color-focus-fore: var(
           --#{variables.$prefix}color-#{$colorName}-badge-focus-fore
         );
-        --#{variables.$prefix}color-badge-focus-back: var(
+        --#{variables.$prefix}badge-color-focus-back: var(
           --#{variables.$prefix}color-#{$colorName}-badge-focus-back
         );
-        --#{variables.$prefix}color-badge-focus-border: var(
+        --#{variables.$prefix}badge-color-focus-border: var(
           --#{variables.$prefix}color-#{$colorName}-badge-focus-border
         );
         //#endregion focus
 
         //#region hover
-        --#{variables.$prefix}color-badge-hover-fore: var(
+        --#{variables.$prefix}badge-color-hover-fore: var(
           --#{variables.$prefix}color-#{$colorName}-badge-hover-fore
         );
-        --#{variables.$prefix}color-badge-hover-back: var(
+        --#{variables.$prefix}badge-color-hover-back: var(
           --#{variables.$prefix}color-#{$colorName}-badge-hover-back
         );
-        --#{variables.$prefix}color-badge-hover-border: var(
+        --#{variables.$prefix}badge-color-hover-border: var(
           --#{variables.$prefix}color-#{$colorName}-badge-hover-border
         );
         //#endregion hover
 
         //#region active
-        --#{variables.$prefix}color-badge-active-fore: var(
+        --#{variables.$prefix}badge-color-active-fore: var(
           --#{variables.$prefix}color-#{$colorName}-badge-active-fore
         );
-        --#{variables.$prefix}color-badge-active-back: var(
+        --#{variables.$prefix}badge-color-active-back: var(
           --#{variables.$prefix}color-#{$colorName}-badge-active-back
         );
-        --#{variables.$prefix}color-badge-active-border: var(
+        --#{variables.$prefix}badge-color-active-border: var(
           --#{variables.$prefix}color-#{$colorName}-badge-active-border
         );
         //#endregion active
 
         //#region disabled
-        --#{variables.$prefix}color-badge-disabled-fore: var(
+        --#{variables.$prefix}badge-color-disabled-fore: var(
           --#{variables.$prefix}color-#{$colorName}-badge-disabled-fore
         );
-        --#{variables.$prefix}color-badge-disabled-back: var(
+        --#{variables.$prefix}badge-color-disabled-back: var(
           --#{variables.$prefix}color-#{$colorName}-badge-disabled-back
         );
-        --#{variables.$prefix}color-badge-disabled-border: var(
+        --#{variables.$prefix}badge-color-disabled-border: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-disabled-border
+        );
+        //#endregion disabled
+      }
+    }
+    @each $semanticColor in variables.$semanticColors {
+      $colorName: map.get($semanticColor, "name");
+      &.is-#{$colorName} {
+        //#region local css variables
+        --#{variables.$prefix}badge-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-fore
+        );
+        --#{variables.$prefix}badge-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-back
+        );
+        --#{variables.$prefix}badge-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-border
+        );
+
+        //#region focus
+        --#{variables.$prefix}badge-color-focus-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-focus-fore
+        );
+        --#{variables.$prefix}badge-color-focus-back: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-focus-back
+        );
+        --#{variables.$prefix}badge-color-focus-border: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-focus-border
+        );
+        //#endregion focus
+
+        //#region hover
+        --#{variables.$prefix}badge-color-hover-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-hover-fore
+        );
+        --#{variables.$prefix}badge-color-hover-back: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-hover-back
+        );
+        --#{variables.$prefix}badge-color-hover-border: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-hover-border
+        );
+        //#endregion hover
+
+        //#region active
+        --#{variables.$prefix}badge-color-active-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-active-fore
+        );
+        --#{variables.$prefix}badge-color-active-back: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-active-back
+        );
+        --#{variables.$prefix}badge-color-active-border: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-active-border
+        );
+        //#endregion active
+
+        //#region disabled
+        --#{variables.$prefix}badge-color-disabled-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-disabled-fore
+        );
+        --#{variables.$prefix}badge-color-disabled-back: var(
+          --#{variables.$prefix}color-#{$colorName}-badge-disabled-back
+        );
+        --#{variables.$prefix}badge-color-disabled-border: var(
           --#{variables.$prefix}color-#{$colorName}-badge-disabled-border
         );
         //#endregion disabled

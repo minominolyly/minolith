@@ -1,0 +1,13 @@
+@use "sass:map";
+
+@function getColorFromColors($colors, $colorName) {
+  @each $color in $colors {
+    $name: map.get($color, "name");
+
+    @if ($name == $colorName) {
+      @return $color;
+    }
+  }
+
+  @return null;
+}

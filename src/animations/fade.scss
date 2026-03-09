@@ -3,7 +3,7 @@
 //#region fade-in
 
 // style
-.fade-in {
+:where(.fade-in) {
   @include mixins.animation() {
     animation-name: fade-in;
   }
@@ -23,7 +23,7 @@
 //#region fade-out
 
 // style
-.fade-out {
+:where(.fade-out) {
   @include mixins.animation() {
     animation-name: fade-out;
   }

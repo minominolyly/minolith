@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.card {
+:where(.card) {
   //#region local css variables
   --#{variables.$prefix}color-card-fore: var(
     --#{variables.$prefix}color-default-card-fore

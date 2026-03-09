@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.badge {
+:where(.badge) {
   //#region local css variables
   --#{variables.$prefix}color-badge-fore: var(
     --#{variables.$prefix}color-default-badge-fore

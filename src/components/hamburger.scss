@@ -5,7 +5,7 @@ $hamburger-size: 3.5rem;
 $hamburger-line-height: 0.2rem;
 $hamburger-line-color: var(--#{variables.$prefix}color-default-border);
 
-.hamburger {
+:where(.hamburger) {
   color: var(--#{variables.$prefix}color-default-fore);
   border-radius: 0.25rem;
   cursor: pointer;

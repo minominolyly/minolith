@@ -468,7 +468,7 @@
   }
 }
 
-.nav {
+:where(.nav) {
   --#{variables.$prefix}color-nav-fore: var(
     --#{variables.$prefix}color-default-nav-fore,
     var(--#{variables.$prefix}color-default-fore)

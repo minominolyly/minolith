@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.dot {
+:where(.dot) {
   --#{variables.$prefix}dot-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-dot-fore) l c h /
       0.5

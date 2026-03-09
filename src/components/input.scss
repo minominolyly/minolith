@@ -223,7 +223,7 @@
   }
 }
 
-.input {
+:where(.input) {
   @include mixins.element();
   background-color: var(--#{variables.$prefix}color-default-back);
   border-color: var(--#{variables.$prefix}color-default-border);

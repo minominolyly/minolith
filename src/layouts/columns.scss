@@ -3,7 +3,7 @@
 @use "../variables/index.scss" as variables;
 @use "../functions/index.scss" as functions;
 
-.columns {
+:where(.columns) {
   --#{variables.$prefix}gutter-x: 0rem;
   --#{variables.$prefix}gutter-y: 0rem;
   @include mixins.element();

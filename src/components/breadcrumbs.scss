@@ -3,7 +3,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.breadcrumbs {
+:where(.breadcrumbs) {
   //#region local css variables
   --#{variables.$prefix}color-breadcrumb-fore: var(
     --#{variables.$prefix}color-default-breadcrumb-fore
@@ -49,6 +49,6 @@
   }
 }
 
-.breadcrumbs-nav {
+:where(.breadcrumbs-nav) {
   @include mixins.element();
 }

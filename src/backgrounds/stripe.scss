@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.stripe {
+:where(.stripe) {
   --#{variables.$prefix}stripe-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-stripe-fore) l c h /
       0.5

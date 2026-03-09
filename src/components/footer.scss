@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.footer {
+:where(.footer) {
   --#{variables.$prefix}color-footer-fore: var(
     --#{variables.$prefix}color-default-footer-fore
   );

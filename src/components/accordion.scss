@@ -3,7 +3,7 @@
 @use "../icons/index.scss" as icons;
 @use "../mixins/index.scss" as mixins;
 
-.accordion {
+:where(.accordion) {
   //#region local css variables
   --#{variables.$prefix}color-accordion-fore: var(
     --#{variables.$prefix}color-default-accordion-fore

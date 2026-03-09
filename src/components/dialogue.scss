@@ -26,7 +26,7 @@
   }
 }
 
-.dialogue {
+:where(.dialogue) {
   //#region local css variables
   --#{variables.$prefix}color-dialogue-fore: var(
     --#{variables.$prefix}color-default-dialogue-fore

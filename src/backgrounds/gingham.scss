@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.gingham {
+:where(.gingham) {
   --#{variables.$prefix}gingham-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-gingham-fore) l c h / 0.5
   );

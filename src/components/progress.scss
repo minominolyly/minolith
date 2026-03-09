@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.progress {
+:where(.progress) {
   --#{variables.$prefix}color-progress-fore: var(
     --#{variables.$prefix}color-default-progress-fore,
     --#{variables.$prefix}color-default-fore

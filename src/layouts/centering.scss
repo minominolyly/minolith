@@ -1,5 +1,5 @@
 /// ⚠️`.centering` has side-effect!
-.centering {
+:where(.centering) {
   display: flex;
   justify-content: center;
   align-items: center;

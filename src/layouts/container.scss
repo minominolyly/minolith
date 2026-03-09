@@ -2,7 +2,7 @@
 @use "../functions/index.scss" as functions;
 @use "../mixins/index.scss" as mixins;
 
-.container {
+:where(.container) {
   --#{variables.$prefix}gutter-x: 0rem;
   --#{variables.$prefix}gutter-y: 0rem;
   @include mixins.element();

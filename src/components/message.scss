@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.message {
+:where(.message) {
   //#region local css variables
   --#{variables.$prefix}color-message-fore: var(
     --#{variables.$prefix}color-default-message-fore

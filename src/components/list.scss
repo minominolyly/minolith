@@ -1,6 +1,6 @@
 @use "../mixins/index.scss" as mixins;
 
-.list {
+:where(.list) {
   @include mixins.element();
   display: block;
   list-style: none;
@@ -10,7 +10,7 @@
   &.is-style-disc {
     list-style: disc;
   }
-  .list-item {
+  > .list-item {
     display: list-item;
   }
 }

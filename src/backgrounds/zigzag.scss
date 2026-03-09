@@ -2,7 +2,7 @@
 @use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-.zigzag {
+:where(.zigzag) {
   --#{variables.$prefix}zigzag-size: 1rem;
   --#{variables.$prefix}zigzag-color-fore: oklch(
     from var(--#{variables.$prefix}color-default-zigzag-fore) l c h /

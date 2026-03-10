@@ -109,6 +109,7 @@
     padding: 1rem;
     position: relative;
     touch-action: manipulation;
+    user-select: none;
     list-style: none;
     &::marker,
     &::-webkit-details-marker {

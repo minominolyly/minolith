@@ -46,14 +46,14 @@
     --#{variables.$prefix}color-default-card-body-border
   );
 
-  --#{variables.$prefix}card-color-footer-fore: var(
-    --#{variables.$prefix}color-default-card-body-fore
+  --#{variables.$prefix}card-footer-color-fore: var(
+    --#{variables.$prefix}color-default-card-footer-fore
   );
-  --#{variables.$prefix}card-color-footer-back: var(
-    --#{variables.$prefix}color-default-card-body-back
+  --#{variables.$prefix}card-footer-color-back: var(
+    --#{variables.$prefix}color-default-card-footer-back
   );
-  --#{variables.$prefix}card-color-footer-border: var(
-    --#{variables.$prefix}color-default-card-body-border
+  --#{variables.$prefix}card-footer-color-border: var(
+    --#{variables.$prefix}color-default-card-footer-border
   );
 
   --#{variables.$prefix}card-border-width: var(
@@ -85,7 +85,7 @@
     background-color: var(--#{variables.$prefix}card-color-selection-back);
   }
 
-  >.card-header {
+  > .card-header {
     @include mixins.element();
     background-color: var(--#{variables.$prefix}card-header-color-back);
     border-radius: var(--#{variables.$prefix}card-border-radius)
@@ -96,7 +96,7 @@
     font-size: var(--#{variables.$prefix}font-size-medium);
     font-weight: var(--#{variables.$prefix}font-weight-semibold);
   }
-  >.card-body {
+  > .card-body {
     @include mixins.element();
     background-color: var(--#{variables.$prefix}card-body-color-back);
     color: var(--#{variables.$prefix}card-body-color-fore);
@@ -114,12 +114,12 @@
       border-radius: var(--#{variables.$prefix}card-border-radius);
     }
   }
-  >.card-footer {
+  > .card-footer {
     @include mixins.element();
-    background-color: var(--#{variables.$prefix}card-color-footer-back);
+    background-color: var(--#{variables.$prefix}card-footer-color-back);
     border-radius: 0 0 var(--#{variables.$prefix}card-border-radius)
       var(--#{variables.$prefix}card-border-radius);
-    color: var(--#{variables.$prefix}card-color-footer-fore);
+    color: var(--#{variables.$prefix}card-footer-color-fore);
     padding: 0.5rem;
     display: block;
   }
@@ -171,18 +171,19 @@
           --#{variables.$prefix}color-#{$colorName}-card-body-border
         );
 
-        --#{variables.$prefix}card-color-footer-fore: var(
+        --#{variables.$prefix}card-footer-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-fore
         );
-        --#{variables.$prefix}card-color-footer-back: var(
+        --#{variables.$prefix}card-footer-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-back
         );
-        --#{variables.$prefix}card-color-footer-border: var(
+        --#{variables.$prefix}card-footer-color-border: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-border
         );
         //#endregion local css variables
       }
     }
+
     @each $semanticColor in variables.$semanticColors {
       $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
@@ -229,13 +230,13 @@
           --#{variables.$prefix}color-#{$colorName}-card-body-border
         );
 
-        --#{variables.$prefix}card-color-footer-fore: var(
+        --#{variables.$prefix}card-footer-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-fore
         );
-        --#{variables.$prefix}card-color-footer-back: var(
+        --#{variables.$prefix}card-footer-color-back: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-back
         );
-        --#{variables.$prefix}card-color-footer-border: var(
+        --#{variables.$prefix}card-footer-color-border: var(
           --#{variables.$prefix}color-#{$colorName}-card-body-border
         );
         //#endregion local css variables

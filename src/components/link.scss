@@ -23,7 +23,7 @@
 
   @include mixins.element();
   color: var(--#{variables.$prefix}link-color-fore);
-  text-decoration: underline;
+  text-decoration: none;
   touch-action: manipulation;
   cursor: pointer;
 
@@ -33,7 +33,7 @@
   }
 
   &:hover {
-    text-decoration: none;
+    text-decoration: underline;
   }
 
   :focus:not(:focus-visible) {

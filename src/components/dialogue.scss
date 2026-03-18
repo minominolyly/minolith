@@ -8,18 +8,18 @@
     border-top-color: transparent;
     border-top-style: solid;
     border-top-width: calc(
-      var(--#{variables.$prefix}dialogue-messege-arrow-height) / 2
+      var(--#{variables.$prefix}dialogue-message-arrow-height) / 2
     );
     border-bottom-color: transparent;
     border-bottom-style: solid;
     border-bottom-width: calc(
-      var(--#{variables.$prefix}dialogue-messege-arrow-height) / 2
+      var(--#{variables.$prefix}dialogue-message-arrow-height) / 2
     );
     content: "";
     display: block;
     height: 0;
     position: absolute;
-    top: var(--#{variables.$prefix}dialogue-messege-arrow-top-offset);
+    top: var(--#{variables.$prefix}dialogue-message-arrow-top-offset);
     right: auto;
     width: 0;
     z-index: -1;
@@ -75,7 +75,7 @@
   --#{variables.$prefix}dialogue-border-width: var(
     --#{variables.$prefix}border-width-medium
   );
-  --#{variables.$prefix}dialogue-messege-top-offset: calc(
+  --#{variables.$prefix}dialogue-message-top-offset: calc(
     (
         var(--#{variables.$prefix}dialogue-name-padding-y) * 2 +
           var(--#{variables.$prefix}dialogue-border-width) * 2 +
@@ -83,10 +83,10 @@
       ) /
       2
   );
-  --#{variables.$prefix}dialogue-messege-arrow-top-offset: calc(
-    (-1 * var(--#{variables.$prefix}dialogue-messege-top-offset)) +
+  --#{variables.$prefix}dialogue-message-arrow-top-offset: calc(
+    (-1 * var(--#{variables.$prefix}dialogue-message-top-offset)) +
       (-1 * var(--#{variables.$prefix}dialogue-border-width)) +
-      (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-height) / 2) +
+      (-1 * var(--#{variables.$prefix}dialogue-message-arrow-height) / 2) +
       var(--#{variables.$prefix}dialogue-avatar-top-offset) +
       (var(--#{variables.$prefix}dialogue-avatar-size) / 2)
   );
@@ -100,7 +100,7 @@
   display: flex;
   max-width: 100%;
   margin: 0;
-  padding-bottom: var(--#{variables.$prefix}dialogue-messege-top-offset);
+  padding-bottom: var(--#{variables.$prefix}dialogue-message-top-offset);
   position: relative;
   width: 100%;
 
@@ -110,10 +110,10 @@
   }
 
   &.is-avatar-circle {
-    --#{variables.$prefix}dialogue-messege-arrow-top-offset: calc(
-      (-1 * var(--#{variables.$prefix}dialogue-messege-top-offset)) +
+    --#{variables.$prefix}dialogue-message-arrow-top-offset: calc(
+      (-1 * var(--#{variables.$prefix}dialogue-message-top-offset)) +
         (-1 * var(--#{variables.$prefix}dialogue-border-width)) +
-        (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-height) / 2) +
+        (-1 * var(--#{variables.$prefix}dialogue-message-arrow-height) / 2) +
         var(--#{variables.$prefix}dialogue-avatar-top-offset) +
         (
           var(--#{variables.$prefix}dialogue-avatar-size) +
@@ -188,9 +188,9 @@
       border-color: var(--#{variables.$prefix}dialogue-message-color-border);
       color: var(--#{variables.$prefix}dialogue-message-color-fore);
       position: relative;
-      top: var(--#{variables.$prefix}dialogue-messege-top-offset);
+      top: var(--#{variables.$prefix}dialogue-message-top-offset);
       padding-top: calc(
-        var(--#{variables.$prefix}dialogue-messege-top-offset) / 2
+        var(--#{variables.$prefix}dialogue-message-top-offset) / 2
       );
       width: auto;
       z-index: 0;
@@ -205,9 +205,9 @@
     > .dialogue-content-container {
       > .dialogue-name {
         right: auto;
-        left: var(--#{variables.$prefix}dialogue-messege-arrow-width);
+        left: var(--#{variables.$prefix}dialogue-message-arrow-width);
       }
-      padding-left: var(--#{variables.$prefix}dialogue-messege-arrow-width);
+      padding-left: var(--#{variables.$prefix}dialogue-message-arrow-width);
       > .dialogue-message {
         right: auto;
         @include dialogue-message-arrow-base();
@@ -221,11 +221,11 @@
             --#{variables.$prefix}dialogue-message-color-border
           );
           border-right-width: var(
-            --#{variables.$prefix}dialogue-messege-arrow-width
+            --#{variables.$prefix}dialogue-message-arrow-width
           );
           border-right-style: solid;
           left: calc(
-            (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width))
+            (-1 * var(--#{variables.$prefix}dialogue-message-arrow-width))
           );
         }
         &::after {
@@ -233,11 +233,11 @@
             --#{variables.$prefix}dialogue-message-color-back
           );
           border-right-width: var(
-            --#{variables.$prefix}dialogue-messege-arrow-width
+            --#{variables.$prefix}dialogue-message-arrow-width
           );
           border-right-style: solid;
           left: calc(
-            (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width)) +
+            (-1 * var(--#{variables.$prefix}dialogue-message-arrow-width)) +
               var(--#{variables.$prefix}dialogue-border-width) * 2
           );
         }
@@ -246,10 +246,10 @@
   }
   &.is-right {
     > .dialogue-content-container {
-      padding-right: var(--#{variables.$prefix}dialogue-messege-arrow-width);
+      padding-right: var(--#{variables.$prefix}dialogue-message-arrow-width);
       > .dialogue-name {
         left: auto;
-        right: var(--#{variables.$prefix}dialogue-messege-arrow-width);
+        right: var(--#{variables.$prefix}dialogue-message-arrow-width);
       }
       > .dialogue-message {
         left: auto;
@@ -264,11 +264,11 @@
             --#{variables.$prefix}dialogue-message-color-border
           );
           border-left-width: var(
-            --#{variables.$prefix}dialogue-messege-arrow-width
+            --#{variables.$prefix}dialogue-message-arrow-width
           );
           border-left-style: solid;
           right: calc(
-            (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width))
+            (-1 * var(--#{variables.$prefix}dialogue-message-arrow-width))
           );
         }
         &::after {
@@ -276,11 +276,11 @@
             --#{variables.$prefix}dialogue-message-color-back
           );
           border-left-width: var(
-            --#{variables.$prefix}dialogue-messege-arrow-width
+            --#{variables.$prefix}dialogue-message-arrow-width
           );
           border-left-style: solid;
           right: calc(
-            (-1 * var(--#{variables.$prefix}dialogue-messege-arrow-width)) +
+            (-1 * var(--#{variables.$prefix}dialogue-message-arrow-width)) +
               var(--#{variables.$prefix}dialogue-border-width) * 2
           );
         }

@@ -14,27 +14,29 @@
   margin-left: auto;
   width: auto;
 
-  @for $p from 0 through 20 {
-    $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
-    &.has-gutter-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
-    }
-    &.has-gutter-x-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-    }
-    &.has-gutter-y-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
-    }
-    @include mixins.is-responsive("has-gutter", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
-    }
-    @include mixins.is-responsive("has-gutter-x", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-    }
-    @include mixins.is-responsive("has-gutter-y", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+  @if (not variables.$is-skelton) {
+    @for $p from 0 through 20 {
+      $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
+      &.has-gutter-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      &.has-gutter-x-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      }
+      &.has-gutter-y-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter-x", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter-y", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
     }
   }
 

@@ -4,7 +4,7 @@
 
 :where(.zigzag) {
   --#{variables.$prefix}zigzag-size: 1rem;
-  --#{variables.$prefix}zigzag-color-fore: oklch(
+  --#{variables.$prefix}zigzag-color-line: oklch(
     from var(--#{variables.$prefix}color-default-zigzag-fore) l c h /
       0.5
   );
@@ -18,22 +18,22 @@
   background-image:
     linear-gradient(
       calc(45deg * 3),
-      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      var(--#{variables.$prefix}zigzag-color-line) 25%,
       transparent 25%
     ),
     linear-gradient(
       calc(45deg * 5),
-      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      var(--#{variables.$prefix}zigzag-color-line) 25%,
       transparent 25%
     ),
     linear-gradient(
       45deg,
-      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      var(--#{variables.$prefix}zigzag-color-line) 25%,
       transparent 25%
     ),
     linear-gradient(
       calc(45deg * 7),
-      var(--#{variables.$prefix}zigzag-color-fore) 25%,
+      var(--#{variables.$prefix}zigzag-color-line) 25%,
       var(--#{variables.$prefix}zigzag-color-back) 25%
     );
   background-position:
@@ -64,7 +64,7 @@
     @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}zigzag-color-fore: oklch(
+        --#{variables.$prefix}zigzag-color-line: oklch(
           from var(--#{variables.$prefix}color-#{$colorName}-zigzag-fore)
             l
             c

@@ -3,7 +3,7 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.dot) {
-  --#{variables.$prefix}dot-color-fore: oklch(
+  --#{variables.$prefix}dot-color-dot: oklch(
     from var(--#{variables.$prefix}color-default-dot-fore) l c h /
       0.5
   );
@@ -16,12 +16,12 @@
   background-color: var(--#{variables.$prefix}dot-color-back);
   background-image:
     radial-gradient(
-      var(--#{variables.$prefix}dot-color-fore)
+      var(--#{variables.$prefix}dot-color-dot)
         var(--#{variables.$prefix}dot-size),
       transparent calc(var(--#{variables.$prefix}dot-size) + 3%)
     ),
     radial-gradient(
-      var(--#{variables.$prefix}dot-color-fore)
+      var(--#{variables.$prefix}dot-color-dot)
         var(--#{variables.$prefix}dot-size),
       transparent calc(var(--#{variables.$prefix}dot-size) + 3%)
     );
@@ -44,26 +44,10 @@
       --#{variables.$prefix}dot-size: 10%;
     }
 
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}dot-color-fore: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-dot-fore)
-            l
-            c
-            h /
-            0.5
-        );
-        --#{variables.$prefix}dot-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-dot-back
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}dot-color-fore: oklch(
+        --#{variables.$prefix}dot-color-dot: oklch(
           from var(--#{variables.$prefix}color-#{$colorName}-dot-fore)
             l
             c

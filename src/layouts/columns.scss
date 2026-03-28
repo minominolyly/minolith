@@ -14,57 +14,60 @@
   margin-bottom: calc(var(--#{variables.$prefix}gutter-y) * -0.5);
   margin-right: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
   margin-left: calc(var(--#{variables.$prefix}gutter-x) * -0.5);
-  @for $p from 0 through 20 {
-    $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
-    &.has-gutter-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+
+  @if (not variables.$is-skelton) {
+    @for $p from 0 through 20 {
+      $escapedQuarter: functions.strReplace(#{($p * 0.25)}, ".", "\\.");
+      &.has-gutter-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      &.has-gutter-x-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      }
+      &.has-gutter-y-#{$escapedQuarter}rem {
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter-x", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+      }
+      @include mixins.is-responsive("has-gutter-y", "-#{$escapedQuarter}rem") {
+        --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+      }
     }
-    &.has-gutter-x-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+
+    &.is-direction-row {
+      flex-direction: row;
     }
-    &.has-gutter-y-#{$escapedQuarter}rem {
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    &.is-direction-row-reverse {
+      flex-direction: row-reverse;
     }
-    @include mixins.is-responsive("has-gutter", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+    &.is-direction-column {
+      flex-direction: column;
     }
-    @include mixins.is-responsive("has-gutter-x", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-x: #{($p * 0.25rem)};
+    &.is-direction-column-reverse {
+      flex-direction: column-reverse;
     }
-    @include mixins.is-responsive("has-gutter-y", "-#{$escapedQuarter}rem") {
-      --#{variables.$prefix}gutter-y: #{($p * 0.25rem)};
+
+    @include mixins.is-responsive("is", "-direction-row") {
+      flex-direction: row;
+    }
+    @include mixins.is-responsive("is", "-direction-row-reverse") {
+      flex-direction: row-reverse;
+    }
+    @include mixins.is-responsive("is", "-direction-column") {
+      flex-direction: column;
+    }
+    @include mixins.is-responsive("is", "-direction-column-reverse") {
+      flex-direction: column-reverse;
     }
   }
 
-  &.is-direction-row {
-    flex-direction: row;
-  }
-  &.is-direction-row-reverse {
-    flex-direction: row-reverse;
-  }
-  &.is-direction-column {
-    flex-direction: column;
-  }
-  &.is-direction-column-reverse {
-    flex-direction: column-reverse;
-  }
-
-  @include mixins.is-responsive("is", "-direction-row") {
-    flex-direction: row;
-  }
-  @include mixins.is-responsive("is", "-direction-row-reverse") {
-    flex-direction: row-reverse;
-  }
-  @include mixins.is-responsive("is", "-direction-column") {
-    flex-direction: column;
-  }
-  @include mixins.is-responsive("is", "-direction-column-reverse") {
-    flex-direction: column-reverse;
-  }
-
-  .column {
+  :where(.column) {
     @include mixins.element();
     @include mixins.column();
     flex-grow: 1;
@@ -76,8 +79,9 @@
       width: 100%;
     }
   }
+
   @for $num from 1 through variables.$columns-count {
-    .column-#{$num} {
+    :where(.column-#{$num}) {
       @include mixins.element();
       @include mixins.column();
       flex-basis: math.percentage(math.div($num, variables.$columns-count));
@@ -85,7 +89,8 @@
       width: math.percentage(math.div($num, variables.$columns-count));
     }
   }
-  .column,
+
+  :where(.column),
   [class^="column-"] {
     @for $num from 1 through variables.$columns-count {
       @include mixins.is-responsive("is", "-" + $num) {

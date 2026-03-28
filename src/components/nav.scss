@@ -170,8 +170,9 @@
           );
       }
     }
+
     &:hover,
-    &.is-hovered,
+    &.is-hover,
     &.is-hovered {
       color: var(--#{variables.$prefix}nav-menu-item-color-hover-fore);
       text-shadow:
@@ -266,6 +267,7 @@
           );
       }
     }
+
     &:active,
     &.is-active {
       color: var(--#{variables.$prefix}nav-menu-item-color-active-fore);
@@ -365,6 +367,7 @@
           );
       }
     }
+
     &[disabled],
     fieldset[disabled],
     &.is-disabled {
@@ -642,67 +645,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}nav-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-fore)
-        );
-        --#{variables.$prefix}nav-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-back,
-          var(--#{variables.$prefix}color-#{$colorName}-back)
-        );
-        --#{variables.$prefix}nav-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-border,
-          var(--#{variables.$prefix}color-#{$colorName}-border)
-        );
-
-        --#{variables.$prefix}nav-menu-item-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-fore)
-        );
-        --#{variables.$prefix}nav-menu-item-color-focus-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-focus-fore)
-        );
-        --#{variables.$prefix}nav-menu-item-color-hover-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-hover-fore)
-        );
-        --#{variables.$prefix}nav-menu-item-color-active-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-active-fore)
-        );
-        --#{variables.$prefix}nav-menu-item-color-disabled-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-disabled-fore)
-        );
-        --#{variables.$prefix}nav-menu-item-color-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-shadow,
-          var(--#{variables.$prefix}color-#{$colorName}-shadow)
-        );
-        --#{variables.$prefix}nav-menu-item-color-focus-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-focus-shadow,
-          var(--#{variables.$prefix}color-#{$colorName}-focus-shadow)
-        );
-        --#{variables.$prefix}nav-menu-item-color-hover-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-hover-shadow,
-          var(--#{variables.$prefix}color-#{$colorName}-hover-shadow)
-        );
-        --#{variables.$prefix}nav-menu-item-color-active-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-active-shadow,
-          var(--#{variables.$prefix}color-#{$colorName}-active-shadow)
-        );
-        --#{variables.$prefix}nav-menu-item-color-disabled-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-nav-menu-item-disabled-shadow,
-          var(--#{variables.$prefix}color-#{$colorName}-disabled-shadow)
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}nav-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-nav-fore,

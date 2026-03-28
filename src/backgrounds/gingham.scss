@@ -3,7 +3,7 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.gingham) {
-  --#{variables.$prefix}gingham-color-fore: oklch(
+  --#{variables.$prefix}gingham-color-line: oklch(
     from var(--#{variables.$prefix}color-default-gingham-fore) l c h / 0.5
   );
   --#{variables.$prefix}gingham-color-back: var(
@@ -19,15 +19,15 @@
       var(--#{variables.$prefix}gingham-degree),
       transparent,
       transparent 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore) 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore) 1.5rem
+      var(--#{variables.$prefix}gingham-color-line) 0.75rem,
+      var(--#{variables.$prefix}gingham-color-line) 1.5rem
     ),
     repeating-linear-gradient(
       calc(var(--#{variables.$prefix}gingham-degree) + 90deg),
       transparent,
       transparent 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore) 0.75rem,
-      var(--#{variables.$prefix}gingham-color-fore) 1.5rem
+      var(--#{variables.$prefix}gingham-color-line) 0.75rem,
+      var(--#{variables.$prefix}gingham-color-line) 1.5rem
     );
 
   @if (not variables.$is-skelton) {
@@ -38,26 +38,10 @@
       }
     }
 
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}gingham-color-fore: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-gingham-fore)
-            l
-            c
-            h /
-            0.5
-        );
-        --#{variables.$prefix}gingham-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-gingham-back
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}gingham-color-fore: oklch(
+        --#{variables.$prefix}gingham-color-line: oklch(
           from var(--#{variables.$prefix}color-#{$colorName}-gingham-fore)
             l
             c

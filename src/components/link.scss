@@ -32,7 +32,9 @@
     background-color: var(--#{variables.$prefix}link-color-selection-back);
   }
 
-  &:hover {
+  &:hover,
+  &.is-hover,
+  &.is-hovered {
     text-decoration: underline;
   }
 
@@ -40,35 +42,14 @@
     outline: none;
   }
 
-  &:visited {
+  &:visited,
+  &.is-visited {
     color: var(--#{variables.$prefix}link-color-visited-fore);
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}link-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-link-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-fore)
-        );
-        --#{variables.$prefix}link-color-visited-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-link-visited-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-visited-fore)
-        );
-        --#{variables.$prefix}link-color-selection-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-link-selection-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
-        );
-        --#{variables.$prefix}link-color-selection-back: var(
-          --#{variables.$prefix}color-#{$colorName}-link-selection-back,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}link-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-link-fore,

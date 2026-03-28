@@ -3,7 +3,7 @@
 @use "../mixins/index.scss" as mixins;
 
 :where(.stripe) {
-  --#{variables.$prefix}stripe-color-fore: oklch(
+  --#{variables.$prefix}stripe-color-line: oklch(
     from var(--#{variables.$prefix}color-default-stripe-fore) l c h /
       0.5
   );
@@ -19,8 +19,8 @@
     var(--#{variables.$prefix}stripe-degree),
     transparent,
     transparent 0.75rem,
-    var(--#{variables.$prefix}stripe-color-fore) 0.75rem,
-    var(--#{variables.$prefix}stripe-color-fore) 1.5rem
+    var(--#{variables.$prefix}stripe-color-line) 0.75rem,
+    var(--#{variables.$prefix}stripe-color-line) 1.5rem
   );
 
   @if (not variables.$is-skelton) {
@@ -31,26 +31,10 @@
       }
     }
 
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
-        --#{variables.$prefix}stripe-color-fore: oklch(
-          from var(--#{variables.$prefix}color-#{$colorName}-stripe-fore)
-            l
-            c
-            h /
-            0.5
-        );
-        --#{variables.$prefix}stripe-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-stripe-back
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}stripe-color-fore: oklch(
+        --#{variables.$prefix}stripe-color-line: oklch(
           from var(--#{variables.$prefix}color-#{$colorName}-stripe-fore)
             l
             c

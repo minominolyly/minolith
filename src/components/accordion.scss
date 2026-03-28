@@ -124,6 +124,7 @@
         background: var(--#{variables.$prefix}accordion-color-fore);
       }
     }
+
     &:focus,
     &.is-focus,
     &.is-focused {
@@ -134,8 +135,9 @@
         --#{variables.$prefix}accordion-summary-color-focus-border
       );
     }
+
     &:hover,
-    &.is-hovered,
+    &.is-hover,
     &.is-hovered {
       background-color: var(
         --#{variables.$prefix}accordion-summary-color-hover-back
@@ -144,6 +146,7 @@
         --#{variables.$prefix}accordion-summary-color-hover-border
       );
     }
+
     &:active,
     &.is-active {
       background-color: var(
@@ -153,6 +156,7 @@
         --#{variables.$prefix}accordion-summary-color-active-border
       );
     }
+
     &[disabled],
     fieldset[disabled],
     &.is-disabled {
@@ -188,85 +192,8 @@
     }
   }
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}accordion-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-fore
-        );
-        --#{variables.$prefix}accordion-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-back
-        );
-        --#{variables.$prefix}accordion-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-border
-        );
-        --#{variables.$prefix}accordion-color-selection-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-selection-fore
-        );
-        --#{variables.$prefix}accordion-color-selection-back: var(
-          --#{variables.$prefix}color-#{$colorName}-selection-back
-        );
-
-        --#{variables.$prefix}accordion-summary-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-fore
-        );
-        --#{variables.$prefix}accordion-summary-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-back
-        );
-        --#{variables.$prefix}accordion-summary-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-border
-        );
-
-        --#{variables.$prefix}accordion-details-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-details-fore
-        );
-        --#{variables.$prefix}accordion-details-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-details-back
-        );
-        --#{variables.$prefix}accordion-details-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-details-border
-        );
-
-        //#region focus
-        --#{variables.$prefix}accordion-summary-color-focus-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-focus-back
-        );
-        --#{variables.$prefix}accordion-summary-color-focus-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-focus-border
-        );
-        //#endregion focus
-
-        //#region hover
-        --#{variables.$prefix}accordion-summary-color-hover-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-hover-back
-        );
-        --#{variables.$prefix}accordion-summary-color-hover-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-hover-border
-        );
-        //#endregion hover
-
-        //#region active
-        --#{variables.$prefix}accordion-summary-color-active-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-active-back
-        );
-        --#{variables.$prefix}accordion-summary-color-active-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-active-border
-        );
-        //#endregion active
-
-        //#region disabled
-        --#{variables.$prefix}accordion-summary-color-disabled-back: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-disabled-back
-        );
-        --#{variables.$prefix}accordion-summary-color-disabled-border: var(
-          --#{variables.$prefix}color-#{$colorName}-accordion-summary-disabled-border
-        );
-        //#endregion disabled
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}accordion-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-accordion-fore

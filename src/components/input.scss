@@ -76,39 +76,8 @@
       }
     }
 
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}input-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-input-fore
-        );
-        --#{variables.$prefix}input-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-input-back
-        );
-        --#{variables.$prefix}input-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-input-border
-        );
-        --#{variables.$prefix}input-color-placeholder: var(
-          --#{variables.$prefix}color-#{$colorName}-input-placeholder
-        );
-
-        --#{variables.$prefix}input-focus-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-input-focus-back
-        );
-        --#{variables.$prefix}input-focus-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-input-focus-border
-        );
-        --#{variables.$prefix}input-disabled-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-input-disabled-back
-        );
-        --#{variables.$prefix}input-disabled-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-input-disabled-border
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}input-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-input-fore

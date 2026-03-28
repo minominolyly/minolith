@@ -48,29 +48,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        //#region local css variables
-        --#{variables.$prefix}breadcrumb-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-breadcrumb-fore
-        );
-        --#{variables.$prefix}breadcrumb-divider-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-breadcrumb-divider-fore
-        );
-        --#{variables.$prefix}breadcrumb-color-selection-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
-        );
-        --#{variables.$prefix}breadcrumb-color-selection-back: var(
-          --#{variables.$prefix}color-#{$colorName}-breadcrumb-selection-back,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
-        );
-        //#endregion local css variables
-      }
-    }
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         //#region local css variables
         --#{variables.$prefix}breadcrumb-color-fore: var(

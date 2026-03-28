@@ -1,4 +1,5 @@
 @use "sass:color";
+@use "sass:list";
 @use "../functions/index.scss" as functions;
 
 //#region define color settings
@@ -28,8 +29,6 @@ $color-hue-violet: 290 !default;
 $color-hue-magenta: 340 !default;
 
 //#endregion define color settings
-
-//#region define color shades array
 
 //#region color-light-lightness
 
@@ -1132,6 +1131,7 @@ $colorShades: (
               $color-lightness-offset-focus,
           ),
         ),
+      //#endregion input
       //#region nav
       nav: (
           navMenu: (
@@ -1324,8 +1324,6 @@ $colorShades: (
 
 //#endregion colorShades
 
-//#endregion define color shades array
-
 //#region define colorNames array
 
 $colors: (
@@ -1413,4 +1411,5 @@ $semanticColors: (
   )
 ) !default;
 
+$allColors: list.join($colors, $semanticColors);
 //#endregion define colorNames array

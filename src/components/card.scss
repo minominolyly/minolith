@@ -125,67 +125,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        //#region local css variables
-        --#{variables.$prefix}card-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-card-fore
-        );
-        --#{variables.$prefix}card-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-card-back
-        );
-        --#{variables.$prefix}card-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-card-border
-        );
-        --#{variables.$prefix}card-color-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-card-shadow
-        );
-
-        --#{variables.$prefix}card-color-selection-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-card-selection-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
-        );
-        --#{variables.$prefix}card-color-selection-back: var(
-          --#{variables.$prefix}color-#{$colorName}-card-selection-back,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
-        );
-
-        --#{variables.$prefix}card-header-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-card-header-fore
-        );
-        --#{variables.$prefix}card-header-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-card-header-back
-        );
-        --#{variables.$prefix}card-header-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-card-header-border
-        );
-
-        --#{variables.$prefix}card-body-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-fore
-        );
-        --#{variables.$prefix}card-body-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-back
-        );
-        --#{variables.$prefix}card-body-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-border
-        );
-
-        --#{variables.$prefix}card-footer-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-fore
-        );
-        --#{variables.$prefix}card-footer-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-back
-        );
-        --#{variables.$prefix}card-footer-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-card-body-border
-        );
-        //#endregion local css variables
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         //#region local css variables
         --#{variables.$prefix}card-color-fore: var(

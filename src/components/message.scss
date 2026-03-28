@@ -83,51 +83,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}message-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-message-fore
-        );
-        --#{variables.$prefix}message-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-message-back
-        );
-        --#{variables.$prefix}message-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-message-border
-        );
-        --#{variables.$prefix}message-color-selection-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-message-selection-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
-        );
-        --#{variables.$prefix}message-color-selection-back: var(
-          --#{variables.$prefix}color-#{$colorName}-message-selection-back,
-          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
-        );
-
-        --#{variables.$prefix}message-header-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-message-header-fore
-        );
-        --#{variables.$prefix}message-header-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-message-header-back
-        );
-        --#{variables.$prefix}message-header-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-message-header-border
-        );
-
-        --#{variables.$prefix}message-body-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-message-body-fore
-        );
-        --#{variables.$prefix}message-body-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-message-body-back
-        );
-        --#{variables.$prefix}message-body-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-message-body-border
-        );
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}message-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-message-fore

@@ -94,21 +94,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}hamburger-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-hamburger-fore,
-          var(--#{variables.$prefix}color-#{$colorName}-fore)
-        );
-        --#{variables.$prefix}hamburger-line-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-hamburger-line-back,
-          var(--#{variables.$prefix}color-#{$colorName}-border)
-        );
-      }
-    }
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}hamburger-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-hamburger-fore,

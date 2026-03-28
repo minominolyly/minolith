@@ -39,39 +39,8 @@
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
-      &.is-#{$colorName} {
-        --#{variables.$prefix}header-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-header-fore,
-          --#{variables.$prefix}color-#{$colorName}-fore,
-        );
-        --#{variables.$prefix}header-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-header-back,
-          --#{variables.$prefix}color-#{$colorName}-back,
-        );
-        --#{variables.$prefix}header-color-shadow: var(
-          --#{variables.$prefix}color-#{$colorName}-header-shadow,
-          --#{variables.$prefix}color-#{$colorName}-shadow,
-        );
-
-        background-color: oklch(
-          from var(--#{variables.$prefix}header-color-back)
-            l
-            c
-            h /
-            0.5
-        );
-        box-shadow: 0
-          0
-          0.5rem
-          var(--#{variables.$prefix}header-color-shadow);
-        color: var(--#{variables.$prefix}header-color-fore);
-      }
-    }
-
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
       &.is-#{$colorName} {
         --#{variables.$prefix}header-color-fore: var(
           --#{variables.$prefix}color-#{$colorName}-header-fore,

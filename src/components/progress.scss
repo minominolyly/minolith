@@ -46,7 +46,7 @@
         }
       }
 
-      @each $color in variables.$colors {
+      @each $color in variables.$allColors {
         $colorName: map.get($color, "name");
         &.is-#{$colorName} {
           --#{variables.$prefix}progress-color-fore: var(

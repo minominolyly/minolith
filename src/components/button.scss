@@ -5,60 +5,75 @@
 :where(.button) {
   //#region local css variables
   --#{variables.$prefix}button-color-fore: var(
-    --#{variables.$prefix}color-default-button-fore
+    --#{variables.$prefix}color-default-button-fore,
+    var(--#{variables.$prefix}color-default-fore)
   );
   --#{variables.$prefix}button-color-back: var(
-    --#{variables.$prefix}color-default-button-back
+    --#{variables.$prefix}color-default-button-back,
+    var(--#{variables.$prefix}color-default-back)
   );
   --#{variables.$prefix}button-color-border: var(
-    --#{variables.$prefix}color-default-button-border
+    --#{variables.$prefix}color-default-button-border,
+    var(--#{variables.$prefix}color-default-border)
   );
 
   //#region focus
   --#{variables.$prefix}button-focus-color-fore: var(
-    --#{variables.$prefix}color-default-button-focus-fore
+    --#{variables.$prefix}color-default-button-focus-fore,
+    var(--#{variables.$prefix}color-default-focus-fore)
   );
   --#{variables.$prefix}button-focus-color-back: var(
-    --#{variables.$prefix}color-default-button-focus-back
+    --#{variables.$prefix}color-default-button-focus-back,
+    var(--#{variables.$prefix}color-default-focus-back)
   );
   --#{variables.$prefix}button-focus-color-border: var(
-    --#{variables.$prefix}color-default-button-focus-border
+    --#{variables.$prefix}color-default-button-focus-border,
+    var(--#{variables.$prefix}color-default-focus-border)
   );
   //#endregion focus
 
   //#region hover
   --#{variables.$prefix}button-hover-color-fore: var(
-    --#{variables.$prefix}color-default-button-hover-fore
+    --#{variables.$prefix}color-default-button-hover-fore,
+    var(--#{variables.$prefix}color-default-hover-fore)
   );
   --#{variables.$prefix}button-hover-color-back: var(
-    --#{variables.$prefix}color-default-button-hover-back
+    --#{variables.$prefix}color-default-button-hover-back,
+    var(--#{variables.$prefix}color-default-hover-back)
   );
   --#{variables.$prefix}button-hover-color-border: var(
-    --#{variables.$prefix}color-default-button-hover-border
+    --#{variables.$prefix}color-default-button-hover-border,
+    var(--#{variables.$prefix}color-default-hover-border)
   );
   //#endregion hover
 
   //#region active
   --#{variables.$prefix}button-active-color-fore: var(
-    --#{variables.$prefix}color-default-button-active-fore
+    --#{variables.$prefix}color-default-button-active-fore,
+    var(--#{variables.$prefix}color-default-active-fore)
   );
   --#{variables.$prefix}button-active-color-back: var(
-    --#{variables.$prefix}color-default-button-active-back
+    --#{variables.$prefix}color-default-button-active-back,
+    var(--#{variables.$prefix}color-default-active-back)
   );
   --#{variables.$prefix}button-active-color-border: var(
-    --#{variables.$prefix}color-default-button-active-border
+    --#{variables.$prefix}color-default-button-active-border,
+    var(--#{variables.$prefix}color-default-active-border)
   );
   //#endregion active
 
   //#region disabled
   --#{variables.$prefix}button-disabled-color-fore: var(
-    --#{variables.$prefix}color-default-button-disabled-fore
+    --#{variables.$prefix}color-default-button-disabled-fore,
+    var(--#{variables.$prefix}color-default-disabled-fore)
   );
   --#{variables.$prefix}button-disabled-color-back: var(
-    --#{variables.$prefix}color-default-button-disabled-back
+    --#{variables.$prefix}color-default-button-disabled-back,
+    var(--#{variables.$prefix}color-default-disabled-back)
   );
   --#{variables.$prefix}button-disabled-color-border: var(
-    --#{variables.$prefix}color-default-button-disabled-border
+    --#{variables.$prefix}color-default-button-disabled-border,
+    var(--#{variables.$prefix}color-default-disabled-border)
   );
   //#endregion disabled
 
@@ -81,6 +96,7 @@
   user-select: none;
   vertical-align: top;
   word-spacing: 0px;
+
   &.is-circle {
     border-radius: 50%;
     text-align: center;
@@ -110,171 +126,116 @@
       width: 5rem;
     }
   }
+
   &:focus,
   &.is-focus,
   &.is-focused {
     outline: none;
-    background-color: var(
-      --#{variables.$prefix}button-focus-color-back
-    );
+    background-color: var(--#{variables.$prefix}button-focus-color-back);
     border-color: var(--#{variables.$prefix}button-focus-color-border);
     color: var(--#{variables.$prefix}button-focus-color-fore);
   }
+
   &:hover,
-  &.is-hovered,
+  &.is-hover,
   &.is-hovered {
     outline: none;
-    background-color: var(
-      --#{variables.$prefix}button-hover-color-back
-    );
+    background-color: var(--#{variables.$prefix}button-hover-color-back);
     border-color: var(--#{variables.$prefix}button-hover-color-border);
     color: var(--#{variables.$prefix}button-hover-color-fore);
   }
+
   &:active,
   &.is-active {
-    background-color: var(
-      --#{variables.$prefix}button-active-color-back
-    );
+    background-color: var(--#{variables.$prefix}button-active-color-back);
     border-color: var(--#{variables.$prefix}button-active-color-border);
     color: var(--#{variables.$prefix}button-active-color-fore);
   }
+
   &[disabled],
   fieldset[disabled],
   &.is-disabled {
-    background-color: var(
-      --#{variables.$prefix}button-disabled-color-back
-    );
-    border-color: var(
-      --#{variables.$prefix}button-disabled-color-border
-    );
+    background-color: var(--#{variables.$prefix}button-disabled-color-back);
+    border-color: var(--#{variables.$prefix}button-disabled-color-border);
     color: var(--#{variables.$prefix}button-disabled-color-fore);
   }
 
   @if (not variables.$is-skelton) {
-    @each $color in variables.$colors {
+    @each $color in variables.$allColors {
       $colorName: map.get($color, "name");
       &.is-#{$colorName} {
         //#region local css variables
-        --#{variables.$prefix}button-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-fore
-        );
-        --#{variables.$prefix}button-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-back
-        );
-        --#{variables.$prefix}button-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-border
-        );
-
-        //#region focus
-        --#{variables.$prefix}button-focus-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-fore
-        );
-        --#{variables.$prefix}button-focus-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-back
-        );
-        --#{variables.$prefix}button-focus-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-border
-        );
-        //#endregion focus
-
-        //#region hover
-        --#{variables.$prefix}button-hover-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-fore
-        );
-        --#{variables.$prefix}button-hover-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-back
-        );
-        --#{variables.$prefix}button-hover-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-border
-        );
-        //#endregion hover
-
-        //#region active
-        --#{variables.$prefix}button-active-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-fore
-        );
-        --#{variables.$prefix}button-active-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-back
-        );
-        --#{variables.$prefix}button-active-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-border
-        );
-        //#endregion active
-
-        //#region disabled
-        --#{variables.$prefix}button-disabled-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-fore
-        );
-        --#{variables.$prefix}button-disabled-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-back
-        );
-        --#{variables.$prefix}button-disabled-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-border
-        );
-        //#endregion disabled
-
-        //#endregion local css variables
-      }
-    }
-    @each $semanticColor in variables.$semanticColors {
-      $colorName: map.get($semanticColor, "name");
-      &.is-#{$colorName} {
         //#region local css variables
         --#{variables.$prefix}button-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-fore
+          --#{variables.$prefix}color-#{$colorName}-button-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
         );
         --#{variables.$prefix}button-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-back
+          --#{variables.$prefix}color-#{$colorName}-button-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
         );
         --#{variables.$prefix}button-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-border
+          --#{variables.$prefix}color-#{$colorName}-button-border,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
         );
 
         //#region focus
         --#{variables.$prefix}button-focus-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-fore
+          --#{variables.$prefix}color-#{$colorName}-button-focus-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-fore)
         );
         --#{variables.$prefix}button-focus-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-back
+          --#{variables.$prefix}color-#{$colorName}-button-focus-back,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-back)
         );
         --#{variables.$prefix}button-focus-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-focus-border
+          --#{variables.$prefix}color-#{$colorName}-button-focus-border,
+          var(--#{variables.$prefix}color-#{$colorName}-focus-border)
         );
         //#endregion focus
 
         //#region hover
         --#{variables.$prefix}button-hover-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-fore
+          --#{variables.$prefix}color-#{$colorName}-button-hover-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-fore)
         );
         --#{variables.$prefix}button-hover-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-back
+          --#{variables.$prefix}color-#{$colorName}-button-hover-back,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-back)
         );
         --#{variables.$prefix}button-hover-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-hover-border
+          --#{variables.$prefix}color-#{$colorName}-button-hover-border,
+          var(--#{variables.$prefix}color-#{$colorName}-hover-border)
         );
         //#endregion hover
 
         //#region active
         --#{variables.$prefix}button-active-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-fore
+          --#{variables.$prefix}color-#{$colorName}-button-active-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-active-fore)
         );
         --#{variables.$prefix}button-active-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-back
+          --#{variables.$prefix}color-#{$colorName}-button-active-back,
+          var(--#{variables.$prefix}color-#{$colorName}-active-back)
         );
         --#{variables.$prefix}button-active-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-active-border
+          --#{variables.$prefix}color-#{$colorName}-button-active-border,
+          var(--#{variables.$prefix}color-#{$colorName}-active-border)
         );
         //#endregion active
 
         //#region disabled
         --#{variables.$prefix}button-disabled-color-fore: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-fore
+          --#{variables.$prefix}color-#{$colorName}-button-disabled-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-fore)
         );
         --#{variables.$prefix}button-disabled-color-back: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-back
+          --#{variables.$prefix}color-#{$colorName}-button-disabled-back,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-back)
         );
         --#{variables.$prefix}button-disabled-color-border: var(
-          --#{variables.$prefix}color-#{$colorName}-button-disabled-border
+          --#{variables.$prefix}color-#{$colorName}-button-disabled-border,
+          var(--#{variables.$prefix}color-#{$colorName}-disabled-border)
         );
         //#endregion disabled
 

@@ -1,0 +1,173 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
+@use "../icons/index.scss" as icons;
+@use "../mixins/index.scss" as mixins;
+
+:where(.figure) {
+  --#{variables.$prefix}figure-color-fore: var(
+    --#{variables.$prefix}color-default-figure-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}figure-color-back: var(
+    --#{variables.$prefix}color-default-figure-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+  --#{variables.$prefix}figure-color-border: var(
+    --#{variables.$prefix}color-default-figure-border,
+    var(--#{variables.$prefix}color-default-border)
+  );
+
+  --#{variables.$prefix}figure-color-selection-fore: var(
+    --#{variables.$prefix}color-default-figure-selection-fore,
+    var(--#{variables.$prefix}color-default-selection-fore)
+  );
+  --#{variables.$prefix}figure-color-selection-back: var(
+    --#{variables.$prefix}color-default-figure-selection-back,
+    var(--#{variables.$prefix}color-default-selection-back)
+  );
+
+  --#{variables.$prefix}figure-content-color-fore: var(
+    --#{variables.$prefix}color-default-figure-content-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}figure-content-color-back: var(
+    --#{variables.$prefix}color-default-figure-content-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+  --#{variables.$prefix}figure-content-color-selection-fore: var(
+    --#{variables.$prefix}color-default-figure-content-selection-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}figure-content-color-selection-back: var(
+    --#{variables.$prefix}color-default-figure-content-selection-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+
+  --#{variables.$prefix}figure-caption-color-fore: var(
+    --#{variables.$prefix}color-default-figure-caption-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}figure-caption-color-back: var(
+    --#{variables.$prefix}color-default-figure-caption-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+  --#{variables.$prefix}figure-caption-color-selection-fore: var(
+    --#{variables.$prefix}color-default-figure-caption-selection-fore,
+    var(--#{variables.$prefix}color-default-fore)
+  );
+  --#{variables.$prefix}figure-caption-color-selection-back: var(
+    --#{variables.$prefix}color-default-figure-caption-selection-back,
+    var(--#{variables.$prefix}color-default-back)
+  );
+
+  @include mixins.element();
+  background-color: var(--#{variables.$prefix}figure-color-back);
+  border-color: var(--#{variables.$prefix}figure-color-border);
+  border-style: none;
+  border-width: var(--#{variables.$prefix}border-width-medium);
+  color: var(--#{variables.$prefix}figure-color-fore);
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0.25rem;
+
+  &::selection {
+    color: var(--#{variables.$prefix}figure-color-selection-fore);
+    background-color: var(--#{variables.$prefix}figure-color-selection-back);
+  }
+
+  > :where(.figure-content) {
+    @include mixins.element();
+    background-color: var(--#{variables.$prefix}figure-content-color-back);
+    color: var(--#{variables.$prefix}figure-content-color-fore);
+    display: block;
+    width: 100%;
+    height: auto;
+    &::selection {
+      color: var(--#{variables.$prefix}figure-content-color-selection-fore);
+      background-color: var(--#{variables.$prefix}figure-content-color-selection-back);
+    }
+  }
+
+  > :where(.figure-caption) {
+    @include mixins.element();
+    display: block;
+    background-color: var(--#{variables.$prefix}figure-caption-color-back);
+    color: var(--#{variables.$prefix}figure-caption-color-fore);
+    font-size: var(--#{variables.$prefix}font-size-small);
+    width: 100%;
+    &:first-child {
+      padding-bottom: 0.25rem;
+    }
+    &:last-child {
+      padding-top: 0.25rem;
+    }
+    &::selection {
+      color: var(--#{variables.$prefix}figure-caption-color-selection-fore);
+      background-color: var(--#{variables.$prefix}figure-caption-color-selection-back);
+    }
+  }
+
+  @if (not variables.$is-skelton) {
+    @each $color in variables.$allColors {
+      $colorName: map.get($color, "name");
+      &.is-#{$colorName} {
+        --#{variables.$prefix}figure-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}figure-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
+        );
+        --#{variables.$prefix}figure-color-border: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-border,
+          var(--#{variables.$prefix}color-#{$colorName}-border)
+        );
+
+        --#{variables.$prefix}figure-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}figure-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+
+        --#{variables.$prefix}figure-content-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-content-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}figure-content-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-content-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
+        );
+        --#{variables.$prefix}figure-content-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-content-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}figure-content-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-content-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+
+        --#{variables.$prefix}figure-caption-color-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-caption-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-fore)
+        );
+        --#{variables.$prefix}figure-caption-color-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-caption-back,
+          var(--#{variables.$prefix}color-#{$colorName}-back)
+        );
+        --#{variables.$prefix}figure-caption-color-selection-fore: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-caption-selection-fore,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-fore)
+        );
+        --#{variables.$prefix}figure-caption-color-selection-back: var(
+          --#{variables.$prefix}color-#{$colorName}-figure-caption-selection-back,
+          var(--#{variables.$prefix}color-#{$colorName}-selection-back)
+        );
+      }
+    }
+  }
+}

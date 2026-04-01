@@ -379,6 +379,68 @@
   }
   //#endregion dialogue
 
+  //#region figure
+  $figure: map.get($colorShade, "figure");
+  @if ($figure != null) {
+    @include setColor(
+      $figure,
+      $lightnessOffset,
+      $srcColorName,
+      $destColorName,
+      $name,
+      "figure"
+    );
+
+    $figureContent: map.get($figure, "figureContent");
+    @if ($figureContent != null) {
+      @include setColor(
+        $figureContent,
+        $lightnessOffset,
+        $srcColorName,
+        $destColorName,
+        $name,
+        "figure-content"
+      );
+
+      $figureContentSelection: map.get($figureContent, "selection");
+      @if ($figureContentSelection != null) {
+        @include setColor(
+          $figureContentSelection,
+          $lightnessOffset,
+          $srcColorName,
+          $destColorName,
+          $name,
+          "figure-content-selection"
+        );
+      }
+    }
+
+    $figureCaption: map.get($figure, "figureCaption");
+    @if ($figureCaption != null) {
+      @include setColor(
+        $figureCaption,
+        $lightnessOffset,
+        $srcColorName,
+        $destColorName,
+        $name,
+        "figure-caption"
+      );
+
+      $figureCaptionSelection: map.get($figureCaption, "selection");
+      @if ($figureCaptionSelection != null) {
+        @include setColor(
+          $figureCaptionSelection,
+          $lightnessOffset,
+          $srcColorName,
+          $destColorName,
+          $name,
+          "figure-caption-selection"
+        );
+      }
+    }
+  }
+  //#endregion figure
+
   //#region footer
   $footer: map.get($colorShade, "footer");
   @if ($footer != null) {

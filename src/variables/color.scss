@@ -38,9 +38,6 @@ $color-light-lightness-border: 70 !default;
 $color-light-lightness-placeholder: 70 !default;
 $color-light-lightness-shadow: 70 !default;
 
-$color-light-lightness-selection-fore: 5 !default;
-$color-light-lightness-selection-back: 70 !default;
-
 //#region color-light-lightness-dot
 $color-light-lightness-dot-fore: 85 !default;
 $color-light-lightness-dot-back: 95 !default;
@@ -133,6 +130,16 @@ $color-light-lightness-dialogue-message-back: 95 !default;
 $color-light-lightness-dialogue-message-border: 70 !default;
 //#endregion color-light-lightness-dialogue
 
+//#region color-dark-lightness-figure
+$color-light-lightness-figure-fore: 5 !default;
+$color-light-lightness-figure-back: 70 !default;
+$color-light-lightness-figure-border: 70 !default;
+$color-light-lightness-figure-content-fore: 5 !default;
+$color-light-lightness-figure-content-back: 95 !default;
+$color-light-lightness-figure-caption-fore: 20 !default;
+$color-light-lightness-figure-caption-back: 70 !default;
+//#endregion color-dark-lightness-figure
+
 //#region color-light-lightness-header
 $color-light-lightness-header-fore: 5 !default;
 $color-light-lightness-header-back: 70 !default;
@@ -190,9 +197,6 @@ $color-dark-lightness-back: 5 !default;
 $color-dark-lightness-border: 50 !default;
 $color-dark-lightness-placeholder: 50 !default;
 $color-dark-lightness-shadow: 50 !default;
-
-$color-dark-lightness-selection-fore: 95 !default;
-$color-dark-lightness-selection-back: 30 !default;
 
 //#region color-dark-lightness-dot
 $color-dark-lightness-dot-fore: 5 !default;
@@ -286,6 +290,16 @@ $color-dark-lightness-dialogue-message-back: 5 !default;
 $color-dark-lightness-dialogue-message-border: 50 !default;
 //#endregion color-dark-lightness-dialogue
 
+//#region color-dark-lightness-figure
+$color-dark-lightness-figure-fore: 95 !default;
+$color-dark-lightness-figure-back: 30 !default;
+$color-dark-lightness-figure-border: 30 !default;
+$color-dark-lightness-figure-content-fore: 95 !default;
+$color-dark-lightness-figure-content-back: 5 !default;
+$color-dark-lightness-figure-caption-fore: 80 !default;
+$color-dark-lightness-figure-caption-back: 30 !default;
+//#endregion color-dark-lightness-figure
+
 //#region color-dark-lightness-header
 $color-dark-lightness-header-fore: 95 !default;
 $color-dark-lightness-header-back: 30 !default;
@@ -344,6 +358,10 @@ $color-dark-lightness-progress-back: 5 !default;
 
 $color-light-lightness-offset-disabled-fore: 30 !default;
 $color-dark-lightness-offset-disabled-fore: -30 !default;
+$color-light-lightness-offset-selection-fore: 0 !default;
+$color-dark-lightness-offset-selection-fore: 0 !default;
+$color-light-lightness-offset-selection-back: -25 !default;
+$color-dark-lightness-offset-selection-back: 25 !default;
 $color-lightness-offset-disabled: 0 !default;
 $color-lightness-offset-focus: 20 !default;
 $color-lightness-offset-hover: 5 !default;
@@ -380,12 +398,12 @@ $colorShades: (
       ),
       selection: (
         fore: (
-          light: $color-light-lightness-selection-fore,
-          dark: $color-dark-lightness-selection-fore,
+          light: $color-light-lightness-fore + $color-light-lightness-offset-selection-fore,
+          dark: $color-dark-lightness-fore + $color-dark-lightness-offset-selection-fore,
         ),
         back: (
-          light: $color-light-lightness-selection-back,
-          dark: $color-dark-lightness-selection-back,
+          light: $color-light-lightness-back + $color-light-lightness-offset-selection-back,
+          dark: $color-dark-lightness-back + $color-dark-lightness-offset-selection-back,
         ),
       ),
       //#region backgrounds
@@ -679,6 +697,72 @@ $colorShades: (
           ),
         ),
       //#endregion dialogue
+      //#region figure
+      figure: (
+          fore: (
+            light: $color-light-lightness-figure-fore,
+            dark: $color-dark-lightness-figure-fore,
+          ),
+          back: (
+            light: $color-light-lightness-figure-back,
+            dark: $color-dark-lightness-figure-back,
+          ),
+          border: (
+            light: $color-light-lightness-figure-border,
+            dark: $color-dark-lightness-figure-border,
+          ),
+          selection: (
+            fore: (
+              light: $color-light-lightness-figure-fore + $color-light-lightness-offset-selection-fore,
+              dark: $color-dark-lightness-figure-fore + $color-dark-lightness-offset-selection-fore,
+            ),
+            back: (
+              light: $color-light-lightness-figure-back + $color-light-lightness-offset-selection-back,
+              dark: $color-dark-lightness-figure-back + $color-dark-lightness-offset-selection-back,
+            ),
+          ),
+          figureContent: (
+            fore: (
+              light: $color-light-lightness-figure-content-fore,
+              dark: $color-dark-lightness-figure-content-fore,
+            ),
+            back: (
+              light: $color-light-lightness-figure-content-back,
+              dark: $color-dark-lightness-figure-content-back,
+            ),
+            selection: (
+              fore: (
+                light: $color-light-lightness-figure-content-fore + $color-light-lightness-offset-selection-fore,
+                dark: $color-dark-lightness-figure-content-fore + $color-dark-lightness-offset-selection-fore,
+              ),
+              back: (
+                light: $color-light-lightness-figure-content-back + $color-light-lightness-offset-selection-back,
+                dark: $color-dark-lightness-figure-content-back + $color-dark-lightness-offset-selection-back,
+              ),
+            ),
+          ),
+          figureCaption: (
+            fore: (
+              light: $color-light-lightness-figure-caption-fore,
+              dark: $color-dark-lightness-figure-caption-fore,
+            ),
+            back: (
+              light: $color-light-lightness-figure-caption-back,
+              dark: $color-dark-lightness-figure-caption-back,
+            ),
+            selection: (
+              fore: (
+                light: $color-light-lightness-figure-caption-fore + $color-light-lightness-offset-selection-fore,
+                dark: $color-dark-lightness-figure-caption-fore + $color-dark-lightness-offset-selection-fore,
+              ),
+              back: (
+                light: $color-light-lightness-figure-caption-back + $color-light-lightness-offset-selection-back,
+                dark: $color-dark-lightness-figure-caption-back + $color-dark-lightness-offset-selection-back,
+              ),
+            ),
+          ),
+      ),
+      //#endregion figure
       //#region header
       header: (
           fore: (

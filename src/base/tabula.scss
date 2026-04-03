@@ -19,6 +19,10 @@
   font-family: var(--#{variables.$prefix}font-family-main);
   z-index: var(--#{variables.$prefix}z-index-tabula);
   text-size-adjust: 100%;
+  line-height: 1.5;
+  letter-spacing: 0.025rem;
+  text-autospace: normal;
+  text-spacing-trim: trim-start;
 
   &::selection {
     color: var(--#{variables.$prefix}tabula-color-selection-fore);

@@ -1,16 +1,46 @@
+@use "sass:map";
+@use "../variables/index.scss" as variables;
 @use "../mixins/index.scss" as mixins;
 
-:where(.list) {
+@mixin base-list() {
   @include mixins.element();
-  display: block;
-  list-style: none;
-  &.is-style-decimal {
-    list-style: decimal;
-  }
-  &.is-style-disc {
-    list-style: disc;
-  }
+  display: grid;
+}
+
+@mixin base-list-item() {
+  @include mixins.element();
+  display: list-item;
+}
+
+:where(.list) {
+  @include base-list();
+  --#{variables.$prefix}list-gutter-y: 1rem;
+  --#{variables.$prefix}list-indent: 1.5rem;
+  gap: var(--#{variables.$prefix}list-gutter-y) 0;
   > :where(.list-item) {
-    display: list-item;
+    @include base-list-item();
+    margin-left: var(--#{variables.$prefix}list-indent);
+  }
+}
+
+:where(.ordered-list) {
+  @include base-list();
+  --#{variables.$prefix}ordered-list-gutter-y: 1rem;
+  --#{variables.$prefix}ordered-list-indent: 1.5rem;
+  gap: var(--#{variables.$prefix}ordered-list-gutter-y) 0;
+  > :where(.ordered-list-item) {
+    @include base-list-item();
+    margin-left: var(--#{variables.$prefix}ordered-list-indent);
+  }
+}
+
+:where(.unordered-list) {
+  @include base-list();
+  --#{variables.$prefix}unordered-list-gutter-y: 1rem;
+  --#{variables.$prefix}unordered-list-indent: 1.5rem;
+  gap: var(--#{variables.$prefix}unordered-list-gutter-y) 0;
+  > :where(.unordered-list-item) {
+    @include base-list-item();
+    margin-left: var(--#{variables.$prefix}unordered-list-indent);
   }
 }

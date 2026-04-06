@@ -2,7 +2,7 @@
 
 @mixin screen($size) {
   @if ($size == "xsmall") {
-    $max-width: variables.$responsive-breakpoint-small -
+    $max-width: variables.$responsive-breakpoint-small +
       variables.$responsive-breakpoint-max-width-offset;
     @media screen and (max-width: $max-width) {
       @content;
@@ -17,15 +17,15 @@
     $max-width: 0;
     @if ($size == "small") {
       $min-width: variables.$responsive-breakpoint-small;
-      $max-width: variables.$responsive-breakpoint-medium -
+      $max-width: variables.$responsive-breakpoint-medium +
         variables.$responsive-breakpoint-max-width-offset;
     } @else if ($size == "medium") {
       $min-width: variables.$responsive-breakpoint-medium;
-      $max-width: variables.$responsive-breakpoint-large -
+      $max-width: variables.$responsive-breakpoint-large +
         variables.$responsive-breakpoint-max-width-offset;
     } @else if ($size == "large") {
       $min-width: variables.$responsive-breakpoint-large;
-      $max-width: variables.$responsive-breakpoint-xlarge -
+      $max-width: variables.$responsive-breakpoint-xlarge +
         variables.$responsive-breakpoint-max-width-offset;
     } @else {
       @error "wrong size.";

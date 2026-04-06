@@ -41,19 +41,19 @@
   }
 
   @include mixins.screen("medium") {
-    max-width: variables.$breakpoint-medium;
+    max-width: variables.$responsive-breakpoint-medium;
     &.is-fluid {
       max-width: unset;
     }
   }
   @include mixins.screen("large") {
-    max-width: variables.$breakpoint-large;
+    max-width: variables.$responsive-breakpoint-large;
     &.is-fluid {
       max-width: unset;
     }
   }
   @include mixins.screen("xlarge") {
-    max-width: variables.$breakpoint-xlarge;
+    max-width: variables.$responsive-breakpoint-xlarge;
     &.is-fluid {
       max-width: unset;
     }

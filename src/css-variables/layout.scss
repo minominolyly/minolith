@@ -1,0 +1,11 @@
+@use "../variables/index.scss" as variables;
+
+:where(:root) {
+  --#{variables.$prefix}responsive-breakpoint-xsmall: #{variables.$responsive-breakpoint-xsmall};
+  --#{variables.$prefix}responsive-breakpoint-small: #{variables.$responsive-breakpoint-small};
+  --#{variables.$prefix}responsive-breakpoint-medium: #{variables.$responsive-breakpoint-medium};
+  --#{variables.$prefix}responsive-breakpoint-large: #{variables.$responsive-breakpoint-large};
+  --#{variables.$prefix}responsive-breakpoint-xlarge: #{variables.$responsive-breakpoint-xlarge};
+
+  --#{variables.$prefix}responsive-breakpoint-max-width-offset: #{variables.$responsive-breakpoint-max-width-offset};
+}

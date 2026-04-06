@@ -2,13 +2,13 @@
 
 @mixin screen($size) {
   @if ($size == "xsmall") {
-    $max-width: variables.$breakpoint-small -
+    $max-width: variables.$responsive-breakpoint-small -
       variables.$responsive-breakpoint-max-width-offset;
     @media screen and (max-width: $max-width) {
       @content;
     }
   } @else if ($size == "xlarge") {
-    $min-width: variables.$breakpoint-xlarge;
+    $min-width: variables.$responsive-breakpoint-xlarge;
     @media screen and (min-width: $min-width) {
       @content;
     }
@@ -16,16 +16,16 @@
     $min-width: 0;
     $max-width: 0;
     @if ($size == "small") {
-      $min-width: variables.$breakpoint-small;
-      $max-width: variables.$breakpoint-medium -
+      $min-width: variables.$responsive-breakpoint-small;
+      $max-width: variables.$responsive-breakpoint-medium -
         variables.$responsive-breakpoint-max-width-offset;
     } @else if ($size == "medium") {
-      $min-width: variables.$breakpoint-medium;
-      $max-width: variables.$breakpoint-large -
+      $min-width: variables.$responsive-breakpoint-medium;
+      $max-width: variables.$responsive-breakpoint-large -
         variables.$responsive-breakpoint-max-width-offset;
     } @else if ($size == "large") {
-      $min-width: variables.$breakpoint-large;
-      $max-width: variables.$breakpoint-xlarge -
+      $min-width: variables.$responsive-breakpoint-large;
+      $max-width: variables.$responsive-breakpoint-xlarge -
         variables.$responsive-breakpoint-max-width-offset;
     } @else {
       @error "wrong size.";

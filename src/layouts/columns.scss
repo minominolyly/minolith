@@ -32,10 +32,10 @@
         --#{variables.$prefix}columns-gutter-x: #{($p * 0.25rem)};
         --#{variables.$prefix}columns-gutter-y: #{($p * 0.25rem)};
       }
-      @include mixins.is-responsive("has-columns-gutter-x", "-#{$escapedQuarter}rem") {
+      @include mixins.is-responsive("has-gutter-x", "-#{$escapedQuarter}rem") {
         --#{variables.$prefix}columns-gutter-x: #{($p * 0.25rem)};
       }
-      @include mixins.is-responsive("has-columns-gutter-y", "-#{$escapedQuarter}rem") {
+      @include mixins.is-responsive("has-gutter-y", "-#{$escapedQuarter}rem") {
         --#{variables.$prefix}columns-gutter-y: #{($p * 0.25rem)};
       }
     }

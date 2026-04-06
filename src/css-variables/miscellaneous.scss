@@ -1,8 +1,8 @@
 @use "../variables/index.scss" as variables;
 
 :where(:root) {
-  --#{variables.$prefix}z-index-tabula:  #{variables.$z-index-tabula};
+  --#{variables.$prefix}z-index-tabula: #{variables.$z-index-tabula};
 
-  --#{variables.$prefix}z-index-modal:  #{variables.$z-index-modal};
-  --#{variables.$prefix}z-index-modal-content:  #{variables.$z-index-modal-content};
+  --#{variables.$prefix}z-index-modal: #{variables.$z-index-modal};
+  --#{variables.$prefix}z-index-modal-content: #{variables.$z-index-modal-content};
 }

@@ -1,28 +1,30 @@
-$breakpoint-xsmall: 0 !default;
-$breakpoint-small: 544px !default;
-$breakpoint-medium: 768px !default;
-$breakpoint-large: 1024px !default;
-$breakpoint-xlarge: 1200px !default;
+$responsive-breakpoint-xsmall: 0 !default;
+$responsive-breakpoint-small: 544px !default;
+$responsive-breakpoint-medium: 768px !default;
+$responsive-breakpoint-large: 1024px !default;
+$responsive-breakpoint-xlarge: 1200px !default;
 
 $breakpoints: (
   (
     "name": "xsmall",
-    "value": $breakpoint-xsmall,
+    "value": $responsive-breakpoint-xsmall,
   ),
   (
     "name": "small",
-    "value": $breakpoint-small,
+    "value": $responsive-breakpoint-small,
   ),
   (
     "name": "medium",
-    "value": $breakpoint-medium,
+    "value": $responsive-breakpoint-medium,
   ),
   (
     "name": "large",
-    "value": $breakpoint-large,
+    "value": $responsive-breakpoint-large,
   ),
   (
     "name": "xlarge",
-    "value": $breakpoint-xlarge,
+    "value": $responsive-breakpoint-xlarge,
   )
-);
+) !default;
+
+$responsive-breakpoint-max-width-offset: -0.02px !default;

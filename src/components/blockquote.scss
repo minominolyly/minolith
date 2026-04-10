@@ -64,6 +64,7 @@
       max-width: 100%;
       color: var(--#{variables.$prefix}blockquote-color-fore);
       font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
+      line-height: 1;
     }
   }
   &.has-quote,
@@ -82,6 +83,7 @@
       max-width: 100%;
       color: var(--#{variables.$prefix}blockquote-color-fore);
       font-size: var(--#{variables.$prefix}blockquote-icon-font-size);
+      line-height: 1;
     }
   }
 

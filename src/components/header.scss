@@ -21,6 +21,7 @@
   width: 100%;
   box-shadow: 0 0 0.5rem var(--#{variables.$prefix}header-color-shadow);
   backdrop-filter: var(--#{variables.$prefix}header-backdrop-filter);
+  min-height: var(--#{variables.$prefix}header-min-height);
 
   &.is-sticky {
     position: sticky;

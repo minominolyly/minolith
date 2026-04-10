@@ -3,18 +3,14 @@
 @use "../functions/index.scss" as functions;
 
 //#region define color settings
-
-$color-lightness-white: 95% !default;
-$color-lightness-black: 14% !default;
-
-$color-lightness-50: 50% !default;
-$color-lightness-offset-lighter: 5% !default;
-$color-lightness-offset-darker: -4% !default;
+$color-lightness-05: 10%;
+$color-lightness-95: 90%;
 
 $color-chroma-gray: 0.02 !default;
-$color-chroma-colorful: 0.18 !default;
-$color-chroma-colorful-offset-lighter: -0.01 !default;
-$color-chroma-colorful-offset-darker: -0.01 !default;
+
+$color-chroma-colorful-50: 0.14 !default;
+$color-chroma-colorful-offset-lighter: 0 !default;
+$color-chroma-colorful-offset-darker: 0 !default;
 
 $color-hue-gray: 290 !default;
 $color-hue-red: 0 !default;
@@ -30,77 +26,127 @@ $color-hue-magenta: 340 !default;
 
 //#endregion define color settings
 
-//#region color-light-lightness
-
 $color-light-lightness-fore: 5 !default;
 $color-light-lightness-back: 95 !default;
 $color-light-lightness-border: 70 !default;
-$color-light-lightness-placeholder: 70 !default;
-$color-light-lightness-shadow: 70 !default;
+$color-light-lightness-placeholder: 50 !default;
+$color-light-lightness-shadow: 50 !default;
+$color-light-lightness-scrollbar-thumb: 30 !default;
+$color-light-lightness-scrollbar-track: 70 !default;
 
-//#region color-light-lightness-dot
+$color-dark-lightness-fore: 95 !default;
+$color-dark-lightness-back: 5 !default;
+$color-dark-lightness-border: 30 !default;
+$color-dark-lightness-placeholder: 50 !default;
+$color-dark-lightness-shadow: 50 !default;
+$color-dark-lightness-scrollbar-thumb: 70 !default;
+$color-dark-lightness-scrollbar-track: 30 !default;
+
+//#region color-lightness-dot
 $color-light-lightness-dot-fore: 85 !default;
 $color-light-lightness-dot-back: 95 !default;
-//#endregion color-light-lightness-dot
 
-//#region color-light-lightness-gingham
+$color-dark-lightness-dot-fore: 15 !default;
+$color-dark-lightness-dot-back: 5 !default;
+//#endregion color-lightness-dot
+
+//#region color-lightness-gingham
 $color-light-lightness-gingham-fore: 85 !default;
 $color-light-lightness-gingham-back: 95 !default;
-//#endregion color-light-lightness-gingham
 
-//#region color-light-lightness-rhombus
+$color-dark-lightness-gingham-fore: 15 !default;
+$color-dark-lightness-gingham-back: 5 !default;
+//#endregion color-lightness-gingham
+
+//#region color-lightness-rhombus
 $color-light-lightness-rhombus-fore: 85 !default;
 $color-light-lightness-rhombus-back: 95 !default;
-//#endregion color-light-lightness-rhombus
 
-//#region color-light-lightness-stripe
+$color-dark-lightness-rhombus-fore: 15 !default;
+$color-dark-lightness-rhombus-back: 5 !default;
+//#endregion color-lightness-rhombus
+
+//#region color-lightness-stripe
 $color-light-lightness-stripe-fore: 85 !default;
 $color-light-lightness-stripe-back: 95 !default;
-//#endregion color-light-lightness-stripe
 
-//#region color-light-lightness-zigzag
+$color-dark-lightness-stripe-fore: 15 !default;
+$color-dark-lightness-stripe-back: 5 !default;
+//#endregion color-lightness-stripe
+
+//#region color-lightness-zigzag
 $color-light-lightness-zigzag-fore: 85 !default;
 $color-light-lightness-zigzag-back: 95 !default;
-//#endregion color-light-lightness-zigzag
 
-//#region color-light-lightness-accordion
+$color-dark-lightness-zigzag-fore: 15 !default;
+$color-dark-lightness-zigzag-back: 5 !default;
+//#endregion color-lightness-zigzag
+
+//#region color-lightness-accordion
 $color-light-lightness-accordion-fore: 5 !default;
 $color-light-lightness-accordion-back: 95 !default;
-$color-light-lightness-accordion-border: 70 !default;
+$color-light-lightness-accordion-border: 80 !default;
 $color-light-lightness-accordion-summary-fore: 5 !default;
-$color-light-lightness-accordion-summary-back: 70 !default;
-$color-light-lightness-accordion-summary-border: 70 !default;
+$color-light-lightness-accordion-summary-back: 80 !default;
+$color-light-lightness-accordion-summary-border: 80 !default;
 $color-light-lightness-accordion-details-fore: 5 !default;
 $color-light-lightness-accordion-details-back: 95 !default;
-$color-light-lightness-accordion-details-border: 70 !default;
-//#endregion color-light-lightness-accordion
+$color-light-lightness-accordion-details-border: 80 !default;
 
-//#region color-light-lightness-button
+$color-dark-lightness-accordion-fore: 95 !default;
+$color-dark-lightness-accordion-back: 5 !default;
+$color-dark-lightness-accordion-border: 20 !default;
+$color-dark-lightness-accordion-summary-fore: 95 !default;
+$color-dark-lightness-accordion-summary-back: 20 !default;
+$color-dark-lightness-accordion-summary-border: 20 !default;
+$color-dark-lightness-accordion-details-fore: 95 !default;
+$color-dark-lightness-accordion-details-back: 5 !default;
+$color-dark-lightness-accordion-details-border: 20 !default;
+//#endregion color-lightness-accordion
+
+//#region color-lightness-button
 $color-light-lightness-button-fore: 5 !default;
 $color-light-lightness-button-back: 70 !default;
 $color-light-lightness-button-border: 70 !default;
 $color-light-lightness-button-shadow: 70 !default;
-//#endregion color-light-lightness-button
 
-//#region color-light-lightness-badge
+$color-dark-lightness-button-fore: 95 !default;
+$color-dark-lightness-button-back: 30 !default;
+$color-dark-lightness-button-border: 30 !default;
+$color-dark-lightness-button-shadow: 30 !default;
+//#endregion color-lightness-button
+
+//#region color-lightness-badge
 $color-light-lightness-badge-fore: 5 !default;
-$color-light-lightness-badge-back: 85 !default;
+$color-light-lightness-badge-back: 80 !default;
 $color-light-lightness-badge-border: 70 !default;
-//#endregion color-light-lightness-badge
 
-//#region color-light-lightness-blockquote
-$color-light-lightness-blockquote-fore: 50 !default;
-$color-light-lightness-blockquote-back: 90 !default;
-$color-light-lightness-blockquote-border: 50 !default;
-//#endregion color-light-lightness-blockquote
+$color-dark-lightness-badge-fore: 95 !default;
+$color-dark-lightness-badge-back: 20 !default;
+$color-dark-lightness-badge-border: 30 !default;
+//#endregion color-lightness-badge
 
-//#region color-light-lightness-breadcrumbs
-$color-light-lightness-breadcrumbs-fore: 30 !default;
-$color-light-lightness-breadcrumb-fore: 30 !default;
-$color-light-lightness-breadcrumb-divider-fore: 60 !default;
-//#endregion color-light-lightness-breadcrumbs
+//#region color-lightness-blockquote
+$color-light-lightness-blockquote-fore: 30 !default;
+$color-light-lightness-blockquote-back: 80 !default;
+$color-light-lightness-blockquote-border: 60 !default;
 
-//#region color-light-lightness-card
+$color-dark-lightness-blockquote-fore: 70 !default;
+$color-dark-lightness-blockquote-back: 20 !default;
+$color-dark-lightness-blockquote-border: 40 !default;
+//#endregion color-lightness-blockquote
+
+//#region color-lightness-breadcrumbs
+$color-light-lightness-breadcrumbs-fore: 65 !default;
+$color-light-lightness-breadcrumb-fore: 65 !default;
+$color-light-lightness-breadcrumb-divider-fore: 65 !default;
+
+$color-dark-lightness-breadcrumbs-fore: 65 !default;
+$color-dark-lightness-breadcrumb-fore: 65 !default;
+$color-dark-lightness-breadcrumb-divider-fore: 65 !default;
+//#endregion color-lightness-breadcrumbs
+
+//#region color-lightness-card
 $color-light-lightness-card-fore: 5 !default;
 $color-light-lightness-card-back: 70 !default;
 $color-light-lightness-card-border: 70 !default;
@@ -111,9 +157,20 @@ $color-light-lightness-card-body-fore: 5 !default;
 $color-light-lightness-card-body-back: 90 !default;
 $color-light-lightness-card-footer-fore: 5 !default;
 $color-light-lightness-card-footer-back: 80 !default;
-//#endregion color-light-lightness-card
 
-//#region color-light-lightness-dialogue
+$color-dark-lightness-card-fore: 95 !default;
+$color-dark-lightness-card-back: 5 !default;
+$color-dark-lightness-card-border: 30 !default;
+$color-dark-lightness-card-shadow: 30 !default;
+$color-dark-lightness-card-header-fore: 95 !default;
+$color-dark-lightness-card-header-back: 50 !default;
+$color-dark-lightness-card-body-fore: 95 !default;
+$color-dark-lightness-card-body-back: 10 !default;
+$color-dark-lightness-card-footer-fore: 95 !default;
+$color-dark-lightness-card-footer-back: 20 !default;
+//#endregion color-lightness-card
+
+//#region color-lightness-dialogue
 $color-light-lightness-dialogue-fore: 5 !default;
 $color-light-lightness-dialogue-back: 95 !default;
 $color-light-lightness-dialogue-border: 70 !default;
@@ -128,152 +185,7 @@ $color-light-lightness-dialogue-name-shadow: 70 !default;
 $color-light-lightness-dialogue-message-fore: 5 !default;
 $color-light-lightness-dialogue-message-back: 95 !default;
 $color-light-lightness-dialogue-message-border: 70 !default;
-//#endregion color-light-lightness-dialogue
 
-//#region color-dark-lightness-figure
-$color-light-lightness-figure-fore: 5 !default;
-$color-light-lightness-figure-back: 70 !default;
-$color-light-lightness-figure-border: 70 !default;
-$color-light-lightness-figure-content-fore: 5 !default;
-$color-light-lightness-figure-content-back: 95 !default;
-$color-light-lightness-figure-caption-fore: 20 !default;
-$color-light-lightness-figure-caption-back: 70 !default;
-//#endregion color-dark-lightness-figure
-
-//#region color-light-lightness-header
-$color-light-lightness-header-fore: 5 !default;
-$color-light-lightness-header-back: 70 !default;
-$color-light-lightness-header-shadow: 70 !default;
-//#endregion color-light-lightness-header
-
-//#region color-light-lightness-label
-$color-light-lightness-label-fore: 60 !default;
-//#endregion color-light-lightness-label
-
-//#region color-light-lightness-input
-$color-light-lightness-input-fore: 5 !default;
-$color-light-lightness-input-back: 95 !default;
-$color-light-lightness-input-border: 60 !default;
-$color-light-lightness-input-placeholder: 60 !default;
-//#endregion color-light-lightness-input
-
-//#region color-light-lightness-link
-$color-light-lightness-link-fore: 60 !default;
-//#endregion color-light-lightness-link
-
-//#region color-light-lightness-loader
-$color-light-lightness-loader-fore: 60 !default;
-//#endregion color-light-lightness-loader
-
-//#region color-light-lightness-message
-$color-light-lightness-message-fore: 5 !default;
-$color-light-lightness-message-back: 70 !default;
-$color-light-lightness-message-border: 70 !default;
-$color-light-lightness-message-header-fore: 5 !default;
-$color-light-lightness-message-header-back: 70 !default;
-$color-light-lightness-message-body-fore: 5 !default;
-$color-light-lightness-message-body-back: 90 !default;
-//#endregion color-light-lightness-card
-
-//#region color-light-lightness-nav
-$color-light-lightness-nav-fore: 5 !default;
-$color-light-lightness-nav-back: 95 !default;
-$color-light-lightness-nav-border: 70 !default;
-$color-light-lightness-nav-menu-item-fore: 05 !default;
-$color-light-lightness-nav-menu-item-shadow: 80 !default;
-//#endregion color-light-lightness-nav
-
-//#region color-light-lightness-progress
-$color-light-lightness-progress-fore: 70 !default;
-$color-light-lightness-progress-back: 95 !default;
-//#endregion color-light-lightness-progress
-
-//#endregion color-light-lightness
-
-//#region color-dark-lightness
-
-$color-dark-lightness-fore: 95 !default;
-$color-dark-lightness-back: 5 !default;
-$color-dark-lightness-border: 50 !default;
-$color-dark-lightness-placeholder: 50 !default;
-$color-dark-lightness-shadow: 50 !default;
-
-//#region color-dark-lightness-dot
-$color-dark-lightness-dot-fore: 5 !default;
-$color-dark-lightness-dot-back: 15 !default;
-//#endregion color-dark-lightness-dot
-
-//#region color-dark-lightness-gingham
-$color-dark-lightness-gingham-fore: 5 !default;
-$color-dark-lightness-gingham-back: 15 !default;
-//#endregion color-dark-lightness-gingham
-
-//#region color-dark-lightness-rhombus
-$color-dark-lightness-rhombus-fore: 5 !default;
-$color-dark-lightness-rhombus-back: 15 !default;
-//#endregion color-dark-lightness-rhombus
-
-//#region color-dark-lightness-stripe
-$color-dark-lightness-stripe-fore: 5 !default;
-$color-dark-lightness-stripe-back: 15 !default;
-//#endregion color-dark-lightness-stripe
-
-//#region color-dark-lightness-zigzag
-$color-dark-lightness-zigzag-fore: 5 !default;
-$color-dark-lightness-zigzag-back: 15 !default;
-//#endregion color-dark-lightness-zigzag
-
-//#region color-dark-lightness-accordion
-$color-dark-lightness-accordion-fore: 95 !default;
-$color-dark-lightness-accordion-back: 5 !default;
-$color-dark-lightness-accordion-border: 30 !default;
-$color-dark-lightness-accordion-summary-fore: 95 !default;
-$color-dark-lightness-accordion-summary-back: 30 !default;
-$color-dark-lightness-accordion-summary-border: 30 !default;
-$color-dark-lightness-accordion-details-fore: 95 !default;
-$color-dark-lightness-accordion-details-back: 5 !default;
-$color-dark-lightness-accordion-details-border: 30 !default;
-//#endregion color-dark-lightness-accordion
-
-//#region color-dark-lightness-badge
-$color-dark-lightness-badge-fore: 95 !default;
-$color-dark-lightness-badge-back: 15 !default;
-$color-dark-lightness-badge-border: 30 !default;
-//#endregion color-dark-lightness-badge
-
-//#region color-dark-lightness-blockquote
-$color-dark-lightness-blockquote-fore: 70 !default;
-$color-dark-lightness-blockquote-back: 20 !default;
-$color-dark-lightness-blockquote-border: 70 !default;
-//#endregion color-dark-lightness-blockquote
-
-//#region color-dark-lightness-blockquote
-$color-dark-lightness-breadcrumbs-fore: 70 !default;
-$color-dark-lightness-breadcrumb-fore: 70 !default;
-$color-dark-lightness-breadcrumb-divider-fore: 40 !default;
-//#endregion color-dark-lightness-blockquote
-
-//#region color-dark-lightness-button
-$color-dark-lightness-button-fore: 95 !default;
-$color-dark-lightness-button-back: 30 !default;
-$color-dark-lightness-button-border: 30 !default;
-$color-dark-lightness-button-shadow: 30 !default;
-//#endregion color-dark-lightness-button
-
-//#region color-dark-lightness-card
-$color-dark-lightness-card-fore: 95 !default;
-$color-dark-lightness-card-back: 5 !default;
-$color-dark-lightness-card-border: 30 !default;
-$color-dark-lightness-card-shadow: 30 !default;
-$color-dark-lightness-card-header-fore: 95 !default;
-$color-dark-lightness-card-header-back: 50 !default;
-$color-dark-lightness-card-body-fore: 95 !default;
-$color-dark-lightness-card-body-back: 10 !default;
-$color-dark-lightness-card-footer-fore: 95 !default;
-$color-dark-lightness-card-footer-back: 20 !default;
-//#endregion color-dark-lightness-card
-
-//#region color-dark-lightness-dialogue
 $color-dark-lightness-dialogue-fore: 95 !default;
 $color-dark-lightness-dialogue-back: 5 !default;
 $color-dark-lightness-dialogue-border: 50 !default;
@@ -288,9 +200,17 @@ $color-dark-lightness-dialogue-name-shadow: 50 !default;
 $color-dark-lightness-dialogue-message-fore: 95 !default;
 $color-dark-lightness-dialogue-message-back: 5 !default;
 $color-dark-lightness-dialogue-message-border: 50 !default;
-//#endregion color-dark-lightness-dialogue
+//#endregion color-lightness-dialogue
 
-//#region color-dark-lightness-figure
+//#region color-lightness-figure
+$color-light-lightness-figure-fore: 5 !default;
+$color-light-lightness-figure-back: 70 !default;
+$color-light-lightness-figure-border: 70 !default;
+$color-light-lightness-figure-content-fore: 5 !default;
+$color-light-lightness-figure-content-back: 95 !default;
+$color-light-lightness-figure-caption-fore: 20 !default;
+$color-light-lightness-figure-caption-back: 70 !default;
+
 $color-dark-lightness-figure-fore: 95 !default;
 $color-dark-lightness-figure-back: 30 !default;
 $color-dark-lightness-figure-border: 30 !default;
@@ -298,38 +218,57 @@ $color-dark-lightness-figure-content-fore: 95 !default;
 $color-dark-lightness-figure-content-back: 5 !default;
 $color-dark-lightness-figure-caption-fore: 80 !default;
 $color-dark-lightness-figure-caption-back: 30 !default;
-//#endregion color-dark-lightness-figure
+//#endregion color-lightness-figure
 
-//#region color-dark-lightness-header
+//#region color-lightness-header
+$color-light-lightness-header-fore: 5 !default;
+$color-light-lightness-header-back: 70 !default;
+$color-light-lightness-header-shadow: 70 !default;
+
 $color-dark-lightness-header-fore: 95 !default;
 $color-dark-lightness-header-back: 30 !default;
 $color-dark-lightness-header-shadow: 30 !default;
-//#endregion color-dark-lightness-header
+//#endregion color-lightness-header
 
-//#region color-dark-lightness-input
+//#region color-lightness-input
+$color-light-lightness-input-fore: 5 !default;
+$color-light-lightness-input-back: 95 !default;
+$color-light-lightness-input-border: 60 !default;
+$color-light-lightness-input-placeholder: 60 !default;
+
 $color-dark-lightness-input-fore: 95 !default;
 $color-dark-lightness-input-back: 5 !default;
 $color-dark-lightness-input-border: 40 !default;
 $color-dark-lightness-input-placeholder: 40 !default;
-//#endregion color-dark-lightness-input
+//#endregion color-lightness-input
 
-//#region color-dark-lightness-label
-$color-dark-lightness-label-fore: 70 !default;
-//#endregion color-dark-lightness-label
+//#region color-lightness-label
+$color-light-lightness-label-fore: 65 !default;
 
-//#region color-dark-lightness-link
-$color-dark-lightness-link-fore: 70 !default;
-//#endregion color-dark-lightness-link
+$color-dark-lightness-label-fore: 65 !default;
+//#endregion color-lightness-label
 
-//#region color-dark-lightness-loader
-$color-dark-lightness-loader-fore: 70 !default;
-//#endregion color-dark-lightness-loader
+//#region color-lightness-link
+$color-light-lightness-link-fore: 65 !default;
 
-//#region color-dark-lightness-progress
-$color-dark-lightness-progress-fore: 80 !default;
-//#endregion color-dark-lightness-progress
+$color-dark-lightness-link-fore: 65 !default;
+//#endregion color-lightness-link
 
-//#region color-dark-lightness-message
+//#region color-lightness-loader
+$color-light-lightness-loader-fore: 65 !default;
+
+$color-dark-lightness-loader-fore: 65 !default;
+//#endregion color-lightness-loader
+
+//#region color-lightness-message
+$color-light-lightness-message-fore: 5 !default;
+$color-light-lightness-message-back: 70 !default;
+$color-light-lightness-message-border: 70 !default;
+$color-light-lightness-message-header-fore: 5 !default;
+$color-light-lightness-message-header-back: 70 !default;
+$color-light-lightness-message-body-fore: 5 !default;
+$color-light-lightness-message-body-back: 90 !default;
+
 $color-dark-lightness-message-fore: 95 !default;
 $color-dark-lightness-message-back: 5 !default;
 $color-dark-lightness-message-border: 30 !default;
@@ -337,22 +276,31 @@ $color-dark-lightness-message-header-fore: 95 !default;
 $color-dark-lightness-message-header-back: 50 !default;
 $color-dark-lightness-message-body-fore: 95 !default;
 $color-dark-lightness-message-body-back: 5 !default;
-//#endregion color-dark-lightness-card
+//#endregion color-lightness-message
 
-//#region color-dark-lightness-nav
+//#region color-lightness-nav
+$color-light-lightness-nav-fore: 5 !default;
+$color-light-lightness-nav-back: 95 !default;
+$color-light-lightness-nav-border: 70 !default;
+$color-light-lightness-nav-menu-item-fore: 05 !default;
+$color-light-lightness-nav-menu-item-shadow: 80 !default;
+
 $color-dark-lightness-nav-fore: 95 !default;
 $color-dark-lightness-nav-back: 5 !default;
 $color-dark-lightness-nav-border: 30 !default;
 $color-dark-lightness-nav-menu-item-fore: 95 !default;
 $color-dark-lightness-nav-menu-item-shadow: 40 !default;
-//#endregion color-dark-lightness-nav
+//#endregion color-lightness-nav
 
-//#region color-light-lightness-progress
-$color-dark-lightness-progress-fore: 80 !default;
-$color-dark-lightness-progress-back: 5 !default;
-//#endregion color-light-lightness-progress
+//#region color-lightness-progress
+$color-light-lightness-progress-fore: 65 !default;
+$color-light-lightness-progress-back: 90 !default;
+$color-light-lightness-progress-border: 65 !default;
 
-//#endregion color-dark-lightness
+$color-dark-lightness-progress-fore: 65 !default;
+$color-dark-lightness-progress-back: 10 !default;
+$color-dark-lightness-progress-border: 65 !default;
+//#endregion color-lightness-progress
 
 //#region color-lightness-offset
 
@@ -395,6 +343,16 @@ $colorShades: (
       shadow: (
         light: $color-light-lightness-shadow,
         dark: $color-dark-lightness-shadow,
+      ),
+      scrollbar: (
+        thumb: (
+          light: $color-light-lightness-scrollbar-track,
+          dark: $color-dark-lightness-scrollbar-track,
+        ),
+        track: (
+          light: $color-light-lightness-scrollbar-track,
+          dark: $color-dark-lightness-scrollbar-track,
+        ),
       ),
       selection: (
         fore: (
@@ -895,6 +853,10 @@ $colorShades: (
           back: (
             light: $color-light-lightness-progress-back,
             dark: $color-dark-lightness-progress-back,
+          ),
+          border: (
+            light: $color-light-lightness-progress-border,
+            dark: $color-dark-lightness-progress-border,
           ),
         ),
       //#endregion components

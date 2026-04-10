@@ -7,6 +7,12 @@
   --#{variables.$prefix}tabula-color-back: var(
     --#{variables.$prefix}color-default-back
   );
+  --#{variables.$prefix}tabula-color-scrollbar-thumb: var(
+    --#{variables.$prefix}color-default-scrollbar-thumb
+  );
+  --#{variables.$prefix}tabula-color-scrollbar-track: var(
+    --#{variables.$prefix}color-default-scrollbar-track
+  );
   --#{variables.$prefix}tabula-color-selection-fore: var(
     --#{variables.$prefix}color-default-selection-fore
   );
@@ -23,6 +29,8 @@
   letter-spacing: 0.025rem;
   text-autospace: normal;
   text-spacing-trim: trim-start;
+  // scrollbar-color: var(--#{variables.$prefix}tabula-color-scrollbar-thumb)
+  //   var(--#{variables.$prefix}tabula-color-scrollbar-track);
 
   &::selection {
     color: var(--#{variables.$prefix}tabula-color-selection-fore);

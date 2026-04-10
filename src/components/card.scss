@@ -67,6 +67,7 @@
   @include mixins.element();
   display: block;
   background-color: var(--#{variables.$prefix}card-color-back);
+  // backdrop-filter: blur(1rem);
   border-radius: calc(
     var(--#{variables.$prefix}card-border-radius) +
       var(--#{variables.$prefix}card-border-width)

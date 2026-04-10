@@ -812,8 +812,9 @@
 
 @mixin setColorLightnessCssVariables() {
   $steps: 18;
-  $value-step: (variables.$color-lightness-95 - variables.$color-lightness-05) /
-    $steps;
+  $value-step: calc(
+    (variables.$color-lightness-95 - variables.$color-lightness-05) / $steps
+  );
   @for $i from 0 through $steps {
     $current-label: 5 + ($i * 5);
 

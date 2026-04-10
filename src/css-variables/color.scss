@@ -817,11 +817,11 @@
   @for $i from 0 through $steps {
     $current-label: 5 + ($i * 5);
 
-    $formatted-label: if(
-      $current-label < 10,
-      "0#{$current-label}",
-      "#{$current-label}"
-    );
+    $formatted-label: "#{$current-label}";
+
+    @if ($current-label < 10) {
+      $formatted-label: "0#{$current-label}";
+    }
 
     $current-value: variables.$color-lightness-05 + ($value-step * $i);
 

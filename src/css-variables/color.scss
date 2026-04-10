@@ -816,7 +816,7 @@
     (variables.$color-lightness-95 - variables.$color-lightness-05) / $steps
   );
   @for $i from 0 through $steps {
-    $current-label: 5 + ($i * 5);
+    $current-label: calc(5 + ($i * 5));
 
     $formatted-label: "#{$current-label}";
 
@@ -824,7 +824,7 @@
       $formatted-label: "0#{$current-label}";
     }
 
-    $current-value: variables.$color-lightness-05 + ($value-step * $i);
+    $current-value: calc(variables.$color-lightness-05 + ($value-step * $i));
 
     --#{variables.$prefix}color-lightness-#{$formatted-label}: #{$current-value};
   }
